@@ -1,0 +1,249 @@
+tosca_definitions_version: freecsm_example
+#定义Node Types
+node_types:
+	cloudeploy.nodes.Root: #根类型，所有node均继承它，简化interfaces的定义
+		interfaces:
+			cloudeploy.interfaces.standard:
+				create:
+				configure:
+				start:
+				stop:
+				delete:
+
+	cloudeploy.nodes.Compute: #定义服务器类型
+		derived_from: cloudeploy.nodes.Root #采用继承
+		properties:
+		#虚拟机或者物理机的属性
+			num_cpus: # Cpu数目
+				type: integer
+				constraints: #限制条件
+					- greater_or_equal: 1
+			disk_size:
+				type: string
+				constraints:
+					- greater_or_equal: 0 MB
+			mem_size:
+				type: string
+				constraints:
+					- greater_or_equal: 0 MB
+		capabilities: 
+ 			host: #表明该Type有host能力，即可以作为其他Node类型的容器.
+ 				type: cloudeploy.capabilities.Container #capability的类型
+ 				properties:
+ 					valid_node_types: [ cloudeploy.nodes.DBMS, cloudeploy.nodes.WebServer] # 定义该容器中可存放的类型
+ 			endpoint: #定义该Type可作为一个网路端点，接受访问
+ 				type: cloudeploy.capabilities.Endpoint 
+ 				properties:
+ 					protocol: #协议名
+ 					port: #对应端口
+ 			os: #define a os container capability
+ 				properties:
+ 					type: #如linux, windows, mac
+ 					version: #operating system version
+ 					architecture: #如 x86_32, x86_64
+ 					distribution: #针对linux如debian unbuntu等
+
+ 	cloudeploy.nodes.DBMS: #定义数据库管理系统
+ 		derived_from: cloudeploy.nodes.Root
+ 		properties:
+ 			dbms_root_password:
+ 				type: string
+ 			dbms_port:
+ 				type: integer
+ 		requirements: #定义该类型所需的条件
+ 			- host: #需要一个容器安装数据库管理系统
+ 				node: cloudeploy.nodes.Compute #对应的容器是Compute，与Compute的capability对应
+ 				relationship: cloudeploy.relationships.HostedOn #连接对应的关系类型
+ 		capabilities:
+ 			host: #安装数据库的能力
+ 				type: cloudeploy.capabilities.Container
+ 				properties:
+ 					valid_node_types: [cloudeploy.nodes.DataBase]
+
+ 	cloudeploy.nodes.DataBase: #定义数据库
+ 		derived_from: cloudeploy.nodes.Root
+ 		properties:
+ 			db_user:
+ 			db_password:
+ 			dp_port:
+ 			db_name:
+ 		artifacts: #数据库所需的软件制品，如SQL文件。
+ 			- db_contens:
+ 			  	type: cloudeploy.artifacts.File #类型为文件
+ 		requirements:
+ 			- host: 
+ 				node: cloudeploy.nodes.DBMS
+ 				relationship: cloudeploy.relationships.HostedOn
+ 		capabilities:
+ 			database_endpoint:
+ 				properties:
+ 					protocol: #协议名
+ 					port: #对应端口
+
+ 	cloudeploy.nodes.WebServer:
+ 		derived_from: cloudeploy.nodes.Root
+ 		requirements:
+ 			- host:
+ 				node: cloudeploy.nodes.Compute
+ 				relationship: cloudeploy.relationships.HostedOn
+ 		capabilities:
+ 			host:
+ 				type: cloudeploy.capabilities.Container
+ 				properties:
+ 					valid_node_types: [cloudeploy.nodes.WebApplication]
+
+ 	cloudeploy.nodes.WebApplication:
+ 		derived_from: cloudeploy.nodes.Root
+ 		properties:
+ 			context_root:
+ 		requirements:
+ 		 - host:
+ 		 	node: cloudeploy.nodes.WebServer
+ 		 	relationship: cloudeploy.relationships.HostedOn
+ 		 - database_endpoint:
+ 		 	node: cloudeploy.nodes.DataBase
+ 		 	relationship: cloudeploy.relationships.ConnectTo
+
+relation_types: #定义关系类型
+	cloudeploy.relationships.HostedOn:
+		valid_targets: [cloudeploy.capabilities.Container]
+		interfaces:
+			cloudeploy.interfaces.relationship.Configure:
+				pre_configure_source: # 运行在source的configure之前
+				pre_configure_target: # 运行在target的configure之前
+				post_configure_source: #运行在sourc的configure之后
+				post_configure_target: #运行在target的configure之后
+
+	cloudeploy.relationships.ConnectTo:
+		valid_targets: [cloudeploy.capabilities.Endpoint]
+		interfaces:
+			cloudeploy.interfaces.relationship.Configure:
+				pre_configure_source: # 运行在source的configure之前
+				pre_configure_target: # 运行在target的configure之前
+				post_configure_source: #运行在sourc的configure之后
+				post_configure_target: #运行在target的configure之后
+
+capability_types: #定义capability类型
+	cloudeploy.capabilities.Container:
+		properties:
+			valid_node_types: #A list of one or more names of Node Types that are supported as 
+			#containees that declare the Container type as a Capability.
+	cloudeploy.capabilities.Endpoint:
+		properties:
+			protocol: #协议名
+ 			port: #对应端口
+
+artifact_type: #定义artifact类型
+	cloudeploy.artifacts.File:
+
+topology_template: #定义应用拓扑结构
+	inputs: #定义该template转化为一个真正可执行部署的模型所需填入的参数
+		cpus:
+			type: integer #限制类型
+			constraints: #限制参数合法值
+				- valid_values: [1,2,4,8]
+
+	node_templates:
+		freecsm: #定义freecsm的Node Template
+			type: cloudeploy.nodes.WebApplication
+			artifacts: #定义war包文件
+				- war_package:
+					implementation: ftp://133.133.133.40/freecsm/freecsm.war
+					type:cloudeploy.artifacts.File
+			requirements: #实例化依赖关系
+				- host: tomcat_server #对应的host的node template为tomcat_server 
+				- database_endpoint:  
+					node: mysql_database
+					relationship: app_connectTo_db  #using relationshipTemplate
+			interfaces:
+				standard:
+					create: freecsm_install.sh 
+					delete: freecsm_delete.sh 
+
+
+		mysql_database:
+			type: cloudeploy.nodes.DataBase
+			properties:
+				db_name: freecsm
+				db_user: root
+				db_password: root
+			artifacts:
+				- db_contens: 
+					implmentation: ftp://133.133.133.40/fresscsm/freecsm.sql
+				  	type: cloudeploy.artifacts.File
+			capabilities:
+				database_endpoint:
+					properties:
+						port: 3306
+			requirements:
+				- host: 
+					node: mysql_dbms
+					relationship: db_hostOn_dbms
+
+		mysql_dbms:
+			type: cloudeploy.nodes.DBMS
+			properties:
+				dbms_root_password: root
+				dbms_port: 3306
+			requirements:
+				- host: mysql_compute
+			interfaces:
+				standard:
+					create: mysql_dbms_install.sh
+					start: mysql_dbms_start.sh
+					configrure: mysql_dbms_configure.sh
+						inputs: # 定义脚本的输入参数
+							dbms_root_password: {get_property : [SELF, dbms_root_password]} #定义获取该template中定义的property的值
+							dbms_port: {get_property : [SELF, dbms_port]}
+
+		tomcat_server:
+			type: cloudeploy.nodes.WebServer
+			requirements:
+				- host: tomcat_compute
+			interfaces:
+				standard:
+					create: tomcat_install.sh
+					start: tomcat_start.sh
+					stop: tomcat_stop.sh
+					configrure: tomcat_configure.sh
+
+		mysql_compute:
+			type: cloudeploy.nodes.Compute
+			properties:
+				disk_size: 500 GB
+				num_cpus: {get_input: cpus} #定义函数，获取topology inputs中的参数值
+				mem_size: 4 GB
+			capabilities:
+				os:
+					properties:
+						architecture: x86_64
+						type: linux
+						distribution: centos
+						version: 6.4
+
+		tomcat_compute:
+			type: cloudeploy.nodes.Compute
+			properties:
+				disk_size: 100 GB
+				num_cpus: 4
+				mem_size: 4 GB
+			capabilities:
+				os:
+					properties:
+						architecture: x86_64
+						type: linux
+						distribution: centos
+						version: 6.4
+
+	relationship_templates:
+		app_connectTo_db:
+			type: cloudeploy.relationships.ConnectTo
+			interfaces:
+					cloudeploy.interfaces.relationships.ConnectTo:
+						post_configure_source: freecsm_configure.sh
+		db_hostOn_dbms:
+			type: cloudeploy.relationships.HostedOn
+			interfaces:
+				standard:
+					postconfigure: mysql_database_postconfigure.sh
+

@@ -1,0 +1,29 @@
+component: #定义组件信息
+  name: cloudeploy::default::component::package::playframework
+  display_name: Playframework
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::default::playframework::install
+  displayName: 安装
+  nodes:
+  - nodeName: playframework_install_node
+    searchName: cloudeploy::playframework::install
+    extractParams: 
+    - target
+    - play_source: 'ftp://133.133.133.40/exchange/cloudshare/pkgs/play-2.2.2.zip'
+    - source_username: 'tcse'
+    - source_password: 'tcse'
+- operationName: cloudeploy::default::playframework::service
+  displayName: 服务
+  nodes:
+  - nodeName: playframework_service_node
+    searchName: cloudeploy::playframework::service
+    extractParams: 
+    - '$allParams'
+- operationName: cloudeploy::default::playframework::delete
+  displayName: 卸载
+  nodes:
+  - nodeName: playframework_delete_node
+    searchName: cloudeploy::playframework::uninstall
+    extractParams:
+    - '$allParams'

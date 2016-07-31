@@ -1,0 +1,12 @@
+component:
+  name: cloudeploy::default::component::font
+  display_name: Font
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::default::font::install
+  displayName: 安装
+  nodes:
+  - nodeName: font_install_node
+    searchName: cloudeploy::font::install
+    extractParms:
+    - '$allParams'

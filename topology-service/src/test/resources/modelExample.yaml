@@ -1,0 +1,61 @@
+name: freecsm_example
+description: freecsm的拓扑描述
+nodetypes:
+- name: cloudeploy.nodetype.tomcat
+  description: tomcat类型
+  properties:
+  - name: catalina_base
+    defaultValue: /usr/local/tomcat/
+    required: true
+  - name: port
+    defaultValue: 8080
+    required: false
+  capabilities:
+  - name: host
+    source: container
+  requirements:
+  - name: host
+    target: container
+  services:
+  - name: tomcat_service
+    serviceId: tomcat_service_1
+    ip: 
+    port: 8080
+    check: 
+  interfaces:
+  - name: install
+    params:
+    - name: catalina_base
+      value: /usr/local/tomcat
+    implementation:
+  - name: start
+    params:
+    - name: running
+      value: true
+    implementation: 
+  attributes:
+  - name: port
+    value: 8080
+  - name: catalina_base
+    value: /usr/local/tomcat
+topologytemplate:
+  nodetemplates:
+  - name: freecsm_tomcat
+    type: cloudeploy.nodetype.tomcat
+  - name: freecsm_mysql
+    type: cloudeploy.nodetype.mysql
+  relationshiptemplates:
+  - name: tomcat_connectTo_compute
+    type: cloudeploy.relationship.connectTo
+    source: freecsm_tomcat
+    target: freecsm_mysql
+    templates:
+    - name: db_context
+      template: db_context.ctml
+      configurationfile: /usr/local/tomcat/freecsm/
+      command: /usr/local/tomcat/bin/catalina.sh stop && /usr/local/tomcat/bin/catalina.sh start
+relationshiptypes: 
+  - name: cloudeploy.relationship.connectTo
+    source:
+    target:
+    templates:

@@ -1,0 +1,64 @@
+component: #定义组件信息
+  name: cloudeploy::default::component::package::tomcat
+  display_name: Tomcat
+  componentType: PACKAGE::APP_SERVER
+operations:
+- operationName: cloudeploy::default::tomcat::install
+  displayName: 安装
+  nodes:
+  - nodeName: tomcat_init
+    searchName: cloudeploy::tomcat::install
+    extractParams:
+    - catalina_base: /opt/tomcatDirectory/tomcat
+    - source_url: http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/apache-tomcat-8.0.9.tar.gz
+- operationName: cloudeploy::default::tomcat::service
+  displayName: 服务
+  nodes:
+  - nodeName: tomcat_service_node
+    searchName: tomcat::service
+    params:
+      catalina_base: /opt/apache-tomcat/tomcat
+    extractParams:
+    - catalina_base: /opt/apache-tomcat/tomcat
+    - service_ensure
+- operationName: cloudeploy::default::tomcat::delete
+  displayName: 卸载
+  nodes:
+  - nodeName: tomcat_delete_node
+    searchName: tomcat::instance::uninstall
+    params:
+      catalina_base: /opt/apache-tomcat/tomcat
+      catalina_home: /opt/apache-tomcat/tomcat
+    extractParams: 
+    - catalina_base: /opt/apache-tomcat/tomcat
+    - catalina_home: /opt/apache-tomcat/tomcat
+- operationName: cloudeploy::default::tomcat::config
+  displayName: 配置
+  nodes:
+  - nodeName: tomcat_config_node
+    searchName: cloudeploy::tomcat::config
+    extractParams:
+    - catalina_base: '"/opt/apache-tomcat/tomcat"'
+    - shutdownPort
+    - http_connector_port
+    - http_connector_redirectPort
+    - ajp_connector_port
+    - ajp_connector_redirectPort
+- operationName: cloudeploy::default::tomcat::installAndService
+  displayName: InstallAndService
+  nodes:
+  - nodeName: tomcat_install_operation_node
+    searchName: cloudeploy::default::tomcat::install
+  - nodeName: tomcat_service_operation_node
+    searchName: cloudeploy::default::tomcat::service
+- operationName: cloudeploy::default::tomcat::deployWar
+  displayName: 部署应用
+  nodes:
+  - nodeName: tomcat_deployWar_node
+    searchName: cloudeploy::tomcat::war
+    extractParams:
+    - catalina_base: /opt/apache-tomcat/tomcat
+    - war_source
+    - war_ensure: present
+    - war_name
+    

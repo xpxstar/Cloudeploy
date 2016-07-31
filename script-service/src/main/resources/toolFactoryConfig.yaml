@@ -1,0 +1,11 @@
+moduleResultYaml:
+- parser/mysql/result.yaml
+- parser/tomcat/result.yaml
+- parser/java/result.yaml
+- parser/nginx/result.yaml
+- parser/redis/result.yaml
+- parser/cloudeploy/result.yaml
+- parser/cloudeploydocker/result.yaml
+- parser/docker/result.yaml
+- parser/consul/result.yaml
+- parser/consul_template/result.yaml

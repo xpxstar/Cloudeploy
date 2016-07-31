@@ -1,0 +1,13 @@
+component: #定义组件信息
+  name: cloudeploy::default::component::exec
+  display_name: 脚本组件
+  componentType: EXEC
+operations:
+- operationName: cloudeploy::default::exec::run
+  displayName: 执行命令
+  nodes:
+  - nodeName: exec_run_node
+    searchName: cloudeploy::primitive::exec
+    extractParams:
+    - command
+    - timeout: 600

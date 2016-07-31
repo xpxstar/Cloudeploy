@@ -1,0 +1,268 @@
+2016-06-27 15:10:48 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [application_context.xml]
+2016-06-27 15:10:50 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@602f958: startup date [Mon Jun 27 15:10:50 CST 2016]; root of context hierarchy
+2016-06-27 15:10:50 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/packet-service/target/test-classes/application.properties]
+2016-06-27 15:10:50 main INFO  AutowiredAnnotationBeanPostProcessor:141 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-06-27 15:10:50 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-06-27 15:10:50 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-06-27 15:10:51 main INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2016-06-27 15:10:51 main INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-06-27 15:10:51 main INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2016-06-27 15:10:51 main INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-27 15:10:51 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2016-06-27 15:10:51 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-27 15:10:52 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-06-27 15:10:52 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-06-27 15:10:52 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action_param
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, define_file_key, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component_type
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_file_source
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_host
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_import_action
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_temp_file
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_type_implemention
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, meta_json, update_time, interface_filename, create_time, interface_name, defined_file, startegy, node_type]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, role, password, salt]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:10:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user_token
+2016-06-27 15:10:52 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2016-06-27 15:10:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2016-06-27 15:10:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2016-06-27 15:10:54 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2016-06-27 15:10:54 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2/#sql-13b1_107' to './cloudeploy2/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2016-06-27 15:10:54 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-06-27 15:10:55 main INFO  PropertiesFactoryBean:172 - Loading properties file from class path resource [application.properties]
+2016-06-27 15:10:57 Thread-2 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@602f958: startup date [Mon Jun 27 15:10:50 CST 2016]; root of context hierarchy
+2016-06-27 15:10:57 Thread-2 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-06-27 15:12:08 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [application_context.xml]
+2016-06-27 15:12:09 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@4acc70e8: startup date [Mon Jun 27 15:12:09 CST 2016]; root of context hierarchy
+2016-06-27 15:12:09 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/packet-service/target/test-classes/application.properties]
+2016-06-27 15:12:09 main INFO  AutowiredAnnotationBeanPostProcessor:141 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-06-27 15:12:10 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-06-27 15:12:10 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-06-27 15:12:10 main INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2016-06-27 15:12:10 main INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-06-27 15:12:10 main INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2016-06-27 15:12:10 main INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-27 15:12:10 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2016-06-27 15:12:10 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-27 15:12:11 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-06-27 15:12:11 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-06-27 15:12:11 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action_param
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, define_file_key, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component_type
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_file_source
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_host
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_import_action
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_temp_file
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_type_implemention
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [id, meta_json, update_time, interface_filename, create_time, interface_name, defined_file, startegy, node_type]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, role, password, salt]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-27 15:12:11 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user_token
+2016-06-27 15:12:11 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2016-06-27 15:12:11 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2016-06-27 15:12:11 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2016-06-27 15:12:12 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2016-06-27 15:12:12 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2/#sql-13b1_109' to './cloudeploy2/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2016-06-27 15:12:12 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-06-27 15:12:13 main INFO  PropertiesFactoryBean:172 - Loading properties file from class path resource [application.properties]
+2016-06-27 15:12:14 Thread-2 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@4acc70e8: startup date [Mon Jun 27 15:12:09 CST 2016]; root of context hierarchy
+2016-06-27 15:12:14 Thread-2 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-06-28 09:46:34 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [application_context.xml]
+2016-06-28 09:46:35 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@4acc70e8: startup date [Tue Jun 28 09:46:35 CST 2016]; root of context hierarchy
+2016-06-28 09:46:36 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/packet-service/target/test-classes/application.properties]
+2016-06-28 09:46:36 main INFO  AutowiredAnnotationBeanPostProcessor:141 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-06-28 09:46:36 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-06-28 09:46:36 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-06-28 09:46:36 main INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2016-06-28 09:46:36 main INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-06-28 09:46:36 main INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2016-06-28 09:46:37 main INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-28 09:46:37 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2016-06-28 09:46:37 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-28 09:46:37 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-06-28 09:46:37 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-06-28 09:46:37 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action_param
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, define_file_key, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component_type
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_file_source
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_host
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_import_action
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_temp_file
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_type_implemention
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [id, meta_json, update_time, interface_filename, create_time, interface_name, defined_file, startegy, node_type]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, role, password, salt]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:46:37 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user_token
+2016-06-28 09:46:37 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2016-06-28 09:46:37 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2016-06-28 09:46:37 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2016-06-28 09:46:39 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2016-06-28 09:46:39 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2/#sql-13b1_148' to './cloudeploy2/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2016-06-28 09:46:39 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-06-28 09:46:40 main INFO  PropertiesFactoryBean:172 - Loading properties file from class path resource [application.properties]
+2016-06-28 09:46:42 Thread-2 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@4acc70e8: startup date [Tue Jun 28 09:46:35 CST 2016]; root of context hierarchy
+2016-06-28 09:46:42 Thread-2 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-06-28 09:48:50 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [application_context.xml]
+2016-06-28 09:48:51 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@3408b5b5: startup date [Tue Jun 28 09:48:51 CST 2016]; root of context hierarchy
+2016-06-28 09:48:51 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/packet-service/target/test-classes/application.properties]
+2016-06-28 09:48:51 main INFO  AutowiredAnnotationBeanPostProcessor:141 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-06-28 09:48:51 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-06-28 09:48:51 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-06-28 09:48:51 main INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2016-06-28 09:48:51 main INFO  Environment:239 - HHH000206: hibernate.properties not found
+2016-06-28 09:48:51 main INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2016-06-28 09:48:52 main INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-28 09:48:52 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2016-06-28 09:48:52 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-06-28 09:48:52 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2016-06-28 09:48:52 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2016-06-28 09:48:52 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2016-06-28 09:48:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action
+2016-06-28 09:48:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2016-06-28 09:48:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2016-06-28 09:48:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc]
+2016-06-28 09:48:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action_param
+2016-06-28 09:48:52 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2016-06-28 09:48:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2016-06-28 09:48:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2016-06-28 09:48:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component
+2016-06-28 09:48:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, define_file_key, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2016-06-28 09:48:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2016-06-28 09:48:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2016-06-28 09:48:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component_type
+2016-06-28 09:48:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2016-06-28 09:48:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:48:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:48:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_file_source
+2016-06-28 09:48:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2016-06-28 09:48:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:48:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:48:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_host
+2016-06-28 09:48:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2016-06-28 09:48:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2016-06-28 09:48:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2016-06-28 09:48:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_import_action
+2016-06-28 09:48:52 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2016-06-28 09:48:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2016-06-28 09:48:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2016-06-28 09:48:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_temp_file
+2016-06-28 09:48:53 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2016-06-28 09:48:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:48:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:48:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_type_implemention
+2016-06-28 09:48:53 main INFO  TableMetadata:67 - HHH000037: Columns: [id, meta_json, update_time, interface_filename, create_time, interface_name, defined_file, startegy, node_type]
+2016-06-28 09:48:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:48:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:48:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user
+2016-06-28 09:48:53 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, role, password, salt]
+2016-06-28 09:48:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2016-06-28 09:48:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2016-06-28 09:48:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user_token
+2016-06-28 09:48:53 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2016-06-28 09:48:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2016-06-28 09:48:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2016-06-28 09:48:54 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2016-06-28 09:48:54 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2/#sql-13b1_14d' to './cloudeploy2/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2016-06-28 09:48:54 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2016-06-28 09:48:55 main INFO  PropertiesFactoryBean:172 - Loading properties file from class path resource [application.properties]
+2016-06-28 09:48:56 Thread-2 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@3408b5b5: startup date [Tue Jun 28 09:48:51 CST 2016]; root of context hierarchy
+2016-06-28 09:48:56 Thread-2 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'

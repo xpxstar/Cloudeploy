@@ -1,0 +1,9 @@
+database:
+  username: root
+  password: test
+  kasses:
+      - name: sse
+        prozent: 20
+kasse:
+  name: fabienneKasse
+  prozent: 20

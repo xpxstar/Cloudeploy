@@ -1,0 +1,211 @@
+#app-panel {
+	min-height: 100%;
+	height: 100%;
+	margin: 0px;
+	margin-left: 15px;
+	border-top: 1px solid rgb(221, 221, 221);
+}
+
+#group-list {
+	min-height: 100%;
+	height: 100%;
+	padding: 0px;
+	border-left: 1px solid rgb(221, 221, 221);
+}
+
+#group-list .panel-group, #group-list .panel-group .panel {
+	margin: 0px;
+	border-left: 0px;
+	border-top: 0px;
+}
+
+#group-list .panel-group, #group-list .panel-group {
+	border-top: 1px solid rgb(221, 221, 221);
+}
+
+#group-list .panel-group .panel, #group-list .panel-group .panel .panel-heading
+	{
+	border-radius: 0px;
+}
+
+#group-list .list-group {
+	z-index: 200;
+	margin: 0px;
+	border: 0px;
+}
+
+#group-list .list-group .list-group-item {
+	border-left: 0px;
+	border-right: 0px;
+}
+
+#group-list .list-group .list-group-item:last-child {
+	border-bottom: 0px;
+}
+
+#group-list .list-group .list-group-item:first-child, #group-list .list-group .list-group-item:last-child
+	{
+	border-radius: 0px;
+}
+
+#graph-panel {
+	min-height: 100%;
+	height: 100%;
+	padding: 0px;
+}
+
+#graph-panel #tmp-panel {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	padding-left: 50px;
+	padding-top: 50px;
+}
+
+#group-list .save-btn {
+	display: inline-block;
+	cursor: pointer;
+	margin: 10px;
+	padding: 5px 10px;
+}
+
+#group-list .save-btn:hover {
+	background-color: rgb(231, 231, 231);
+}
+
+/*graph related style*/
+.graph-node {
+	border: 1px solid #346789;
+	border-radius: 0.5em;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	text-align: center;
+	z-index: 20;
+	position: absolute;
+	background-color: white;
+	color: black;
+	padding: 0.5em;
+	font-size: 0.9em;
+	height: 100px;
+	width: 100px;
+	padding-top: 1em;
+}
+
+.graph-node-deployed {
+	border: 2px solid rgb(102, 179, 102);
+	background-color: rgb(218, 218, 218);
+	box-shadow: 2px 2px 19px #aaa;
+	-o-box-shadow: 2px 2px 19px #aaa;
+	-webkit-box-shadow: 2px 2px 19px #aaa;
+	-moz-box-shadow: 2px 2px 19px #aaa;
+	-moz-border-radius: 0.5em;
+}
+
+.graph-node-running {
+	border: 2px solid rgb(102, 179, 102);
+}
+
+.graph-node-stopped, .graph-node-error {
+	border: 2px solid rgb(230, 81, 83);
+}
+
+.graph-node:hover {
+	box-shadow: 2px 2px 19px #444;
+	-o-box-shadow: 2px 2px 19px #444;
+	-webkit-box-shadow: 2px 2px 19px #444;
+	-moz-box-shadow: 2px 2px 19px #444;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+}
+
+.graph-node .node-name, .graph-node .node-port, .graph-node .node-status
+	{
+	height: 25px;
+	line-height: 25px;
+	text-align: left;
+	width: 88px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.graph-node .node-del-btn {
+	color: rgb(224, 38, 41);
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	font-size: 16px;
+}
+
+#graph-panel ._jsPlumb_connector {
+	z-index: 4;
+}
+
+#graph-panel ._jsPlumb_endpoint, .endpointTargetLabel,
+	.endpointSourceLabel {
+	z-index: 21;
+	cursor: pointer;
+}
+
+#graph-panel .aLabel {
+	background-color: white;
+	padding: 0.4em;
+	font: 12px sans-serif;
+	color: #444;
+	z-index: 21;
+	border: 1px dotted gray;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	cursor: pointer;
+}
+
+#graph-panel .aLabel._jsPlumb_hover {
+	background-color: #5C96BC;
+	color: white;
+	border: 1px solid white;
+}
+
+/*configuration dialog related style*/
+#hostNames {
+	max-height: 100px;
+	overflow: auto;
+	border: 1px solid rgb(204, 204, 204);
+}
+
+#hostNames ul {
+	list-style-type: none;
+}
+
+#hostNames ul li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+/*operation dialog related style*/
+ul.operation-list {
+	list-style: none;
+	margin-left: 0px;
+}
+
+ul.operation-list li {
+	height: 70px;
+	width: 50px;
+	margin-right: 50px;
+	cursor: pointer;
+	display:none;
+}
+
+ul.operation-list li .oper-icon {
+	height: 50px;
+	line-height: 50px;
+	font-size: 35px;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+ul.operation-list li .oper-text {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 5px;
+}

@@ -1,0 +1,480 @@
+2015-10-26 09:19:12 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [application_context.xml]
+2015-10-26 09:19:13 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@3cca6f82: startup date [Mon Oct 26 09:19:13 CST 2015]; root of context hierarchy
+2015-10-26 09:19:13 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/script-service/target/test-classes/application.properties]
+2015-10-26 09:19:13 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-26 09:19:13 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-26 09:19:13 main INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-10-26 09:19:13 main INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-10-26 09:19:13 main INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-10-26 09:19:13 main INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-26 09:19:13 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2015-10-26 09:19:14 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-10-26 09:19:14 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2015-10-26 09:19:14 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2015-10-26 09:19:14 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action_param
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_capability_type
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_9uj7hmsb1oxlcvqoqbuhw821r, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component_type
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_file_source
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_host
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_import_action
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_interface_definition
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_gbv80vo809s12hdt6rvh9a0mr]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_interface_element
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_279vu7m7rqd04n2x2vnpjcc9m, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_node_template
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, min_instance, topology_tem_id, update_time, description, name, create_time, max_instance, type]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lpjsybinl44wpntvxc20q6xmg]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_lpjsybinl44wpntvxc20q6xmg, primary, uk_hfkbf6epmuxq7lpehu5t5uuqo]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_node_type
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_d9yu8lcsg57ng5tubl5bcgo23, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_attribute
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tds9b48q1kf4gllc33emqwini]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_tds9b48q1kf4gllc33emqwini, uk_tbxyn4dt1h827m6qyuny6x2dh]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_interface
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_property
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_g47xljk487jwewhdwicymo06w, fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_attribute
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_bc5tel05wm6k13ahxxm4mqahw]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_bc5tel05wm6k13ahxxm4mqahw, uk_b975k7laxmr82o93oiko73mkj]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_capability
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, type]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ib6tprtqtj2khkbbwrjd522ss]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_673r1qucex6ue06yyfbcywbl3, fk_ib6tprtqtj2khkbbwrjd522ss, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_interface
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [node_type_id, interface_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_property
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type, required]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahunw3pl8i7w1b7ujsuvj8tsr]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahunw3pl8i7w1b7ujsuvj8tsr, primary, uk_o855g50bc2uo7pp2tac8drfsj]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_requirement
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, capability]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m2df1in4wu61sym15q8qpr4qu]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_m2df1in4wu61sym15q8qpr4qu, uk_5papwwvni1utnwmkfgg5w0xqu, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_operation_definition
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, interface_id, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_n5qgna24qg39my9pootv486b]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_c81w94s1fsohrvs87vq1c9ych, primary, fk_n5qgna24qg39my9pootv486b]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_operation_element
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, create_time, interface_element_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_fjypyk2ih57s1r4xe50ymh4ix]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_fjypyk2ih57s1r4xe50ymh4ix, primary, uk_4byh904diowj1x5y6t7txacku]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_param_element
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation_id, update_time, description, name, value, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwsxxe0213o3y8ccbrimbwl6w]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_qwsxxe0213o3y8ccbrimbwl6w, uk_c5fwtl4pa70sxkd5274dkx98c, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relation_template
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, source, update_time, description, name, target, create_time, type]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_79rwr74ve3kp11vl0ljvfxmvk]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_79rwr74ve3kp11vl0ljvfxmvk, uk_g23md4j47q8edejlu3si2b50g, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relation_type
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_tn1mxrhvn4ji26jihl51ttpjs, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relationtemplate_interface
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_2y9mlr0erhbu9yxvgosu6h5hk, fk_1xmpnaupehvxqisa83joltc3a]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_2y9mlr0erhbu9yxvgosu6h5hk, uk_1xmpnaupehvxqisa83joltc3a]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relationtype_interface
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [relation_type_id, interface_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_temp_file
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_topology_template
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_p7n1r681e7hmyc3d528u4osnk, primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, role, password, salt]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-26 09:19:14 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user_token
+2015-10-26 09:19:14 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2015-10-26 09:19:14 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2015-10-26 09:19:14 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2015-10-26 09:19:16 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2015-10-26 09:19:16 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2/#sql-9c1_1d9' to './cloudeploy2/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2015-10-26 09:19:16 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2015-10-26 09:19:17 main INFO  PropertiesFactoryBean:172 - Loading properties file from class path resource [application.properties]
+2015-10-26 09:19:17 main INFO  TransactionalTestExecutionListener:276 - Began transaction (1) for test context [DefaultTestContext@61d055e2 testClass = EdgeTypedGraphOperationBuilderRefactedTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.EdgeTypedGraphOperationBuilderRefactedTest@34b69a99, testMethod = testCreateNewOperation@EdgeTypedGraphOperationBuilderRefactedTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@405fcdd8 testClass = EdgeTypedGraphOperationBuilderRefactedTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:65 - Begining createNewOperation for cloudeploy::default::tomcat::tomcat_install
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:254 - createParams for node:java_install
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:209 - $vjava_install_97998135 = {
+	"java" => {
+		
+
+	}
+}
+if !defined(Class["java"]){
+	create_resources('class', $vjava_install_97998135)
+	contain java
+}
+
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:254 - createParams for node:tomcat
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:209 - $vtomcat_138640832 = {
+	"tomcat_${name}" => {
+		'source_url' => $source_url,
+'catalina_base' => $catalina_base,
+require => Class[java],
+
+	}
+}
+if !defined(::Tomcat::Instance["tomcat_${name}"]){
+	create_resources('::tomcat::instance', $vtomcat_138640832)
+}
+
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:96 - define cloudeploy::default::tomcat::tomcat_install(
+  $source_url="http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/apache-tomcat-8.0.9.tar.gz",
+$catalina_base="/opt/apache-tomcat/tomcat",
+){
+	$vjava_install_97998135 = {
+	"java" => {
+		
+
+	}
+}
+if !defined(Class["java"]){
+	create_resources('class', $vjava_install_97998135)
+	contain java
+}
+
+$vtomcat_138640832 = {
+	"tomcat_${name}" => {
+		'source_url' => $source_url,
+'catalina_base' => $catalina_base,
+require => Class[java],
+
+	}
+}
+if !defined(::Tomcat::Instance["tomcat_${name}"]){
+	create_resources('::tomcat::instance', $vtomcat_138640832)
+}
+
+
+}
+
+2015-10-26 09:19:17 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@61d055e2 testClass = EdgeTypedGraphOperationBuilderRefactedTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.EdgeTypedGraphOperationBuilderRefactedTest@34b69a99, testMethod = testCreateNewOperation@EdgeTypedGraphOperationBuilderRefactedTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@405fcdd8 testClass = EdgeTypedGraphOperationBuilderRefactedTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:17 main INFO  TransactionalTestExecutionListener:276 - Began transaction (2) for test context [DefaultTestContext@61d055e2 testClass = EdgeTypedGraphOperationBuilderRefactedTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.EdgeTypedGraphOperationBuilderRefactedTest@659c68b0, testMethod = testCreateNewOperationWhenExtractParamsNull@EdgeTypedGraphOperationBuilderRefactedTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@405fcdd8 testClass = EdgeTypedGraphOperationBuilderRefactedTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:65 - Begining createNewOperation for cloudeploy::default::tomcat::tomcat_install
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:254 - createParams for node:java_install
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:209 - $vjava_install_97998135 = {
+	"java" => {
+		
+
+	}
+}
+if !defined(Class["java"]){
+	create_resources('class', $vjava_install_97998135)
+	contain java
+}
+
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:254 - createParams for node:tomcat
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:209 - $vtomcat_873890703 = {
+	"tomcat_${name}" => {
+		'source_url' => "http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/apache-tomcat-8.0.9.tar.gz",
+'catalina_base' => "/opt/apache-tomcat/tomcat",
+require => Class[java],
+
+	}
+}
+if !defined(::Tomcat::Instance["tomcat_${name}"]){
+	create_resources('::tomcat::instance', $vtomcat_873890703)
+}
+
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:96 - define cloudeploy::default::tomcat::tomcat_install(
+  
+){
+	$vjava_install_97998135 = {
+	"java" => {
+		
+
+	}
+}
+if !defined(Class["java"]){
+	create_resources('class', $vjava_install_97998135)
+	contain java
+}
+
+$vtomcat_873890703 = {
+	"tomcat_${name}" => {
+		'source_url' => "http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/apache-tomcat-8.0.9.tar.gz",
+'catalina_base' => "/opt/apache-tomcat/tomcat",
+require => Class[java],
+
+	}
+}
+if !defined(::Tomcat::Instance["tomcat_${name}"]){
+	create_resources('::tomcat::instance', $vtomcat_873890703)
+}
+
+
+}
+
+2015-10-26 09:19:17 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@61d055e2 testClass = EdgeTypedGraphOperationBuilderRefactedTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.EdgeTypedGraphOperationBuilderRefactedTest@659c68b0, testMethod = testCreateNewOperationWhenExtractParamsNull@EdgeTypedGraphOperationBuilderRefactedTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@405fcdd8 testClass = EdgeTypedGraphOperationBuilderRefactedTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:17 main INFO  TransactionalTestExecutionListener:276 - Began transaction (3) for test context [DefaultTestContext@61d055e2 testClass = EdgeTypedGraphOperationBuilderRefactedTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.EdgeTypedGraphOperationBuilderRefactedTest@14a1c910, testMethod = testCreateNewOperationWhenGraphNull@EdgeTypedGraphOperationBuilderRefactedTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@405fcdd8 testClass = EdgeTypedGraphOperationBuilderRefactedTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:17 main INFO  EdgeTypedGraphOperationBuilderRefacted:65 - Begining createNewOperation for hello
+2015-10-26 09:19:17 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@61d055e2 testClass = EdgeTypedGraphOperationBuilderRefactedTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.EdgeTypedGraphOperationBuilderRefactedTest@14a1c910, testMethod = testCreateNewOperationWhenGraphNull@EdgeTypedGraphOperationBuilderRefactedTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@405fcdd8 testClass = EdgeTypedGraphOperationBuilderRefactedTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:17 main INFO  TransactionalTestExecutionListener:276 - Began transaction (4) for test context [DefaultTestContext@61d055e2 testClass = EdgeTypedGraphOperationBuilderRefactedTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.EdgeTypedGraphOperationBuilderRefactedTest@7a412085, testMethod = testUsingTemplateProduceScript@EdgeTypedGraphOperationBuilderRefactedTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@405fcdd8 testClass = EdgeTypedGraphOperationBuilderRefactedTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:17 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@61d055e2 testClass = EdgeTypedGraphOperationBuilderRefactedTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.EdgeTypedGraphOperationBuilderRefactedTest@7a412085, testMethod = testUsingTemplateProduceScript@EdgeTypedGraphOperationBuilderRefactedTest, testException = org.junit.ComparisonFailure: expected:<...ain tomcat::server
+}[]
+> but was:<...ain tomcat::server
+}[]
+>, mergedContextConfiguration = [MergedContextConfiguration@405fcdd8 testClass = EdgeTypedGraphOperationBuilderRefactedTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:18 main INFO  TransactionalTestExecutionListener:276 - Began transaction (1) for test context [DefaultTestContext@3a14456a testClass = OperationBuilderFactoryTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.OperationBuilderFactoryTest@8d94ff0, testMethod = testProduceAllOperation@OperationBuilderFactoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@730f1a19 testClass = OperationBuilderFactoryTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/mysql/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/tomcat/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/java/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/nginx/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/redis/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/cloudeploy/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/cloudeploydocker/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/docker/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/consul/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:50 - transformparser/consul_template/result.yaml's classes or defines to Node
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:81 - try to find a protype with name: consul_template
+2015-10-26 09:19:18 main INFO  EdgeTypedGraphOperationBuilderRefacted:65 - Begining createNewOperation for cloudeploy::default::consul_template::install
+2015-10-26 09:19:18 main INFO  EdgeTypedGraphOperationBuilderRefacted:254 - createParams for node:consul_template_install_node
+2015-10-26 09:19:18 main INFO  EdgeTypedGraphOperationBuilderRefacted:209 - $vconsul_template_install_node_1677379163 = {
+	"consul_template" => {
+		'os' => $os,
+'consul_port' => $consul_port,
+'arch' => $arch,
+'install_method' => $install_method,
+'package_name' => $package_name,
+'manage_group' => $manage_group,
+'bin_dir' => $bin_dir,
+'service_ensure' => $service_ensure,
+'version' => $version,
+'consul_token' => $consul_token,
+'manage_user' => $manage_user,
+'extra_options' => $extra_options,
+'download_url' => $download_url,
+'consul_host' => $consul_host,
+'package_ensure' => $package_ensure,
+'consul_retry' => $consul_retry,
+'config_dir' => $config_dir,
+'purge_config_dir' => $purge_config_dir,
+'group' => $group,
+'init_style' => $init_style,
+'user' => $user,
+'service_enable' => $service_enable,
+
+	}
+}
+if !defined(Class["consul_template"]){
+	create_resources('class', $vconsul_template_install_node_1677379163)
+	contain consul_template
+}
+
+2015-10-26 09:19:18 main INFO  EdgeTypedGraphOperationBuilderRefacted:96 - define cloudeploy::default::consul_template::install(
+  $os="${$consul_template::params::os}",
+$consul_port="8500",
+$arch="${$consul_template::params::arch}",
+$install_method="url",
+$package_name="consul-template",
+$manage_group=true,
+$bin_dir="/usr/local/bin",
+$service_ensure="running",
+$version="0.6.0",
+$consul_token="",
+$manage_user=true,
+$download_url="https://github.com/hashicorp/consul-template/releases/download/v${version}/consul-template_${version}_${os}_${arch}.tar.gz",
+$extra_options="",
+$consul_host="localhost",
+$package_ensure="latest",
+$config_dir="/etc/consul-template",
+$consul_retry="10s",
+$purge_config_dir=true,
+$group="consul-t",
+$user="consul-t",
+$init_style="${$consul_template::params::init_style}",
+$service_enable=true,
+){
+	$vconsul_template_install_node_1677379163 = {
+	"consul_template" => {
+		'os' => $os,
+'consul_port' => $consul_port,
+'arch' => $arch,
+'install_method' => $install_method,
+'package_name' => $package_name,
+'manage_group' => $manage_group,
+'bin_dir' => $bin_dir,
+'service_ensure' => $service_ensure,
+'version' => $version,
+'consul_token' => $consul_token,
+'manage_user' => $manage_user,
+'extra_options' => $extra_options,
+'download_url' => $download_url,
+'consul_host' => $consul_host,
+'package_ensure' => $package_ensure,
+'consul_retry' => $consul_retry,
+'config_dir' => $config_dir,
+'purge_config_dir' => $purge_config_dir,
+'group' => $group,
+'init_style' => $init_style,
+'user' => $user,
+'service_enable' => $service_enable,
+
+	}
+}
+if !defined(Class["consul_template"]){
+	create_resources('class', $vconsul_template_install_node_1677379163)
+	contain consul_template
+}
+
+
+}
+
+2015-10-26 09:19:18 main INFO  OperationBuilderFactory:81 - try to find a protype with name: consul_template::watch
+2015-10-26 09:19:18 main INFO  EdgeTypedGraphOperationBuilderRefacted:65 - Begining createNewOperation for cloudeploy::default::consul_template::watch
+2015-10-26 09:19:18 main INFO  EdgeTypedGraphOperationBuilderRefacted:254 - createParams for node:consul_template_watch_node
+2015-10-26 09:19:18 main INFO  EdgeTypedGraphOperationBuilderRefacted:209 - $vconsul_template_watch_node_545179210 = {
+	"consul_template_watch_node_${name}" => {
+		'template' => $template,
+'command' => $command,
+'destination' => $destination,
+
+	}
+}
+if !defined(::Consul_template::Watch["consul_template_watch_node_${name}"]){
+	create_resources('::consul_template::watch', $vconsul_template_watch_node_545179210)
+}
+
+2015-10-26 09:19:18 main INFO  EdgeTypedGraphOperationBuilderRefacted:96 - define cloudeploy::default::consul_template::watch(
+  $template,
+$command,
+$destination,
+){
+	$vconsul_template_watch_node_545179210 = {
+	"consul_template_watch_node_${name}" => {
+		'template' => $template,
+'command' => $command,
+'destination' => $destination,
+
+	}
+}
+if !defined(::Consul_template::Watch["consul_template_watch_node_${name}"]){
+	create_resources('::consul_template::watch', $vconsul_template_watch_node_545179210)
+}
+
+
+}
+
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@3a14456a testClass = OperationBuilderFactoryTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.OperationBuilderFactoryTest@8d94ff0, testMethod = testProduceAllOperation@OperationBuilderFactoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@730f1a19 testClass = OperationBuilderFactoryTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:276 - Began transaction (1) for test context [DefaultTestContext@8327bdd testClass = ToolFactoryTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.ToolFactoryTest@2a61ee5f, testMethod = testYamlLoasAllMethod@ToolFactoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@368b4b6 testClass = ToolFactoryTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@8327bdd testClass = ToolFactoryTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.factory.ToolFactoryTest@2a61ee5f, testMethod = testYamlLoasAllMethod@ToolFactoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@368b4b6 testClass = ToolFactoryTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:276 - Began transaction (1) for test context [DefaultTestContext@1f947dde testClass = EdgeTypedGraphScriptServiceTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.impl.EdgeTypedGraphScriptServiceTest@4dd38a04, testMethod = testCreateTaskOfTomcatInstall@EdgeTypedGraphScriptServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7b0a3486 testClass = EdgeTypedGraphScriptServiceTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphScriptService:60 - create task script for host:richard.agent1
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphOperationBuilder:292 - 进入createParams: 
+startNode:tomcat_install_operation
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphOperationBuilder:262 - $vtomcat_install_operation_1745866151= {
+"tomcat_install_operation_${name}" =>{
+'source_url' => "http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.9/bin/apache-tomcat-8.0.9.tar.gz",
+'catalina_base' => "/opt/tomcatDirectory/tomcat",
+}
+}
+if !defined(Cloudeploy::Default::Tomcat::Install["tomcat_install_operation_${name}"]){
+create_resources('::cloudeploy::default::tomcat::install',$vtomcat_install_operation_1745866151)
+
+}
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphOperationBuilder:292 - 进入createParams: 
+startNode:tomcat_service_operation
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphOperationBuilder:262 - $vtomcat_service_operation_2063451994= {
+"tomcat_service_operation_${name}" =>{
+'catalina_base' => "/opt/apache-tomcat/tomcat",
+'service_ensure' => running,
+require =>Cloudeploy::Default::Tomcat::Install["tomcat_install_operation_${name}"],
+}
+}
+if !defined(Cloudeploy::Default::Tomcat::Service["tomcat_service_operation_${name}"]){
+create_resources('::cloudeploy::default::tomcat::service',$vtomcat_service_operation_2063451994)
+
+}
+2015-10-26 09:19:19 main ERROR EdgeTypedGraphScriptService:91 - store task script file failed
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@1f947dde testClass = EdgeTypedGraphScriptServiceTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.impl.EdgeTypedGraphScriptServiceTest@4dd38a04, testMethod = testCreateTaskOfTomcatInstall@EdgeTypedGraphScriptServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7b0a3486 testClass = EdgeTypedGraphScriptServiceTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:276 - Began transaction (2) for test context [DefaultTestContext@1f947dde testClass = EdgeTypedGraphScriptServiceTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.impl.EdgeTypedGraphScriptServiceTest@64bf1589, testMethod = testCreateTaskOfTomcatConfig@EdgeTypedGraphScriptServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7b0a3486 testClass = EdgeTypedGraphScriptServiceTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphScriptService:60 - create task script for host:richard.agent1
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphOperationBuilder:292 - 进入createParams: 
+startNode:tomcat_config_operation
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphOperationBuilder:262 - $vtomcat_config_operation_603263829= {
+"tomcat_config_operation_${name}" =>{
+'http_connector_port' => "8080",
+'catalina_base' => "/opt/apache-tomcat/tomcat",
+'shutdownPort' => "8005",
+'ajp_connector_redirectPort' => "8443",
+'ajp_connector_port' => "8009",
+'http_connector_redirectPort' => "8443",
+}
+}
+if !defined(Cloudeploy::Default::Tomcat::Config["tomcat_config_operation_${name}"]){
+create_resources('::cloudeploy::default::tomcat::config',$vtomcat_config_operation_603263829)
+
+}
+2015-10-26 09:19:19 main ERROR EdgeTypedGraphScriptService:91 - store task script file failed
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@1f947dde testClass = EdgeTypedGraphScriptServiceTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.impl.EdgeTypedGraphScriptServiceTest@64bf1589, testMethod = testCreateTaskOfTomcatConfig@EdgeTypedGraphScriptServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7b0a3486 testClass = EdgeTypedGraphScriptServiceTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:276 - Began transaction (3) for test context [DefaultTestContext@1f947dde testClass = EdgeTypedGraphScriptServiceTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.impl.EdgeTypedGraphScriptServiceTest@2b355624, testMethod = testCreateTaskOfTomcatDelete@EdgeTypedGraphScriptServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7b0a3486 testClass = EdgeTypedGraphScriptServiceTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@51c340ec]; rollback [true]
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphScriptService:60 - create task script for host:richard.agent1
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphOperationBuilder:292 - 进入createParams: 
+startNode:tomcat_delete_operation
+2015-10-26 09:19:19 main INFO  EdgeTypedGraphOperationBuilder:262 - $vtomcat_delete_operation_1964573366= {
+"tomcat_delete_operation_${name}" =>{
+'catalina_base' => "/opt/apache-tomcat/tomcat",
+'catalina_home' => "/opt/apache-tomcat/tomcat",
+}
+}
+if !defined(Cloudeploy::Default::Tomcat::Delete["tomcat_delete_operation_${name}"]){
+create_resources('::cloudeploy::default::tomcat::delete',$vtomcat_delete_operation_1964573366)
+
+}
+2015-10-26 09:19:19 main ERROR EdgeTypedGraphScriptService:91 - store task script file failed
+2015-10-26 09:19:19 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@1f947dde testClass = EdgeTypedGraphScriptServiceTest, testInstance = cn.ac.iscas.cloudeploy.v2.model.service.script.impl.EdgeTypedGraphScriptServiceTest@2b355624, testMethod = testCreateTaskOfTomcatDelete@EdgeTypedGraphScriptServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7b0a3486 testClass = EdgeTypedGraphScriptServiceTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-26 09:19:19 Thread-2 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@3cca6f82: startup date [Mon Oct 26 09:19:13 CST 2015]; root of context hierarchy
+2015-10-26 09:19:19 Thread-2 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-03-03 16:20:04 main INFO  PuppetParser:82 - parser/redis/tree.yaml
+2016-03-03 16:20:26 main INFO  PuppetParser:82 - parser/redis/tree.yaml

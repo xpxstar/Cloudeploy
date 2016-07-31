@@ -1,0 +1,2023 @@
+&id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploy::default::docker::run
+params:
+  hostentries:
+    paramName: hostentries
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 2
+    value: '[]'
+  disable_network:
+    paramName: disable_network
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 3, value: false}
+    value: false
+  restart_service:
+    paramName: restart_service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 4, value: true}
+    value: true
+  ports:
+    paramName: ports
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 5
+    value: '[]'
+  lxc_conf:
+    paramName: lxc_conf
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 6
+    value: '[]'
+  running:
+    paramName: running
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 7, value: true}
+    value: true
+  hostname:
+    paramName: hostname
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 8, value: false}
+    value: false
+  dns_search:
+    paramName: dns_search
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 9
+    value: '[]'
+  links:
+    paramName: links
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 10
+    value: '[]'
+  memory_limit:
+    paramName: memory_limit
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 11, value: 0b}
+    value: 0b
+  net:
+    paramName: net
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 12, value: bridge}
+    value: bridge
+  use_name:
+    paramName: use_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 13, value: false}
+    value: false
+  image:
+    paramName: image
+    parent: *id001
+    type: null
+    value: null
+  depends:
+    paramName: depends
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 15
+    value: '[]'
+  socket_connect:
+    paramName: socket_connect
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 16
+    value: '[]'
+  restart:
+    paramName: restart
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 17,
+      value: undef}
+    value: undef
+  volumes:
+    paramName: volumes
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 18
+    value: '[]'
+  dns:
+    paramName: dns
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 19
+    value: '[]'
+  cpuset:
+    paramName: cpuset
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 20
+    value: '[]'
+  pull_on_start:
+    paramName: pull_on_start
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 21, value: false}
+    value: false
+  env:
+    paramName: env
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 22
+    value: '[]'
+  expose:
+    paramName: expose
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 23
+    value: '[]'
+  command:
+    paramName: command
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 24,
+      value: undef}
+    value: undef
+  privileged:
+    paramName: privileged
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 25, value: false}
+    value: false
+  tty:
+    paramName: tty
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 26, value: false}
+    value: false
+  detach:
+    paramName: detach
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 27,
+      value: undef}
+    value: undef
+  volumes_from:
+    paramName: volumes_from
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 28
+    value: '[]'
+  extra_parameters:
+    paramName: extra_parameters
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 29,
+      value: undef}
+    value: undef
+  username:
+    paramName: username
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 30, value: false}
+    value: false
+type: definition
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::mysql::instance
+params:
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: freeCMS_MySQL}
+    value: freeCMS_MySQL
+  port:
+    paramName: port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 3, value: '3406'}
+    value: '3406'
+  image:
+    paramName: image
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 4, value: iscas/tomcat}
+    value: iscas/tomcat
+  registry:
+    paramName: registry
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 5, value: docker.io}
+    value: docker.io
+  imagetag:
+    paramName: imagetag
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 6, value: latest}
+    value: latest
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::mysql::runsql
+params:
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: freeCMS_MySQL}
+    value: freeCMS_MySQL
+  source:
+    paramName: source
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 3, value: ''}
+    value: ''
+  password:
+    paramName: password
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 4, value: root}
+    value: root
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::mysql::server
+params:
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: freeCMS_MySQL}
+    value: freeCMS_MySQL
+  running:
+    paramName: running
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 3, value: true}
+    value: true
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::nginx::config
+params:
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 17, value: ''}
+    value: ''
+  client_body_temp_path:
+    paramName: client_body_temp_path
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 19, value: /var/nginx/client_body_temp}
+    value: /var/nginx/client_body_temp
+  confd_purge:
+    paramName: confd_purge
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 20, value: false}
+    value: false
+  daemon_user:
+    paramName: daemon_user
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 21, value: nginx}
+    value: nginx
+  global_owner:
+    paramName: global_owner
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 22, value: root}
+    value: root
+  global_group:
+    paramName: global_group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 23, value: root}
+    value: root
+  global_mode:
+    paramName: global_mode
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 24, value: '0644'}
+    value: '0644'
+  log_dir:
+    paramName: log_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 25, value: /var/log/nginx}
+    value: /var/log/nginx
+  http_access_log:
+    paramName: http_access_log
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 26, value: /var/log/nginx/access.logs}
+    value: /var/log/nginx/access.logs
+  nginx_error_log:
+    paramName: nginx_error_log
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 27, value: /var/log/nginx/error.log}
+    value: /var/log/nginx/error.log
+  pid:
+    paramName: pid
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 28, value: /var/run/nginx.pid}
+    value: /var/run/nginx.pid
+  proxy_temp_path:
+    paramName: proxy_temp_path
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 29, value: /var/nginx/proxy_temp}
+    value: /var/nginx/proxy_temp
+  root_group:
+    paramName: root_group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 30, value: root}
+    value: root
+  run_dir:
+    paramName: run_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 31, value: /var/nginx}
+    value: /var/nginx
+  sites_available_owner:
+    paramName: sites_available_owner
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 32, value: root}
+    value: root
+  sites_available_group:
+    paramName: sites_available_group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 33, value: root}
+    value: root
+  sites_available_mode:
+    paramName: sites_available_mode
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 34, value: '0644'}
+    value: '0644'
+  super_user:
+    paramName: super_user
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 35, value: true}
+    value: true
+  temp_dir:
+    paramName: temp_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 36, value: /tmp}
+    value: /tmp
+  vhost_purge:
+    paramName: vhost_purge
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 37, value: false}
+    value: false
+  conf_template:
+    paramName: conf_template
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 40, value: cloudeploydocker/conf.d/nginx.conf.erb}
+    value: cloudeploydocker/conf.d/nginx.conf.erb
+  proxy_conf_template:
+    paramName: proxy_conf_template
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 41, value: cloudeploydocker/conf.d/proxy.conf.erb}
+    value: cloudeploydocker/conf.d/proxy.conf.erb
+  client_body_buffer_size:
+    paramName: client_body_buffer_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 45, value: 128k}
+    value: 128k
+  client_max_body_size:
+    paramName: client_max_body_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 46, value: 10m}
+    value: 10m
+  events_use:
+    paramName: events_use
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 47, value: false}
+    value: false
+  fastcgi_cache_inactive:
+    paramName: fastcgi_cache_inactive
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 48, value: 20m}
+    value: 20m
+  fastcgi_cache_key:
+    paramName: fastcgi_cache_key
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 49, value: false}
+    value: false
+  fastcgi_cache_keys_zone:
+    paramName: fastcgi_cache_keys_zone
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 50, value: 'd3:100m'}
+    value: d3:100m
+  fastcgi_cache_levels:
+    paramName: fastcgi_cache_levels
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 51, value: '1'}
+    value: '1'
+  fastcgi_cache_max_size:
+    paramName: fastcgi_cache_max_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 52, value: 500m}
+    value: 500m
+  fastcgi_cache_path:
+    paramName: fastcgi_cache_path
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 53, value: false}
+    value: false
+  fastcgi_cache_use_stale:
+    paramName: fastcgi_cache_use_stale
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 54, value: false}
+    value: false
+  gzip:
+    paramName: gzip
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 55, value: 'on'}
+    value: 'on'
+  http_cfg_append:
+    paramName: http_cfg_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 56, value: false}
+    value: false
+  http_tcp_nodelay:
+    paramName: http_tcp_nodelay
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 57, value: 'on'}
+    value: 'on'
+  http_tcp_nopush:
+    paramName: http_tcp_nopush
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 58, value: 'off'}
+    value: 'off'
+  keepalive_timeout:
+    paramName: keepalive_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 59, value: '65'}
+    value: '65'
+  mail:
+    paramName: mail
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 60, value: false}
+    value: false
+  multi_accept:
+    paramName: multi_accept
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 61, value: 'off'}
+    value: 'off'
+  names_hash_bucket_size:
+    paramName: names_hash_bucket_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 62, value: '64'}
+    value: '64'
+  names_hash_max_size:
+    paramName: names_hash_max_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 63, value: '512'}
+    value: '512'
+  proxy_buffers:
+    paramName: proxy_buffers
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 64, value: 32 4k}
+    value: 32 4k
+  proxy_buffer_size:
+    paramName: proxy_buffer_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 65, value: 8k}
+    value: 8k
+  proxy_cache_inactive:
+    paramName: proxy_cache_inactive
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 66, value: 20m}
+    value: 20m
+  proxy_cache_keys_zone:
+    paramName: proxy_cache_keys_zone
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 67, value: 'd2:100m'}
+    value: d2:100m
+  proxy_cache_levels:
+    paramName: proxy_cache_levels
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 68, value: '1'}
+    value: '1'
+  proxy_cache_max_size:
+    paramName: proxy_cache_max_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 69, value: 500m}
+    value: 500m
+  proxy_cache_path:
+    paramName: proxy_cache_path
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 70, value: false}
+    value: false
+  proxy_connect_timeout:
+    paramName: proxy_connect_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 71, value: '1'}
+    value: '1'
+  proxy_headers_hash_bucket_size:
+    paramName: proxy_headers_hash_bucket_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 72, value: '64'}
+    value: '64'
+  proxy_http_version:
+    paramName: proxy_http_version
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 73, value: '1.0'}
+    value: '1.0'
+  proxy_read_timeout:
+    paramName: proxy_read_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 74, value: '1'}
+    value: '1'
+  proxy_redirect:
+    paramName: proxy_redirect
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 75, value: 'off'}
+    value: 'off'
+  proxy_send_timeout:
+    paramName: proxy_send_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 76, value: '1'}
+    value: '1'
+  proxy_set_header:
+    paramName: proxy_set_header
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 78,
+        value: Host $host}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 79,
+        value: X-Real-IP $remote_addr}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 80,
+        value: X-Forwarded-For $proxy_add_x_forwarded_for}
+      file: null
+      line: 78
+    value: '["Host $host","X-Real-IP $remote_addr","X-Forwarded-For $proxy_add_x_forwarded_for",]'
+  sendfile:
+    paramName: sendfile
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 82, value: 'on'}
+    value: 'on'
+  server_tokens:
+    paramName: server_tokens
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 83, value: 'on'}
+    value: 'on'
+  spdy:
+    paramName: spdy
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 84, value: 'off'}
+    value: 'off'
+  ssl_stapling:
+    paramName: ssl_stapling
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 85, value: 'off'}
+    value: 'off'
+  types_hash_bucket_size:
+    paramName: types_hash_bucket_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 86, value: '512'}
+    value: '512'
+  types_hash_max_size:
+    paramName: types_hash_max_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 87, value: '1024'}
+    value: '1024'
+  worker_connections:
+    paramName: worker_connections
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 88, value: '1024'}
+    value: '1024'
+  worker_processes:
+    paramName: worker_processes
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 89, value: '1'}
+    value: '1'
+  worker_rlimit_nofile:
+    paramName: worker_rlimit_nofile
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 90, value: '1024'}
+    value: '1024'
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::nginx::container
+params:
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: null
+    value: null
+  image:
+    paramName: image
+    parent: *id001
+    type: null
+    value: null
+  command:
+    paramName: command
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 4,
+      value: undef}
+    value: undef
+  memory_limit:
+    paramName: memory_limit
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 5,
+      value: undef}
+    value: undef
+  cpuset:
+    paramName: cpuset
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 6
+    value: '[]'
+  ports:
+    paramName: ports
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 7
+    value: '[]'
+  expose:
+    paramName: expose
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 8
+    value: '[]'
+  volumes:
+    paramName: volumes
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 9
+    value: '[]'
+  use_name:
+    paramName: use_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 10, value: false}
+    value: false
+  running:
+    paramName: running
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 11, value: true}
+    value: true
+  volumes_from:
+    paramName: volumes_from
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 12
+    value: '[]'
+  net:
+    paramName: net
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 13, value: bridge}
+    value: bridge
+  username:
+    paramName: username
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 14, value: false}
+    value: false
+  hostname:
+    paramName: hostname
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 15, value: false}
+    value: false
+  env:
+    paramName: env
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 16
+    value: '[]'
+  dns:
+    paramName: dns
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 17
+    value: '[]'
+  dns_search:
+    paramName: dns_search
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 18
+    value: '[]'
+  lxc_conf:
+    paramName: lxc_conf
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 19
+    value: '[]'
+  restart_service:
+    paramName: restart_service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 20, value: true}
+    value: true
+  disable_network:
+    paramName: disable_network
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 21, value: false}
+    value: false
+  privileged:
+    paramName: privileged
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 22, value: false}
+    value: false
+  detach:
+    paramName: detach
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 23,
+      value: undef}
+    value: undef
+  extra_parameters:
+    paramName: extra_parameters
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 24,
+      value: undef}
+    value: undef
+  pull_on_start:
+    paramName: pull_on_start
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 25, value: false}
+    value: false
+  depends:
+    paramName: depends
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 26
+    value: '[]'
+  tty:
+    paramName: tty
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 27, value: false}
+    value: false
+  socket_connect:
+    paramName: socket_connect
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 28
+    value: '[]'
+  hostentries:
+    paramName: hostentries
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 29
+    value: '[]'
+  restart:
+    paramName: restart
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 30,
+      value: undef}
+    value: undef
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::nginx::install
+params:
+  image:
+    paramName: image
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: nginx}
+    value: nginx
+  registry:
+    paramName: registry
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 3, value: docker.io}
+    value: docker.io
+  imagetag:
+    paramName: imagetag
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 4, value: latest}
+    value: latest
+  mount_file:
+    paramName: mount_file
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 5, value: /etc/nginx}
+    value: /etc/nginx
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 6, value: freeCMS_Nginx}
+    value: freeCMS_Nginx
+  port:
+    paramName: port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 7, value: '80'}
+    value: '80'
+  links:
+    paramName: links
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 8,
+        value: 'freeCMS_Tomcat:freeCMS_Tomcat'}
+      file: null
+      line: 8
+    value: '["freeCMS_Tomcat:freeCMS_Tomcat",]'
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::nginx::link
+params:
+  source_instance_name:
+    paramName: source_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: ''}
+    value: ''
+  alias:
+    paramName: alias
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 3, value: ''}
+    value: ''
+  target_instance_name:
+    paramName: target_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 4, value: ''}
+    value: ''
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 5, value: true}
+    value: true
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::nginx::location
+params:
+  nginx_instance_name:
+    paramName: nginx_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 128, value: ''}
+    value: ''
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 129,
+      value: present}
+    value: present
+  internal:
+    paramName: internal
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 130, value: false}
+    value: false
+  location:
+    paramName: location
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 131, value: name}
+    value: ${$name}
+  vhost:
+    paramName: vhost
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 132,
+      value: undef}
+    value: undef
+  www_root:
+    paramName: www_root
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 133,
+      value: undef}
+    value: undef
+  autoindex:
+    paramName: autoindex
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 134,
+      value: undef}
+    value: undef
+  index_files:
+    paramName: index_files
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 136,
+        value: index.html}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 137,
+        value: index.htm}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 138,
+        value: index.php}
+      file: null
+      line: 136
+    value: '["index.html","index.htm","index.php",]'
+  proxy:
+    paramName: proxy
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 139,
+      value: undef}
+    value: undef
+  proxy_redirect:
+    paramName: proxy_redirect
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 140, value: 'off'}
+    value: 'off'
+  proxy_read_timeout:
+    paramName: proxy_read_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 141, value: '3'}
+    value: '3'
+  proxy_connect_timeout:
+    paramName: proxy_connect_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 142, value: '3'}
+    value: '3'
+  proxy_send_timeout:
+    paramName: proxy_send_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 143, value: '3'}
+    value: '3'
+  proxy_set_header:
+    paramName: proxy_set_header
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 145,
+        value: Host $host}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 146,
+        value: X-Real-IP $remote_addr}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 147,
+        value: X-Forwarded-For $proxy_add_x_forwarded_for}
+      file: null
+      line: 145
+    value: '["Host $host","X-Real-IP $remote_addr","X-Forwarded-For $proxy_add_x_forwarded_for",]'
+  fastcgi:
+    paramName: fastcgi
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 149,
+      value: undef}
+    value: undef
+  fastcgi_param:
+    paramName: fastcgi_param
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 150,
+      value: undef}
+    value: undef
+  location_fastcgi_params:
+    paramName: location_fastcgi_params
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 151,
+      value: undef}
+    value: undef
+  fastcgi_script:
+    paramName: fastcgi_script
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 152,
+      value: undef}
+    value: undef
+  fastcgi_split_path:
+    paramName: fastcgi_split_path
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 153,
+      value: undef}
+    value: undef
+  ssl:
+    paramName: ssl
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 154, value: false}
+    value: false
+  ssl_only:
+    paramName: ssl_only
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 155, value: false}
+    value: false
+  location_alias:
+    paramName: location_alias
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 156,
+      value: undef}
+    value: undef
+  location_allow:
+    paramName: location_allow
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 157,
+      value: undef}
+    value: undef
+  location_deny:
+    paramName: location_deny
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 158,
+      value: undef}
+    value: undef
+  option:
+    paramName: option
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 159,
+      value: undef}
+    value: undef
+  stub_status:
+    paramName: stub_status
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 160,
+      value: undef}
+    value: undef
+  raw_prepend:
+    paramName: raw_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 161,
+      value: undef}
+    value: undef
+  raw_append:
+    paramName: raw_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 162,
+      value: undef}
+    value: undef
+  location_custom_cfg:
+    paramName: location_custom_cfg
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 163,
+      value: undef}
+    value: undef
+  location_cfg_prepend:
+    paramName: location_cfg_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 164,
+      value: undef}
+    value: undef
+  location_cfg_append:
+    paramName: location_cfg_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 165,
+      value: undef}
+    value: undef
+  location_custom_cfg_prepend:
+    paramName: location_custom_cfg_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 166,
+      value: undef}
+    value: undef
+  location_custom_cfg_append:
+    paramName: location_custom_cfg_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 167,
+      value: undef}
+    value: undef
+  include:
+    paramName: include
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 168,
+      value: undef}
+    value: undef
+  try_files:
+    paramName: try_files
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 169,
+      value: undef}
+    value: undef
+  proxy_cache:
+    paramName: proxy_cache
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 170, value: false}
+    value: false
+  proxy_cache_valid:
+    paramName: proxy_cache_valid
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 171, value: false}
+    value: false
+  proxy_method:
+    paramName: proxy_method
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 172,
+      value: undef}
+    value: undef
+  proxy_set_body:
+    paramName: proxy_set_body
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 173,
+      value: undef}
+    value: undef
+  auth_basic:
+    paramName: auth_basic
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 174,
+      value: undef}
+    value: undef
+  auth_basic_user_file:
+    paramName: auth_basic_user_file
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 175,
+      value: undef}
+    value: undef
+  rewrite_rules:
+    paramName: rewrite_rules
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 176
+    value: '[]'
+  priority:
+    paramName: priority
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 177,
+      value: '500'}
+    value: '500'
+  mp4:
+    paramName: mp4
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 178, value: false}
+    value: false
+  flv:
+    paramName: flv
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 179, value: false}
+    value: false
+type: definition
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocke::nginx::param
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::nginx::upstream::member
+params:
+  upstream:
+    paramName: upstream
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: ''}
+    value: ''
+  server:
+    paramName: server
+    parent: *id001
+    type: null
+    value: null
+  port:
+    paramName: port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 4, value: '8080'}
+    value: '8080'
+  upstream_fail_timeout:
+    paramName: upstream_fail_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 5, value: 10s}
+    value: 10s
+  nginx_instance_name:
+    paramName: nginx_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 6, value: ''}
+    value: ''
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 7, value: true}
+    value: true
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::nginx::upstream
+params:
+  members:
+    paramName: members
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 42
+    value: '[]'
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 43, value: present}
+    value: present
+  upstream_cfg_prepend:
+    paramName: upstream_cfg_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 44,
+      value: undef}
+    value: undef
+  upstream_fail_timeout:
+    paramName: upstream_fail_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 45, value: 10s}
+    value: 10s
+  nginx_instance_name:
+    paramName: nginx_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 46, value: ''}
+    value: ''
+  upstream_name:
+    paramName: upstream_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 47, value: ''}
+    value: ''
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::nginx::vhost
+params:
+  nginx_instance_name:
+    paramName: nginx_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 151, value: ''}
+    value: ''
+  vhost_name:
+    paramName: vhost_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 152, value: ''}
+    value: ''
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 153, value: present}
+    value: present
+  listen_ip:
+    paramName: listen_ip
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 154, value: '*'}
+    value: '*'
+  listen_port:
+    paramName: listen_port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 155, value: '80'}
+    value: '80'
+  listen_options:
+    paramName: listen_options
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 156,
+      value: undef}
+    value: undef
+  location_allow:
+    paramName: location_allow
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 157
+    value: '[]'
+  location_deny:
+    paramName: location_deny
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 158
+    value: '[]'
+  ipv6_enable:
+    paramName: ipv6_enable
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 159, value: false}
+    value: false
+  ipv6_listen_ip:
+    paramName: ipv6_listen_ip
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 160, value: '::'}
+    value: '::'
+  ipv6_listen_port:
+    paramName: ipv6_listen_port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 161, value: '80'}
+    value: '80'
+  ipv6_listen_options:
+    paramName: ipv6_listen_options
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 162, value: default ipv6only=on}
+    value: default ipv6only=on
+  add_header:
+    paramName: add_header
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 163,
+      value: undef}
+    value: undef
+  ssl:
+    paramName: ssl
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 164, value: false}
+    value: false
+  ssl_listen_option:
+    paramName: ssl_listen_option
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 165, value: true}
+    value: true
+  ssl_cert:
+    paramName: ssl_cert
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 166,
+      value: undef}
+    value: undef
+  ssl_dhparam:
+    paramName: ssl_dhparam
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 167,
+      value: undef}
+    value: undef
+  ssl_key:
+    paramName: ssl_key
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 168,
+      value: undef}
+    value: undef
+  ssl_port:
+    paramName: ssl_port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 169, value: '443'}
+    value: '443'
+  ssl_protocols:
+    paramName: ssl_protocols
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 170, value: TLSv1 TLSv1.1 TLSv1.2}
+    value: TLSv1 TLSv1.1 TLSv1.2
+  ssl_ciphers:
+    paramName: ssl_ciphers
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 171, value: 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:#aNULL:#eNULL:#EXPORT:#DES:#RC4:#MD5:#PSK:#aECDH:#EDH-DSS-DES-CBC3-SHA:#EDH-RSA-DES-CBC3-SHA:#KRB5-DES-CBC3-SHA'}
+    value: ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:#aNULL:#eNULL:#EXPORT:#DES:#RC4:#MD5:#PSK:#aECDH:#EDH-DSS-DES-CBC3-SHA:#EDH-RSA-DES-CBC3-SHA:#KRB5-DES-CBC3-SHA
+  ssl_cache:
+    paramName: ssl_cache
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 172, value: 'shared:SSL:10m'}
+    value: shared:SSL:10m
+  ssl_stapling:
+    paramName: ssl_stapling
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 173, value: false}
+    value: false
+  ssl_stapling_file:
+    paramName: ssl_stapling_file
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 174,
+      value: undef}
+    value: undef
+  ssl_stapling_responder:
+    paramName: ssl_stapling_responder
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 175,
+      value: undef}
+    value: undef
+  ssl_stapling_verify:
+    paramName: ssl_stapling_verify
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 176, value: false}
+    value: false
+  ssl_session_timeout:
+    paramName: ssl_session_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 177, value: 5m}
+    value: 5m
+  ssl_trusted_cert:
+    paramName: ssl_trusted_cert
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 178,
+      value: undef}
+    value: undef
+  spdy:
+    paramName: spdy
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 179, value: 'off'}
+    value: 'off'
+  proxy:
+    paramName: proxy
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 180,
+      value: undef}
+    value: undef
+  proxy_redirect:
+    paramName: proxy_redirect
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 181,
+      value: undef}
+    value: undef
+  proxy_read_timeout:
+    paramName: proxy_read_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 182, value: '1'}
+    value: '1'
+  proxy_connect_timeout:
+    paramName: proxy_connect_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 183, value: '1'}
+    value: '1'
+  proxy_set_header:
+    paramName: proxy_set_header
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 184
+    value: '[]'
+  proxy_cache:
+    paramName: proxy_cache
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 185, value: false}
+    value: false
+  proxy_cache_valid:
+    paramName: proxy_cache_valid
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 186, value: false}
+    value: false
+  proxy_method:
+    paramName: proxy_method
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 187,
+      value: undef}
+    value: undef
+  proxy_set_body:
+    paramName: proxy_set_body
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 188,
+      value: undef}
+    value: undef
+  resolver:
+    paramName: resolver
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 189
+    value: '[]'
+  fastcgi:
+    paramName: fastcgi
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 190,
+      value: undef}
+    value: undef
+  fastcgi_script:
+    paramName: fastcgi_script
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 191,
+      value: undef}
+    value: undef
+  index_files:
+    paramName: index_files
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 193,
+        value: index.html}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 194,
+        value: index.htm}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 195,
+        value: index.php}
+      file: null
+      line: 193
+    value: '["index.html","index.htm","index.php",]'
+  autoindex:
+    paramName: autoindex
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 196,
+      value: undef}
+    value: undef
+  www_root:
+    paramName: www_root
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 197,
+      value: undef}
+    value: undef
+  rewrite_www_to_non_www:
+    paramName: rewrite_www_to_non_www
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 198, value: false}
+    value: false
+  rewrite_to_https:
+    paramName: rewrite_to_https
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 199,
+      value: undef}
+    value: undef
+  location_custom_cfg:
+    paramName: location_custom_cfg
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 200,
+      value: undef}
+    value: undef
+  location_cfg_prepend:
+    paramName: location_cfg_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 201,
+      value: undef}
+    value: undef
+  location_cfg_append:
+    paramName: location_cfg_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 202,
+      value: undef}
+    value: undef
+  location_custom_cfg_prepend:
+    paramName: location_custom_cfg_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 203,
+      value: undef}
+    value: undef
+  location_custom_cfg_append:
+    paramName: location_custom_cfg_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 204,
+      value: undef}
+    value: undef
+  try_files:
+    paramName: try_files
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 205,
+      value: undef}
+    value: undef
+  auth_basic:
+    paramName: auth_basic
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 206,
+      value: undef}
+    value: undef
+  auth_basic_user_file:
+    paramName: auth_basic_user_file
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 207,
+      value: undef}
+    value: undef
+  client_body_timeout:
+    paramName: client_body_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 208,
+      value: undef}
+    value: undef
+  client_header_timeout:
+    paramName: client_header_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 209,
+      value: undef}
+    value: undef
+  client_max_body_size:
+    paramName: client_max_body_size
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 210,
+      value: undef}
+    value: undef
+  raw_prepend:
+    paramName: raw_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 211,
+      value: undef}
+    value: undef
+  raw_append:
+    paramName: raw_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 212,
+      value: undef}
+    value: undef
+  location_raw_prepend:
+    paramName: location_raw_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 213,
+      value: undef}
+    value: undef
+  location_raw_append:
+    paramName: location_raw_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 214,
+      value: undef}
+    value: undef
+  vhost_cfg_prepend:
+    paramName: vhost_cfg_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 215,
+      value: undef}
+    value: undef
+  vhost_cfg_append:
+    paramName: vhost_cfg_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 216,
+      value: undef}
+    value: undef
+  vhost_cfg_ssl_prepend:
+    paramName: vhost_cfg_ssl_prepend
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 217,
+      value: undef}
+    value: undef
+  vhost_cfg_ssl_append:
+    paramName: vhost_cfg_ssl_append
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 218,
+      value: undef}
+    value: undef
+  include_files:
+    paramName: include_files
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 219,
+      value: undef}
+    value: undef
+  access_log:
+    paramName: access_log
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 220,
+      value: undef}
+    value: undef
+  error_log:
+    paramName: error_log
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 221,
+      value: undef}
+    value: undef
+  format_log:
+    paramName: format_log
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 222,
+      value: undef}
+    value: undef
+  passenger_cgi_param:
+    paramName: passenger_cgi_param
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 223,
+      value: undef}
+    value: undef
+  log_by_lua:
+    paramName: log_by_lua
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 224,
+      value: undef}
+    value: undef
+  log_by_lua_file:
+    paramName: log_by_lua_file
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 225,
+      value: undef}
+    value: undef
+  use_default_location:
+    paramName: use_default_location
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 226, value: true}
+    value: true
+  rewrite_rules:
+    paramName: rewrite_rules
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 227
+    value: '[]'
+  gzip_types:
+    paramName: gzip_types
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 228,
+      value: undef}
+    value: undef
+  owner:
+    paramName: owner
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 229, value: root}
+    value: root
+  group:
+    paramName: group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 230, value: root}
+    value: root
+  mode:
+    paramName: mode
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 231, value: '0644'}
+    value: '0644'
+type: definition
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::params
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::primitive::deletedocker
+params:
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: ''}
+    value: ''
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::primitive::deployfile
+params:
+  source:
+    paramName: source
+    parent: *id001
+    type: null
+    value: null
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: null
+    value: null
+  timeout:
+    paramName: timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 4,
+      value: '0'}
+    value: '0'
+  force:
+    paramName: force
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 5, value: true}
+    value: true
+  target:
+    paramName: target
+    parent: *id001
+    type: null
+    value: null
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::primitive::domain
+params:
+  ip:
+    paramName: ip
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: ''}
+    value: ''
+  domain:
+    paramName: domain
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 3, value: ''}
+    value: ''
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::tomcat::deploywar
+params:
+  tomcat_instance_name:
+    paramName: tomcat_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: freeCMS_Tomcat}
+    value: freeCMS_Tomcat
+  catalina_home:
+    paramName: catalina_home
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 3, value: /usr/local/tomcat/webapps/}
+    value: /usr/local/tomcat/webapps/
+  war_ensure:
+    paramName: war_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 4, value: present}
+    value: present
+  war_name:
+    paramName: war_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 5,
+      value: undef}
+    value: undef
+  war_purge:
+    paramName: war_purge
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 6, value: true}
+    value: true
+  war_source:
+    paramName: war_source
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 7,
+      value: undef}
+    value: undef
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::tomcat::instance
+params:
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: freeCMS_Tomcat}
+    value: freeCMS_Tomcat
+  mysql_instance_name:
+    paramName: mysql_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 3, value: freeCMS_MySQL}
+    value: freeCMS_MySQL
+  mysql_alias_name:
+    paramName: mysql_alias_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 4, value: freecmsMysql}
+    value: freecmsMysql
+  port:
+    paramName: port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 5, value: '8090'}
+    value: '8090'
+  nginx_instance_name:
+    paramName: nginx_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 6, value: freeCMS_Nginx}
+    value: freeCMS_Nginx
+  image:
+    paramName: image
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 7, value: iscas/tomcat}
+    value: iscas/tomcat
+  registry:
+    paramName: registry
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 8, value: docker.io}
+    value: docker.io
+  imagetag:
+    paramName: imagetag
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 9, value: ''}
+    value: ''
+  server_name:
+    paramName: server_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: freecms}
+    value: freecms
+  apmServer_ip:
+    paramName: apmServer_ip
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 11, value: 133.133.134.137}
+    value: 133.133.134.137
+  jvm_args:
+    paramName: jvm_args
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 12, value: ''}
+    value: ''
+type: definition
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::tomcat::param
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: cloudeploydocker::tomcat::server
+params:
+  instance_name:
+    paramName: instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: freeCMS_Tomcat}
+    value: freeCMS_Tomcat
+  running:
+    paramName: running
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 3, value: true}
+    value: true
+  nginx_instance_name:
+    paramName: nginx_instance_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 4, value: ''}
+    value: ''
+  server_name:
+    paramName: server_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 5, value: freecms}
+    value: freecms
+type: definition

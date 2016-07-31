@@ -1,0 +1,26 @@
+component:
+  name: cloudeploy::default::component::package::docker
+  display_name: DOCKER
+  componentType: PACKAGE::OTHER
+operations:
+#- operationName: cloudeploy::default::docker::image
+#  displayName: 镜像
+#  nodes:
+#  - nodeName: docker_image_node
+#    searchName: docker::image
+#    extractParams:
+#    - $allParams
+#- operationName: cloudeploy::default::docker::run
+#  displayName: 创建容器
+#  nodes:
+#  - nodeName: docker_run_node
+#    searchName: docker::run
+#    extractParams:
+#    - $allParams
+- operationName: cloudeploy::default::docker::server
+  displayName: 服务
+  nodes:
+    - nodeName: docker_server_node
+      searchName: cloudeploydocker::mysql::server
+      extractParams:
+      - $allParams

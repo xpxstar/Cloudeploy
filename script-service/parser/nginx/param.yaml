@@ -1,0 +1,2098 @@
+--- 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::config"
+    type: !ruby/sym hostclass
+    params: 
+      client_body_temp_path: 
+        value: "${$::nginx::params::client_body_temp_path}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 18
+          file: 
+          value: "::nginx::params::client_body_temp_path"
+      confd_purge: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 19
+          file: 
+          value: false
+      conf_dir: 
+        value: "${$::nginx::params::conf_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 20
+          file: 
+          value: "::nginx::params::conf_dir"
+      daemon_user: 
+        value: "${$::nginx::params::daemon_user}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 21
+          file: 
+          value: "::nginx::params::daemon_user"
+      global_owner: 
+        value: "${$::nginx::params::global_owner}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 22
+          file: 
+          value: "::nginx::params::global_owner"
+      global_group: 
+        value: "${$::nginx::params::global_group}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 23
+          file: 
+          value: "::nginx::params::global_group"
+      global_mode: 
+        value: "${$::nginx::params::global_mode}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 24
+          file: 
+          value: "::nginx::params::global_mode"
+      log_dir: 
+        value: "${$::nginx::params::log_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 25
+          file: 
+          value: "::nginx::params::log_dir"
+      http_access_log: 
+        value: "${$::nginx::params::http_access_log}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 26
+          file: 
+          value: "::nginx::params::http_access_log"
+      nginx_error_log: 
+        value: "${$::nginx::params::nginx_error_log}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 27
+          file: 
+          value: "::nginx::params::nginx_error_log"
+      pid: 
+        value: "${$::nginx::params::pid}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 28
+          file: 
+          value: "::nginx::params::pid"
+      proxy_temp_path: 
+        value: "${$::nginx::params::proxy_temp_path}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 29
+          file: 
+          value: "::nginx::params::proxy_temp_path"
+      root_group: 
+        value: "${$::nginx::params::root_group}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 30
+          file: 
+          value: "::nginx::params::root_group"
+      run_dir: 
+        value: "${$::nginx::params::run_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 31
+          file: 
+          value: "::nginx::params::run_dir"
+      sites_available_owner: 
+        value: "${$::nginx::params::sites_available_owner}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 32
+          file: 
+          value: "::nginx::params::sites_available_owner"
+      sites_available_group: 
+        value: "${$::nginx::params::sites_available_group}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 33
+          file: 
+          value: "::nginx::params::sites_available_group"
+      sites_available_mode: 
+        value: "${$::nginx::params::sites_available_mode}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 34
+          file: 
+          value: "::nginx::params::sites_available_mode"
+      super_user: 
+        value: "${$::nginx::params::super_user}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 35
+          file: 
+          value: "::nginx::params::super_user"
+      temp_dir: 
+        value: "${$::nginx::params::temp_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 36
+          file: 
+          value: "::nginx::params::temp_dir"
+      vhost_purge: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 37
+          file: 
+          value: false
+      conf_template: 
+        value: nginx/conf.d/nginx.conf.erb
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 40
+          file: 
+          value: nginx/conf.d/nginx.conf.erb
+      proxy_conf_template: 
+        value: nginx/conf.d/proxy.conf.erb
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 41
+          file: 
+          value: nginx/conf.d/proxy.conf.erb
+      client_body_buffer_size: 
+        value: "128k"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 45
+          file: 
+          value: "128k"
+      client_max_body_size: 
+        value: "10m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 46
+          file: 
+          value: "10m"
+      events_use: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 47
+          file: 
+          value: false
+      fastcgi_cache_inactive: 
+        value: "20m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 48
+          file: 
+          value: "20m"
+      fastcgi_cache_key: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 49
+          file: 
+          value: false
+      fastcgi_cache_keys_zone: 
+        value: "d3:100m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 50
+          file: 
+          value: "d3:100m"
+      fastcgi_cache_levels: 
+        value: "1"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 51
+          file: 
+          value: "1"
+      fastcgi_cache_max_size: 
+        value: "500m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 52
+          file: 
+          value: "500m"
+      fastcgi_cache_path: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 53
+          file: 
+          value: false
+      fastcgi_cache_use_stale: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 54
+          file: 
+          value: false
+      gzip: 
+        value: "on"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 55
+          file: 
+          value: "on"
+      http_cfg_append: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 56
+          file: 
+          value: false
+      http_tcp_nodelay: 
+        value: "on"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 57
+          file: 
+          value: "on"
+      http_tcp_nopush: 
+        value: "off"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 58
+          file: 
+          value: "off"
+      keepalive_timeout: 
+        value: "65"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 59
+          file: 
+          value: "65"
+      mail: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 60
+          file: 
+          value: false
+      multi_accept: 
+        value: "off"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 61
+          file: 
+          value: "off"
+      names_hash_bucket_size: 
+        value: "64"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 62
+          file: 
+          value: "64"
+      names_hash_max_size: 
+        value: "512"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 63
+          file: 
+          value: "512"
+      proxy_buffers: 
+        value: "32 4k"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 64
+          file: 
+          value: "32 4k"
+      proxy_buffer_size: 
+        value: "8k"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 65
+          file: 
+          value: "8k"
+      proxy_cache_inactive: 
+        value: "20m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 66
+          file: 
+          value: "20m"
+      proxy_cache_keys_zone: 
+        value: "d2:100m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 67
+          file: 
+          value: "d2:100m"
+      proxy_cache_levels: 
+        value: "1"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 68
+          file: 
+          value: "1"
+      proxy_cache_max_size: 
+        value: "500m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 69
+          file: 
+          value: "500m"
+      proxy_cache_path: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 70
+          file: 
+          value: false
+      proxy_connect_timeout: 
+        value: "90"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 71
+          file: 
+          value: "90"
+      proxy_headers_hash_bucket_size: 
+        value: "64"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 72
+          file: 
+          value: "64"
+      proxy_http_version: 
+        value: "1.0"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 73
+          file: 
+          value: "1.0"
+      proxy_read_timeout: 
+        value: "90"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 74
+          file: 
+          value: "90"
+      proxy_redirect: 
+        value: "off"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 75
+          file: 
+          value: "off"
+      proxy_send_timeout: 
+        value: "90"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 76
+          file: 
+          value: "90"
+      proxy_set_header: 
+        value: 
+          - "Host $host"
+          - "X-Real-IP $remote_addr"
+          - "X-Forwarded-For $proxy_add_x_forwarded_for"
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 78
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 78
+              file: 
+              value: "Host $host"
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 79
+              file: 
+              value: "X-Real-IP $remote_addr"
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 80
+              file: 
+              value: "X-Forwarded-For $proxy_add_x_forwarded_for"
+      sendfile: 
+        value: "on"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 82
+          file: 
+          value: "on"
+      server_tokens: 
+        value: "on"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 83
+          file: 
+          value: "on"
+      spdy: 
+        value: "off"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 84
+          file: 
+          value: "off"
+      ssl_stapling: 
+        value: "off"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 85
+          file: 
+          value: "off"
+      types_hash_bucket_size: 
+        value: "512"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 86
+          file: 
+          value: "512"
+      types_hash_max_size: 
+        value: "1024"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 87
+          file: 
+          value: "1024"
+      worker_connections: 
+        value: "1024"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 88
+          file: 
+          value: "1024"
+      worker_processes: 
+        value: "1"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 89
+          file: 
+          value: "1"
+      worker_rlimit_nofile: 
+        value: "1024"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 90
+          file: 
+          value: "1024"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: nginx
+    type: !ruby/sym hostclass
+    params: 
+      client_body_buffer_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 30
+          file: 
+          value: !ruby/sym undef
+      client_body_temp_path: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 31
+          file: 
+          value: !ruby/sym undef
+      client_max_body_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 32
+          file: 
+          value: !ruby/sym undef
+      events_use: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 33
+          file: 
+          value: !ruby/sym undef
+      fastcgi_cache_inactive: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 34
+          file: 
+          value: !ruby/sym undef
+      fastcgi_cache_key: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 35
+          file: 
+          value: !ruby/sym undef
+      fastcgi_cache_keys_zone: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 36
+          file: 
+          value: !ruby/sym undef
+      fastcgi_cache_levels: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 37
+          file: 
+          value: !ruby/sym undef
+      fastcgi_cache_max_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 38
+          file: 
+          value: !ruby/sym undef
+      fastcgi_cache_path: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 39
+          file: 
+          value: !ruby/sym undef
+      fastcgi_cache_use_stale: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 40
+          file: 
+          value: !ruby/sym undef
+      gzip: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 41
+          file: 
+          value: !ruby/sym undef
+      http_cfg_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 42
+          file: 
+          value: !ruby/sym undef
+      http_tcp_nodelay: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 43
+          file: 
+          value: !ruby/sym undef
+      http_tcp_nopush: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 44
+          file: 
+          value: !ruby/sym undef
+      keepalive_timeout: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 45
+          file: 
+          value: !ruby/sym undef
+      mail: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 46
+          file: 
+          value: !ruby/sym undef
+      multi_accept: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 47
+          file: 
+          value: !ruby/sym undef
+      names_hash_bucket_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 48
+          file: 
+          value: !ruby/sym undef
+      names_hash_max_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 49
+          file: 
+          value: !ruby/sym undef
+      proxy_buffers: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 50
+          file: 
+          value: !ruby/sym undef
+      proxy_buffer_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 51
+          file: 
+          value: !ruby/sym undef
+      proxy_cache_inactive: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 52
+          file: 
+          value: !ruby/sym undef
+      proxy_cache_keys_zone: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 53
+          file: 
+          value: !ruby/sym undef
+      proxy_cache_levels: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 54
+          file: 
+          value: !ruby/sym undef
+      proxy_cache_max_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 55
+          file: 
+          value: !ruby/sym undef
+      proxy_cache_path: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 56
+          file: 
+          value: !ruby/sym undef
+      proxy_connect_timeout: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 57
+          file: 
+          value: !ruby/sym undef
+      proxy_headers_hash_bucket_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 58
+          file: 
+          value: !ruby/sym undef
+      proxy_http_version: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 59
+          file: 
+          value: !ruby/sym undef
+      proxy_read_timeout: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 60
+          file: 
+          value: !ruby/sym undef
+      proxy_redirect: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 61
+          file: 
+          value: !ruby/sym undef
+      proxy_send_timeout: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 62
+          file: 
+          value: !ruby/sym undef
+      proxy_set_header: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 63
+          file: 
+          value: !ruby/sym undef
+      sendfile: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 64
+          file: 
+          value: !ruby/sym undef
+      server_tokens: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 65
+          file: 
+          value: !ruby/sym undef
+      spdy: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 66
+          file: 
+          value: !ruby/sym undef
+      types_hash_bucket_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 67
+          file: 
+          value: !ruby/sym undef
+      types_hash_max_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 68
+          file: 
+          value: !ruby/sym undef
+      worker_connections: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 69
+          file: 
+          value: !ruby/sym undef
+      worker_processes: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 70
+          file: 
+          value: !ruby/sym undef
+      worker_rlimit_nofile: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 71
+          file: 
+          value: !ruby/sym undef
+      confd_purge: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 75
+          file: 
+          value: !ruby/sym undef
+      conf_dir: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 76
+          file: 
+          value: !ruby/sym undef
+      daemon_user: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 77
+          file: 
+          value: !ruby/sym undef
+      global_owner: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 78
+          file: 
+          value: !ruby/sym undef
+      global_group: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 79
+          file: 
+          value: !ruby/sym undef
+      global_mode: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 80
+          file: 
+          value: !ruby/sym undef
+      logdir: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 81
+          file: 
+          value: !ruby/sym undef
+      http_access_log: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 82
+          file: 
+          value: !ruby/sym undef
+      nginx_error_log: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 83
+          file: 
+          value: !ruby/sym undef
+      pid: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 84
+          file: 
+          value: !ruby/sym undef
+      proxy_temp_path: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 85
+          file: 
+          value: !ruby/sym undef
+      root_group: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 86
+          file: 
+          value: !ruby/sym undef
+      run_dir: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 87
+          file: 
+          value: !ruby/sym undef
+      sites_available_owner: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 88
+          file: 
+          value: !ruby/sym undef
+      sites_available_group: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 89
+          file: 
+          value: !ruby/sym undef
+      sites_available_mode: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 90
+          file: 
+          value: !ruby/sym undef
+      super_user: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 91
+          file: 
+          value: !ruby/sym undef
+      temp_dir: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 92
+          file: 
+          value: !ruby/sym undef
+      vhost_purge: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 93
+          file: 
+          value: !ruby/sym undef
+      conf_template: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 96
+          file: 
+          value: !ruby/sym undef
+      proxy_conf_template: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 97
+          file: 
+          value: !ruby/sym undef
+      package_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::Name
+          line: 101
+          file: 
+          value: present
+      package_name: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 102
+          file: 
+          value: nginx
+      package_source: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 103
+          file: 
+          value: nginx
+      manage_repo: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 104
+          file: 
+          value: true
+      configtest_enable: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 108
+          file: 
+          value: false
+      service_ensure: 
+        value: running
+        type: !ruby/object:Puppet::Parser::AST::Name
+          line: 109
+          file: 
+          value: running
+      service_restart: 
+        value: "/etc/init.d/nginx configtest && /etc/init.d/nginx restart"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 110
+          file: 
+          value: "/etc/init.d/nginx configtest && /etc/init.d/nginx restart"
+      geo_mappings: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 114
+          file: 
+          value: {}
+      string_mappings: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 115
+          file: 
+          value: {}
+      nginx_locations: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 116
+          file: 
+          value: {}
+      nginx_mailhosts: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 117
+          file: 
+          value: {}
+      nginx_upstreams: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 118
+          file: 
+          value: {}
+      nginx_vhosts: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 119
+          file: 
+          value: {}
+      nginx_vhosts_defaults: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 120
+          file: 
+          value: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::notice::config"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::package::archlinux"
+    type: !ruby/sym hostclass
+    params: 
+      package_name: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 17
+          file: 
+          value: nginx
+      package_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 18
+          file: 
+          value: present
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::package::debian"
+    type: !ruby/sym hostclass
+    params: 
+      manage_repo: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 17
+          file: 
+          value: true
+      package_name: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 18
+          file: 
+          value: nginx
+      package_source: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 19
+          file: 
+          value: nginx
+      package_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 20
+          file: 
+          value: present
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::package::freebsd"
+    type: !ruby/sym hostclass
+    params: 
+      package_name: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 5
+          file: 
+          value: nginx
+      package_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 6
+          file: 
+          value: present
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::package::gentoo"
+    type: !ruby/sym hostclass
+    params: 
+      package_name: 
+        value: www-servers/nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 5
+          file: 
+          value: www-servers/nginx
+      package_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 6
+          file: 
+          value: present
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::package::redhat"
+    type: !ruby/sym hostclass
+    params: 
+      manage_repo: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 17
+          file: 
+          value: true
+      package_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 18
+          file: 
+          value: present
+      package_name: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 19
+          file: 
+          value: nginx
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::package::solaris"
+    type: !ruby/sym hostclass
+    params: 
+      package_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 21
+          file: 
+          value: !ruby/sym undef
+      package_source: 
+        value: ""
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 22
+          file: 
+          value: ""
+      package_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 23
+          file: 
+          value: present
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::package::suse"
+    type: !ruby/sym hostclass
+    params: 
+      package_name: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 19
+          file: 
+          value: nginx
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::package"
+    type: !ruby/sym hostclass
+    params: 
+      package_name: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 17
+          file: 
+          value: nginx
+      package_source: 
+        value: nginx
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 18
+          file: 
+          value: nginx
+      package_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 19
+          file: 
+          value: present
+      manage_repo: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 20
+          file: 
+          value: true
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::params"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::resource::geo"
+    type: !ruby/sym definition
+    params: 
+      networks: 
+        value: 
+        type: 
+      default: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 57
+          file: 
+          value: !ruby/sym undef
+      ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 58
+          file: 
+          value: present
+      ranges: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 59
+          file: 
+          value: false
+      address: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 60
+          file: 
+          value: !ruby/sym undef
+      delete: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 61
+          file: 
+          value: !ruby/sym undef
+      proxies: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 62
+          file: 
+          value: !ruby/sym undef
+      proxy_recursive: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 63
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::resource::location"
+    type: !ruby/sym definition
+    params: 
+      ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::Name
+          line: 128
+          file: 
+          value: present
+      internal: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 129
+          file: 
+          value: false
+      location: 
+        value: "${$name}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 130
+          file: 
+          value: name
+      vhost: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 131
+          file: 
+          value: !ruby/sym undef
+      www_root: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 132
+          file: 
+          value: !ruby/sym undef
+      autoindex: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 133
+          file: 
+          value: !ruby/sym undef
+      index_files: 
+        value: 
+          - index.html
+          - index.htm
+          - index.php
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 135
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 135
+              file: 
+              value: index.html
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 136
+              file: 
+              value: index.htm
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 137
+              file: 
+              value: index.php
+      proxy: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 138
+          file: 
+          value: !ruby/sym undef
+      proxy_redirect: 
+        value: "${$nginx::config::proxy_redirect}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 139
+          file: 
+          value: "nginx::config::proxy_redirect"
+      proxy_read_timeout: 
+        value: "${$nginx::config::proxy_read_timeout}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 140
+          file: 
+          value: "nginx::config::proxy_read_timeout"
+      proxy_connect_timeout: 
+        value: "${$nginx::config::proxy_connect_timeout}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 141
+          file: 
+          value: "nginx::config::proxy_connect_timeout"
+      proxy_set_header: 
+        value: "${$nginx::config::proxy_set_header}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 142
+          file: 
+          value: "nginx::config::proxy_set_header"
+      fastcgi: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 143
+          file: 
+          value: !ruby/sym undef
+      fastcgi_param: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 144
+          file: 
+          value: !ruby/sym undef
+      fastcgi_params: 
+        value: "${nginx::config::conf_dir}/fastcgi_params"
+        type: !ruby/object:Puppet::Parser::AST::Concat
+          line: 145
+          file: 
+          value: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 145
+              file: 
+              value: ""
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 145
+              file: 
+              value: "nginx::config::conf_dir"
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 145
+              file: 
+              value: /fastcgi_params
+      fastcgi_script: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 146
+          file: 
+          value: !ruby/sym undef
+      fastcgi_split_path: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 147
+          file: 
+          value: !ruby/sym undef
+      ssl: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 148
+          file: 
+          value: false
+      ssl_only: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 149
+          file: 
+          value: false
+      location_alias: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 150
+          file: 
+          value: !ruby/sym undef
+      location_allow: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 151
+          file: 
+          value: !ruby/sym undef
+      location_deny: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 152
+          file: 
+          value: !ruby/sym undef
+      option: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 153
+          file: 
+          value: !ruby/sym undef
+      stub_status: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 154
+          file: 
+          value: !ruby/sym undef
+      raw_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 155
+          file: 
+          value: !ruby/sym undef
+      raw_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 156
+          file: 
+          value: !ruby/sym undef
+      location_custom_cfg: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 157
+          file: 
+          value: !ruby/sym undef
+      location_cfg_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 158
+          file: 
+          value: !ruby/sym undef
+      location_cfg_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 159
+          file: 
+          value: !ruby/sym undef
+      location_custom_cfg_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 160
+          file: 
+          value: !ruby/sym undef
+      location_custom_cfg_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 161
+          file: 
+          value: !ruby/sym undef
+      include: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 162
+          file: 
+          value: !ruby/sym undef
+      try_files: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 163
+          file: 
+          value: !ruby/sym undef
+      proxy_cache: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 164
+          file: 
+          value: false
+      proxy_cache_valid: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 165
+          file: 
+          value: false
+      proxy_method: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 166
+          file: 
+          value: !ruby/sym undef
+      proxy_set_body: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 167
+          file: 
+          value: !ruby/sym undef
+      auth_basic: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 168
+          file: 
+          value: !ruby/sym undef
+      auth_basic_user_file: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 169
+          file: 
+          value: !ruby/sym undef
+      rewrite_rules: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 170
+          file: 
+          children: []
+      priority: 
+        value: 500
+        type: !ruby/object:Puppet::Parser::AST::Name
+          line: 171
+          file: 
+          value: "500"
+      mp4: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 172
+          file: 
+          value: false
+      flv: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 173
+          file: 
+          value: false
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::resource::mailhost"
+    type: !ruby/sym definition
+    params: 
+      listen_port: 
+        value: 
+        type: 
+      ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 46
+          file: 
+          value: present
+      listen_ip: 
+        value: "*"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 47
+          file: 
+          value: "*"
+      listen_options: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 48
+          file: 
+          value: !ruby/sym undef
+      ipv6_enable: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 49
+          file: 
+          value: false
+      ipv6_listen_ip: 
+        value: "::"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 50
+          file: 
+          value: "::"
+      ipv6_listen_port: 
+        value: "80"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 51
+          file: 
+          value: "80"
+      ipv6_listen_options: 
+        value: "default ipv6only=on"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 52
+          file: 
+          value: "default ipv6only=on"
+      ssl: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 53
+          file: 
+          value: false
+      ssl_cert: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 54
+          file: 
+          value: !ruby/sym undef
+      ssl_key: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 55
+          file: 
+          value: !ruby/sym undef
+      ssl_port: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 56
+          file: 
+          value: !ruby/sym undef
+      starttls: 
+        value: "off"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 57
+          file: 
+          value: "off"
+      protocol: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 58
+          file: 
+          value: !ruby/sym undef
+      auth_http: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 59
+          file: 
+          value: !ruby/sym undef
+      xclient: 
+        value: "on"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 60
+          file: 
+          value: "on"
+      server_name: 
+        value: 
+          - "${$name}"
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 61
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 61
+              file: 
+              value: name
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::resource::map"
+    type: !ruby/sym definition
+    params: 
+      string: 
+        value: 
+        type: 
+      mappings: 
+        value: 
+        type: 
+      default: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 47
+          file: 
+          value: !ruby/sym undef
+      ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 48
+          file: 
+          value: present
+      hostnames: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 49
+          file: 
+          value: false
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::resource::upstream::member"
+    type: !ruby/sym definition
+    params: 
+      upstream: 
+        value: 
+        type: 
+      server: 
+        value: 
+        type: 
+      port: 
+        value: "80"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: "80"
+      upstream_fail_timeout: 
+        value: "10s"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 39
+          file: 
+          value: "10s"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::resource::upstream"
+    type: !ruby/sym definition
+    params: 
+      members: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 42
+          file: 
+          value: !ruby/sym undef
+      ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 43
+          file: 
+          value: present
+      upstream_cfg_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 44
+          file: 
+          value: !ruby/sym undef
+      upstream_fail_timeout: 
+        value: "10s"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 45
+          file: 
+          value: "10s"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::resource::vhost"
+    type: !ruby/sym definition
+    params: 
+      ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 151
+          file: 
+          value: present
+      listen_ip: 
+        value: "*"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 152
+          file: 
+          value: "*"
+      listen_port: 
+        value: "80"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 153
+          file: 
+          value: "80"
+      listen_options: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 154
+          file: 
+          value: !ruby/sym undef
+      location_allow: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 155
+          file: 
+          children: []
+      location_deny: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 156
+          file: 
+          children: []
+      ipv6_enable: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 157
+          file: 
+          value: false
+      ipv6_listen_ip: 
+        value: "::"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 158
+          file: 
+          value: "::"
+      ipv6_listen_port: 
+        value: "80"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 159
+          file: 
+          value: "80"
+      ipv6_listen_options: 
+        value: "default ipv6only=on"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 160
+          file: 
+          value: "default ipv6only=on"
+      add_header: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 161
+          file: 
+          value: !ruby/sym undef
+      ssl: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 162
+          file: 
+          value: false
+      ssl_listen_option: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 163
+          file: 
+          value: true
+      ssl_cert: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 164
+          file: 
+          value: !ruby/sym undef
+      ssl_dhparam: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 165
+          file: 
+          value: !ruby/sym undef
+      ssl_key: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 166
+          file: 
+          value: !ruby/sym undef
+      ssl_port: 
+        value: "443"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 167
+          file: 
+          value: "443"
+      ssl_protocols: 
+        value: "TLSv1 TLSv1.1 TLSv1.2"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 168
+          file: 
+          value: "TLSv1 TLSv1.1 TLSv1.2"
+      ssl_ciphers: 
+        value: "ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 169
+          file: 
+          value: "ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA"
+      ssl_cache: 
+        value: "shared:SSL:10m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 170
+          file: 
+          value: "shared:SSL:10m"
+      ssl_stapling: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 171
+          file: 
+          value: false
+      ssl_stapling_file: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 172
+          file: 
+          value: !ruby/sym undef
+      ssl_stapling_responder: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 173
+          file: 
+          value: !ruby/sym undef
+      ssl_stapling_verify: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 174
+          file: 
+          value: false
+      ssl_session_timeout: 
+        value: "5m"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 175
+          file: 
+          value: "5m"
+      ssl_trusted_cert: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 176
+          file: 
+          value: !ruby/sym undef
+      spdy: 
+        value: "${$nginx::config::spdy}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 177
+          file: 
+          value: "nginx::config::spdy"
+      proxy: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 178
+          file: 
+          value: !ruby/sym undef
+      proxy_redirect: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 179
+          file: 
+          value: !ruby/sym undef
+      proxy_read_timeout: 
+        value: "${$nginx::config::proxy_read_timeout}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 180
+          file: 
+          value: "nginx::config::proxy_read_timeout"
+      proxy_connect_timeout: 
+        value: "${$nginx::config::proxy_connect_timeout}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 181
+          file: 
+          value: "nginx::config::proxy_connect_timeout"
+      proxy_set_header: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 182
+          file: 
+          children: []
+      proxy_cache: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 183
+          file: 
+          value: false
+      proxy_cache_valid: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 184
+          file: 
+          value: false
+      proxy_method: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 185
+          file: 
+          value: !ruby/sym undef
+      proxy_set_body: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 186
+          file: 
+          value: !ruby/sym undef
+      resolver: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 187
+          file: 
+          children: []
+      fastcgi: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 188
+          file: 
+          value: !ruby/sym undef
+      fastcgi_params: 
+        value: "${nginx::config::conf_dir}/fastcgi_params"
+        type: !ruby/object:Puppet::Parser::AST::Concat
+          line: 189
+          file: 
+          value: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 189
+              file: 
+              value: ""
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 189
+              file: 
+              value: "nginx::config::conf_dir"
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 189
+              file: 
+              value: /fastcgi_params
+      fastcgi_script: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 190
+          file: 
+          value: !ruby/sym undef
+      index_files: 
+        value: 
+          - index.html
+          - index.htm
+          - index.php
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 192
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 192
+              file: 
+              value: index.html
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 193
+              file: 
+              value: index.htm
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 194
+              file: 
+              value: index.php
+      autoindex: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 195
+          file: 
+          value: !ruby/sym undef
+      server_name: 
+        value: 
+          - "${$name}"
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 196
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 196
+              file: 
+              value: name
+      www_root: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 197
+          file: 
+          value: !ruby/sym undef
+      rewrite_www_to_non_www: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 198
+          file: 
+          value: false
+      rewrite_to_https: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 199
+          file: 
+          value: !ruby/sym undef
+      location_custom_cfg: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 200
+          file: 
+          value: !ruby/sym undef
+      location_cfg_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 201
+          file: 
+          value: !ruby/sym undef
+      location_cfg_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 202
+          file: 
+          value: !ruby/sym undef
+      location_custom_cfg_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 203
+          file: 
+          value: !ruby/sym undef
+      location_custom_cfg_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 204
+          file: 
+          value: !ruby/sym undef
+      try_files: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 205
+          file: 
+          value: !ruby/sym undef
+      auth_basic: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 206
+          file: 
+          value: !ruby/sym undef
+      auth_basic_user_file: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 207
+          file: 
+          value: !ruby/sym undef
+      client_body_timeout: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 208
+          file: 
+          value: !ruby/sym undef
+      client_header_timeout: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 209
+          file: 
+          value: !ruby/sym undef
+      client_max_body_size: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 210
+          file: 
+          value: !ruby/sym undef
+      raw_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 211
+          file: 
+          value: !ruby/sym undef
+      raw_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 212
+          file: 
+          value: !ruby/sym undef
+      location_raw_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 213
+          file: 
+          value: !ruby/sym undef
+      location_raw_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 214
+          file: 
+          value: !ruby/sym undef
+      vhost_cfg_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 215
+          file: 
+          value: !ruby/sym undef
+      vhost_cfg_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 216
+          file: 
+          value: !ruby/sym undef
+      vhost_cfg_ssl_prepend: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 217
+          file: 
+          value: !ruby/sym undef
+      vhost_cfg_ssl_append: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 218
+          file: 
+          value: !ruby/sym undef
+      include_files: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 219
+          file: 
+          value: !ruby/sym undef
+      access_log: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 220
+          file: 
+          value: !ruby/sym undef
+      error_log: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 221
+          file: 
+          value: !ruby/sym undef
+      format_log: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 222
+          file: 
+          value: !ruby/sym undef
+      passenger_cgi_param: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 223
+          file: 
+          value: !ruby/sym undef
+      log_by_lua: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 224
+          file: 
+          value: !ruby/sym undef
+      log_by_lua_file: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 225
+          file: 
+          value: !ruby/sym undef
+      use_default_location: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 226
+          file: 
+          value: true
+      rewrite_rules: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 227
+          file: 
+          children: []
+      string_mappings: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 228
+          file: 
+          value: {}
+      geo_mappings: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 229
+          file: 
+          value: {}
+      gzip_types: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 230
+          file: 
+          value: !ruby/sym undef
+      owner: 
+        value: "${$nginx::config::global_owner}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 231
+          file: 
+          value: "nginx::config::global_owner"
+      group: 
+        value: "${$nginx::config::global_group}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 232
+          file: 
+          value: "nginx::config::global_group"
+      mode: 
+        value: "${$nginx::config::global_mode}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 233
+          file: 
+          value: "nginx::config::global_mode"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "nginx::service"
+    type: !ruby/sym hostclass
+    params: 
+      configtest_enable: 
+        value: "${$nginx::configtest_enable}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 17
+          file: 
+          value: "nginx::configtest_enable"
+      service_restart: 
+        value: "${$nginx::service_restart}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 18
+          file: 
+          value: "nginx::service_restart"
+      service_ensure: 
+        value: "${$nginx::service_ensure}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 19
+          file: 
+          value: "nginx::service_ensure"

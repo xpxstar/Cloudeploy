@@ -1,0 +1,11 @@
+--- 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: bootstrap
+    type: !ruby/sym hostclass
+    params: 
+      serverfqdns: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 14
+          file: 
+          value: !ruby/sym undef

@@ -1,0 +1,220 @@
+--- 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul_template::config"
+    type: !ruby/sym hostclass
+    params: 
+      consul_host: 
+        value: 
+        type: 
+      consul_port: 
+        value: 
+        type: 
+      consul_token: 
+        value: 
+        type: 
+      consul_retry: 
+        value: 
+        type: 
+      purge: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 10
+          file: 
+          value: true
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: consul_template
+    type: !ruby/sym hostclass
+    params: 
+      manage_user: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 28
+          file: 
+          value: true
+      user: 
+        value: consul-t
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 29
+          file: 
+          value: consul-t
+      manage_group: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 30
+          file: 
+          value: true
+      purge_config_dir: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 31
+          file: 
+          value: true
+      group: 
+        value: consul-t
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 32
+          file: 
+          value: consul-t
+      bin_dir: 
+        value: /usr/local/bin
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 33
+          file: 
+          value: /usr/local/bin
+      arch: 
+        value: "${$consul_template::params::arch}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 34
+          file: 
+          value: "consul_template::params::arch"
+      version: 
+        value: "${$consul_template::params::version}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 35
+          file: 
+          value: "consul_template::params::version"
+      install_method: 
+        value: "${$consul_template::params::install_method}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 36
+          file: 
+          value: "consul_template::params::install_method"
+      os: 
+        value: "${$consul_template::params::os}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 37
+          file: 
+          value: "consul_template::params::os"
+      download_url: 
+        value: "https://github.com/hashicorp/consul-template/releases/download/v${version}/consul-template_${version}_${os}_${arch}.tar.gz"
+        type: !ruby/object:Puppet::Parser::AST::Concat
+          line: 38
+          file: 
+          value: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 38
+              file: 
+              value: "https://github.com/hashicorp/consul-template/releases/download/v"
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 38
+              file: 
+              value: version
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 38
+              file: 
+              value: /consul-template_
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 38
+              file: 
+              value: version
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 38
+              file: 
+              value: "_"
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 38
+              file: 
+              value: os
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 38
+              file: 
+              value: "_"
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 38
+              file: 
+              value: arch
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 38
+              file: 
+              value: ".tar.gz"
+      package_name: 
+        value: "${$consul_template::params::package_name}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 39
+          file: 
+          value: "consul_template::params::package_name"
+      package_ensure: 
+        value: "${$consul_template::params::package_ensure}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 40
+          file: 
+          value: "consul_template::params::package_ensure"
+      config_dir: 
+        value: /etc/consul-template
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 41
+          file: 
+          value: /etc/consul-template
+      extra_options: 
+        value: ""
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 42
+          file: 
+          value: ""
+      service_enable: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 43
+          file: 
+          value: true
+      service_ensure: 
+        value: running
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 44
+          file: 
+          value: running
+      consul_host: 
+        value: localhost
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 45
+          file: 
+          value: localhost
+      consul_port: 
+        value: "8500"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 46
+          file: 
+          value: "8500"
+      consul_token: 
+        value: ""
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 47
+          file: 
+          value: ""
+      consul_retry: 
+        value: "10s"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 48
+          file: 
+          value: "10s"
+      init_style: 
+        value: "${$consul_template::params::init_style}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 49
+          file: 
+          value: "consul_template::params::init_style"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul_template::install"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul_template::params"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul_template::run_service"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul_template::watch"
+    type: !ruby/sym definition
+    params: 
+      template: 
+        value: 
+        type: 
+      destination: 
+        value: 
+        type: 
+      command: 
+        value: 
+        type: 

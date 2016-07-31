@@ -1,0 +1,9 @@
+$vtestTemplateFile_12222334234 = {
+	"tomcat::server" => {
+		
+	}
+}
+if !defined(Class["tomcat::server"]){
+	create_resources('class', $vtestTemplateFile_12222334234)
+	contain tomcat::server
+}

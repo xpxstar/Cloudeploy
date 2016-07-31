@@ -1,0 +1,422 @@
+--- 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul::check"
+    type: !ruby/sym definition
+    params: 
+      id: 
+        value: "${$title}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 35
+          file: 
+          value: title
+      ttl: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 36
+          file: 
+          value: !ruby/sym undef
+      http: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 37
+          file: 
+          value: !ruby/sym undef
+      script: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 38
+          file: 
+          value: !ruby/sym undef
+      interval: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 39
+          file: 
+          value: !ruby/sym undef
+      service_id: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 40
+          file: 
+          value: !ruby/sym undef
+      timeout: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 41
+          file: 
+          value: !ruby/sym undef
+      notes: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 42
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul::config"
+    type: !ruby/sym hostclass
+    params: 
+      config_hash: 
+        value: 
+        type: 
+      purge: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 15
+          file: 
+          value: true
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: consul
+    type: !ruby/sym hostclass
+    params: 
+      manage_user: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 37
+          file: 
+          value: true
+      user: 
+        value: consul
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: consul
+      manage_group: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 39
+          file: 
+          value: true
+      purge_config_dir: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 40
+          file: 
+          value: true
+      group: 
+        value: consul
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 41
+          file: 
+          value: consul
+      join_wan: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 42
+          file: 
+          value: false
+      bin_dir: 
+        value: /usr/local/bin
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 43
+          file: 
+          value: /usr/local/bin
+      arch: 
+        value: "${$consul::params::arch}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 44
+          file: 
+          value: "consul::params::arch"
+      version: 
+        value: "${$consul::params::version}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 45
+          file: 
+          value: "consul::params::version"
+      install_method: 
+        value: "${$consul::params::install_method}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 46
+          file: 
+          value: "consul::params::install_method"
+      os: 
+        value: "${$consul::params::os}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 47
+          file: 
+          value: "consul::params::os"
+      download_url: 
+        value: "https://dl.bintray.com/mitchellh/consul/${version}_${os}_${arch}.zip"
+        type: !ruby/object:Puppet::Parser::AST::Concat
+          line: 48
+          file: 
+          value: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 48
+              file: 
+              value: "https://dl.bintray.com/mitchellh/consul/"
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 48
+              file: 
+              value: version
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 48
+              file: 
+              value: "_"
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 48
+              file: 
+              value: os
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 48
+              file: 
+              value: "_"
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 48
+              file: 
+              value: arch
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 48
+              file: 
+              value: ".zip"
+      package_name: 
+        value: "${$consul::params::package_name}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 49
+          file: 
+          value: "consul::params::package_name"
+      package_ensure: 
+        value: "${$consul::params::package_ensure}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 50
+          file: 
+          value: "consul::params::package_ensure"
+      ui_download_url: 
+        value: "https://dl.bintray.com/mitchellh/consul/${version}_web_ui.zip"
+        type: !ruby/object:Puppet::Parser::AST::Concat
+          line: 51
+          file: 
+          value: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 51
+              file: 
+              value: "https://dl.bintray.com/mitchellh/consul/"
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 51
+              file: 
+              value: version
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 51
+              file: 
+              value: "_web_ui.zip"
+      ui_package_name: 
+        value: "${$consul::params::ui_package_name}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 52
+          file: 
+          value: "consul::params::ui_package_name"
+      ui_package_ensure: 
+        value: "${$consul::params::ui_package_ensure}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 53
+          file: 
+          value: "consul::params::ui_package_ensure"
+      config_dir: 
+        value: /etc/consul
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 54
+          file: 
+          value: /etc/consul
+      extra_options: 
+        value: ""
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 55
+          file: 
+          value: ""
+      config_hash: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 56
+          file: 
+          value: {}
+      config_defaults: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 57
+          file: 
+          value: {}
+      service_enable: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 58
+          file: 
+          value: true
+      service_ensure: 
+        value: running
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 59
+          file: 
+          value: running
+      manage_service: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 60
+          file: 
+          value: true
+      init_style: 
+        value: "${$consul::params::init_style}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 61
+          file: 
+          value: "consul::params::init_style"
+      services: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 62
+          file: 
+          value: {}
+      watches: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 63
+          file: 
+          value: {}
+      checks: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 64
+          file: 
+          value: {}
+      acls: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 65
+          file: 
+          value: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul::install"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul::params"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul::put_key_value"
+    type: !ruby/sym definition
+    params: 
+      name: 
+        value: ""
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 2
+          file: 
+          value: ""
+      value: 
+        value: ""
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 3
+          file: 
+          value: ""
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul::run_service"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul::service"
+    type: !ruby/sym definition
+    params: 
+      service_name: 
+        value: "${$title}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 27
+          file: 
+          value: title
+      id: 
+        value: "${$title}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 28
+          file: 
+          value: title
+      tags: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 29
+          file: 
+          children: []
+      address: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 30
+          file: 
+          value: !ruby/sym undef
+      port: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 31
+          file: 
+          value: !ruby/sym undef
+      checks: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 32
+          file: 
+          children: []
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "consul::watch"
+    type: !ruby/sym definition
+    params: 
+      handler: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 43
+          file: 
+          value: !ruby/sym undef
+      datacenter: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 44
+          file: 
+          value: !ruby/sym undef
+      token: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 45
+          file: 
+          value: !ruby/sym undef
+      type: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 46
+          file: 
+          value: !ruby/sym undef
+      key: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 47
+          file: 
+          value: !ruby/sym undef
+      keyprefix: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 48
+          file: 
+          value: !ruby/sym undef
+      service: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 49
+          file: 
+          value: !ruby/sym undef
+      service_tag: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 50
+          file: 
+          value: !ruby/sym undef
+      passingonly: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 51
+          file: 
+          value: !ruby/sym undef
+      state: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 52
+          file: 
+          value: !ruby/sym undef
+      event_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 53
+          file: 
+          value: !ruby/sym undef

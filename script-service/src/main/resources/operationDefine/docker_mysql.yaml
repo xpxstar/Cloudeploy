@@ -1,0 +1,26 @@
+component:
+  name: cloudeploy::docker::component::package::mysql
+  display_name: Docker_Mysql
+  componentType: PACKAGE::DOCKER
+operations:
+- operationName: cloudeploy::docker::mysql::install
+  displayName: 安装
+  nodes:
+  - nodeName: docker_mysql_install_node
+    searchName: cloudeploydocker::mysql::instance
+    extractParams:
+      - '$allParams'
+- operationName: cloudeploy::docker::mysql::server
+  displayName: 服务
+  nodes:
+  - nodeName: docker_mysql_service_node
+    searchName: cloudeploydocker::mysql::server
+    extractParams:
+      - '$allParams'
+#- operationName: cloudeploy::docker::mysql::sql
+#  displayName: 运行SQL脚本
+#  nodes:
+#  - nodeName: mysql_sql_node
+#    searchName: cloudeploydocker::mysql::runsql
+#    extractParams:
+#     - '$allParams'

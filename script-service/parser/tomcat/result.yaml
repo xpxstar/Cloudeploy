@@ -1,0 +1,613 @@
+&id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::config::server::connector
+params:
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  connector_ensure:
+    paramName: connector_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 20, value: present}
+    value: present
+  port:
+    paramName: port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 21,
+      value: undef}
+    value: undef
+  protocol:
+    paramName: protocol
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 22,
+      value: undef}
+    value: undef
+  parent_service:
+    paramName: parent_service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 23, value: Catalina}
+    value: Catalina
+  additional_attributes:
+    paramName: additional_attributes
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 24
+      value: {}
+    value: '{}'
+  attributes_to_remove:
+    paramName: attributes_to_remove
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 25
+    value: '[]'
+  purge_connectors:
+    paramName: purge_connectors
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 27, value: false}
+    value: false
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::config::server::engine
+params:
+  default_host:
+    paramName: default_host
+    parent: *id001
+    type: null
+    value: null
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  background_processor_delay:
+    paramName: background_processor_delay
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 32,
+      value: undef}
+    value: undef
+  background_processor_delay_ensure:
+    paramName: background_processor_delay_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 33, value: present}
+    value: present
+  class_name:
+    paramName: class_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 34,
+      value: undef}
+    value: undef
+  class_name_ensure:
+    paramName: class_name_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 35, value: present}
+    value: present
+  engine_name:
+    paramName: engine_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 36,
+      value: undef}
+    value: undef
+  jvm_route:
+    paramName: jvm_route
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 37,
+      value: undef}
+    value: undef
+  jvm_route_ensure:
+    paramName: jvm_route_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 38, value: present}
+    value: present
+  parent_service:
+    paramName: parent_service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 39, value: Catalina}
+    value: Catalina
+  start_stop_threads:
+    paramName: start_stop_threads
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 40,
+      value: undef}
+    value: undef
+  start_stop_threads_ensure:
+    paramName: start_stop_threads_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 41, value: present}
+    value: present
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::config::server::host
+params:
+  app_base:
+    paramName: app_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 19,
+      value: undef}
+    value: undef
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  host_ensure:
+    paramName: host_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 21, value: present}
+    value: present
+  host_name:
+    paramName: host_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 22,
+      value: undef}
+    value: undef
+  parent_service:
+    paramName: parent_service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 23, value: Catalina}
+    value: Catalina
+  additional_attributes:
+    paramName: additional_attributes
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 24
+      value: {}
+    value: '{}'
+  attributes_to_remove:
+    paramName: attributes_to_remove
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 25
+    value: '[]'
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::config::server::service
+params:
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  class_name:
+    paramName: class_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 17,
+      value: undef}
+    value: undef
+  class_name_ensure:
+    paramName: class_name_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 18, value: present}
+    value: present
+  service_ensure:
+    paramName: service_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 19, value: present}
+    value: present
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::config::server::valve
+params:
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  class_name:
+    paramName: class_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 21,
+      value: undef}
+    value: undef
+  parent_host:
+    paramName: parent_host
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 22,
+      value: undef}
+    value: undef
+  parent_service:
+    paramName: parent_service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 23, value: Catalina}
+    value: Catalina
+  valve_ensure:
+    paramName: valve_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 24, value: present}
+    value: present
+  additional_attributes:
+    paramName: additional_attributes
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 25
+      value: {}
+    value: '{}'
+  attributes_to_remove:
+    paramName: attributes_to_remove
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 26
+    value: '[]'
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::config::server
+params:
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  class_name:
+    paramName: class_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 19,
+      value: undef}
+    value: undef
+  class_name_ensure:
+    paramName: class_name_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 20, value: present}
+    value: present
+  address:
+    paramName: address
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 21,
+      value: undef}
+    value: undef
+  address_ensure:
+    paramName: address_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 22, value: present}
+    value: present
+  port:
+    paramName: port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 23,
+      value: undef}
+    value: undef
+  shutdown:
+    paramName: shutdown
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 24,
+      value: undef}
+    value: undef
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat
+params:
+  catalina_home:
+    paramName: catalina_home
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  user:
+    paramName: user
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 11, value: tomcat}
+    value: tomcat
+  group:
+    paramName: group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 12, value: tomcat}
+    value: tomcat
+  install_from_source:
+    paramName: install_from_source
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 26, value: true}
+    value: true
+  purge_connectors:
+    paramName: purge_connectors
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 27, value: false}
+    value: false
+  manage_user:
+    paramName: manage_user
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 28, value: true}
+    value: true
+  manage_group:
+    paramName: manage_group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 29, value: true}
+    value: true
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::instance::package
+params:
+  package_ensure:
+    paramName: package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 9, value: installed}
+    value: installed
+  package_name:
+    paramName: package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 10,
+      value: undef}
+    value: undef
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::instance::source
+params:
+  catalina_home:
+    paramName: catalina_home
+    parent: *id001
+    type: null
+    value: null
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: null
+    value: null
+  source_url:
+    paramName: source_url
+    parent: *id001
+    type: null
+    value: null
+  source_strip_first_dir:
+    paramName: source_strip_first_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 17,
+      value: undef}
+    value: undef
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::instance::uninstall
+params:
+  catalina_home:
+    paramName: catalina_home
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 2,
+      value: undef}
+    value: undef
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 3,
+      value: undef}
+    value: undef
+  package_name:
+    paramName: package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 4,
+      value: undef}
+    value: undef
+  install_from_source:
+    paramName: install_from_source
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 5, value: true}
+    value: true
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::instance
+params:
+  catalina_home:
+    paramName: catalina_home
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 21,
+      value: undef}
+    value: undef
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 22,
+      value: undef}
+    value: undef
+  install_from_source:
+    paramName: install_from_source
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 26, value: true}
+    value: true
+  source_url:
+    paramName: source_url
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 24,
+      value: undef}
+    value: undef
+  source_strip_first_dir:
+    paramName: source_strip_first_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 25,
+      value: undef}
+    value: undef
+  package_ensure:
+    paramName: package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 26,
+      value: undef}
+    value: undef
+  package_name:
+    paramName: package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 27,
+      value: undef}
+    value: undef
+type: definition
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::params
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::service
+params:
+  catalina_home:
+    paramName: catalina_home
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 23,
+      value: undef}
+    value: undef
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 24,
+      value: undef}
+    value: undef
+  use_jsvc:
+    paramName: use_jsvc
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 25, value: false}
+    value: false
+  java_home:
+    paramName: java_home
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 26,
+      value: undef}
+    value: undef
+  service_ensure:
+    paramName: service_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 27,
+      value: running}
+    value: running
+  use_init:
+    paramName: use_init
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 28, value: false}
+    value: false
+  service_name:
+    paramName: service_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 29,
+      value: undef}
+    value: undef
+  start_command:
+    paramName: start_command
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 30,
+      value: undef}
+    value: undef
+  stop_command:
+    paramName: stop_command
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 31,
+      value: undef}
+    value: undef
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::setenv::entry
+params:
+  value:
+    paramName: value
+    parent: *id001
+    type: null
+    value: null
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 15, value: present}
+    value: present
+  config_file:
+    paramName: config_file
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  param:
+    paramName: param
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 17, value: name}
+    value: ${$name}
+  quote_char:
+    paramName: quote_char
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 18,
+      value: undef}
+    value: undef
+  base_path:
+    paramName: base_path
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 20, value: ''}
+    value: ''
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: tomcat::war
+params:
+  catalina_base:
+    paramName: catalina_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: /opt/apache-tomcat}
+    value: /opt/apache-tomcat
+  app_base:
+    paramName: app_base
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 24,
+      value: undef}
+    value: undef
+  deployment_path:
+    paramName: deployment_path
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 25,
+      value: undef}
+    value: undef
+  war_ensure:
+    paramName: war_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 26, value: present}
+    value: present
+  war_name:
+    paramName: war_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 27,
+      value: undef}
+    value: undef
+  war_purge:
+    paramName: war_purge
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 28, value: true}
+    value: true
+  war_source:
+    paramName: war_source
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 29,
+      value: undef}
+    value: undef
+type: definition

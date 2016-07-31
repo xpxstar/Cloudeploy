@@ -1,0 +1,331 @@
+--- !ruby/object:Puppet::Parser::AST::Else
+line: 59
+file: 
+doc: ""
+statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+  line: 49
+  file: 
+  children: 
+    - !ruby/object:Puppet::Parser::AST::IfStatement
+      line: 49
+      file: 
+      doc: ""
+      test: !ruby/object:Puppet::Parser::AST::Not
+        line: 45
+        file: 
+        value: !ruby/object:Puppet::Parser::AST::Variable
+          line: 45
+          file: 
+          value: port
+        children: []
+      statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+        line: 47
+        file: 
+        children: 
+          - !ruby/object:Puppet::Parser::AST::Function
+            ftype: !ruby/sym statement
+            line: 46
+            file: 
+            doc: ""
+            name: fail
+            arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+              line: 46
+              file: 
+              children: 
+                - !ruby/object:Puppet::Parser::AST::String
+                  line: 46
+                  file: 
+                  value: "$port must be specified if you aren't removing the connector"
+            children: []
+      children: []
+    - !ruby/object:Puppet::Parser::AST::VarDef
+      line: 49
+      file: 
+      doc: ""
+      name: !ruby/object:Puppet::Parser::AST::Name
+        line: 49
+        file: 
+        value: "_protocol_change"
+      value: !ruby/object:Puppet::Parser::AST::Concat
+        line: 49
+        file: 
+        value: 
+          - !ruby/object:Puppet::Parser::AST::String
+            line: 49
+            file: 
+            value: "set "
+          - !ruby/object:Puppet::Parser::AST::Variable
+            line: 49
+            file: 
+            value: base_path
+          - !ruby/object:Puppet::Parser::AST::String
+            line: 49
+            file: 
+            value: "/#attribute/protocol "
+          - !ruby/object:Puppet::Parser::AST::Variable
+            line: 49
+            file: 
+            value: "_protocol"
+          - !ruby/object:Puppet::Parser::AST::String
+            line: 49
+            file: 
+            value: ""
+      children: []
+    - !ruby/object:Puppet::Parser::AST::VarDef
+      line: 50
+      file: 
+      doc: ""
+      name: !ruby/object:Puppet::Parser::AST::Name
+        line: 50
+        file: 
+        value: "_port"
+      value: !ruby/object:Puppet::Parser::AST::Concat
+        line: 50
+        file: 
+        value: 
+          - !ruby/object:Puppet::Parser::AST::String
+            line: 50
+            file: 
+            value: "set "
+          - !ruby/object:Puppet::Parser::AST::Variable
+            line: 50
+            file: 
+            value: base_path
+          - !ruby/object:Puppet::Parser::AST::String
+            line: 50
+            file: 
+            value: "/#attribute/port "
+          - !ruby/object:Puppet::Parser::AST::Variable
+            line: 50
+            file: 
+            value: port
+          - !ruby/object:Puppet::Parser::AST::String
+            line: 50
+            file: 
+            value: ""
+      children: []
+    - !ruby/object:Puppet::Parser::AST::IfStatement
+      line: 54
+      file: 
+      doc: ""
+      test: !ruby/object:Puppet::Parser::AST::Not
+        line: 51
+        file: 
+        value: !ruby/object:Puppet::Parser::AST::Function
+          ftype: !ruby/sym rvalue
+          line: 51
+          file: 
+          doc: ""
+          name: empty
+          arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 51
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::Variable
+                line: 51
+                file: 
+                value: additional_attributes
+          children: []
+        children: []
+      statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+        line: 53
+        file: 
+        children: 
+          - !ruby/object:Puppet::Parser::AST::VarDef
+            line: 52
+            file: 
+            doc: ""
+            name: !ruby/object:Puppet::Parser::AST::Name
+              line: 52
+              file: 
+              value: "_additional_attributes"
+            value: !ruby/object:Puppet::Parser::AST::Function
+              ftype: !ruby/sym rvalue
+              line: 52
+              file: 
+              doc: ""
+              name: prefix
+              arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 52
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Function
+                    ftype: !ruby/sym rvalue
+                    line: 52
+                    file: 
+                    doc: ""
+                    name: join_keys_to_values
+                    arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 52
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 52
+                          file: 
+                          value: additional_attributes
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 52
+                          file: 
+                          value: " "
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::Concat
+                    line: 52
+                    file: 
+                    value: 
+                      - !ruby/object:Puppet::Parser::AST::String
+                        line: 52
+                        file: 
+                        value: "set "
+                      - !ruby/object:Puppet::Parser::AST::Variable
+                        line: 52
+                        file: 
+                        value: base_path
+                      - !ruby/object:Puppet::Parser::AST::String
+                        line: 52
+                        file: 
+                        value: "/#attribute/"
+              children: []
+            children: []
+      children: []
+    - !ruby/object:Puppet::Parser::AST::IfStatement
+      line: 58
+      file: 
+      doc: ""
+      test: !ruby/object:Puppet::Parser::AST::Not
+        line: 54
+        file: 
+        value: !ruby/object:Puppet::Parser::AST::Function
+          ftype: !ruby/sym rvalue
+          line: 54
+          file: 
+          doc: ""
+          name: empty
+          arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 54
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::Function
+                ftype: !ruby/sym rvalue
+                line: 54
+                file: 
+                doc: ""
+                name: any2array
+                arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                  line: 54
+                  file: 
+                  children: 
+                    - !ruby/object:Puppet::Parser::AST::Variable
+                      line: 54
+                      file: 
+                      value: attributes_to_remove
+                children: []
+          children: []
+        children: []
+      statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+        line: 56
+        file: 
+        children: 
+          - !ruby/object:Puppet::Parser::AST::VarDef
+            line: 55
+            file: 
+            doc: ""
+            name: !ruby/object:Puppet::Parser::AST::Name
+              line: 55
+              file: 
+              value: "_attributes_to_remove"
+            value: !ruby/object:Puppet::Parser::AST::Function
+              ftype: !ruby/sym rvalue
+              line: 55
+              file: 
+              doc: ""
+              name: prefix
+              arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 55
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Function
+                    ftype: !ruby/sym rvalue
+                    line: 55
+                    file: 
+                    doc: ""
+                    name: any2array
+                    arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 55
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 55
+                          file: 
+                          value: attributes_to_remove
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::Concat
+                    line: 55
+                    file: 
+                    value: 
+                      - !ruby/object:Puppet::Parser::AST::String
+                        line: 55
+                        file: 
+                        value: "rm "
+                      - !ruby/object:Puppet::Parser::AST::Variable
+                        line: 55
+                        file: 
+                        value: base_path
+                      - !ruby/object:Puppet::Parser::AST::String
+                        line: 55
+                        file: 
+                        value: "/#attribute/"
+              children: []
+            children: []
+      children: []
+    - !ruby/object:Puppet::Parser::AST::VarDef
+      line: 58
+      file: 
+      doc: ""
+      name: !ruby/object:Puppet::Parser::AST::Name
+        line: 58
+        file: 
+        value: changes
+      value: !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym rvalue
+        line: 58
+        file: 
+        doc: ""
+        name: delete_undef_values
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 58
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Function
+              ftype: !ruby/sym rvalue
+              line: 58
+              file: 
+              doc: ""
+              name: flatten
+              arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 58
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 58
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::Variable
+                        line: 58
+                        file: 
+                        value: "_protocol_change"
+                      - !ruby/object:Puppet::Parser::AST::Variable
+                        line: 58
+                        file: 
+                        value: "_port"
+                      - !ruby/object:Puppet::Parser::AST::Variable
+                        line: 58
+                        file: 
+                        value: "_additional_attributes"
+                      - !ruby/object:Puppet::Parser::AST::Variable
+                        line: 58
+                        file: 
+                        value: "_attributes_to_remove"
+              children: []
+        children: []
+      children: []
+children: []

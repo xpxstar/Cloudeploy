@@ -1,0 +1,33 @@
+component: #定义组件信息
+  name: cloudeploy::default::component::file
+  display_name: 文本组件
+  componentType: FILE
+operations:
+- operationName: cloudeploy::default::file::upload
+  displayName: 上传文件
+  nodes:
+  - nodeName: file_upload_node
+    searchName: cloudeploy::primitive::file
+    extractParams:
+    - source
+    - target
+    - timeout
+    - force
+- operationName: cloudeploy::default::file::deploy
+  displayName: 上传并解压文件
+  nodes:
+  - nodeName: file_upload_extract_node
+    searchName: cloudeploy::primitive::deploy
+    extractParams:
+    - source
+    - target 
+    - timeout
+    - force
+#- operationName: cloudeploy::default::file::delete
+#  displayName: DELETE
+#  nodes:
+#  - nodeName: file_delete_node
+#    searchName: cloudeploy::primitive::cloudeployFile
+#    extractParams:
+#    - filePath
+#    - ensure: absent

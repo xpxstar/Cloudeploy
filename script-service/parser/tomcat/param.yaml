@@ -1,0 +1,604 @@
+--- 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::config::server::connector"
+    type: !ruby/sym definition
+    params: 
+      catalina_base: 
+        value: "${$::tomcat::catalina_home}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 19
+          file: 
+          value: "::tomcat::catalina_home"
+      connector_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 20
+          file: 
+          value: present
+      port: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 21
+          file: 
+          value: !ruby/sym undef
+      protocol: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 22
+          file: 
+          value: !ruby/sym undef
+      parent_service: 
+        value: Catalina
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 23
+          file: 
+          value: Catalina
+      additional_attributes: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 24
+          file: 
+          value: {}
+      attributes_to_remove: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 25
+          file: 
+          children: []
+      purge_connectors: 
+        value: "${$::tomcat::purge_connectors}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 26
+          file: 
+          value: "::tomcat::purge_connectors"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::config::server::engine"
+    type: !ruby/sym definition
+    params: 
+      default_host: 
+        value: 
+        type: 
+      catalina_base: 
+        value: "${$::tomcat::catalina_home}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 31
+          file: 
+          value: "::tomcat::catalina_home"
+      background_processor_delay: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 32
+          file: 
+          value: !ruby/sym undef
+      background_processor_delay_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 33
+          file: 
+          value: present
+      class_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 34
+          file: 
+          value: !ruby/sym undef
+      class_name_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 35
+          file: 
+          value: present
+      engine_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 36
+          file: 
+          value: !ruby/sym undef
+      jvm_route: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 37
+          file: 
+          value: !ruby/sym undef
+      jvm_route_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: present
+      parent_service: 
+        value: Catalina
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 39
+          file: 
+          value: Catalina
+      start_stop_threads: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 40
+          file: 
+          value: !ruby/sym undef
+      start_stop_threads_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 41
+          file: 
+          value: present
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::config::server::host"
+    type: !ruby/sym definition
+    params: 
+      app_base: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 19
+          file: 
+          value: !ruby/sym undef
+      catalina_base: 
+        value: "${$::tomcat::catalina_home}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 20
+          file: 
+          value: "::tomcat::catalina_home"
+      host_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 21
+          file: 
+          value: present
+      host_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 22
+          file: 
+          value: !ruby/sym undef
+      parent_service: 
+        value: Catalina
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 23
+          file: 
+          value: Catalina
+      additional_attributes: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 24
+          file: 
+          value: {}
+      attributes_to_remove: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 25
+          file: 
+          children: []
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::config::server::service"
+    type: !ruby/sym definition
+    params: 
+      catalina_base: 
+        value: "${$::tomcat::catalina_home}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 16
+          file: 
+          value: "::tomcat::catalina_home"
+      class_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 17
+          file: 
+          value: !ruby/sym undef
+      class_name_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 18
+          file: 
+          value: present
+      service_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 19
+          file: 
+          value: present
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::config::server::valve"
+    type: !ruby/sym definition
+    params: 
+      catalina_base: 
+        value: "${$::tomcat::catalina_home}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 20
+          file: 
+          value: "::tomcat::catalina_home"
+      class_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 21
+          file: 
+          value: !ruby/sym undef
+      parent_host: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 22
+          file: 
+          value: !ruby/sym undef
+      parent_service: 
+        value: Catalina
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 23
+          file: 
+          value: Catalina
+      valve_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 24
+          file: 
+          value: present
+      additional_attributes: 
+        value: {}
+        type: !ruby/object:Puppet::Parser::AST::ASTHash
+          line: 25
+          file: 
+          value: {}
+      attributes_to_remove: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 26
+          file: 
+          children: []
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::config::server"
+    type: !ruby/sym definition
+    params: 
+      catalina_base: 
+        value: "${$::tomcat::catalina_home}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 18
+          file: 
+          value: "::tomcat::catalina_home"
+      class_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 19
+          file: 
+          value: !ruby/sym undef
+      class_name_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 20
+          file: 
+          value: present
+      address: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 21
+          file: 
+          value: !ruby/sym undef
+      address_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 22
+          file: 
+          value: present
+      port: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 23
+          file: 
+          value: !ruby/sym undef
+      shutdown: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 24
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: tomcat
+    type: !ruby/sym hostclass
+    params: 
+      catalina_home: 
+        value: "${$::tomcat::params::catalina_home}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 23
+          file: 
+          value: "::tomcat::params::catalina_home"
+      user: 
+        value: "${$::tomcat::params::user}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 24
+          file: 
+          value: "::tomcat::params::user"
+      group: 
+        value: "${$::tomcat::params::group}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 25
+          file: 
+          value: "::tomcat::params::group"
+      install_from_source: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 26
+          file: 
+          value: true
+      purge_connectors: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 27
+          file: 
+          value: false
+      manage_user: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 28
+          file: 
+          value: true
+      manage_group: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 29
+          file: 
+          value: true
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::instance::package"
+    type: !ruby/sym definition
+    params: 
+      package_ensure: 
+        value: installed
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 9
+          file: 
+          value: installed
+      package_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 10
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::instance::source"
+    type: !ruby/sym definition
+    params: 
+      catalina_home: 
+        value: 
+        type: 
+      catalina_base: 
+        value: 
+        type: 
+      source_url: 
+        value: 
+        type: 
+      source_strip_first_dir: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 17
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::instance::uninstall"
+    type: !ruby/sym definition
+    params: 
+      catalina_home: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 2
+          file: 
+          value: !ruby/sym undef
+      catalina_base: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 3
+          file: 
+          value: !ruby/sym undef
+      package_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 4
+          file: 
+          value: !ruby/sym undef
+      install_from_source: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 5
+          file: 
+          value: true
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::instance"
+    type: !ruby/sym definition
+    params: 
+      catalina_home: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 21
+          file: 
+          value: !ruby/sym undef
+      catalina_base: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 22
+          file: 
+          value: !ruby/sym undef
+      install_from_source: 
+        value: "${$::tomcat::install_from_source}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 23
+          file: 
+          value: "::tomcat::install_from_source"
+      source_url: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 24
+          file: 
+          value: !ruby/sym undef
+      source_strip_first_dir: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 25
+          file: 
+          value: !ruby/sym undef
+      package_ensure: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 26
+          file: 
+          value: !ruby/sym undef
+      package_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 27
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::params"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::service"
+    type: !ruby/sym definition
+    params: 
+      catalina_home: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 23
+          file: 
+          value: !ruby/sym undef
+      catalina_base: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 24
+          file: 
+          value: !ruby/sym undef
+      use_jsvc: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 25
+          file: 
+          value: false
+      java_home: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 26
+          file: 
+          value: !ruby/sym undef
+      service_ensure: 
+        value: running
+        type: !ruby/object:Puppet::Parser::AST::Name
+          line: 27
+          file: 
+          value: running
+      use_init: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 28
+          file: 
+          value: false
+      service_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 29
+          file: 
+          value: !ruby/sym undef
+      start_command: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 30
+          file: 
+          value: !ruby/sym undef
+      stop_command: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 31
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::setenv::entry"
+    type: !ruby/sym definition
+    params: 
+      value: 
+        value: 
+        type: 
+      ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 15
+          file: 
+          value: present
+      config_file: 
+        value: "${::tomcat::catalina_home}/bin/setenv.sh"
+        type: !ruby/object:Puppet::Parser::AST::Concat
+          line: 16
+          file: 
+          value: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 16
+              file: 
+              value: ""
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 16
+              file: 
+              value: "::tomcat::catalina_home"
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 16
+              file: 
+              value: /bin/setenv.sh
+      param: 
+        value: "${$name}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 17
+          file: 
+          value: name
+      quote_char: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 18
+          file: 
+          value: !ruby/sym undef
+      base_path: 
+        value: ""
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 20
+          file: 
+          value: ""
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "tomcat::war"
+    type: !ruby/sym definition
+    params: 
+      catalina_base: 
+        value: "${$::tomcat::catalina_home}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 23
+          file: 
+          value: "::tomcat::catalina_home"
+      app_base: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 24
+          file: 
+          value: !ruby/sym undef
+      deployment_path: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 25
+          file: 
+          value: !ruby/sym undef
+      war_ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 26
+          file: 
+          value: present
+      war_name: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 27
+          file: 
+          value: !ruby/sym undef
+      war_purge: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 28
+          file: 
+          value: true
+      war_source: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 29
+          file: 
+          value: !ruby/sym undef

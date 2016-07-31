@@ -1,0 +1,2230 @@
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: "consul_template::config"
+  namespace: "consul_template::config"
+  arguments: 
+    consul_host: 
+    consul_port: 
+    consul_token: 
+    consul_retry: 
+    purge: !ruby/object:Puppet::Parser::AST::Boolean
+      line: 10
+      file: 
+      value: true
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 19
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 17
+        file: 
+        doc: ""
+        type: "concat::fragment"
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 17
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 17
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 13
+                file: 
+                value: header
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 14
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 14
+                    file: 
+                    param: target
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 14
+                      file: 
+                      value: consul-template/config.json
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 15
+                    file: 
+                    param: content
+                    value: !ruby/object:Puppet::Parser::AST::Function
+                      ftype: !ruby/sym rvalue
+                      line: 15
+                      file: 
+                      doc: ""
+                      name: inline_template
+                      arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 15
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 15
+                            file: 
+                            value: "consul = \x22<%= @consul_host %>:<%= @consul_port %>\x22\ntoken = \x22<%= @consul_token %>\x22\nretry = \x22<%= @consul_retry %>\x22\n\n"
+                      children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 16
+                    file: 
+                    param: order
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 16
+                      file: 
+                      value: "00"
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Relationship
+        line: 27
+        file: 
+        children: []
+        left: !ruby/object:Puppet::Parser::AST::Resource
+          line: 23
+          file: 
+          doc: ""
+          type: file
+          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 23
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                line: 23
+                file: 
+                title: !ruby/object:Puppet::Parser::AST::Variable
+                  line: 19
+                  file: 
+                  value: "consul_template::config_dir"
+                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                  line: 20
+                  file: 
+                  children: 
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 20
+                      file: 
+                      param: ensure
+                      value: !ruby/object:Puppet::Parser::AST::String
+                        line: 20
+                        file: 
+                        value: directory
+                      children: []
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 21
+                      file: 
+                      param: purge
+                      value: !ruby/object:Puppet::Parser::AST::Variable
+                        line: 21
+                        file: 
+                        value: purge
+                      children: []
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 22
+                      file: 
+                      param: recurse
+                      value: !ruby/object:Puppet::Parser::AST::Variable
+                        line: 22
+                        file: 
+                        value: purge
+                      children: []
+                children: []
+          children: []
+        right: !ruby/object:Puppet::Parser::AST::Resource
+          line: 27
+          file: 
+          doc: ""
+          type: concat
+          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 27
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                line: 27
+                file: 
+                title: !ruby/object:Puppet::Parser::AST::String
+                  line: 24
+                  file: 
+                  value: consul-template/config.json
+                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                  line: 25
+                  file: 
+                  children: 
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 25
+                      file: 
+                      param: path
+                      value: !ruby/object:Puppet::Parser::AST::Concat
+                        line: 25
+                        file: 
+                        value: 
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 25
+                            file: 
+                            value: ""
+                          - !ruby/object:Puppet::Parser::AST::Variable
+                            line: 25
+                            file: 
+                            value: "consul_template::config_dir"
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 25
+                            file: 
+                            value: /config.json
+                      children: []
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 26
+                      file: 
+                      param: notify
+                      value: !ruby/object:Puppet::Parser::AST::ResourceReference
+                        line: 26
+                        file: 
+                        type: Service
+                        title: !ruby/object:Puppet::Parser::AST::ASTArray
+                          line: 26
+                          file: 
+                          children: 
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 26
+                              file: 
+                              value: consul-template
+                        children: []
+                      children: []
+                children: []
+          children: []
+        arrow: "->"
+  doc: "== Class consul_template::config\n\nThis class is called from consul_template\n\n"
+  line: 5
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: consul_template
+  namespace: consul_template
+  arguments: 
+    manage_user: !ruby/object:Puppet::Parser::AST::Boolean
+      line: 28
+      file: 
+      value: true
+    user: !ruby/object:Puppet::Parser::AST::String
+      line: 29
+      file: 
+      value: consul-t
+    manage_group: !ruby/object:Puppet::Parser::AST::Boolean
+      line: 30
+      file: 
+      value: true
+    purge_config_dir: !ruby/object:Puppet::Parser::AST::Boolean
+      line: 31
+      file: 
+      value: true
+    group: !ruby/object:Puppet::Parser::AST::String
+      line: 32
+      file: 
+      value: consul-t
+    bin_dir: !ruby/object:Puppet::Parser::AST::String
+      line: 33
+      file: 
+      value: /usr/local/bin
+    arch: !ruby/object:Puppet::Parser::AST::Variable
+      line: 34
+      file: 
+      value: "consul_template::params::arch"
+    version: !ruby/object:Puppet::Parser::AST::Variable
+      line: 35
+      file: 
+      value: "consul_template::params::version"
+    install_method: !ruby/object:Puppet::Parser::AST::Variable
+      line: 36
+      file: 
+      value: "consul_template::params::install_method"
+    os: !ruby/object:Puppet::Parser::AST::Variable
+      line: 37
+      file: 
+      value: "consul_template::params::os"
+    download_url: !ruby/object:Puppet::Parser::AST::Concat
+      line: 38
+      file: 
+      value: 
+        - !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: "https://github.com/hashicorp/consul-template/releases/download/v"
+        - !ruby/object:Puppet::Parser::AST::Variable
+          line: 38
+          file: 
+          value: version
+        - !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: /consul-template_
+        - !ruby/object:Puppet::Parser::AST::Variable
+          line: 38
+          file: 
+          value: version
+        - !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: "_"
+        - !ruby/object:Puppet::Parser::AST::Variable
+          line: 38
+          file: 
+          value: os
+        - !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: "_"
+        - !ruby/object:Puppet::Parser::AST::Variable
+          line: 38
+          file: 
+          value: arch
+        - !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: ".tar.gz"
+    package_name: !ruby/object:Puppet::Parser::AST::Variable
+      line: 39
+      file: 
+      value: "consul_template::params::package_name"
+    package_ensure: !ruby/object:Puppet::Parser::AST::Variable
+      line: 40
+      file: 
+      value: "consul_template::params::package_ensure"
+    config_dir: !ruby/object:Puppet::Parser::AST::String
+      line: 41
+      file: 
+      value: /etc/consul-template
+    extra_options: !ruby/object:Puppet::Parser::AST::String
+      line: 42
+      file: 
+      value: ""
+    service_enable: !ruby/object:Puppet::Parser::AST::Boolean
+      line: 43
+      file: 
+      value: true
+    service_ensure: !ruby/object:Puppet::Parser::AST::String
+      line: 44
+      file: 
+      value: running
+    consul_host: !ruby/object:Puppet::Parser::AST::String
+      line: 45
+      file: 
+      value: localhost
+    consul_port: !ruby/object:Puppet::Parser::AST::String
+      line: 46
+      file: 
+      value: "8500"
+    consul_token: !ruby/object:Puppet::Parser::AST::String
+      line: 47
+      file: 
+      value: ""
+    consul_retry: !ruby/object:Puppet::Parser::AST::String
+      line: 48
+      file: 
+      value: "10s"
+    init_style: !ruby/object:Puppet::Parser::AST::Variable
+      line: 49
+      file: 
+      value: "consul_template::params::init_style"
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 53
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym statement
+        line: 52
+        file: 
+        doc: ""
+        name: validate_bool
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 52
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 52
+              file: 
+              value: purge_config_dir
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym statement
+        line: 53
+        file: 
+        doc: ""
+        name: validate_bool
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 53
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 53
+              file: 
+              value: manage_user
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Relationship
+        line: 64
+        file: 
+        children: []
+        left: !ruby/object:Puppet::Parser::AST::Relationship
+          line: 63
+          file: 
+          children: []
+          left: !ruby/object:Puppet::Parser::AST::Relationship
+            line: 62
+            file: 
+            children: []
+            left: !ruby/object:Puppet::Parser::AST::Resource
+              line: 55
+              file: 
+              doc: ""
+              type: class
+              instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 55
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                    line: 55
+                    file: 
+                    title: !ruby/object:Puppet::Parser::AST::String
+                      line: 55
+                      file: 
+                      value: "consul_template::install"
+                    parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 55
+                      file: 
+                      children: []
+                    children: []
+              children: []
+            right: !ruby/object:Puppet::Parser::AST::Resource
+              line: 62
+              file: 
+              doc: ""
+              type: class
+              instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 62
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                    line: 62
+                    file: 
+                    title: !ruby/object:Puppet::Parser::AST::String
+                      line: 56
+                      file: 
+                      value: "consul_template::config"
+                    parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 57
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 57
+                          file: 
+                          param: consul_host
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 57
+                            file: 
+                            value: consul_host
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 58
+                          file: 
+                          param: consul_port
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 58
+                            file: 
+                            value: consul_port
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 59
+                          file: 
+                          param: consul_token
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 59
+                            file: 
+                            value: consul_token
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 60
+                          file: 
+                          param: consul_retry
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 60
+                            file: 
+                            value: consul_retry
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 61
+                          file: 
+                          param: purge
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 61
+                            file: 
+                            value: purge_config_dir
+                          children: []
+                    children: []
+              children: []
+            arrow: "->"
+          right: !ruby/object:Puppet::Parser::AST::Resource
+            line: 63
+            file: 
+            doc: ""
+            type: class
+            instances: !ruby/object:Puppet::Parser::AST::ASTArray
+              line: 63
+              file: 
+              children: 
+                - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                  line: 63
+                  file: 
+                  title: !ruby/object:Puppet::Parser::AST::String
+                    line: 63
+                    file: 
+                    value: "consul_template::run_service"
+                  parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 63
+                    file: 
+                    children: []
+                  children: []
+            children: []
+          arrow: "~>"
+        right: !ruby/object:Puppet::Parser::AST::ResourceReference
+          line: 64
+          file: 
+          type: Class
+          title: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 64
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::String
+                line: 64
+                file: 
+                value: consul_template
+          children: []
+        arrow: "->"
+  doc: "== Class: consul-template\n\nInstalls, configures, and manages consul-template\n\n=== Parameters\n\n[*version*]\n  Specify version of consul-template binary to download.\n\n[*install_method*]\n  Defaults to `url` but can be `package` if you want to install via a system package.\n\n[*package_name*]\n  Only valid when the install_method == package. Defaults to `consul-template`.\n\n[*package_ensure*]\n  Only valid when the install_method == package. Defaults to `latest`.\n\n[*extra_options*]\n  Extra arguments to be passed to the consul-template agent\n\n[*init_style*]\n  What style of init system your system uses.\n\n[*purge_config_dir*]\n  Purge config files no longer generated by Puppet\n"
+  line: 27
+  parent: "consul_template::params"
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: "consul_template::install"
+  namespace: "consul_template::install"
+  arguments: {}
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 14
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::IfStatement
+        line: 14
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Variable
+          line: 5
+          file: 
+          value: "consul_template::data_dir"
+        statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+          line: 12
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Resource
+              line: 11
+              file: 
+              doc: ""
+              type: file
+              instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 11
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                    line: 11
+                    file: 
+                    title: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 6
+                      file: 
+                      value: "consul_template::data_dir"
+                    parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 7
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 7
+                          file: 
+                          param: ensure
+                          value: !ruby/object:Puppet::Parser::AST::String
+                            line: 7
+                            file: 
+                            value: directory
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 8
+                          file: 
+                          param: owner
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 8
+                            file: 
+                            value: "consul_template::user"
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 9
+                          file: 
+                          param: group
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 9
+                            file: 
+                            value: "consul_template::group"
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 10
+                          file: 
+                          param: mode
+                          value: !ruby/object:Puppet::Parser::AST::String
+                            line: 10
+                            file: 
+                            value: "0755"
+                          children: []
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::IfStatement
+        line: 41
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::ComparisonOperator
+          line: 14
+          file: 
+          operator: "=="
+          lval: !ruby/object:Puppet::Parser::AST::Variable
+            line: 14
+            file: 
+            value: "consul_template::install_method"
+          rval: !ruby/object:Puppet::Parser::AST::String
+            line: 14
+            file: 
+            value: url
+          children: []
+        statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+          line: 19
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::IfStatement
+              line: 19
+              file: 
+              doc: ""
+              test: !ruby/object:Puppet::Parser::AST::ComparisonOperator
+                line: 16
+                file: 
+                operator: "!="
+                lval: !ruby/object:Puppet::Parser::AST::Variable
+                  line: 16
+                  file: 
+                  value: "::operatingsystem"
+                rval: !ruby/object:Puppet::Parser::AST::String
+                  line: 16
+                  file: 
+                  value: darwin
+                children: []
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 18
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Function
+                    ftype: !ruby/sym statement
+                    line: 17
+                    file: 
+                    doc: ""
+                    name: ensure_packages
+                    arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 17
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::ASTArray
+                          line: 17
+                          file: 
+                          children: 
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 17
+                              file: 
+                              value: tar
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::Relationship
+              line: 31
+              file: 
+              children: []
+              left: !ruby/object:Puppet::Parser::AST::Relationship
+                line: 26
+                file: 
+                children: []
+                left: !ruby/object:Puppet::Parser::AST::Resource
+                  line: 21
+                  file: 
+                  doc: ""
+                  type: "staging::file"
+                  instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 21
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                        line: 21
+                        file: 
+                        title: !ruby/object:Puppet::Parser::AST::String
+                          line: 19
+                          file: 
+                          value: consul-template.tar.gz
+                        parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                          line: 21
+                          file: 
+                          children: 
+                            - !ruby/object:Puppet::Parser::AST::ResourceParam
+                              line: 20
+                              file: 
+                              param: source
+                              value: !ruby/object:Puppet::Parser::AST::Variable
+                                line: 20
+                                file: 
+                                value: "consul_template::download_url"
+                              children: []
+                        children: []
+                  children: []
+                right: !ruby/object:Puppet::Parser::AST::Resource
+                  line: 26
+                  file: 
+                  doc: ""
+                  type: "staging::extract"
+                  instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 26
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                        line: 26
+                        file: 
+                        title: !ruby/object:Puppet::Parser::AST::String
+                          line: 22
+                          file: 
+                          value: consul-template.tar.gz
+                        parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                          line: 23
+                          file: 
+                          children: 
+                            - !ruby/object:Puppet::Parser::AST::ResourceParam
+                              line: 23
+                              file: 
+                              param: target
+                              value: !ruby/object:Puppet::Parser::AST::Variable
+                                line: 23
+                                file: 
+                                value: "consul_template::bin_dir"
+                              children: []
+                            - !ruby/object:Puppet::Parser::AST::ResourceParam
+                              line: 24
+                              file: 
+                              param: creates
+                              value: !ruby/object:Puppet::Parser::AST::Concat
+                                line: 24
+                                file: 
+                                value: 
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 24
+                                    file: 
+                                    value: ""
+                                  - !ruby/object:Puppet::Parser::AST::Variable
+                                    line: 24
+                                    file: 
+                                    value: "consul_template::bin_dir"
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 24
+                                    file: 
+                                    value: /consul-template
+                              children: []
+                            - !ruby/object:Puppet::Parser::AST::ResourceParam
+                              line: 25
+                              file: 
+                              param: strip
+                              value: !ruby/object:Puppet::Parser::AST::Name
+                                line: 25
+                                file: 
+                                value: "1"
+                              children: []
+                        children: []
+                  children: []
+                arrow: "->"
+              right: !ruby/object:Puppet::Parser::AST::Resource
+                line: 31
+                file: 
+                doc: ""
+                type: file
+                instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                  line: 31
+                  file: 
+                  children: 
+                    - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                      line: 31
+                      file: 
+                      title: !ruby/object:Puppet::Parser::AST::Concat
+                        line: 27
+                        file: 
+                        value: 
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 27
+                            file: 
+                            value: ""
+                          - !ruby/object:Puppet::Parser::AST::Variable
+                            line: 27
+                            file: 
+                            value: "consul_template::bin_dir"
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 27
+                            file: 
+                            value: /consul-template
+                      parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 28
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::ResourceParam
+                            line: 28
+                            file: 
+                            param: owner
+                            value: !ruby/object:Puppet::Parser::AST::String
+                              line: 28
+                              file: 
+                              value: root
+                            children: []
+                          - !ruby/object:Puppet::Parser::AST::ResourceParam
+                            line: 29
+                            file: 
+                            param: group
+                            value: !ruby/object:Puppet::Parser::AST::Name
+                              line: 29
+                              file: 
+                              value: "0"
+                            children: []
+                          - !ruby/object:Puppet::Parser::AST::ResourceParam
+                            line: 30
+                            file: 
+                            param: mode
+                            value: !ruby/object:Puppet::Parser::AST::String
+                              line: 30
+                              file: 
+                              value: "0555"
+                            children: []
+                      children: []
+                children: []
+              arrow: "->"
+        children: []
+        else: !ruby/object:Puppet::Parser::AST::Else
+          line: 41
+          file: 
+          doc: ""
+          statements: !ruby/object:Puppet::Parser::AST::IfStatement
+            line: 41
+            file: 
+            doc: ""
+            test: !ruby/object:Puppet::Parser::AST::ComparisonOperator
+              line: 33
+              file: 
+              operator: "=="
+              lval: !ruby/object:Puppet::Parser::AST::Variable
+                line: 33
+                file: 
+                value: "consul_template::install_method"
+              rval: !ruby/object:Puppet::Parser::AST::String
+                line: 33
+                file: 
+                value: package
+              children: []
+            statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+              line: 39
+              file: 
+              children: 
+                - !ruby/object:Puppet::Parser::AST::Resource
+                  line: 37
+                  file: 
+                  doc: ""
+                  type: package
+                  instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 37
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                        line: 37
+                        file: 
+                        title: !ruby/object:Puppet::Parser::AST::Variable
+                          line: 35
+                          file: 
+                          value: "consul_template::package_name"
+                        parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                          line: 36
+                          file: 
+                          children: 
+                            - !ruby/object:Puppet::Parser::AST::ResourceParam
+                              line: 36
+                              file: 
+                              param: ensure
+                              value: !ruby/object:Puppet::Parser::AST::Variable
+                                line: 36
+                                file: 
+                                value: "consul_template::package_ensure"
+                              children: []
+                        children: []
+                  children: []
+            children: []
+            else: !ruby/object:Puppet::Parser::AST::Else
+              line: 41
+              file: 
+              doc: ""
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 41
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Function
+                    ftype: !ruby/sym statement
+                    line: 40
+                    file: 
+                    doc: ""
+                    name: fail
+                    arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 40
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Concat
+                          line: 40
+                          file: 
+                          value: 
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 40
+                              file: 
+                              value: "The provided install method "
+                            - !ruby/object:Puppet::Parser::AST::Variable
+                              line: 40
+                              file: 
+                              value: "consul_template::install_method"
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 40
+                              file: 
+                              value: " is invalid"
+                    children: []
+              children: []
+          children: []
+      - !ruby/object:Puppet::Parser::AST::IfStatement
+        line: 99
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Variable
+          line: 43
+          file: 
+          value: "consul_template::init_style"
+        statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+          line: 97
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::CaseStatement
+              line: 96
+              file: 
+              doc: ""
+              test: !ruby/object:Puppet::Parser::AST::Variable
+                line: 45
+                file: 
+                value: "consul_template::init_style"
+              options: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 60
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::CaseOpt
+                    line: 60
+                    file: 
+                    value: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 46
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 46
+                          file: 
+                          value: upstart
+                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                      line: 53
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Resource
+                          line: 52
+                          file: 
+                          doc: ""
+                          type: file
+                          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 52
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                                line: 52
+                                file: 
+                                title: !ruby/object:Puppet::Parser::AST::String
+                                  line: 47
+                                  file: 
+                                  value: /etc/init/consul-template.conf
+                                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 48
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 48
+                                      file: 
+                                      param: mode
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 48
+                                        file: 
+                                        value: "0444"
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 49
+                                      file: 
+                                      param: owner
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 49
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 50
+                                      file: 
+                                      param: group
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 50
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 51
+                                      file: 
+                                      param: content
+                                      value: !ruby/object:Puppet::Parser::AST::Function
+                                        ftype: !ruby/sym rvalue
+                                        line: 51
+                                        file: 
+                                        doc: ""
+                                        name: template
+                                        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                          line: 51
+                                          file: 
+                                          children: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 51
+                                              file: 
+                                              value: consul_template/consul-template.upstart.erb
+                                        children: []
+                                      children: []
+                                children: []
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::Resource
+                          line: 59
+                          file: 
+                          doc: ""
+                          type: file
+                          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 59
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                                line: 59
+                                file: 
+                                title: !ruby/object:Puppet::Parser::AST::String
+                                  line: 53
+                                  file: 
+                                  value: /etc/init.d/consul-template
+                                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 54
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 54
+                                      file: 
+                                      param: ensure
+                                      value: !ruby/object:Puppet::Parser::AST::Name
+                                        line: 54
+                                        file: 
+                                        value: link
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 55
+                                      file: 
+                                      param: target
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 55
+                                        file: 
+                                        value: /lib/init/upstart-job
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 56
+                                      file: 
+                                      param: owner
+                                      value: !ruby/object:Puppet::Parser::AST::Name
+                                        line: 56
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 57
+                                      file: 
+                                      param: group
+                                      value: !ruby/object:Puppet::Parser::AST::Name
+                                        line: 57
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 58
+                                      file: 
+                                      param: mode
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 58
+                                        file: 
+                                        value: "0755"
+                                      children: []
+                                children: []
+                          children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::CaseOpt
+                    line: 68
+                    file: 
+                    value: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 61
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 61
+                          file: 
+                          value: systemd
+                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                      line: 68
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Resource
+                          line: 67
+                          file: 
+                          doc: ""
+                          type: file
+                          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 67
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                                line: 67
+                                file: 
+                                title: !ruby/object:Puppet::Parser::AST::String
+                                  line: 62
+                                  file: 
+                                  value: /lib/systemd/system/consul-template.service
+                                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 63
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 63
+                                      file: 
+                                      param: mode
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 63
+                                        file: 
+                                        value: "0644"
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 64
+                                      file: 
+                                      param: owner
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 64
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 65
+                                      file: 
+                                      param: group
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 65
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 66
+                                      file: 
+                                      param: content
+                                      value: !ruby/object:Puppet::Parser::AST::Function
+                                        ftype: !ruby/sym rvalue
+                                        line: 66
+                                        file: 
+                                        doc: ""
+                                        name: template
+                                        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                          line: 66
+                                          file: 
+                                          children: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 66
+                                              file: 
+                                              value: consul_template/consul-template.systemd.erb
+                                        children: []
+                                      children: []
+                                children: []
+                          children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::CaseOpt
+                    line: 76
+                    file: 
+                    value: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 69
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 69
+                          file: 
+                          value: sysv
+                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                      line: 76
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Resource
+                          line: 75
+                          file: 
+                          doc: ""
+                          type: file
+                          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 75
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                                line: 75
+                                file: 
+                                title: !ruby/object:Puppet::Parser::AST::String
+                                  line: 70
+                                  file: 
+                                  value: /etc/init.d/consul-template
+                                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 71
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 71
+                                      file: 
+                                      param: mode
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 71
+                                        file: 
+                                        value: "0555"
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 72
+                                      file: 
+                                      param: owner
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 72
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 73
+                                      file: 
+                                      param: group
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 73
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 74
+                                      file: 
+                                      param: content
+                                      value: !ruby/object:Puppet::Parser::AST::Function
+                                        ftype: !ruby/sym rvalue
+                                        line: 74
+                                        file: 
+                                        doc: ""
+                                        name: template
+                                        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                          line: 74
+                                          file: 
+                                          children: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 74
+                                              file: 
+                                              value: consul_template/consul-template.sysv.erb
+                                        children: []
+                                      children: []
+                                children: []
+                          children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::CaseOpt
+                    line: 84
+                    file: 
+                    value: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 77
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 77
+                          file: 
+                          value: debian
+                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                      line: 84
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Resource
+                          line: 83
+                          file: 
+                          doc: ""
+                          type: file
+                          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 83
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                                line: 83
+                                file: 
+                                title: !ruby/object:Puppet::Parser::AST::String
+                                  line: 78
+                                  file: 
+                                  value: /etc/init.d/consul-template
+                                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 79
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 79
+                                      file: 
+                                      param: mode
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 79
+                                        file: 
+                                        value: "0555"
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 80
+                                      file: 
+                                      param: owner
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 80
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 81
+                                      file: 
+                                      param: group
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 81
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 82
+                                      file: 
+                                      param: content
+                                      value: !ruby/object:Puppet::Parser::AST::Function
+                                        ftype: !ruby/sym rvalue
+                                        line: 82
+                                        file: 
+                                        doc: ""
+                                        name: template
+                                        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                          line: 82
+                                          file: 
+                                          children: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 82
+                                              file: 
+                                              value: consul_template/consul-template.debian.erb
+                                        children: []
+                                      children: []
+                                children: []
+                          children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::CaseOpt
+                    line: 92
+                    file: 
+                    value: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 85
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 85
+                          file: 
+                          value: sles
+                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                      line: 92
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Resource
+                          line: 91
+                          file: 
+                          doc: ""
+                          type: file
+                          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 91
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                                line: 91
+                                file: 
+                                title: !ruby/object:Puppet::Parser::AST::String
+                                  line: 86
+                                  file: 
+                                  value: /etc/init.d/consul-template
+                                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 87
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 87
+                                      file: 
+                                      param: mode
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 87
+                                        file: 
+                                        value: "0555"
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 88
+                                      file: 
+                                      param: owner
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 88
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 89
+                                      file: 
+                                      param: group
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 89
+                                        file: 
+                                        value: root
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 90
+                                      file: 
+                                      param: content
+                                      value: !ruby/object:Puppet::Parser::AST::Function
+                                        ftype: !ruby/sym rvalue
+                                        line: 90
+                                        file: 
+                                        doc: ""
+                                        name: template
+                                        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                          line: 90
+                                          file: 
+                                          children: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 90
+                                              file: 
+                                              value: consul_template/consul-template.sles.erb
+                                        children: []
+                                      children: []
+                                children: []
+                          children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::CaseOpt
+                    line: 95
+                    file: 
+                    value: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 93
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Default
+                          line: 93
+                          file: 
+                          value: default
+                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                      line: 95
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Function
+                          ftype: !ruby/sym statement
+                          line: 94
+                          file: 
+                          doc: ""
+                          name: fail
+                          arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 94
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Concat
+                                line: 94
+                                file: 
+                                value: 
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 94
+                                    file: 
+                                    value: "I don't know how to create an init script for style "
+                                  - !ruby/object:Puppet::Parser::AST::Variable
+                                    line: 94
+                                    file: 
+                                    value: "consul_template::init_style"
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 94
+                                    file: 
+                                    value: ""
+                          children: []
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::IfStatement
+        line: 104
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Variable
+          line: 99
+          file: 
+          value: "consul_template::manage_user"
+        statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+          line: 103
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Resource
+              line: 102
+              file: 
+              doc: ""
+              type: user
+              instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 102
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                    line: 102
+                    file: 
+                    title: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 100
+                      file: 
+                      value: "consul_template::user"
+                    parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 101
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 101
+                          file: 
+                          param: ensure
+                          value: !ruby/object:Puppet::Parser::AST::String
+                            line: 101
+                            file: 
+                            value: present
+                          children: []
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::IfStatement
+        line: 109
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Variable
+          line: 104
+          file: 
+          value: "consul_template::manage_group"
+        statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+          line: 108
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Resource
+              line: 107
+              file: 
+              doc: ""
+              type: group
+              instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 107
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                    line: 107
+                    file: 
+                    title: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 105
+                      file: 
+                      value: "consul_template::group"
+                    parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 106
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 106
+                          file: 
+                          param: ensure
+                          value: !ruby/object:Puppet::Parser::AST::String
+                            line: 106
+                            file: 
+                            value: present
+                          children: []
+                    children: []
+              children: []
+        children: []
+  doc: "== Class consul_template::intall\n\n"
+  line: 3
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: "consul_template::params"
+  namespace: "consul_template::params"
+  arguments: {}
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 9
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 8
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 8
+          file: 
+          value: install_method
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 8
+          file: 
+          value: url
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 9
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 9
+          file: 
+          value: package_name
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 9
+          file: 
+          value: consul-template
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 10
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 10
+          file: 
+          value: package_ensure
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 10
+          file: 
+          value: latest
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 11
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 11
+          file: 
+          value: version
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 11
+          file: 
+          value: "0.6.0"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::CaseStatement
+        line: 17
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Variable
+          line: 13
+          file: 
+          value: "::architecture"
+        options: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 14
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 14
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 14
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 14
+                    file: 
+                    value: x86_64
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 14
+                    file: 
+                    value: amd64
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 14
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::VarDef
+                    line: 14
+                    file: 
+                    doc: ""
+                    name: !ruby/object:Puppet::Parser::AST::Name
+                      line: 14
+                      file: 
+                      value: arch
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 14
+                      file: 
+                      value: amd64
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 15
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 15
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 15
+                    file: 
+                    value: i386
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 15
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::VarDef
+                    line: 15
+                    file: 
+                    doc: ""
+                    name: !ruby/object:Puppet::Parser::AST::Name
+                      line: 15
+                      file: 
+                      value: arch
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 15
+                      file: 
+                      value: "386"
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 16
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 16
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Default
+                    line: 16
+                    file: 
+                    value: default
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 16
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Function
+                    ftype: !ruby/sym statement
+                    line: 16
+                    file: 
+                    doc: ""
+                    name: fail
+                    arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 16
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Concat
+                          line: 16
+                          file: 
+                          value: 
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 16
+                              file: 
+                              value: "Unsupported kernel architecture: "
+                            - !ruby/object:Puppet::Parser::AST::Variable
+                              line: 16
+                              file: 
+                              value: "::architecture"
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 16
+                              file: 
+                              value: ""
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 19
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 19
+          file: 
+          value: os
+        value: !ruby/object:Puppet::Parser::AST::Function
+          ftype: !ruby/sym rvalue
+          line: 19
+          file: 
+          doc: ""
+          name: downcase
+          arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 19
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::Variable
+                line: 19
+                file: 
+                value: "::kernel"
+          children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 21
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 21
+          file: 
+          value: init_style
+        value: !ruby/object:Puppet::Parser::AST::Selector
+          line: 37
+          file: 
+          param: !ruby/object:Puppet::Parser::AST::Variable
+            line: 21
+            file: 
+            value: "::operatingsystem"
+          values: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 30
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 26
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::String
+                  line: 22
+                  file: 
+                  value: Ubuntu
+                value: !ruby/object:Puppet::Parser::AST::Selector
+                  line: 26
+                  file: 
+                  param: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 22
+                    file: 
+                    value: "::lsbdistrelease"
+                  values: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 24
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 23
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::String
+                          line: 23
+                          file: 
+                          value: "8.04"
+                        value: !ruby/object:Puppet::Parser::AST::String
+                          line: 23
+                          file: 
+                          value: debian
+                        children: []
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 24
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Regex
+                          line: 24
+                          file: 
+                          value: !ruby/regexp /(10|12|14)\.04/
+                        value: !ruby/object:Puppet::Parser::AST::String
+                          line: 24
+                          file: 
+                          value: upstart
+                        children: []
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 26
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Default
+                          line: 25
+                          file: 
+                          value: default
+                        value: !ruby/object:Puppet::Parser::AST::Undef
+                          line: 25
+                          file: 
+                          value: !ruby/sym undef
+                        children: []
+                  children: []
+                children: []
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 30
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::Regex
+                  line: 27
+                  file: 
+                  value: !ruby/regexp /CentOS|RedHat/
+                value: !ruby/object:Puppet::Parser::AST::Selector
+                  line: 30
+                  file: 
+                  param: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 27
+                    file: 
+                    value: "::operatingsystemmajrelease"
+                  values: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 29
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 28
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Regex
+                          line: 28
+                          file: 
+                          value: !ruby/regexp /(4|5|6)/
+                        value: !ruby/object:Puppet::Parser::AST::String
+                          line: 28
+                          file: 
+                          value: sysv
+                        children: []
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 29
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Default
+                          line: 29
+                          file: 
+                          value: default
+                        value: !ruby/object:Puppet::Parser::AST::String
+                          line: 29
+                          file: 
+                          value: systemd
+                        children: []
+                  children: []
+                children: []
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 34
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::String
+                  line: 31
+                  file: 
+                  value: Fedora
+                value: !ruby/object:Puppet::Parser::AST::Selector
+                  line: 34
+                  file: 
+                  param: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 31
+                    file: 
+                    value: "::operatingsystemmajrelease"
+                  values: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 33
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 32
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Regex
+                          line: 32
+                          file: 
+                          value: !ruby/regexp /(12|13|14)/
+                        value: !ruby/object:Puppet::Parser::AST::String
+                          line: 32
+                          file: 
+                          value: sysv
+                        children: []
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 33
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Default
+                          line: 33
+                          file: 
+                          value: default
+                        value: !ruby/object:Puppet::Parser::AST::String
+                          line: 33
+                          file: 
+                          value: systemd
+                        children: []
+                  children: []
+                children: []
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 35
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::String
+                  line: 35
+                  file: 
+                  value: Debian
+                value: !ruby/object:Puppet::Parser::AST::String
+                  line: 35
+                  file: 
+                  value: debian
+                children: []
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 37
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::Default
+                  line: 36
+                  file: 
+                  value: default
+                value: !ruby/object:Puppet::Parser::AST::Undef
+                  line: 36
+                  file: 
+                  value: !ruby/sym undef
+                children: []
+          children: []
+        children: []
+  doc: "== Class consul_template::params\n\nThis class is meant to be called from consul_template\nIt sets variables according to platform\n\n"
+  line: 6
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: "consul_template::run_service"
+  namespace: "consul_template::run_service"
+  arguments: {}
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 14
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 12
+        file: 
+        doc: ""
+        type: service
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 12
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 12
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 8
+                file: 
+                value: consul-template
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 9
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 9
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 9
+                      file: 
+                      value: "consul_template::service_ensure"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 10
+                    file: 
+                    param: enable
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 10
+                      file: 
+                      value: "consul_template::service_enable"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 11
+                    file: 
+                    param: name
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 11
+                      file: 
+                      value: consul-template
+                    children: []
+              children: []
+        children: []
+  doc: "== Class consul_template::service\n\nThis class is meant to be called from consul_template\nIt ensure the service is running\n\n"
+  line: 6
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym definition
+  name: "consul_template::watch"
+  namespace: consul_template
+  arguments: 
+    template: 
+    destination: 
+    command: 
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 13
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym statement
+        line: 11
+        file: 
+        doc: ""
+        name: include
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 13
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Name
+              line: 11
+              file: 
+              value: consul_template
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Relationship
+        line: 22
+        file: 
+        children: []
+        left: !ruby/object:Puppet::Parser::AST::Resource
+          line: 16
+          file: 
+          doc: ""
+          type: file
+          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 16
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                line: 16
+                file: 
+                title: !ruby/object:Puppet::Parser::AST::Concat
+                  line: 13
+                  file: 
+                  value: 
+                    - !ruby/object:Puppet::Parser::AST::String
+                      line: 13
+                      file: 
+                      value: ""
+                    - !ruby/object:Puppet::Parser::AST::Variable
+                      line: 13
+                      file: 
+                      value: "consul_template::config_dir"
+                    - !ruby/object:Puppet::Parser::AST::String
+                      line: 13
+                      file: 
+                      value: /
+                    - !ruby/object:Puppet::Parser::AST::Variable
+                      line: 13
+                      file: 
+                      value: name
+                    - !ruby/object:Puppet::Parser::AST::String
+                      line: 13
+                      file: 
+                      value: ".ctmpl"
+                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                  line: 14
+                  file: 
+                  children: 
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 14
+                      file: 
+                      param: ensure
+                      value: !ruby/object:Puppet::Parser::AST::Name
+                        line: 14
+                        file: 
+                        value: present
+                      children: []
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 15
+                      file: 
+                      param: content
+                      value: !ruby/object:Puppet::Parser::AST::Function
+                        ftype: !ruby/sym rvalue
+                        line: 15
+                        file: 
+                        doc: ""
+                        name: template
+                        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                          line: 15
+                          file: 
+                          children: 
+                            - !ruby/object:Puppet::Parser::AST::Variable
+                              line: 15
+                              file: 
+                              value: template
+                        children: []
+                      children: []
+                children: []
+          children: []
+        right: !ruby/object:Puppet::Parser::AST::Resource
+          line: 22
+          file: 
+          doc: ""
+          type: "concat::fragment"
+          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 22
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                line: 22
+                file: 
+                title: !ruby/object:Puppet::Parser::AST::Concat
+                  line: 18
+                  file: 
+                  value: 
+                    - !ruby/object:Puppet::Parser::AST::String
+                      line: 18
+                      file: 
+                      value: ""
+                    - !ruby/object:Puppet::Parser::AST::Variable
+                      line: 18
+                      file: 
+                      value: name
+                    - !ruby/object:Puppet::Parser::AST::String
+                      line: 18
+                      file: 
+                      value: ".ctmpl"
+                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                  line: 19
+                  file: 
+                  children: 
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 19
+                      file: 
+                      param: target
+                      value: !ruby/object:Puppet::Parser::AST::String
+                        line: 19
+                        file: 
+                        value: consul-template/config.json
+                      children: []
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 20
+                      file: 
+                      param: content
+                      value: !ruby/object:Puppet::Parser::AST::Concat
+                        line: 20
+                        file: 
+                        value: 
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 20
+                            file: 
+                            value: |-
+                              template {
+                                source = "
+                          - !ruby/object:Puppet::Parser::AST::Variable
+                            line: 20
+                            file: 
+                            value: "consul_template::config_dir"
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 20
+                            file: 
+                            value: /
+                          - !ruby/object:Puppet::Parser::AST::Variable
+                            line: 20
+                            file: 
+                            value: name
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 20
+                            file: 
+                            value: |-
+                              .ctmpl"
+                                destination = "
+                          - !ruby/object:Puppet::Parser::AST::Variable
+                            line: 20
+                            file: 
+                            value: destination
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 20
+                            file: 
+                            value: |-
+                              "
+                                command = "
+                          - !ruby/object:Puppet::Parser::AST::Variable
+                            line: 20
+                            file: 
+                            value: command
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 20
+                            file: 
+                            value: "\x22\n}\n\n"
+                      children: []
+                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                      line: 21
+                      file: 
+                      param: order
+                      value: !ruby/object:Puppet::Parser::AST::String
+                        line: 21
+                        file: 
+                        value: "10"
+                      children: []
+                children: []
+          children: []
+        arrow: "->"
+  doc: "== Class consul_template::watch\n\nThis class is called from consul_template\nThis is a single instance of a configuration file to watch\nfor changes in Consul and update the local file\n"
+  line: 6

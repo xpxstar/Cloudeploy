@@ -1,0 +1,190 @@
+&id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: redis
+params:
+  version:
+    paramName: version
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 19, value: 2.8.12}
+    value: 2.8.12
+  redis_src_dir:
+    paramName: redis_src_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 20, value: /opt/redis-src}
+    value: /opt/redis-src
+  redis_bin_dir:
+    paramName: redis_bin_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 21, value: /opt/redis}
+    value: /opt/redis
+  redis_user:
+    paramName: redis_user
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 31, value: root}
+    value: root
+  redis_group:
+    paramName: redis_group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 32, value: root}
+    value: root
+  redis_port:
+    paramName: redis_port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 17, value: '6379'}
+    value: '6379'
+  redis_bind_address:
+    paramName: redis_bind_address
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 18, value: false}
+    value: false
+  redis_max_memory:
+    paramName: redis_max_memory
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 22, value: 4gb}
+    value: 4gb
+  redis_max_clients:
+    paramName: redis_max_clients
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 23, value: false}
+    value: false
+  redis_timeout:
+    paramName: redis_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 24,
+      value: '300'}
+    value: '300'
+  redis_loglevel:
+    paramName: redis_loglevel
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 25, value: notice}
+    value: notice
+  redis_databases:
+    paramName: redis_databases
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 26,
+      value: '16'}
+    value: '16'
+  redis_slowlog_log_slower_than:
+    paramName: redis_slowlog_log_slower_than
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 27,
+      value: '10000'}
+    value: '10000'
+  redis_slowlog_max_len:
+    paramName: redis_slowlog_max_len
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 28,
+      value: '1024'}
+    value: '1024'
+  redis_password:
+    paramName: redis_password
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 29, value: false}
+    value: false
+  redis_saves:
+    paramName: redis_saves
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 30,
+        value: save 900 1}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 30,
+        value: save 300 10}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 30,
+        value: save 60 10000}
+      file: null
+      line: 30
+    value: '["save 900 1","save 300 10","save 60 10000",]'
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: redis::instance
+params:
+  redis_port:
+    paramName: redis_port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 17, value: '6379'}
+    value: '6379'
+  redis_bind_address:
+    paramName: redis_bind_address
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 18, value: false}
+    value: false
+  redis_max_memory:
+    paramName: redis_max_memory
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 22, value: 4gb}
+    value: 4gb
+  redis_max_clients:
+    paramName: redis_max_clients
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 23, value: false}
+    value: false
+  redis_timeout:
+    paramName: redis_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 24,
+      value: '300'}
+    value: '300'
+  redis_loglevel:
+    paramName: redis_loglevel
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 25, value: notice}
+    value: notice
+  redis_databases:
+    paramName: redis_databases
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 26,
+      value: '16'}
+    value: '16'
+  redis_slowlog_log_slower_than:
+    paramName: redis_slowlog_log_slower_than
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 27,
+      value: '10000'}
+    value: '10000'
+  redis_slowlog_max_len:
+    paramName: redis_slowlog_max_len
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 28,
+      value: '1024'}
+    value: '1024'
+  redis_password:
+    paramName: redis_password
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 29, value: false}
+    value: false
+  redis_saves:
+    paramName: redis_saves
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 30,
+        value: save 900 1}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 30,
+        value: save 300 10}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 30,
+        value: save 60 10000}
+      file: null
+      line: 30
+    value: '["save 900 1","save 300 10","save 60 10000",]'
+type: definition
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: redis::params
+params: {}
+type: hostclass

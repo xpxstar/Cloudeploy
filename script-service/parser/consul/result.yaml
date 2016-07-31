@@ -1,0 +1,423 @@
+&id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul::check
+params:
+  id:
+    paramName: id
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 35, value: title}
+    value: ${$title}
+  ttl:
+    paramName: ttl
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 36,
+      value: undef}
+    value: undef
+  http:
+    paramName: http
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 37,
+      value: undef}
+    value: undef
+  script:
+    paramName: script
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 38,
+      value: undef}
+    value: undef
+  interval:
+    paramName: interval
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 39,
+      value: undef}
+    value: undef
+  service_id:
+    paramName: service_id
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 40,
+      value: undef}
+    value: undef
+  timeout:
+    paramName: timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 41,
+      value: undef}
+    value: undef
+  notes:
+    paramName: notes
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 42,
+      value: undef}
+    value: undef
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul::config
+params:
+  config_hash:
+    paramName: config_hash
+    parent: *id001
+    type: null
+    value: null
+  purge:
+    paramName: purge
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 15, value: true}
+    value: true
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul
+params:
+  manage_user:
+    paramName: manage_user
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 37, value: true}
+    value: true
+  user:
+    paramName: user
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 38, value: consul}
+    value: consul
+  manage_group:
+    paramName: manage_group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 39, value: true}
+    value: true
+  purge_config_dir:
+    paramName: purge_config_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 40, value: true}
+    value: true
+  group:
+    paramName: group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 41, value: consul}
+    value: consul
+  join_wan:
+    paramName: join_wan
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 42, value: false}
+    value: false
+  bin_dir:
+    paramName: bin_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 43, value: /usr/local/bin}
+    value: /usr/local/bin
+  arch:
+    paramName: arch
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 44, value: 'consul::params::arch'}
+    value: ${$consul::params::arch}
+  version:
+    paramName: version
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 13, value: 0.5.0}
+    value: 0.5.0
+  install_method:
+    paramName: install_method
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 8, value: url}
+    value: url
+  os:
+    paramName: os
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 47, value: 'consul::params::os'}
+    value: ${$consul::params::os}
+  download_url:
+    paramName: download_url
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTConcat
+      file: null
+      line: 48
+      value:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 48,
+        value: 'https://dl.bintray.com/mitchellh/consul/'}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+        line: 48, value: version}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 48,
+        value: _}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+        line: 48, value: os}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 48,
+        value: _}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+        line: 48, value: arch}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 48,
+        value: .zip}
+    value: https://dl.bintray.com/mitchellh/consul/${version}_${os}_${arch}.zip
+  package_name:
+    paramName: package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 9, value: consul}
+    value: consul
+  package_ensure:
+    paramName: package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 10, value: latest}
+    value: latest
+  ui_download_url:
+    paramName: ui_download_url
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTConcat
+      file: null
+      line: 51
+      value:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 51,
+        value: 'https://dl.bintray.com/mitchellh/consul/'}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+        line: 51, value: version}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 51,
+        value: _web_ui.zip}
+    value: https://dl.bintray.com/mitchellh/consul/${version}_web_ui.zip
+  ui_package_name:
+    paramName: ui_package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 11, value: consul_ui}
+    value: consul_ui
+  ui_package_ensure:
+    paramName: ui_package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 12, value: latest}
+    value: latest
+  config_dir:
+    paramName: config_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 54, value: /etc/consul}
+    value: /etc/consul
+  extra_options:
+    paramName: extra_options
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 55, value: ''}
+    value: ''
+  config_hash:
+    paramName: config_hash
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 56
+      value: {}
+    value: '{}'
+  config_defaults:
+    paramName: config_defaults
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 57
+      value: {}
+    value: '{}'
+  service_enable:
+    paramName: service_enable
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 58, value: true}
+    value: true
+  service_ensure:
+    paramName: service_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 59, value: running}
+    value: running
+  manage_service:
+    paramName: manage_service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 60, value: true}
+    value: true
+  init_style:
+    paramName: init_style
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 61, value: 'consul::params::init_style'}
+    value: ${$consul::params::init_style}
+  services:
+    paramName: services
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 62
+      value: {}
+    value: '{}'
+  watches:
+    paramName: watches
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 63
+      value: {}
+    value: '{}'
+  checks:
+    paramName: checks
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 64
+      value: {}
+    value: '{}'
+  acls:
+    paramName: acls
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 65
+      value: {}
+    value: '{}'
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul::install
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul::params
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul::put_key_value
+params:
+  name:
+    paramName: name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: ''}
+    value: ''
+  value:
+    paramName: value
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 3, value: ''}
+    value: ''
+type: definition
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul::run_service
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul::service
+params:
+  service_name:
+    paramName: service_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 27, value: title}
+    value: ${$title}
+  id:
+    paramName: id
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 28, value: title}
+    value: ${$title}
+  tags:
+    paramName: tags
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 29
+    value: '[]'
+  address:
+    paramName: address
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 30,
+      value: undef}
+    value: undef
+  port:
+    paramName: port
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 31,
+      value: undef}
+    value: undef
+  checks:
+    paramName: checks
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 32
+    value: '[]'
+type: definition
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: consul::watch
+params:
+  handler:
+    paramName: handler
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 43,
+      value: undef}
+    value: undef
+  datacenter:
+    paramName: datacenter
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 44,
+      value: undef}
+    value: undef
+  token:
+    paramName: token
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 45,
+      value: undef}
+    value: undef
+  type:
+    paramName: type
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 46,
+      value: undef}
+    value: undef
+  key:
+    paramName: key
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 47,
+      value: undef}
+    value: undef
+  keyprefix:
+    paramName: keyprefix
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 48,
+      value: undef}
+    value: undef
+  service:
+    paramName: service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 49,
+      value: undef}
+    value: undef
+  service_tag:
+    paramName: service_tag
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 50,
+      value: undef}
+    value: undef
+  passingonly:
+    paramName: passingonly
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 51,
+      value: undef}
+    value: undef
+  state:
+    paramName: state
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 52,
+      value: undef}
+    value: undef
+  event_name:
+    paramName: event_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 53,
+      value: undef}
+    value: undef
+type: definition

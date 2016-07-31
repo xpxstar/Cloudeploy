@@ -1,0 +1,15 @@
+component:
+  name: cloudeploy::default::component::package::java
+  display_name: Java
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::default::java::install
+  displayName: 安装
+  nodes:
+  - nodeName: java_install_node
+    searchName: cloudeploy::java::install
+- operationName: cloudeploy::default::java::delete
+  displayName: 卸载
+  nodes:
+  - nodeName: java_uninstall_delete
+    searchName: cloudeploy::java::uninstall

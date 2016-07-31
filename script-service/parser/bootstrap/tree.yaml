@@ -1,0 +1,87 @@
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: bootstrap
+  namespace: bootstrap
+  arguments: 
+    serverfqdns: !ruby/object:Puppet::Parser::AST::Undef
+      line: 14
+      file: 
+      value: !ruby/sym undef
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 22
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 21
+        file: 
+        doc: ""
+        type: file
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 21
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 21
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 16
+                file: 
+                value: auth.conf
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 17
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 17
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 17
+                      file: 
+                      value: present
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 18
+                    file: 
+                    param: path
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 18
+                      file: 
+                      value: /etc/puppet/auth.conf
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 19
+                    file: 
+                    param: mode
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 19
+                      file: 
+                      value: "0755"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 20
+                    file: 
+                    param: content
+                    value: !ruby/object:Puppet::Parser::AST::Function
+                      ftype: !ruby/sym rvalue
+                      line: 20
+                      file: 
+                      doc: ""
+                      name: template
+                      arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 20
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 20
+                            file: 
+                            value: bootstrap/auth_conf.erb
+                      children: []
+                    children: []
+              children: []
+        children: []
+  doc: "Class: bootstrap\n\nThis module manages bootstrap\n\nParameters: none\n\nActions:\n\nRequires: see Modulefile\n\nSample Usage:\n\n"
+  line: 13

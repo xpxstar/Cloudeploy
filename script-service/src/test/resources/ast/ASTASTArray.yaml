@@ -1,0 +1,10 @@
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+  line: 16
+  file: 
+  children: 
+    - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString
+      line: 16
+      file: 
+      value: |-
+        This class has been deprecated and callers should directly call 
+        mysql::server::backup now.

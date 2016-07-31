@@ -1,0 +1,67 @@
+name: freecsm_example
+description: freecsm的拓扑描述
+node_types:
+- name: cloudeploy.nodetype.tomcat
+  properties:
+  - name: catalina_base
+    type: STRING
+    defaultValue: /opt/tomcat/
+    required: true
+  - name: http_connnect_port
+    type: STRING
+    defaultValue: 8080
+    required: false
+  capabilities:
+  - name: host
+    type: cloudeploy.capability.container
+  - name: endpoint
+    type: cloudeploy.capability.endpoint
+  requirements:
+  - name: host
+    capability: cloudeploy.capability.container
+  interfaces:
+  - name: cloudeploy。interface.tomcat
+    operations:
+    - name: install
+      implementation: cloudeploy::default::tomcat::install
+    - name: delete
+      implementation: cloudeploy::default::tomcat::delete
+    - name: service
+      implementation: cloudeploy::default::tomcat::service
+    - name: config
+      implementation: cloudeploy::default::tomcat::config
+  attributes:
+  - name: port
+  - name: ip
+  - name: catalina_base
+topology_template:
+  node_templates:
+  - name: freecsm_tomcat
+    type: cloudeploy.nodetype.tomcat
+  - name: freecsm_mysql
+    type: cloudeploy.nodetype.mysql
+  relationship_templates:
+  - name: tomcat_connectTo_compute
+    type: cloudeploy.relationship.connectTo
+    interfaces:
+    - name: targetInteface
+      operations:
+      - name: preTarget
+        implementation: null
+      - name: postTarget
+        implementation: null
+    - name: sourceInteface
+      operations:
+      - name: preSource
+        implementation: null
+      - name: postTarget
+        inputs:
+          - name: sqlSource
+            value: ftp://133.133.133.40/cloudeploy/global.sql
+        implementation: cloudeploy::default::mysql::runSql
+relationship_types: 
+  - name: cloudeploy.relationship.connectTo
+  - name: cloudeploy.relationship.hostOn
+capability_types: 
+  - name: cloudeploy.capability.container
+  - name: cloudeploy.capability.endpoint

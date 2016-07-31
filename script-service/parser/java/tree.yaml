@@ -1,0 +1,2099 @@
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: "java::config"
+  namespace: "java::config"
+  arguments: {}
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 17
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::CaseStatement
+        line: 16
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Variable
+          line: 3
+          file: 
+          value: "::osfamily"
+        options: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 12
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 12
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 4
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 4
+                    file: 
+                    value: Debian
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 12
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::IfStatement
+                    line: 12
+                    file: 
+                    doc: ""
+                    test: !ruby/object:Puppet::Parser::AST::BooleanOperator
+                      line: 5
+                      file: 
+                      operator: and
+                      lval: !ruby/object:Puppet::Parser::AST::ComparisonOperator
+                        line: 5
+                        file: 
+                        operator: "!="
+                        lval: !ruby/object:Puppet::Parser::AST::Variable
+                          line: 5
+                          file: 
+                          value: "java::use_java_alternative"
+                        rval: !ruby/object:Puppet::Parser::AST::Undef
+                          line: 5
+                          file: 
+                          value: !ruby/sym undef
+                        children: []
+                      rval: !ruby/object:Puppet::Parser::AST::ComparisonOperator
+                        line: 5
+                        file: 
+                        operator: "!="
+                        lval: !ruby/object:Puppet::Parser::AST::Variable
+                          line: 5
+                          file: 
+                          value: "java::use_java_alternative_path"
+                        rval: !ruby/object:Puppet::Parser::AST::Undef
+                          line: 5
+                          file: 
+                          value: !ruby/sym undef
+                        children: []
+                      children: []
+                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                      line: 11
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Resource
+                          line: 10
+                          file: 
+                          doc: ""
+                          type: exec
+                          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 10
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                                line: 10
+                                file: 
+                                title: !ruby/object:Puppet::Parser::AST::String
+                                  line: 6
+                                  file: 
+                                  value: update-java-alternatives
+                                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 7
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 7
+                                      file: 
+                                      param: path
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 7
+                                        file: 
+                                        value: "/usr/bin:/usr/sbin:/bin:/sbin"
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 8
+                                      file: 
+                                      param: command
+                                      value: !ruby/object:Puppet::Parser::AST::Concat
+                                        line: 8
+                                        file: 
+                                        value: 
+                                          - !ruby/object:Puppet::Parser::AST::String
+                                            line: 8
+                                            file: 
+                                            value: "update-java-alternatives --set "
+                                          - !ruby/object:Puppet::Parser::AST::Variable
+                                            line: 8
+                                            file: 
+                                            value: "java::use_java_alternative"
+                                          - !ruby/object:Puppet::Parser::AST::String
+                                            line: 8
+                                            file: 
+                                            value: " --jre"
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::ResourceParam
+                                      line: 9
+                                      file: 
+                                      param: unless
+                                      value: !ruby/object:Puppet::Parser::AST::Concat
+                                        line: 9
+                                        file: 
+                                        value: 
+                                          - !ruby/object:Puppet::Parser::AST::String
+                                            line: 9
+                                            file: 
+                                            value: "test /etc/alternatives/java -ef '"
+                                          - !ruby/object:Puppet::Parser::AST::Variable
+                                            line: 9
+                                            file: 
+                                            value: "java::use_java_alternative_path"
+                                          - !ruby/object:Puppet::Parser::AST::String
+                                            line: 9
+                                            file: 
+                                            value: "'"
+                                      children: []
+                                children: []
+                          children: []
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 15
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 13
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Default
+                    line: 13
+                    file: 
+                    value: default
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 15
+                file: 
+                children: []
+              children: []
+        children: []
+  doc: "On Debian systems, if alternatives are set, manually assign them.\n"
+  line: 2
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: java
+  namespace: java
+  arguments: 
+    distribution: !ruby/object:Puppet::Parser::AST::String
+      line: 41
+      file: 
+      value: jdk
+    version: !ruby/object:Puppet::Parser::AST::String
+      line: 42
+      file: 
+      value: present
+    package: !ruby/object:Puppet::Parser::AST::Undef
+      line: 43
+      file: 
+      value: !ruby/sym undef
+    java_alternative: !ruby/object:Puppet::Parser::AST::Undef
+      line: 44
+      file: 
+      value: !ruby/sym undef
+    java_alternative_path: !ruby/object:Puppet::Parser::AST::Undef
+      line: 45
+      file: 
+      value: !ruby/sym undef
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 49
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym statement
+        line: 47
+        file: 
+        doc: ""
+        name: include
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 49
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Name
+              line: 47
+              file: 
+              value: "java::params"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym statement
+        line: 49
+        file: 
+        doc: ""
+        name: validate_re
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 49
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 49
+              file: 
+              value: version
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 49
+              file: 
+              value: "present|installed|latest|^[.+_0-9a-zA-Z:-]+$"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::IfStatement
+        line: 58
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Function
+          ftype: !ruby/sym rvalue
+          line: 51
+          file: 
+          doc: ""
+          name: has_key
+          arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 51
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::Variable
+                line: 51
+                file: 
+                value: "java::params::java"
+              - !ruby/object:Puppet::Parser::AST::Variable
+                line: 51
+                file: 
+                value: distribution
+          children: []
+        statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+          line: 53
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::VarDef
+              line: 52
+              file: 
+              doc: ""
+              name: !ruby/object:Puppet::Parser::AST::Name
+                line: 52
+                file: 
+                value: default_package_name
+              value: !ruby/object:Puppet::Parser::AST::HashOrArrayAccess
+                line: 52
+                file: 
+                variable: !ruby/object:Puppet::Parser::AST::HashOrArrayAccess
+                  line: 52
+                  file: 
+                  variable: "java::params::java"
+                  key: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 52
+                    file: 
+                    value: distribution
+                key: !ruby/object:Puppet::Parser::AST::String
+                  line: 52
+                  file: 
+                  value: package
+              children: []
+            - !ruby/object:Puppet::Parser::AST::VarDef
+              line: 53
+              file: 
+              doc: ""
+              name: !ruby/object:Puppet::Parser::AST::Name
+                line: 53
+                file: 
+                value: default_alternative
+              value: !ruby/object:Puppet::Parser::AST::HashOrArrayAccess
+                line: 53
+                file: 
+                variable: !ruby/object:Puppet::Parser::AST::HashOrArrayAccess
+                  line: 53
+                  file: 
+                  variable: "java::params::java"
+                  key: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 53
+                    file: 
+                    value: distribution
+                key: !ruby/object:Puppet::Parser::AST::String
+                  line: 53
+                  file: 
+                  value: alternative
+              children: []
+            - !ruby/object:Puppet::Parser::AST::VarDef
+              line: 54
+              file: 
+              doc: ""
+              name: !ruby/object:Puppet::Parser::AST::Name
+                line: 54
+                file: 
+                value: default_alternative_path
+              value: !ruby/object:Puppet::Parser::AST::HashOrArrayAccess
+                line: 54
+                file: 
+                variable: !ruby/object:Puppet::Parser::AST::HashOrArrayAccess
+                  line: 54
+                  file: 
+                  variable: "java::params::java"
+                  key: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 54
+                    file: 
+                    value: distribution
+                key: !ruby/object:Puppet::Parser::AST::String
+                  line: 54
+                  file: 
+                  value: alternative_path
+              children: []
+            - !ruby/object:Puppet::Parser::AST::VarDef
+              line: 55
+              file: 
+              doc: ""
+              name: !ruby/object:Puppet::Parser::AST::Name
+                line: 55
+                file: 
+                value: java_home
+              value: !ruby/object:Puppet::Parser::AST::HashOrArrayAccess
+                line: 55
+                file: 
+                variable: !ruby/object:Puppet::Parser::AST::HashOrArrayAccess
+                  line: 55
+                  file: 
+                  variable: "java::params::java"
+                  key: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 55
+                    file: 
+                    value: distribution
+                key: !ruby/object:Puppet::Parser::AST::String
+                  line: 55
+                  file: 
+                  value: java_home
+              children: []
+        children: []
+        else: !ruby/object:Puppet::Parser::AST::Else
+          line: 58
+          file: 
+          doc: ""
+          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+            line: 58
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::Function
+                ftype: !ruby/sym statement
+                line: 57
+                file: 
+                doc: ""
+                name: fail
+                arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                  line: 57
+                  file: 
+                  children: 
+                    - !ruby/object:Puppet::Parser::AST::Concat
+                      line: 57
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 57
+                          file: 
+                          value: "Java distribution "
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 57
+                          file: 
+                          value: distribution
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 57
+                          file: 
+                          value: " is not supported."
+                children: []
+          children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 60
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 60
+          file: 
+          value: use_java_package_name
+        value: !ruby/object:Puppet::Parser::AST::Selector
+          line: 63
+          file: 
+          param: !ruby/object:Puppet::Parser::AST::Variable
+            line: 60
+            file: 
+            value: package
+          values: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 62
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 61
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::Undef
+                  line: 61
+                  file: 
+                  value: !ruby/sym undef
+                value: !ruby/object:Puppet::Parser::AST::Variable
+                  line: 61
+                  file: 
+                  value: default_package_name
+                children: []
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 62
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::Default
+                  line: 62
+                  file: 
+                  value: default
+                value: !ruby/object:Puppet::Parser::AST::Variable
+                  line: 62
+                  file: 
+                  value: package
+                children: []
+          children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 68
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 68
+          file: 
+          value: use_java_alternative
+        value: !ruby/object:Puppet::Parser::AST::Selector
+          line: 74
+          file: 
+          param: !ruby/object:Puppet::Parser::AST::Variable
+            line: 68
+            file: 
+            value: java_alternative
+          values: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 73
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 72
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::Undef
+                  line: 69
+                  file: 
+                  value: !ruby/sym undef
+                value: !ruby/object:Puppet::Parser::AST::Selector
+                  line: 72
+                  file: 
+                  param: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 69
+                    file: 
+                    value: use_java_package_name
+                  values: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 71
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 70
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Variable
+                          line: 70
+                          file: 
+                          value: default_package_name
+                        value: !ruby/object:Puppet::Parser::AST::Variable
+                          line: 70
+                          file: 
+                          value: default_alternative
+                        children: []
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 71
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Default
+                          line: 71
+                          file: 
+                          value: default
+                        value: !ruby/object:Puppet::Parser::AST::Undef
+                          line: 71
+                          file: 
+                          value: !ruby/sym undef
+                        children: []
+                  children: []
+                children: []
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 73
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::Default
+                  line: 73
+                  file: 
+                  value: default
+                value: !ruby/object:Puppet::Parser::AST::Variable
+                  line: 73
+                  file: 
+                  value: java_alternative
+                children: []
+          children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 77
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 77
+          file: 
+          value: use_java_alternative_path
+        value: !ruby/object:Puppet::Parser::AST::Selector
+          line: 83
+          file: 
+          param: !ruby/object:Puppet::Parser::AST::Variable
+            line: 77
+            file: 
+            value: java_alternative_path
+          values: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 82
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 81
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::Undef
+                  line: 78
+                  file: 
+                  value: !ruby/sym undef
+                value: !ruby/object:Puppet::Parser::AST::Selector
+                  line: 81
+                  file: 
+                  param: !ruby/object:Puppet::Parser::AST::Variable
+                    line: 78
+                    file: 
+                    value: use_java_package_name
+                  values: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 80
+                    file: 
+                    children: 
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 79
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Variable
+                          line: 79
+                          file: 
+                          value: default_package_name
+                        value: !ruby/object:Puppet::Parser::AST::Variable
+                          line: 79
+                          file: 
+                          value: default_alternative_path
+                        children: []
+                      - !ruby/object:Puppet::Parser::AST::ResourceParam
+                        line: 80
+                        file: 
+                        param: !ruby/object:Puppet::Parser::AST::Default
+                          line: 80
+                          file: 
+                          value: default
+                        value: !ruby/object:Puppet::Parser::AST::Undef
+                          line: 80
+                          file: 
+                          value: !ruby/sym undef
+                        children: []
+                  children: []
+                children: []
+              - !ruby/object:Puppet::Parser::AST::ResourceParam
+                line: 82
+                file: 
+                param: !ruby/object:Puppet::Parser::AST::Default
+                  line: 82
+                  file: 
+                  value: default
+                value: !ruby/object:Puppet::Parser::AST::Variable
+                  line: 82
+                  file: 
+                  value: java_alternative_path
+                children: []
+          children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Relationship
+        line: 93
+        file: 
+        children: []
+        left: !ruby/object:Puppet::Parser::AST::Relationship
+          line: 92
+          file: 
+          children: []
+          left: !ruby/object:Puppet::Parser::AST::Relationship
+            line: 90
+            file: 
+            children: []
+            left: !ruby/object:Puppet::Parser::AST::Resource
+              line: 85
+              file: 
+              doc: ""
+              type: anchor
+              instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 85
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                    line: 85
+                    file: 
+                    title: !ruby/object:Puppet::Parser::AST::String
+                      line: 85
+                      file: 
+                      value: "java::begin:"
+                    parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 85
+                      file: 
+                      children: []
+                    children: []
+              children: []
+            right: !ruby/object:Puppet::Parser::AST::Resource
+              line: 90
+              file: 
+              doc: ""
+              type: package
+              instances: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 90
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                    line: 90
+                    file: 
+                    title: !ruby/object:Puppet::Parser::AST::String
+                      line: 87
+                      file: 
+                      value: java
+                    parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 88
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 88
+                          file: 
+                          param: ensure
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 88
+                            file: 
+                            value: version
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceParam
+                          line: 89
+                          file: 
+                          param: name
+                          value: !ruby/object:Puppet::Parser::AST::Variable
+                            line: 89
+                            file: 
+                            value: use_java_package_name
+                          children: []
+                    children: []
+              children: []
+            arrow: "->"
+          right: !ruby/object:Puppet::Parser::AST::Resource
+            line: 92
+            file: 
+            doc: ""
+            type: class
+            instances: !ruby/object:Puppet::Parser::AST::ASTArray
+              line: 92
+              file: 
+              children: 
+                - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                  line: 92
+                  file: 
+                  title: !ruby/object:Puppet::Parser::AST::String
+                    line: 92
+                    file: 
+                    value: "java::config"
+                  parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                    line: 92
+                    file: 
+                    children: []
+                  children: []
+            children: []
+          arrow: "->"
+        right: !ruby/object:Puppet::Parser::AST::Resource
+          line: 93
+          file: 
+          doc: ""
+          type: anchor
+          instances: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 93
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::ResourceInstance
+                line: 93
+                file: 
+                title: !ruby/object:Puppet::Parser::AST::String
+                  line: 93
+                  file: 
+                  value: "java::end"
+                parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                  line: 93
+                  file: 
+                  children: []
+                children: []
+          children: []
+        arrow: "->"
+  doc: "Class: java\n\nThis module manages the Java runtime package\n\nParameters:\n\n [*distribution*]\n   The java distribution to install. Can be one of \x22jdk\x22 or \x22jre\x22,\n   or other platform-specific options where there are multiple\n   implementations available (eg: OpenJDK vs Oracle JDK).\n\n\n [*version*]\n   The version of java to install. By default, this module simply ensures\n   that java is present, and does not require a specific version.\n\n [*package*]\n   The name of the java package. This is configurable in case a non-standard\n   java package is desired.\n\n [*java_alternative*]\n   The name of the java alternative to use on Debian systems.\n   \x22update-java-alternatives -l\x22 will show which choices are available.\n   If you specify a particular package, you will almost always also\n   want to specify which java_alternative to choose. If you set\n   this, you also need to set the path below.\n\n [*java_alternative_path*]\n   The path to the \x22java\x22 command on Debian systems. Since the\n   alternatives system makes it difficult to verify which\n   alternative is actually enabled, this is required to ensure the\n   correct JVM is enabled.\n\nActions:\n\nRequires:\n\nSample Usage:\n\n"
+  line: 40
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: "java::params"
+  namespace: "java::params"
+  arguments: {}
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 146
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::CaseStatement
+        line: 145
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Variable
+          line: 15
+          file: 
+          value: "::osfamily"
+        options: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 16
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 16
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 16
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Default
+                    line: 16
+                    file: 
+                    value: default
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 16
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Function
+                    ftype: !ruby/sym statement
+                    line: 16
+                    file: 
+                    doc: ""
+                    name: fail
+                    arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 16
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Concat
+                          line: 16
+                          file: 
+                          value: 
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 16
+                              file: 
+                              value: "unsupported platform "
+                            - !ruby/object:Puppet::Parser::AST::Variable
+                              line: 16
+                              file: 
+                              value: "::osfamily"
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 16
+                              file: 
+                              value: ""
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 47
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 17
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 17
+                    file: 
+                    value: RedHat
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 43
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::CaseStatement
+                    line: 42
+                    file: 
+                    doc: ""
+                    test: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 18
+                      file: 
+                      value: "::operatingsystem"
+                    options: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 19
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 19
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 19
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Default
+                                line: 19
+                                file: 
+                                value: default
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 19
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Function
+                                ftype: !ruby/sym statement
+                                line: 19
+                                file: 
+                                doc: ""
+                                name: fail
+                                arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 19
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::Concat
+                                      line: 19
+                                      file: 
+                                      value: 
+                                        - !ruby/object:Puppet::Parser::AST::String
+                                          line: 19
+                                          file: 
+                                          value: "unsupported os "
+                                        - !ruby/object:Puppet::Parser::AST::Variable
+                                          line: 19
+                                          file: 
+                                          value: "::operatingsystem"
+                                        - !ruby/object:Puppet::Parser::AST::String
+                                          line: 19
+                                          file: 
+                                          value: ""
+                                children: []
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 33
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 20
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 20
+                                file: 
+                                value: RedHat
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 20
+                                file: 
+                                value: CentOS
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 20
+                                file: 
+                                value: OracleLinux
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 20
+                                file: 
+                                value: Scientific
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 32
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::IfStatement
+                                line: 32
+                                file: 
+                                doc: ""
+                                test: !ruby/object:Puppet::Parser::AST::ComparisonOperator
+                                  line: 21
+                                  file: 
+                                  operator: "<"
+                                  lval: !ruby/object:Puppet::Parser::AST::Function
+                                    ftype: !ruby/sym rvalue
+                                    line: 21
+                                    file: 
+                                    doc: ""
+                                    name: versioncmp
+                                    arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                      line: 21
+                                      file: 
+                                      children: 
+                                        - !ruby/object:Puppet::Parser::AST::Variable
+                                          line: 21
+                                          file: 
+                                          value: "::operatingsystemrelease"
+                                        - !ruby/object:Puppet::Parser::AST::String
+                                          line: 21
+                                          file: 
+                                          value: "5.0"
+                                    children: []
+                                  rval: !ruby/object:Puppet::Parser::AST::Name
+                                    line: 21
+                                    file: 
+                                    value: "0"
+                                  children: []
+                                statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                                  line: 23
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::VarDef
+                                      line: 22
+                                      file: 
+                                      doc: ""
+                                      name: !ruby/object:Puppet::Parser::AST::Name
+                                        line: 22
+                                        file: 
+                                        value: jdk_package
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 22
+                                        file: 
+                                        value: java-1.6.0-sun-devel
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::VarDef
+                                      line: 23
+                                      file: 
+                                      doc: ""
+                                      name: !ruby/object:Puppet::Parser::AST::Name
+                                        line: 23
+                                        file: 
+                                        value: jre_package
+                                      value: !ruby/object:Puppet::Parser::AST::String
+                                        line: 23
+                                        file: 
+                                        value: java-1.6.0-sun
+                                      children: []
+                                children: []
+                                else: !ruby/object:Puppet::Parser::AST::Else
+                                  line: 32
+                                  file: 
+                                  doc: ""
+                                  statements: !ruby/object:Puppet::Parser::AST::IfStatement
+                                    line: 32
+                                    file: 
+                                    doc: ""
+                                    test: !ruby/object:Puppet::Parser::AST::ComparisonOperator
+                                      line: 25
+                                      file: 
+                                      operator: "<"
+                                      lval: !ruby/object:Puppet::Parser::AST::Function
+                                        ftype: !ruby/sym rvalue
+                                        line: 25
+                                        file: 
+                                        doc: ""
+                                        name: versioncmp
+                                        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                          line: 25
+                                          file: 
+                                          children: 
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 25
+                                              file: 
+                                              value: "::operatingsystemrelease"
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 25
+                                              file: 
+                                              value: "6.3"
+                                        children: []
+                                      rval: !ruby/object:Puppet::Parser::AST::Name
+                                        line: 25
+                                        file: 
+                                        value: "0"
+                                      children: []
+                                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                                      line: 27
+                                      file: 
+                                      children: 
+                                        - !ruby/object:Puppet::Parser::AST::VarDef
+                                          line: 26
+                                          file: 
+                                          doc: ""
+                                          name: !ruby/object:Puppet::Parser::AST::Name
+                                            line: 26
+                                            file: 
+                                            value: jdk_package
+                                          value: !ruby/object:Puppet::Parser::AST::String
+                                            line: 26
+                                            file: 
+                                            value: java-1.6.0-openjdk-devel
+                                          children: []
+                                        - !ruby/object:Puppet::Parser::AST::VarDef
+                                          line: 27
+                                          file: 
+                                          doc: ""
+                                          name: !ruby/object:Puppet::Parser::AST::Name
+                                            line: 27
+                                            file: 
+                                            value: jre_package
+                                          value: !ruby/object:Puppet::Parser::AST::String
+                                            line: 27
+                                            file: 
+                                            value: java-1.6.0-openjdk
+                                          children: []
+                                    children: []
+                                    else: !ruby/object:Puppet::Parser::AST::Else
+                                      line: 32
+                                      file: 
+                                      doc: ""
+                                      statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                                        line: 31
+                                        file: 
+                                        children: 
+                                          - !ruby/object:Puppet::Parser::AST::VarDef
+                                            line: 30
+                                            file: 
+                                            doc: ""
+                                            name: !ruby/object:Puppet::Parser::AST::Name
+                                              line: 30
+                                              file: 
+                                              value: jdk_package
+                                            value: !ruby/object:Puppet::Parser::AST::String
+                                              line: 30
+                                              file: 
+                                              value: java-1.7.0-openjdk-devel
+                                            children: []
+                                          - !ruby/object:Puppet::Parser::AST::VarDef
+                                            line: 31
+                                            file: 
+                                            doc: ""
+                                            name: !ruby/object:Puppet::Parser::AST::Name
+                                              line: 31
+                                              file: 
+                                              value: jre_package
+                                            value: !ruby/object:Puppet::Parser::AST::String
+                                              line: 31
+                                              file: 
+                                              value: java-1.7.0-openjdk
+                                            children: []
+                                      children: []
+                                  children: []
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 37
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 34
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 34
+                                file: 
+                                value: Fedora
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 36
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 35
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 35
+                                  file: 
+                                  value: jdk_package
+                                value: !ruby/object:Puppet::Parser::AST::String
+                                  line: 35
+                                  file: 
+                                  value: java-1.7.0-openjdk-devel
+                                children: []
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 36
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 36
+                                  file: 
+                                  value: jre_package
+                                value: !ruby/object:Puppet::Parser::AST::String
+                                  line: 36
+                                  file: 
+                                  value: java-1.7.0-openjdk
+                                children: []
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 41
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 38
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 38
+                                file: 
+                                value: Amazon
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 40
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 39
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 39
+                                  file: 
+                                  value: jdk_package
+                                value: !ruby/object:Puppet::Parser::AST::String
+                                  line: 39
+                                  file: 
+                                  value: java-1.7.0-openjdk-devel
+                                children: []
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 40
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 40
+                                  file: 
+                                  value: jre_package
+                                value: !ruby/object:Puppet::Parser::AST::String
+                                  line: 40
+                                  file: 
+                                  value: java-1.7.0-openjdk
+                                children: []
+                          children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::VarDef
+                    line: 43
+                    file: 
+                    doc: ""
+                    name: !ruby/object:Puppet::Parser::AST::Name
+                      line: 43
+                      file: 
+                      value: java
+                    value: !ruby/object:Puppet::Parser::AST::ASTHash
+                      line: 46
+                      file: 
+                      value: 
+                        ? !ruby/object:Puppet::Parser::AST::String
+                          line: 44
+                          file: 
+                          value: jdk
+                        : !ruby/object:Puppet::Parser::AST::ASTHash
+                          line: 44
+                          file: 
+                          value: 
+                            ? !ruby/object:Puppet::Parser::AST::String
+                              line: 44
+                              file: 
+                              value: package
+                            : !ruby/object:Puppet::Parser::AST::Variable
+                              line: 44
+                              file: 
+                              value: jdk_package
+                        ? !ruby/object:Puppet::Parser::AST::String
+                          line: 45
+                          file: 
+                          value: jre
+                        : !ruby/object:Puppet::Parser::AST::ASTHash
+                          line: 45
+                          file: 
+                          value: 
+                            ? !ruby/object:Puppet::Parser::AST::String
+                              line: 45
+                              file: 
+                              value: package
+                            : !ruby/object:Puppet::Parser::AST::Variable
+                              line: 45
+                              file: 
+                              value: jre_package
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 108
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 48
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 48
+                    file: 
+                    value: Debian
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 108
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::CaseStatement
+                    line: 107
+                    file: 
+                    doc: ""
+                    test: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 49
+                      file: 
+                      value: "::lsbdistcodename"
+                    options: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 50
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 50
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 50
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Default
+                                line: 50
+                                file: 
+                                value: default
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 50
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Function
+                                ftype: !ruby/sym statement
+                                line: 50
+                                file: 
+                                doc: ""
+                                name: fail
+                                arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 50
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::Concat
+                                      line: 50
+                                      file: 
+                                      value: 
+                                        - !ruby/object:Puppet::Parser::AST::String
+                                          line: 50
+                                          file: 
+                                          value: "unsupported release "
+                                        - !ruby/object:Puppet::Parser::AST::Variable
+                                          line: 50
+                                          file: 
+                                          value: "::lsbdistcodename"
+                                        - !ruby/object:Puppet::Parser::AST::String
+                                          line: 50
+                                          file: 
+                                          value: ""
+                                children: []
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 78
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 51
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 51
+                                file: 
+                                value: lenny
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 51
+                                file: 
+                                value: squeeze
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 51
+                                file: 
+                                value: lucid
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 51
+                                file: 
+                                value: natty
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 78
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 52
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 52
+                                  file: 
+                                  value: java
+                                value: !ruby/object:Puppet::Parser::AST::ASTHash
+                                  line: 77
+                                  file: 
+                                  value: 
+                                    ? !ruby/object:Puppet::Parser::AST::String
+                                      line: 53
+                                      file: 
+                                      value: jdk
+                                    : !ruby/object:Puppet::Parser::AST::ASTHash
+                                      line: 58
+                                      file: 
+                                      value: 
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 54
+                                          file: 
+                                          value: package
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 54
+                                          file: 
+                                          value: openjdk-6-jdk
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 55
+                                          file: 
+                                          value: alternative
+                                        : !ruby/object:Puppet::Parser::AST::Concat
+                                          line: 55
+                                          file: 
+                                          value: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 55
+                                              file: 
+                                              value: java-6-openjdk-
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 55
+                                              file: 
+                                              value: architecture
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 55
+                                              file: 
+                                              value: ""
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 56
+                                          file: 
+                                          value: alternative_path
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 56
+                                          file: 
+                                          value: /usr/lib/jvm/java-6-openjdk/jre/bin/java
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 57
+                                          file: 
+                                          value: java_home
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 57
+                                          file: 
+                                          value: /usr/lib/jvm/java-6-openjdk/jre/
+                                    ? !ruby/object:Puppet::Parser::AST::String
+                                      line: 59
+                                      file: 
+                                      value: jre
+                                    : !ruby/object:Puppet::Parser::AST::ASTHash
+                                      line: 64
+                                      file: 
+                                      value: 
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 60
+                                          file: 
+                                          value: package
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 60
+                                          file: 
+                                          value: openjdk-6-jre-headless
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 61
+                                          file: 
+                                          value: alternative
+                                        : !ruby/object:Puppet::Parser::AST::Concat
+                                          line: 61
+                                          file: 
+                                          value: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 61
+                                              file: 
+                                              value: java-6-openjdk-
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 61
+                                              file: 
+                                              value: architecture
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 61
+                                              file: 
+                                              value: ""
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 62
+                                          file: 
+                                          value: alternative_path
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 62
+                                          file: 
+                                          value: /usr/lib/jvm/java-6-openjdk/jre/bin/java
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 63
+                                          file: 
+                                          value: java_home
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 63
+                                          file: 
+                                          value: /usr/lib/jvm/java-6-openjdk/jre/
+                                    ? !ruby/object:Puppet::Parser::AST::String
+                                      line: 65
+                                      file: 
+                                      value: sun-jre
+                                    : !ruby/object:Puppet::Parser::AST::ASTHash
+                                      line: 70
+                                      file: 
+                                      value: 
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 66
+                                          file: 
+                                          value: package
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 66
+                                          file: 
+                                          value: sun-java6-jre
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 67
+                                          file: 
+                                          value: alternative
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 67
+                                          file: 
+                                          value: java-6-sun
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 68
+                                          file: 
+                                          value: alternative_path
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 68
+                                          file: 
+                                          value: /usr/lib/jvm/java-6-sun/jre/bin/java
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 69
+                                          file: 
+                                          value: java_home
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 69
+                                          file: 
+                                          value: /usr/lib/jvm/java-6-sun/jre/
+                                    ? !ruby/object:Puppet::Parser::AST::String
+                                      line: 71
+                                      file: 
+                                      value: sun-jdk
+                                    : !ruby/object:Puppet::Parser::AST::ASTHash
+                                      line: 76
+                                      file: 
+                                      value: 
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 72
+                                          file: 
+                                          value: package
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 72
+                                          file: 
+                                          value: sun-java6-jdk
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 73
+                                          file: 
+                                          value: alternative
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 73
+                                          file: 
+                                          value: java-6-sun
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 74
+                                          file: 
+                                          value: alternative_path
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 74
+                                          file: 
+                                          value: /usr/lib/jvm/java-6-sun/jre/bin/java
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 75
+                                          file: 
+                                          value: java_home
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 75
+                                          file: 
+                                          value: /usr/lib/jvm/java-6-sun/jre/
+                                children: []
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 106
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 79
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 79
+                                file: 
+                                value: wheezy
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 79
+                                file: 
+                                value: jessie
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 79
+                                file: 
+                                value: precise
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 79
+                                file: 
+                                value: quantal
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 79
+                                file: 
+                                value: raring
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 79
+                                file: 
+                                value: saucy
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 79
+                                file: 
+                                value: trusty
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 106
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 80
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 80
+                                  file: 
+                                  value: java
+                                value: !ruby/object:Puppet::Parser::AST::ASTHash
+                                  line: 105
+                                  file: 
+                                  value: 
+                                    ? !ruby/object:Puppet::Parser::AST::String
+                                      line: 81
+                                      file: 
+                                      value: jdk
+                                    : !ruby/object:Puppet::Parser::AST::ASTHash
+                                      line: 86
+                                      file: 
+                                      value: 
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 82
+                                          file: 
+                                          value: package
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 82
+                                          file: 
+                                          value: openjdk-7-jdk
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 83
+                                          file: 
+                                          value: alternative
+                                        : !ruby/object:Puppet::Parser::AST::Concat
+                                          line: 83
+                                          file: 
+                                          value: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 83
+                                              file: 
+                                              value: java-1.7.0-openjdk-
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 83
+                                              file: 
+                                              value: "::architecture"
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 83
+                                              file: 
+                                              value: ""
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 84
+                                          file: 
+                                          value: alternative_path
+                                        : !ruby/object:Puppet::Parser::AST::Concat
+                                          line: 84
+                                          file: 
+                                          value: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 84
+                                              file: 
+                                              value: /usr/lib/jvm/java-1.7.0-openjdk-
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 84
+                                              file: 
+                                              value: "::architecture"
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 84
+                                              file: 
+                                              value: /bin/java
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 85
+                                          file: 
+                                          value: java_home
+                                        : !ruby/object:Puppet::Parser::AST::Concat
+                                          line: 85
+                                          file: 
+                                          value: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 85
+                                              file: 
+                                              value: /usr/lib/jvm/java-1.7.0-openjdk-
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 85
+                                              file: 
+                                              value: "::architecture"
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 85
+                                              file: 
+                                              value: /
+                                    ? !ruby/object:Puppet::Parser::AST::String
+                                      line: 87
+                                      file: 
+                                      value: jre
+                                    : !ruby/object:Puppet::Parser::AST::ASTHash
+                                      line: 92
+                                      file: 
+                                      value: 
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 88
+                                          file: 
+                                          value: package
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 88
+                                          file: 
+                                          value: openjdk-7-jre-headless
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 89
+                                          file: 
+                                          value: alternative
+                                        : !ruby/object:Puppet::Parser::AST::Concat
+                                          line: 89
+                                          file: 
+                                          value: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 89
+                                              file: 
+                                              value: java-1.7.0-openjdk-
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 89
+                                              file: 
+                                              value: "::architecture"
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 89
+                                              file: 
+                                              value: ""
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 90
+                                          file: 
+                                          value: alternative_path
+                                        : !ruby/object:Puppet::Parser::AST::Concat
+                                          line: 90
+                                          file: 
+                                          value: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 90
+                                              file: 
+                                              value: /usr/lib/jvm/java-1.7.0-openjdk-
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 90
+                                              file: 
+                                              value: "::architecture"
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 90
+                                              file: 
+                                              value: /bin/java
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 91
+                                          file: 
+                                          value: java_home
+                                        : !ruby/object:Puppet::Parser::AST::Concat
+                                          line: 91
+                                          file: 
+                                          value: 
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 91
+                                              file: 
+                                              value: /usr/lib/jvm/java-1.7.0-openjdk-
+                                            - !ruby/object:Puppet::Parser::AST::Variable
+                                              line: 91
+                                              file: 
+                                              value: "::architecture"
+                                            - !ruby/object:Puppet::Parser::AST::String
+                                              line: 91
+                                              file: 
+                                              value: /
+                                    ? !ruby/object:Puppet::Parser::AST::String
+                                      line: 93
+                                      file: 
+                                      value: oracle-jre
+                                    : !ruby/object:Puppet::Parser::AST::ASTHash
+                                      line: 98
+                                      file: 
+                                      value: 
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 94
+                                          file: 
+                                          value: package
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 94
+                                          file: 
+                                          value: oracle-j2re1.7
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 95
+                                          file: 
+                                          value: alternative
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 95
+                                          file: 
+                                          value: j2re1.7-oracle
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 96
+                                          file: 
+                                          value: alternative_path
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 96
+                                          file: 
+                                          value: /usr/lib/jvm/j2re1.7-oracle/bin/java
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 97
+                                          file: 
+                                          value: java_home
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 97
+                                          file: 
+                                          value: /usr/lib/jvm/j2re1.7-oracle/
+                                    ? !ruby/object:Puppet::Parser::AST::String
+                                      line: 99
+                                      file: 
+                                      value: oracle-jdk
+                                    : !ruby/object:Puppet::Parser::AST::ASTHash
+                                      line: 104
+                                      file: 
+                                      value: 
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 100
+                                          file: 
+                                          value: package
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 100
+                                          file: 
+                                          value: oracle-j2sdk1.7
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 101
+                                          file: 
+                                          value: alternative
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 101
+                                          file: 
+                                          value: j2sdk1.7-oracle
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 102
+                                          file: 
+                                          value: alternative_path
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 102
+                                          file: 
+                                          value: /usr/lib/jvm/j2sdk1.7-oracle/jre/bin/java
+                                        ? !ruby/object:Puppet::Parser::AST::String
+                                          line: 103
+                                          file: 
+                                          value: java_home
+                                        : !ruby/object:Puppet::Parser::AST::String
+                                          line: 103
+                                          file: 
+                                          value: /usr/lib/jvm/j2sdk1.7-oracle/jre/
+                                children: []
+                          children: []
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 114
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 109
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 109
+                    file: 
+                    value: Solaris
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 114
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::VarDef
+                    line: 110
+                    file: 
+                    doc: ""
+                    name: !ruby/object:Puppet::Parser::AST::Name
+                      line: 110
+                      file: 
+                      value: java
+                    value: !ruby/object:Puppet::Parser::AST::ASTHash
+                      line: 113
+                      file: 
+                      value: 
+                        ? !ruby/object:Puppet::Parser::AST::String
+                          line: 111
+                          file: 
+                          value: jdk
+                        : !ruby/object:Puppet::Parser::AST::ASTHash
+                          line: 111
+                          file: 
+                          value: 
+                            ? !ruby/object:Puppet::Parser::AST::String
+                              line: 111
+                              file: 
+                              value: package
+                            : !ruby/object:Puppet::Parser::AST::String
+                              line: 111
+                              file: 
+                              value: developer/java/jdk-7
+                        ? !ruby/object:Puppet::Parser::AST::String
+                          line: 112
+                          file: 
+                          value: jre
+                        : !ruby/object:Puppet::Parser::AST::ASTHash
+                          line: 112
+                          file: 
+                          value: 
+                            ? !ruby/object:Puppet::Parser::AST::String
+                              line: 112
+                              file: 
+                              value: package
+                            : !ruby/object:Puppet::Parser::AST::String
+                              line: 112
+                              file: 
+                              value: runtime/java/jre-7
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 144
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 115
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 115
+                    file: 
+                    value: Suse
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 140
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::CaseStatement
+                    line: 139
+                    file: 
+                    doc: ""
+                    test: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 116
+                      file: 
+                      value: "::operatingsystem"
+                    options: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 120
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 120
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 117
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Default
+                                line: 117
+                                file: 
+                                value: default
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 119
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 118
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 118
+                                  file: 
+                                  value: jdk_package
+                                value: !ruby/object:Puppet::Parser::AST::String
+                                  line: 118
+                                  file: 
+                                  value: java-1_6_0-ibm-devel
+                                children: []
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 119
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 119
+                                  file: 
+                                  value: jre_package
+                                value: !ruby/object:Puppet::Parser::AST::String
+                                  line: 119
+                                  file: 
+                                  value: java-1_6_0-ibm
+                                children: []
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 133
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 122
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 122
+                                file: 
+                                value: SLES
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 133
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::CaseStatement
+                                line: 132
+                                file: 
+                                doc: ""
+                                test: !ruby/object:Puppet::Parser::AST::Variable
+                                  line: 123
+                                  file: 
+                                  value: "::operatingsystemmajrelease"
+                                options: !ruby/object:Puppet::Parser::AST::ASTArray
+                                  line: 127
+                                  file: 
+                                  children: 
+                                    - !ruby/object:Puppet::Parser::AST::CaseOpt
+                                      line: 127
+                                      file: 
+                                      value: !ruby/object:Puppet::Parser::AST::ASTArray
+                                        line: 124
+                                        file: 
+                                        children: 
+                                          - !ruby/object:Puppet::Parser::AST::Default
+                                            line: 124
+                                            file: 
+                                            value: default
+                                      statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                                        line: 126
+                                        file: 
+                                        children: 
+                                          - !ruby/object:Puppet::Parser::AST::VarDef
+                                            line: 125
+                                            file: 
+                                            doc: ""
+                                            name: !ruby/object:Puppet::Parser::AST::Name
+                                              line: 125
+                                              file: 
+                                              value: jdk_package
+                                            value: !ruby/object:Puppet::Parser::AST::String
+                                              line: 125
+                                              file: 
+                                              value: java-1_6_0-ibm-devel
+                                            children: []
+                                          - !ruby/object:Puppet::Parser::AST::VarDef
+                                            line: 126
+                                            file: 
+                                            doc: ""
+                                            name: !ruby/object:Puppet::Parser::AST::Name
+                                              line: 126
+                                              file: 
+                                              value: jre_package
+                                            value: !ruby/object:Puppet::Parser::AST::String
+                                              line: 126
+                                              file: 
+                                              value: java-1_6_0-ibm
+                                            children: []
+                                      children: []
+                                    - !ruby/object:Puppet::Parser::AST::CaseOpt
+                                      line: 131
+                                      file: 
+                                      value: !ruby/object:Puppet::Parser::AST::ASTArray
+                                        line: 128
+                                        file: 
+                                        children: 
+                                          - !ruby/object:Puppet::Parser::AST::String
+                                            line: 128
+                                            file: 
+                                            value: "12"
+                                      statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                                        line: 130
+                                        file: 
+                                        children: 
+                                          - !ruby/object:Puppet::Parser::AST::VarDef
+                                            line: 129
+                                            file: 
+                                            doc: ""
+                                            name: !ruby/object:Puppet::Parser::AST::Name
+                                              line: 129
+                                              file: 
+                                              value: jdk_package
+                                            value: !ruby/object:Puppet::Parser::AST::String
+                                              line: 129
+                                              file: 
+                                              value: java-1_7_0-openjdk-devel
+                                            children: []
+                                          - !ruby/object:Puppet::Parser::AST::VarDef
+                                            line: 130
+                                            file: 
+                                            doc: ""
+                                            name: !ruby/object:Puppet::Parser::AST::Name
+                                              line: 130
+                                              file: 
+                                              value: jre_package
+                                            value: !ruby/object:Puppet::Parser::AST::String
+                                              line: 130
+                                              file: 
+                                              value: java-1_7_0-openjdk
+                                            children: []
+                                      children: []
+                                children: []
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::CaseOpt
+                          line: 138
+                          file: 
+                          value: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 135
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 135
+                                file: 
+                                value: OpenSuSE
+                          statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                            line: 137
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 136
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 136
+                                  file: 
+                                  value: jdk_package
+                                value: !ruby/object:Puppet::Parser::AST::String
+                                  line: 136
+                                  file: 
+                                  value: java-1_7_0-openjdk-devel
+                                children: []
+                              - !ruby/object:Puppet::Parser::AST::VarDef
+                                line: 137
+                                file: 
+                                doc: ""
+                                name: !ruby/object:Puppet::Parser::AST::Name
+                                  line: 137
+                                  file: 
+                                  value: jre_package
+                                value: !ruby/object:Puppet::Parser::AST::String
+                                  line: 137
+                                  file: 
+                                  value: java-1_7_0-openjdk
+                                children: []
+                          children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::VarDef
+                    line: 140
+                    file: 
+                    doc: ""
+                    name: !ruby/object:Puppet::Parser::AST::Name
+                      line: 140
+                      file: 
+                      value: java
+                    value: !ruby/object:Puppet::Parser::AST::ASTHash
+                      line: 143
+                      file: 
+                      value: 
+                        ? !ruby/object:Puppet::Parser::AST::String
+                          line: 141
+                          file: 
+                          value: jdk
+                        : !ruby/object:Puppet::Parser::AST::ASTHash
+                          line: 141
+                          file: 
+                          value: 
+                            ? !ruby/object:Puppet::Parser::AST::String
+                              line: 141
+                              file: 
+                              value: package
+                            : !ruby/object:Puppet::Parser::AST::Variable
+                              line: 141
+                              file: 
+                              value: jdk_package
+                        ? !ruby/object:Puppet::Parser::AST::String
+                          line: 142
+                          file: 
+                          value: jre
+                        : !ruby/object:Puppet::Parser::AST::ASTHash
+                          line: 142
+                          file: 
+                          value: 
+                            ? !ruby/object:Puppet::Parser::AST::String
+                              line: 142
+                              file: 
+                              value: package
+                            : !ruby/object:Puppet::Parser::AST::Variable
+                              line: 142
+                              file: 
+                              value: jre_package
+                    children: []
+              children: []
+        children: []
+  doc: "Class: java::params\n\nThis class builds a hash of JDK/JRE packages and (for Debian)\nalternatives.  For wheezy/precise, we provide Oracle JDK/JRE\noptions, even though those are not in the package repositories.\n\nFor more info on how to package Oracle JDK/JRE, see the Debian wiki:\nhttp://wiki.debian.org/JavaPackage\n\nBecause the alternatives system makes it very difficult to tell\nwhich Java alternative is enabled, we hard code the path to bin/java\nfor the config class to test if it is enabled.\n"
+  line: 13

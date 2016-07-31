@@ -1,0 +1,31 @@
+component: #定义组件信息
+  name: cloudeploy::default::component::package::redis
+  display_name: Redis
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::default::redis::install
+  displayName: 安装
+  nodes:
+  - nodeName: redis_install_node
+    searchName: cloudeploy::redis::install
+    extractParams:
+    - '$allParams'
+#- operationName: cloudeploy::default::redis::config
+#  displayName: CONFIG
+#  nodes:
+#  - nodeName: redis_config_node
+#    searchName: cloudeploy
+- operationName: cloudeploy::default::redis::service
+  displayName: 服务
+  nodes:
+  - nodeName: redis_service_node
+    searchName: cloudeploy::redis::service
+    extractParams:
+    - '$allParams'
+- operationName: cloudeploy::default::redis::delete
+  displayName: 卸载
+  nodes:
+  - nodeName: redis_delete_node
+    searchName: cloudeploy::redis::uninstall
+    extractParams:
+    - '$allParams'

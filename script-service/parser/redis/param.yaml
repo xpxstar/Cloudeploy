@@ -1,0 +1,175 @@
+--- 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: redis
+    type: !ruby/sym hostclass
+    params: 
+      version: 
+        value: "${$redis::params::version}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 86
+          file: 
+          value: "redis::params::version"
+      redis_src_dir: 
+        value: "${$redis::params::redis_src_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 87
+          file: 
+          value: "redis::params::redis_src_dir"
+      redis_bin_dir: 
+        value: "${$redis::params::redis_bin_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 88
+          file: 
+          value: "redis::params::redis_bin_dir"
+      redis_user: 
+        value: "${$redis::params::redis_user}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 89
+          file: 
+          value: "redis::params::redis_user"
+      redis_group: 
+        value: "${$redis::params::redis_group}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 90
+          file: 
+          value: "redis::params::redis_group"
+      redis_port: 
+        value: "${$redis::params::redis_port}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 91
+          file: 
+          value: "redis::params::redis_port"
+      redis_bind_address: 
+        value: "${$redis::params::redis_bind_address}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 92
+          file: 
+          value: "redis::params::redis_bind_address"
+      redis_max_memory: 
+        value: "${$redis::params::redis_max_memory}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 93
+          file: 
+          value: "redis::params::redis_max_memory"
+      redis_max_clients: 
+        value: "${$redis::params::redis_max_clients}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 94
+          file: 
+          value: "redis::params::redis_max_clients"
+      redis_timeout: 
+        value: "${$redis::params::redis_timeout}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 95
+          file: 
+          value: "redis::params::redis_timeout"
+      redis_loglevel: 
+        value: "${$redis::params::redis_loglevel}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 96
+          file: 
+          value: "redis::params::redis_loglevel"
+      redis_databases: 
+        value: "${$redis::params::redis_databases}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 97
+          file: 
+          value: "redis::params::redis_databases"
+      redis_slowlog_log_slower_than: 
+        value: "${$redis::params::redis_slowlog_log_slower_than}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 98
+          file: 
+          value: "redis::params::redis_slowlog_log_slower_than"
+      redis_slowlog_max_len: 
+        value: "${$redis::params::redis_slowlog_max_len}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 99
+          file: 
+          value: "redis::params::redis_slowlog_max_len"
+      redis_password: 
+        value: "${$redis::params::redis_password}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 100
+          file: 
+          value: "redis::params::redis_password"
+      redis_saves: 
+        value: "${$redis::params::redis_saves}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 101
+          file: 
+          value: "redis::params::redis_saves"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "redis::instance"
+    type: !ruby/sym definition
+    params: 
+      redis_port: 
+        value: "${$redis::params::redis_port}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 71
+          file: 
+          value: "redis::params::redis_port"
+      redis_bind_address: 
+        value: "${$redis::params::redis_bind_address}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 72
+          file: 
+          value: "redis::params::redis_bind_address"
+      redis_max_memory: 
+        value: "${$redis::params::redis_max_memory}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 73
+          file: 
+          value: "redis::params::redis_max_memory"
+      redis_max_clients: 
+        value: "${$redis::params::redis_max_clients}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 74
+          file: 
+          value: "redis::params::redis_max_clients"
+      redis_timeout: 
+        value: "${$redis::params::redis_timeout}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 75
+          file: 
+          value: "redis::params::redis_timeout"
+      redis_loglevel: 
+        value: "${$redis::params::redis_loglevel}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 76
+          file: 
+          value: "redis::params::redis_loglevel"
+      redis_databases: 
+        value: "${$redis::params::redis_databases}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 77
+          file: 
+          value: "redis::params::redis_databases"
+      redis_slowlog_log_slower_than: 
+        value: "${$redis::params::redis_slowlog_log_slower_than}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 78
+          file: 
+          value: "redis::params::redis_slowlog_log_slower_than"
+      redis_slowlog_max_len: 
+        value: "${$redis::params::redis_slowlog_max_len}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 79
+          file: 
+          value: "redis::params::redis_slowlog_max_len"
+      redis_password: 
+        value: "${$redis::params::redis_password}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 80
+          file: 
+          value: "redis::params::redis_password"
+      redis_saves: 
+        value: "${$redis::params::redis_saves}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 81
+          file: 
+          value: "redis::params::redis_saves"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "redis::params"
+    type: !ruby/sym hostclass
+    params: {}

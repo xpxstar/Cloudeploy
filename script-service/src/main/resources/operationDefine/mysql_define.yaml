@@ -1,0 +1,43 @@
+component:
+  name: cloudeploy::default::component::package::mysql
+  display_name: Mysql
+  componentType: PACKAGE::DB
+operations:
+- operationName: cloudeploy::default::mysql::install
+  displayName: 安装
+  nodes:
+  - nodeName: mysql_install_node
+    searchName: cloudeploy::mysql::install
+    extractParams:
+    - '$allParams'
+- operationName: cloudeploy::default::mysql::service
+  displayName: 服务
+  nodes:
+  - nodeName: mysql_service_node
+    searchName: cloudeploy::mysql::service
+    extractParams:
+    - ensure: false
+- operationName: cloudeploy::default::mysql::sql
+  displayName: 运行SQL脚本
+  nodes:
+  - nodeName: mysql_sql_node
+    searchName: cloudeploy::mysql::sqlscript
+    extractParams:
+    - target
+    - sqlScript_url
+    - username: root
+    - password: root
+    - url_username
+    - url_password
+- operationName: cloudeploy::default::mysql::config
+  displayName: 配置
+  nodes:
+  - nodeName: mysql_config_node
+    searchName: cloudeploy::mysql::config
+    extractParams:
+    - '$allParams'  #暴露所有参数
+- operationName: cloudeploy::default::mysql::delete
+  displayName: 卸载
+  nodes:
+  - nodeName: mysql_delete_node
+    searchName: cloudeploy::mysql::delete

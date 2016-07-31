@@ -1,0 +1,40 @@
+component:
+  name: cloudeploy::default::component::package::consul
+  display_name: Consul
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::default::consul::install
+  displayName: 安装
+  nodes:
+  - nodeName: consul_install_node
+    searchName: consul
+    extractParams:
+      - $allParams
+- operationName: cloudeploy::default::consul::service
+  displayName: service
+  nodes:
+  - nodeName: consul_service_node
+    searchName: consul::service
+    extractParams:
+      - $allParams
+- operationName: cloudeploy::default::consul::check
+  displayName: check
+  nodes:
+  - nodeName: consul_check_node
+    searchName: consul::check
+    extractParams:
+      - $allParams
+- operationName: cloudeploy::default::consul::watch
+  displayName: watch
+  nodes:
+  - nodeName: consul_watch_node
+    searchName: consul::watch
+    extractParams:
+      - $allParams
+- operationName: cloudeploy::default::consul::keystore
+  displayName: keystore
+  nodes:
+  - nodeName: consul_keystore_node
+    searchName: consul::put_key_value
+    extractParams:
+      - $allParams

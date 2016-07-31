@@ -1,0 +1,26 @@
+name: cloudeploy.nodes.Compute #根类型，所有node均继承它，简化interfaces的定义
+description: "node type test"
+derived_from: cloudeploy.nodes.Root
+properties: 
+  - name: num_cpus
+    type: INTEGER
+    required: true
+    defaultValue: 1
+capabilities:
+  - name: host
+    type: cloudeploy.capabilities.Container
+    properties:
+       - name: valid_node_types
+         defaultValue: [cloudeploy.nodes.DBMS, cloudeploy.nodes.WebServer]
+         required: true
+requirements:
+attributes:
+artifacts:
+interfaces:
+- name: cloudeploy.interfaces.standard
+  operations: 
+  - name: create
+  - name: configure
+  - name: start
+  - name: stop
+  - name: delete 

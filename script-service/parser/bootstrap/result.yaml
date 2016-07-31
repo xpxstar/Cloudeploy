@@ -1,0 +1,10 @@
+&id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: bootstrap
+params:
+  serverfqdns:
+    paramName: serverfqdns
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 14,
+      value: undef}
+    value: undef
+type: hostclass

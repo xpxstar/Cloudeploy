@@ -1,0 +1,19 @@
+component:
+  name: cloudeploy::default::component::package::consul_template
+  display_name: Consul_Template
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::default::consul_template::install
+  displayName: install
+  nodes:
+  - nodeName: consul_template_install_node
+    searchName: consul_template
+    extractParams:
+      - $allParams
+- operationName: cloudeploy::default::consul_template::watch
+  displayName: watch
+  nodes:
+  - nodeName: consul_template_watch_node
+    searchName: consul_template::watch
+    extractParams:
+      - $allParams

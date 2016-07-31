@@ -1,0 +1,821 @@
+--- 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::config"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::create"
+    type: !ruby/sym definition
+    params: 
+      image: 
+        value: 
+        type: 
+      command: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 3
+          file: 
+          value: !ruby/sym undef
+      memory_limit: 
+        value: "0b"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 4
+          file: 
+          value: "0b"
+      cpuset: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 5
+          file: 
+          children: []
+      ports: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 6
+          file: 
+          children: []
+      expose: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 7
+          file: 
+          children: []
+      volumes: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 8
+          file: 
+          children: []
+      links: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 9
+          file: 
+          children: []
+      use_name: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 10
+          file: 
+          value: false
+      volumes_from: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 11
+          file: 
+          children: []
+      net: 
+        value: bridge
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 12
+          file: 
+          value: bridge
+      username: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 13
+          file: 
+          value: false
+      hostname: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 14
+          file: 
+          value: false
+      env: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 15
+          file: 
+          children: []
+      dns: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 16
+          file: 
+          children: []
+      detach: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 17
+          file: 
+          value: !ruby/sym undef
+      dns_search: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 18
+          file: 
+          children: []
+      lxc_conf: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 19
+          file: 
+          children: []
+      restart_service: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 20
+          file: 
+          value: true
+      disable_network: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 21
+          file: 
+          value: false
+      privileged: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 22
+          file: 
+          value: false
+      extra_parameters: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 23
+          file: 
+          value: !ruby/sym undef
+      pull_on_start: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 24
+          file: 
+          value: false
+      depends: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 25
+          file: 
+          children: []
+      tty: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 26
+          file: 
+          value: false
+      socket_connect: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 27
+          file: 
+          children: []
+      hostentries: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 28
+          file: 
+          children: []
+      restart: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 29
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::exec"
+    type: !ruby/sym definition
+    params: 
+      detach: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 6
+          file: 
+          value: false
+      interactive: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 7
+          file: 
+          value: false
+      tty: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 8
+          file: 
+          value: false
+      container: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 9
+          file: 
+          value: !ruby/sym undef
+      command: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 10
+          file: 
+          value: !ruby/sym undef
+      onlyif: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 11
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::image"
+    type: !ruby/sym definition
+    params: 
+      ensure: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 24
+          file: 
+          value: present
+      image: 
+        value: "${$title}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 25
+          file: 
+          value: title
+      image_tag: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 26
+          file: 
+          value: !ruby/sym undef
+      force: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 27
+          file: 
+          value: false
+      docker_file: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 28
+          file: 
+          value: !ruby/sym undef
+      docker_dir: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 29
+          file: 
+          value: !ruby/sym undef
+      docker_tar: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 30
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::images"
+    type: !ruby/sym hostclass
+    params: 
+      images: 
+        value: 
+        type: 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: docker
+    type: !ruby/sym hostclass
+    params: 
+      version: 
+        value: "${$docker::params::version}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 147
+          file: 
+          value: "docker::params::version"
+      ensure: 
+        value: "${$docker::params::ensure}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 148
+          file: 
+          value: "docker::params::ensure"
+      prerequired_packages: 
+        value: "${$docker::params::prerequired_packages}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 149
+          file: 
+          value: "docker::params::prerequired_packages"
+      tcp_bind: 
+        value: "${$docker::params::tcp_bind}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 150
+          file: 
+          value: "docker::params::tcp_bind"
+      socket_bind: 
+        value: "${$docker::params::socket_bind}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 151
+          file: 
+          value: "docker::params::socket_bind"
+      log_level: 
+        value: "${$docker::params::log_level}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 152
+          file: 
+          value: "docker::params::log_level"
+      selinux_enabled: 
+        value: "${$docker::params::selinux_enabled}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 153
+          file: 
+          value: "docker::params::selinux_enabled"
+      use_upstream_package_source: 
+        value: "${$docker::params::use_upstream_package_source}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 154
+          file: 
+          value: "docker::params::use_upstream_package_source"
+      package_source_location: 
+        value: "${$docker::params::package_source_location}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 155
+          file: 
+          value: "docker::params::package_source_location"
+      service_state: 
+        value: "${$docker::params::service_state}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 156
+          file: 
+          value: "docker::params::service_state"
+      service_enable: 
+        value: "${$docker::params::service_enable}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 157
+          file: 
+          value: "docker::params::service_enable"
+      root_dir: 
+        value: "${$docker::params::root_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 158
+          file: 
+          value: "docker::params::root_dir"
+      tmp_dir: 
+        value: "${$docker::params::tmp_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 159
+          file: 
+          value: "docker::params::tmp_dir"
+      manage_kernel: 
+        value: "${$docker::params::manage_kernel}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 160
+          file: 
+          value: "docker::params::manage_kernel"
+      dns: 
+        value: "${$docker::params::dns}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 161
+          file: 
+          value: "docker::params::dns"
+      dns_search: 
+        value: "${$docker::params::dns_search}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 162
+          file: 
+          value: "docker::params::dns_search"
+      socket_group: 
+        value: "${$docker::params::socket_group}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 163
+          file: 
+          value: "docker::params::socket_group"
+      extra_parameters: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 164
+          file: 
+          value: !ruby/sym undef
+      shell_values: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 165
+          file: 
+          value: !ruby/sym undef
+      proxy: 
+        value: "${$docker::params::proxy}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 166
+          file: 
+          value: "docker::params::proxy"
+      no_proxy: 
+        value: "${$docker::params::no_proxy}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 167
+          file: 
+          value: "docker::params::no_proxy"
+      storage_driver: 
+        value: "${$docker::params::storage_driver}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 168
+          file: 
+          value: "docker::params::storage_driver"
+      dm_basesize: 
+        value: "${$docker::params::dm_basesize}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 169
+          file: 
+          value: "docker::params::dm_basesize"
+      dm_fs: 
+        value: "${$docker::params::dm_fs}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 170
+          file: 
+          value: "docker::params::dm_fs"
+      dm_mkfsarg: 
+        value: "${$docker::params::dm_mkfsarg}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 171
+          file: 
+          value: "docker::params::dm_mkfsarg"
+      dm_mountopt: 
+        value: "${$docker::params::dm_mountopt}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 172
+          file: 
+          value: "docker::params::dm_mountopt"
+      dm_blocksize: 
+        value: "${$docker::params::dm_blocksize}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 173
+          file: 
+          value: "docker::params::dm_blocksize"
+      dm_loopdatasize: 
+        value: "${$docker::params::dm_loopdatasize}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 174
+          file: 
+          value: "docker::params::dm_loopdatasize"
+      dm_loopmetadatasize: 
+        value: "${$docker::params::dm_loopmetadatasize}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 175
+          file: 
+          value: "docker::params::dm_loopmetadatasize"
+      dm_datadev: 
+        value: "${$docker::params::dm_datadev}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 176
+          file: 
+          value: "docker::params::dm_datadev"
+      dm_metadatadev: 
+        value: "${$docker::params::dm_metadatadev}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 177
+          file: 
+          value: "docker::params::dm_metadatadev"
+      execdriver: 
+        value: "${$docker::params::execdriver}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 178
+          file: 
+          value: "docker::params::execdriver"
+      manage_package: 
+        value: "${$docker::params::manage_package}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 179
+          file: 
+          value: "docker::params::manage_package"
+      package_name: 
+        value: "${$docker::params::package_name}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 180
+          file: 
+          value: "docker::params::package_name"
+      service_name: 
+        value: "${$docker::params::service_name}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 181
+          file: 
+          value: "docker::params::service_name"
+      docker_command: 
+        value: "${$docker::params::docker_command}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 182
+          file: 
+          value: "docker::params::docker_command"
+      docker_users: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 183
+          file: 
+          children: []
+      repo_opt: 
+        value: "${$docker::params::repo_opt}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 184
+          file: 
+          value: "docker::params::repo_opt"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::install"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::params"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::run"
+    type: !ruby/sym definition
+    params: 
+      image: 
+        value: 
+        type: 
+      command: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 28
+          file: 
+          value: !ruby/sym undef
+      memory_limit: 
+        value: "0b"
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 29
+          file: 
+          value: "0b"
+      cpuset: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 30
+          file: 
+          children: []
+      ports: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 31
+          file: 
+          children: []
+      expose: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 32
+          file: 
+          children: []
+      volumes: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 33
+          file: 
+          children: []
+      links: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 34
+          file: 
+          children: []
+      use_name: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 35
+          file: 
+          value: false
+      running: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 36
+          file: 
+          value: true
+      volumes_from: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 37
+          file: 
+          children: []
+      net: 
+        value: bridge
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 38
+          file: 
+          value: bridge
+      username: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 39
+          file: 
+          value: false
+      hostname: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 40
+          file: 
+          value: false
+      env: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 41
+          file: 
+          children: []
+      dns: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 42
+          file: 
+          children: []
+      dns_search: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 43
+          file: 
+          children: []
+      lxc_conf: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 44
+          file: 
+          children: []
+      restart_service: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 45
+          file: 
+          value: true
+      disable_network: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 46
+          file: 
+          value: false
+      privileged: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 47
+          file: 
+          value: false
+      detach: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 48
+          file: 
+          value: !ruby/sym undef
+      extra_parameters: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 49
+          file: 
+          value: !ruby/sym undef
+      pull_on_start: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 50
+          file: 
+          value: false
+      depends: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 51
+          file: 
+          children: []
+      tty: 
+        value: false
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 52
+          file: 
+          value: false
+      socket_connect: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 53
+          file: 
+          children: []
+      hostentries: 
+        value: []
+        type: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 54
+          file: 
+          children: []
+      restart: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 55
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::run_instance"
+    type: !ruby/sym hostclass
+    params: 
+      instance: 
+        value: 
+        type: 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::service"
+    type: !ruby/sym hostclass
+    params: 
+      docker_command: 
+        value: "${$docker::docker_command}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 25
+          file: 
+          value: "docker::docker_command"
+      service_name: 
+        value: "${$docker::service_name}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 26
+          file: 
+          value: "docker::service_name"
+      tcp_bind: 
+        value: "${$docker::tcp_bind}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 27
+          file: 
+          value: "docker::tcp_bind"
+      socket_bind: 
+        value: "${$docker::socket_bind}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 28
+          file: 
+          value: "docker::socket_bind"
+      log_level: 
+        value: "${$docker::log_level}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 29
+          file: 
+          value: "docker::log_level"
+      selinux_enabled: 
+        value: "${$docker::selinux_enabled}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 30
+          file: 
+          value: "docker::selinux_enabled"
+      socket_group: 
+        value: "${$docker::socket_group}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 31
+          file: 
+          value: "docker::socket_group"
+      dns: 
+        value: "${$docker::dns}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 32
+          file: 
+          value: "docker::dns"
+      dns_search: 
+        value: "${$docker::dns_search}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 33
+          file: 
+          value: "docker::dns_search"
+      service_state: 
+        value: "${$docker::service_state}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 34
+          file: 
+          value: "docker::service_state"
+      service_enable: 
+        value: "${$docker::service_enable}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 35
+          file: 
+          value: "docker::service_enable"
+      root_dir: 
+        value: "${$docker::root_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 36
+          file: 
+          value: "docker::root_dir"
+      extra_parameters: 
+        value: "${$docker::extra_parameters}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 37
+          file: 
+          value: "docker::extra_parameters"
+      shell_values: 
+        value: "${$docker::shell_values}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 38
+          file: 
+          value: "docker::shell_values"
+      proxy: 
+        value: "${$docker::proxy}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 39
+          file: 
+          value: "docker::proxy"
+      no_proxy: 
+        value: "${$docker::no_proxy}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 40
+          file: 
+          value: "docker::no_proxy"
+      execdriver: 
+        value: "${$docker::execdriver}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 41
+          file: 
+          value: "docker::execdriver"
+      storage_driver: 
+        value: "${$docker::storage_driver}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 42
+          file: 
+          value: "docker::storage_driver"
+      tmp_dir: 
+        value: "${$docker::tmp_dir}"
+        type: !ruby/object:Puppet::Parser::AST::Variable
+          line: 43
+          file: 
+          value: "docker::tmp_dir"
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::systemd_reload"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "docker::system_user"
+    type: !ruby/sym definition
+    params: 
+      create_user: 
+        value: true
+        type: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 10
+          file: 
+          value: true

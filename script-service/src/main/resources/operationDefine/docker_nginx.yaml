@@ -1,0 +1,27 @@
+component:
+  name: cloudeploy::docker::component::package::nginx
+  display_name: Docker_Nginx
+  componentType: PACKAGE::DOCKER
+operations:
+- operationName: cloudeploy::docker::nginx::install
+  displayName: 安装
+  nodes:
+  - nodeName: docker_nginx_init
+    searchName: cloudeploydocker::nginx::install
+    extractParams:
+    - $allParams
+#- operationName: cloudeploy::docker::tomcat::deployWar
+#  displayName: 部署应用
+#  nodes:
+#    - nodeName: docker_tomcat_deploywar_node
+#      searchName: cloudeploydocker::tomcat::deploywar
+#      extractParams:
+#      - $allParams
+#- operationName: cloudeploy::docker::tomcat::server
+#  displayName: 服务
+#  nodes:
+#    - nodeName: docker_tomcat_server_node
+#      searchName: cloudeploydocker::tomcat::server
+#      extractParams:
+#      - $allParams
+    

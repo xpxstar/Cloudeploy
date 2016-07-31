@@ -1,0 +1,594 @@
+!!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::bindings::client_dev
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::bindings::daemon_dev
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::bindings::java
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::bindings::perl
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::bindings::php
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::bindings::python
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::bindings::ruby
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::bindings
+params:
+  java_enable:
+    paramName: java_enable
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 4, value: false}
+    value: false
+  perl_enable:
+    paramName: perl_enable
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 5, value: false}
+    value: false
+  php_enable:
+    paramName: php_enable
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 6, value: false}
+    value: false
+  python_enable:
+    paramName: python_enable
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 7, value: false}
+    value: false
+  ruby_enable:
+    paramName: ruby_enable
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 8, value: false}
+    value: false
+  client_dev:
+    paramName: client_dev
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 9, value: false}
+    value: false
+  daemon_dev:
+    paramName: daemon_dev
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 10, value: false}
+    value: false
+  java_package_ensure:
+    paramName: java_package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 15, value: present}
+    value: present
+  java_package_name:
+    paramName: java_package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 13, value: 'mysql::params::java_package_name'}
+    value: ${$mysql::params::java_package_name}
+  java_package_provider:
+    paramName: java_package_provider
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 16,
+      value: undef}
+    value: undef
+  perl_package_ensure:
+    paramName: perl_package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 17, value: present}
+    value: present
+  perl_package_name:
+    paramName: perl_package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 16, value: 'mysql::params::perl_package_name'}
+    value: ${$mysql::params::perl_package_name}
+  perl_package_provider:
+    paramName: perl_package_provider
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 18,
+      value: undef}
+    value: undef
+  php_package_ensure:
+    paramName: php_package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 19, value: present}
+    value: present
+  php_package_name:
+    paramName: php_package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 19, value: 'mysql::params::php_package_name'}
+    value: ${$mysql::params::php_package_name}
+  php_package_provider:
+    paramName: php_package_provider
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 20,
+      value: undef}
+    value: undef
+  python_package_ensure:
+    paramName: python_package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 21, value: present}
+    value: present
+  python_package_name:
+    paramName: python_package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 22, value: 'mysql::params::python_package_name'}
+    value: ${$mysql::params::python_package_name}
+  python_package_provider:
+    paramName: python_package_provider
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 22,
+      value: undef}
+    value: undef
+  ruby_package_ensure:
+    paramName: ruby_package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 23, value: present}
+    value: present
+  ruby_package_name:
+    paramName: ruby_package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 25, value: 'mysql::params::ruby_package_name'}
+    value: ${$mysql::params::ruby_package_name}
+  ruby_package_provider:
+    paramName: ruby_package_provider
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 24,
+      value: undef}
+    value: undef
+  client_dev_package_ensure:
+    paramName: client_dev_package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 25, value: present}
+    value: present
+  client_dev_package_name:
+    paramName: client_dev_package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 28, value: 'mysql::params::client_dev_package_name'}
+    value: ${$mysql::params::client_dev_package_name}
+  client_dev_package_provider:
+    paramName: client_dev_package_provider
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 26,
+      value: undef}
+    value: undef
+  daemon_dev_package_ensure:
+    paramName: daemon_dev_package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 27, value: present}
+    value: present
+  daemon_dev_package_name:
+    paramName: daemon_dev_package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 31, value: 'mysql::params::daemon_dev_package_name'}
+    value: ${$mysql::params::daemon_dev_package_name}
+  daemon_dev_package_provider:
+    paramName: daemon_dev_package_provider
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 28,
+      value: undef}
+    value: undef
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::client::install
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::client
+params:
+  bindings_enable:
+    paramName: bindings_enable
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 14, value: false}
+    value: false
+  package_ensure:
+    paramName: package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 12, value: present}
+    value: present
+  package_name:
+    paramName: package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 5, value: 'mysql::params::client_package_name'}
+    value: ${$mysql::params::client_package_name}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::db
+params:
+  user:
+    paramName: user
+    parent: *id001
+    type: null
+    value: null
+  password:
+    paramName: password
+    parent: *id001
+    type: null
+    value: null
+  dbname:
+    paramName: dbname
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 5, value: name}
+    value: ${$name}
+  charset:
+    paramName: charset
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 6, value: utf8}
+    value: utf8
+  collate:
+    paramName: collate
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 7, value: utf8_general_ci}
+    value: utf8_general_ci
+  host:
+    paramName: host
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 8, value: localhost}
+    value: localhost
+  grant:
+    paramName: grant
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 9, value: ALL}
+    value: ALL
+  sql:
+    paramName: sql
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 10,
+      value: undef}
+    value: undef
+  enforce_sql:
+    paramName: enforce_sql
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 11, value: false}
+    value: false
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 12, value: present}
+    value: present
+  import_timeout:
+    paramName: import_timeout
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 13,
+      value: '300'}
+    value: '300'
+type: definition
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::params
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::account_security
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::backup
+params:
+  backupuser:
+    paramName: backupuser
+    parent: *id001
+    type: null
+    value: null
+  backuppassword:
+    paramName: backuppassword
+    parent: *id001
+    type: null
+    value: null
+  backupdir:
+    paramName: backupdir
+    parent: *id001
+    type: null
+    value: null
+  backupdirmode:
+    paramName: backupdirmode
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 6, value: '0700'}
+    value: '0700'
+  backupdirowner:
+    paramName: backupdirowner
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 7, value: root}
+    value: root
+  backupdirgroup:
+    paramName: backupdirgroup
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 8, value: root}
+    value: root
+  backupcompress:
+    paramName: backupcompress
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 9, value: true}
+    value: true
+  backuprotate:
+    paramName: backuprotate
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTName {file: null, line: 10,
+      value: '30'}
+    value: '30'
+  ignore_events:
+    paramName: ignore_events
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 11, value: true}
+    value: true
+  delete_before_dump:
+    paramName: delete_before_dump
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 12, value: false}
+    value: false
+  backupdatabases:
+    paramName: backupdatabases
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children: []
+      file: null
+      line: 13
+    value: '[]'
+  file_per_database:
+    paramName: file_per_database
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 14, value: false}
+    value: false
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 15, value: present}
+    value: present
+  time:
+    paramName: time
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTArray
+      children:
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 16,
+        value: '23'}
+      - !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null, line: 16,
+        value: '5'}
+      file: null
+      line: 16
+    value: '["23","5",]'
+  postscript:
+    paramName: postscript
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 17, value: false}
+    value: false
+  execpath:
+    paramName: execpath
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 18, value: '/usr/bin:/usr/sbin:/bin:/sbin'}
+    value: /usr/bin:/usr/sbin:/bin:/sbin
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::config
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::install
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::monitor
+params:
+  mysql_monitor_username:
+    paramName: mysql_monitor_username
+    parent: *id001
+    type: null
+    value: null
+  mysql_monitor_password:
+    paramName: mysql_monitor_password
+    parent: *id001
+    type: null
+    value: null
+  mysql_monitor_hostname:
+    paramName: mysql_monitor_hostname
+    parent: *id001
+    type: null
+    value: null
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::mysqltuner
+params:
+  ensure:
+    paramName: ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 2, value: present}
+    value: present
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::providers
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::root_password
+params: {}
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server::service
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: mysql::server
+params:
+  config_file:
+    paramName: config_file
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 3, value: 'mysql::params::config_file'}
+    value: ${$mysql::params::config_file}
+  includedir:
+    paramName: includedir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 4, value: 'mysql::params::includedir'}
+    value: ${$mysql::params::includedir}
+  manage_config_file:
+    paramName: manage_config_file
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 4, value: true}
+    value: true
+  old_root_password:
+    paramName: old_root_password
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 5, value: ''}
+    value: ''
+  override_options:
+    paramName: override_options
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 7
+      value: {}
+    value: '{}'
+  package_ensure:
+    paramName: package_ensure
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 9, value: present}
+    value: present
+  package_name:
+    paramName: package_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 9, value: 'mysql::params::server_package_name'}
+    value: ${$mysql::params::server_package_name}
+  purge_conf_dir:
+    paramName: purge_conf_dir
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 6, value: false}
+    value: false
+  remove_default_accounts:
+    paramName: remove_default_accounts
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 11, value: false}
+    value: false
+  restart:
+    paramName: restart
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 7, value: false}
+    value: false
+  root_group:
+    paramName: root_group
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 13, value: 'mysql::params::root_group'}
+    value: ${$mysql::params::root_group}
+  root_password:
+    paramName: root_password
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 8, value: UNSET}
+    value: UNSET
+  service_enabled:
+    paramName: service_enabled
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 11, value: true}
+    value: true
+  service_manage:
+    paramName: service_manage
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTBoolean {file: null,
+      line: 10, value: true}
+    value: true
+  service_name:
+    paramName: service_name
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 17, value: 'mysql::params::server_service_name'}
+    value: ${$mysql::params::server_service_name}
+  service_provider:
+    paramName: service_provider
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTVariable {file: null,
+      line: 18, value: 'mysql::params::server_service_provider'}
+    value: ${$mysql::params::server_service_provider}
+  users:
+    paramName: users
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 19
+      value: {}
+    value: '{}'
+  grants:
+    paramName: grants
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 20
+      value: {}
+    value: '{}'
+  databases:
+    paramName: databases
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTASTHash
+      file: null
+      line: 21
+      value: {}
+    value: '{}'
+  enabled:
+    paramName: enabled
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 24,
+      value: undef}
+    value: undef
+  manage_service:
+    paramName: manage_service
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 25,
+      value: undef}
+    value: undef
+type: hostclass

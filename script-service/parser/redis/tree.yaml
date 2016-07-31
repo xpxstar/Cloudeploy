@@ -1,0 +1,1762 @@
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: redis
+  namespace: redis
+  arguments: 
+    version: !ruby/object:Puppet::Parser::AST::Variable
+      line: 86
+      file: 
+      value: "redis::params::version"
+    redis_src_dir: !ruby/object:Puppet::Parser::AST::Variable
+      line: 87
+      file: 
+      value: "redis::params::redis_src_dir"
+    redis_bin_dir: !ruby/object:Puppet::Parser::AST::Variable
+      line: 88
+      file: 
+      value: "redis::params::redis_bin_dir"
+    redis_user: !ruby/object:Puppet::Parser::AST::Variable
+      line: 89
+      file: 
+      value: "redis::params::redis_user"
+    redis_group: !ruby/object:Puppet::Parser::AST::Variable
+      line: 90
+      file: 
+      value: "redis::params::redis_group"
+    redis_port: !ruby/object:Puppet::Parser::AST::Variable
+      line: 91
+      file: 
+      value: "redis::params::redis_port"
+    redis_bind_address: !ruby/object:Puppet::Parser::AST::Variable
+      line: 92
+      file: 
+      value: "redis::params::redis_bind_address"
+    redis_max_memory: !ruby/object:Puppet::Parser::AST::Variable
+      line: 93
+      file: 
+      value: "redis::params::redis_max_memory"
+    redis_max_clients: !ruby/object:Puppet::Parser::AST::Variable
+      line: 94
+      file: 
+      value: "redis::params::redis_max_clients"
+    redis_timeout: !ruby/object:Puppet::Parser::AST::Variable
+      line: 95
+      file: 
+      value: "redis::params::redis_timeout"
+    redis_loglevel: !ruby/object:Puppet::Parser::AST::Variable
+      line: 96
+      file: 
+      value: "redis::params::redis_loglevel"
+    redis_databases: !ruby/object:Puppet::Parser::AST::Variable
+      line: 97
+      file: 
+      value: "redis::params::redis_databases"
+    redis_slowlog_log_slower_than: !ruby/object:Puppet::Parser::AST::Variable
+      line: 98
+      file: 
+      value: "redis::params::redis_slowlog_log_slower_than"
+    redis_slowlog_max_len: !ruby/object:Puppet::Parser::AST::Variable
+      line: 99
+      file: 
+      value: "redis::params::redis_slowlog_max_len"
+    redis_password: !ruby/object:Puppet::Parser::AST::Variable
+      line: 100
+      file: 
+      value: "redis::params::redis_password"
+    redis_saves: !ruby/object:Puppet::Parser::AST::Variable
+      line: 101
+      file: 
+      value: "redis::params::redis_saves"
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 105
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym statement
+        line: 104
+        file: 
+        doc: ""
+        name: include
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 105
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Name
+              line: 104
+              file: 
+              value: wget
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym statement
+        line: 105
+        file: 
+        doc: ""
+        name: include
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 107
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Name
+              line: 105
+              file: 
+              value: gcc
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 107
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 107
+          file: 
+          value: redis_pkg_name
+        value: !ruby/object:Puppet::Parser::AST::Concat
+          line: 107
+          file: 
+          value: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 107
+              file: 
+              value: redis-
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 107
+              file: 
+              value: version
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 107
+              file: 
+              value: ".tar.gz"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 108
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 108
+          file: 
+          value: redis_pkg
+        value: !ruby/object:Puppet::Parser::AST::Concat
+          line: 108
+          file: 
+          value: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 108
+              file: 
+              value: ""
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 108
+              file: 
+              value: redis_src_dir
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 108
+              file: 
+              value: /
+            - !ruby/object:Puppet::Parser::AST::Variable
+              line: 108
+              file: 
+              value: redis_pkg_name
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 108
+              file: 
+              value: ""
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 123
+        file: 
+        doc: "Install default instance\n"
+        type: "redis::instance"
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 123
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 123
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 111
+                file: 
+                value: redis-default
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 112
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 112
+                    file: 
+                    param: redis_port
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 112
+                      file: 
+                      value: redis_port
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 113
+                    file: 
+                    param: redis_bind_address
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 113
+                      file: 
+                      value: redis_bind_address
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 114
+                    file: 
+                    param: redis_max_memory
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 114
+                      file: 
+                      value: redis_max_memory
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 115
+                    file: 
+                    param: redis_max_clients
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 115
+                      file: 
+                      value: redis_max_clients
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 116
+                    file: 
+                    param: redis_timeout
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 116
+                      file: 
+                      value: redis_timeout
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 117
+                    file: 
+                    param: redis_loglevel
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 117
+                      file: 
+                      value: redis_loglevel
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 118
+                    file: 
+                    param: redis_databases
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 118
+                      file: 
+                      value: redis_databases
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 119
+                    file: 
+                    param: redis_slowlog_log_slower_than
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 119
+                      file: 
+                      value: redis_slowlog_log_slower_than
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 120
+                    file: 
+                    param: redis_slowlog_max_len
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 120
+                      file: 
+                      value: redis_slowlog_max_len
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 121
+                    file: 
+                    param: redis_password
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 121
+                      file: 
+                      value: redis_password
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 122
+                    file: 
+                    param: redis_saves
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 122
+                      file: 
+                      value: redis_saves
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::ResourceDefaults
+        line: 128
+        file: 
+        doc: ""
+        type: File
+        parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 126
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceParam
+              line: 126
+              file: 
+              param: owner
+              value: !ruby/object:Puppet::Parser::AST::Variable
+                line: 126
+                file: 
+                value: redis_user
+              children: []
+            - !ruby/object:Puppet::Parser::AST::ResourceParam
+              line: 127
+              file: 
+              param: group
+              value: !ruby/object:Puppet::Parser::AST::Variable
+                line: 127
+                file: 
+                value: redis_group
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 131
+        file: 
+        doc: ""
+        type: file
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 131
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 131
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::Variable
+                line: 129
+                file: 
+                value: redis_src_dir
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 130
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 130
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 130
+                      file: 
+                      value: directory
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 134
+        file: 
+        doc: ""
+        type: file
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 134
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 134
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 132
+                file: 
+                value: /etc/redis
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 133
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 133
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 133
+                      file: 
+                      value: directory
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 138
+        file: 
+        doc: ""
+        type: file
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 138
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 138
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 135
+                file: 
+                value: redis-lib
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 136
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 136
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 136
+                      file: 
+                      value: directory
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 137
+                    file: 
+                    param: path
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 137
+                      file: 
+                      value: /var/lib/redis
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 144
+        file: 
+        doc: ""
+        type: exec
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 144
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 144
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 140
+                file: 
+                value: get-redis-pkg
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 141
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 141
+                    file: 
+                    param: command
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 141
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 141
+                          file: 
+                          value: "/usr/bin/wget --output-document "
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 141
+                          file: 
+                          value: redis_pkg
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 141
+                          file: 
+                          value: " http://download.redis.io/releases/"
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 141
+                          file: 
+                          value: redis_pkg_name
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 141
+                          file: 
+                          value: ""
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 142
+                    file: 
+                    param: unless
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 142
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 142
+                          file: 
+                          value: "/usr/bin/test -f "
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 142
+                          file: 
+                          value: redis_pkg
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 142
+                          file: 
+                          value: ""
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 143
+                    file: 
+                    param: require
+                    value: !ruby/object:Puppet::Parser::AST::ResourceReference
+                      line: 143
+                      file: 
+                      type: File
+                      title: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 143
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::Variable
+                            line: 143
+                            file: 
+                            value: redis_src_dir
+                      children: []
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 150
+        file: 
+        doc: ""
+        type: file
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 150
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 150
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 146
+                file: 
+                value: redis-cli-link
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 147
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 147
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 147
+                      file: 
+                      value: link
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 148
+                    file: 
+                    param: path
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 148
+                      file: 
+                      value: /usr/local/bin/redis-cli
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 149
+                    file: 
+                    param: target
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 149
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 149
+                          file: 
+                          value: ""
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 149
+                          file: 
+                          value: redis_bin_dir
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 149
+                          file: 
+                          value: /bin/redis-cli
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 157
+        file: 
+        doc: ""
+        type: exec
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 157
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 157
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 151
+                file: 
+                value: unpack-redis
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 152
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 152
+                    file: 
+                    param: command
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 152
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 152
+                          file: 
+                          value: "tar --strip-components 1 -xzf "
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 152
+                          file: 
+                          value: redis_pkg
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 152
+                          file: 
+                          value: ""
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 153
+                    file: 
+                    param: cwd
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 153
+                      file: 
+                      value: redis_src_dir
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 154
+                    file: 
+                    param: path
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 154
+                      file: 
+                      value: "/bin:/usr/bin"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 155
+                    file: 
+                    param: unless
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 155
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 155
+                          file: 
+                          value: "test -f "
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 155
+                          file: 
+                          value: redis_src_dir
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 155
+                          file: 
+                          value: /Makefile
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 156
+                    file: 
+                    param: require
+                    value: !ruby/object:Puppet::Parser::AST::ResourceReference
+                      line: 156
+                      file: 
+                      type: Exec
+                      title: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 156
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 156
+                            file: 
+                            value: get-redis-pkg
+                      children: []
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 164
+        file: 
+        doc: ""
+        type: exec
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 164
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 164
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::String
+                line: 158
+                file: 
+                value: install-redis
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 159
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 159
+                    file: 
+                    param: command
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 159
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 159
+                          file: 
+                          value: "make && make install PREFIX="
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 159
+                          file: 
+                          value: redis_bin_dir
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 159
+                          file: 
+                          value: ""
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 160
+                    file: 
+                    param: cwd
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 160
+                      file: 
+                      value: redis_src_dir
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 161
+                    file: 
+                    param: path
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 161
+                      file: 
+                      value: "/bin:/usr/bin"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 162
+                    file: 
+                    param: unless
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 162
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 162
+                          file: 
+                          value: "test $("
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 162
+                          file: 
+                          value: redis_bin_dir
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 162
+                          file: 
+                          value: "/bin/redis-server --version | cut -d ' ' -f 1) = 'Redis'"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 163
+                    file: 
+                    param: require
+                    value: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 163
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::ResourceReference
+                          line: 163
+                          file: 
+                          type: Exec
+                          title: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 163
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 163
+                                file: 
+                                value: unpack-redis
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceReference
+                          line: 163
+                          file: 
+                          type: Class
+                          title: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 163
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 163
+                                file: 
+                                value: gcc
+                          children: []
+                    children: []
+              children: []
+        children: []
+  doc: "== Class: redis\n\nInstall redis.\n\n=== Parameters\n\n[*version*]\n  Version to install.\n  Default: 2.8.12\n\n[*redis_src_dir*]\n  Location to unpack source code before building and installing it.\n  Default: /opt/redis-src\n\n[*redis_bin_dir*]\n  Location to install redis binaries.\n  Default: /opt/redis\n\n[*redis_port*]\n  Accept redis connections on this port.\n  Default: 6379\n\n[*redis_bind_address*]\n  Address to bind to.\n  Default: false, which binds to all interfaces\n\n[*redis_max_memory*]\n  Max memory usage configuration.\n  Default: 4gb\n\n[*redis_max_clients*]\n  Set the redis config value maxclients. If no value provided, it is\n  not included in the configuration for 2.6+ and set to 0 (unlimited)\n  for 2.4.\n  Default: 0 (2.4)\n  Default: nil (2.6+)\n\n[*redis_timeout*]\n  Set the redis config value timeout (seconds).\n  Default: 300\n\n[*redis_loglevel*]\n  Set the redis config value loglevel. Valid values are debug,\n  verbose, notice, and warning.\n  Default: notice\n\n[*redis_databases*]\n  Set the redis config value databases.\n  Default: 16\n\n[*redis_slowlog_log_slower_than*]\n  Set the redis config value slowlog-log-slower-than (microseconds).\n  Default: 10000\n\n[*redis_showlog_max_len*]\n  Set the redis config value slowlog-max-len.\n  Default: 1024\n\n[*redis_password*]\n  Password used by AUTH command. Will be set if it is not nil.\n  Default: nil\n\n[*redis_saves*]\n  Redis snapshotting parameters. Set to false for no snapshots.\n  Default: ['save 900 1', 'save 300 10', 'save 60 10000']\n\n=== Examples\n\ninclude redis\n\nclass { 'redis':\n  version       => '2.8',\n  redis_src_dir => '/fake/path/redis-src',\n  redis_bin_dir => '/fake/path/redis',\n}\n\n=== Authors\n\nThomas Van Doren\n\n=== Copyright\n\nCopyright 2012 Thomas Van Doren, unless otherwise noted.\n\n"
+  line: 85
+  parent: "redis::params"
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym definition
+  name: "redis::instance"
+  namespace: redis
+  arguments: 
+    redis_port: !ruby/object:Puppet::Parser::AST::Variable
+      line: 71
+      file: 
+      value: "redis::params::redis_port"
+    redis_bind_address: !ruby/object:Puppet::Parser::AST::Variable
+      line: 72
+      file: 
+      value: "redis::params::redis_bind_address"
+    redis_max_memory: !ruby/object:Puppet::Parser::AST::Variable
+      line: 73
+      file: 
+      value: "redis::params::redis_max_memory"
+    redis_max_clients: !ruby/object:Puppet::Parser::AST::Variable
+      line: 74
+      file: 
+      value: "redis::params::redis_max_clients"
+    redis_timeout: !ruby/object:Puppet::Parser::AST::Variable
+      line: 75
+      file: 
+      value: "redis::params::redis_timeout"
+    redis_loglevel: !ruby/object:Puppet::Parser::AST::Variable
+      line: 76
+      file: 
+      value: "redis::params::redis_loglevel"
+    redis_databases: !ruby/object:Puppet::Parser::AST::Variable
+      line: 77
+      file: 
+      value: "redis::params::redis_databases"
+    redis_slowlog_log_slower_than: !ruby/object:Puppet::Parser::AST::Variable
+      line: 78
+      file: 
+      value: "redis::params::redis_slowlog_log_slower_than"
+    redis_slowlog_max_len: !ruby/object:Puppet::Parser::AST::Variable
+      line: 79
+      file: 
+      value: "redis::params::redis_slowlog_max_len"
+    redis_password: !ruby/object:Puppet::Parser::AST::Variable
+      line: 80
+      file: 
+      value: "redis::params::redis_password"
+    redis_saves: !ruby/object:Puppet::Parser::AST::Variable
+      line: 81
+      file: 
+      value: "redis::params::redis_saves"
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 87
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::Relationship
+        line: 86
+        file: 
+        children: []
+        left: !ruby/object:Puppet::Parser::AST::ResourceReference
+          line: 86
+          file: 
+          type: Exec
+          title: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 86
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::String
+                line: 86
+                file: 
+                value: install-redis
+          children: []
+        right: !ruby/object:Puppet::Parser::AST::ResourceReference
+          line: 86
+          file: 
+          type: "Redis::Instance"
+          title: !ruby/object:Puppet::Parser::AST::ASTArray
+            line: 86
+            file: 
+            children: 
+              - !ruby/object:Puppet::Parser::AST::Variable
+                line: 86
+                file: 
+                value: name
+          children: []
+        arrow: "->"
+      - !ruby/object:Puppet::Parser::AST::Function
+        ftype: !ruby/sym statement
+        line: 87
+        file: 
+        doc: ""
+        name: include
+        arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 89
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::Name
+              line: 87
+              file: 
+              value: redis
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 89
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 89
+          file: 
+          value: version
+        value: !ruby/object:Puppet::Parser::AST::Variable
+          line: 89
+          file: 
+          value: "redis::version"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::CaseStatement
+        line: 106
+        file: 
+        doc: ""
+        test: !ruby/object:Puppet::Parser::AST::Variable
+          line: 91
+          file: 
+          value: version
+        options: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 99
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 99
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 92
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Regex
+                    line: 92
+                    file: 
+                    value: !ruby/regexp /^2\.4\.\d+$/
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 98
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::IfStatement
+                    line: 98
+                    file: 
+                    doc: ""
+                    test: !ruby/object:Puppet::Parser::AST::ComparisonOperator
+                      line: 93
+                      file: 
+                      operator: "=="
+                      lval: !ruby/object:Puppet::Parser::AST::Variable
+                        line: 93
+                        file: 
+                        value: redis_max_clients
+                      rval: !ruby/object:Puppet::Parser::AST::Boolean
+                        line: 93
+                        file: 
+                        value: false
+                      children: []
+                    statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                      line: 95
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::VarDef
+                          line: 94
+                          file: 
+                          doc: ""
+                          name: !ruby/object:Puppet::Parser::AST::Name
+                            line: 94
+                            file: 
+                            value: real_redis_max_clients
+                          value: !ruby/object:Puppet::Parser::AST::Name
+                            line: 94
+                            file: 
+                            value: "0"
+                          children: []
+                    else: !ruby/object:Puppet::Parser::AST::Else
+                      line: 98
+                      file: 
+                      doc: ""
+                      statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                        line: 98
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::VarDef
+                            line: 97
+                            file: 
+                            doc: ""
+                            name: !ruby/object:Puppet::Parser::AST::Name
+                              line: 97
+                              file: 
+                              value: real_redis_max_clients
+                            value: !ruby/object:Puppet::Parser::AST::Variable
+                              line: 97
+                              file: 
+                              value: redis_max_clients
+                            children: []
+                      children: []
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 102
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 100
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Regex
+                    line: 100
+                    file: 
+                    value: !ruby/regexp /^2\.[68]\.\d+$/
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 102
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::VarDef
+                    line: 101
+                    file: 
+                    doc: ""
+                    name: !ruby/object:Puppet::Parser::AST::Name
+                      line: 101
+                      file: 
+                      value: real_redis_max_clients
+                    value: !ruby/object:Puppet::Parser::AST::Variable
+                      line: 101
+                      file: 
+                      value: redis_max_clients
+                    children: []
+              children: []
+            - !ruby/object:Puppet::Parser::AST::CaseOpt
+              line: 105
+              file: 
+              value: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 103
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Default
+                    line: 103
+                    file: 
+                    value: default
+              statements: !ruby/object:Puppet::Parser::AST::BlockExpression
+                line: 105
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::Function
+                    ftype: !ruby/sym statement
+                    line: 104
+                    file: 
+                    doc: ""
+                    name: fail
+                    arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 104
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::Concat
+                          line: 104
+                          file: 
+                          value: 
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 104
+                              file: 
+                              value: "Invalid redis version, "
+                            - !ruby/object:Puppet::Parser::AST::Variable
+                              line: 104
+                              file: 
+                              value: version
+                            - !ruby/object:Puppet::Parser::AST::String
+                              line: 104
+                              file: 
+                              value: ". It must match 2.4.\x5cd+ or 2.[68].\x5cd+."
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 111
+        file: 
+        doc: ""
+        type: file
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 111
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 111
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::Concat
+                line: 108
+                file: 
+                value: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 108
+                    file: 
+                    value: redis-lib-port-
+                  - !ruby/object:Puppet::Parser::AST::Variable
+                    line: 108
+                    file: 
+                    value: redis_port
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 108
+                    file: 
+                    value: ""
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 109
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 109
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 109
+                      file: 
+                      value: directory
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 110
+                    file: 
+                    param: path
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 110
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 110
+                          file: 
+                          value: /var/lib/redis/
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 110
+                          file: 
+                          value: redis_port
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 110
+                          file: 
+                          value: ""
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 119
+        file: 
+        doc: ""
+        type: file
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 119
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 119
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::Concat
+                line: 113
+                file: 
+                value: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 113
+                    file: 
+                    value: redis-init-
+                  - !ruby/object:Puppet::Parser::AST::Variable
+                    line: 113
+                    file: 
+                    value: redis_port
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 113
+                    file: 
+                    value: ""
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 114
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 114
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 114
+                      file: 
+                      value: present
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 115
+                    file: 
+                    param: path
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 115
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 115
+                          file: 
+                          value: /etc/init.d/redis_
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 115
+                          file: 
+                          value: redis_port
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 115
+                          file: 
+                          value: ""
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 116
+                    file: 
+                    param: mode
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 116
+                      file: 
+                      value: "0755"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 117
+                    file: 
+                    param: content
+                    value: !ruby/object:Puppet::Parser::AST::Function
+                      ftype: !ruby/sym rvalue
+                      line: 117
+                      file: 
+                      doc: ""
+                      name: template
+                      arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 117
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 117
+                            file: 
+                            value: redis/redis.init.erb
+                      children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 118
+                    file: 
+                    param: notify
+                    value: !ruby/object:Puppet::Parser::AST::ResourceReference
+                      line: 118
+                      file: 
+                      type: Service
+                      title: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 118
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::Concat
+                            line: 118
+                            file: 
+                            value: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 118
+                                file: 
+                                value: redis-
+                              - !ruby/object:Puppet::Parser::AST::Variable
+                                line: 118
+                                file: 
+                                value: redis_port
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 118
+                                file: 
+                                value: ""
+                      children: []
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 125
+        file: 
+        doc: ""
+        type: file
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 125
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 125
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::Concat
+                line: 120
+                file: 
+                value: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 120
+                    file: 
+                    value: redis_port_
+                  - !ruby/object:Puppet::Parser::AST::Variable
+                    line: 120
+                    file: 
+                    value: redis_port
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 120
+                    file: 
+                    value: ".conf"
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 121
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 121
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 121
+                      file: 
+                      value: present
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 122
+                    file: 
+                    param: path
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 122
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 122
+                          file: 
+                          value: /etc/redis/
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 122
+                          file: 
+                          value: redis_port
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 122
+                          file: 
+                          value: ".conf"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 123
+                    file: 
+                    param: mode
+                    value: !ruby/object:Puppet::Parser::AST::String
+                      line: 123
+                      file: 
+                      value: "0644"
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 124
+                    file: 
+                    param: content
+                    value: !ruby/object:Puppet::Parser::AST::Function
+                      ftype: !ruby/sym rvalue
+                      line: 124
+                      file: 
+                      doc: ""
+                      name: template
+                      arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 124
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::String
+                            line: 124
+                            file: 
+                            value: redis/redis_port.conf.erb
+                      children: []
+                    children: []
+              children: []
+        children: []
+      - !ruby/object:Puppet::Parser::AST::Resource
+        line: 133
+        file: 
+        doc: ""
+        type: service
+        instances: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 133
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::ResourceInstance
+              line: 133
+              file: 
+              title: !ruby/object:Puppet::Parser::AST::Concat
+                line: 127
+                file: 
+                value: 
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 127
+                    file: 
+                    value: redis-
+                  - !ruby/object:Puppet::Parser::AST::Variable
+                    line: 127
+                    file: 
+                    value: redis_port
+                  - !ruby/object:Puppet::Parser::AST::String
+                    line: 127
+                    file: 
+                    value: ""
+              parameters: !ruby/object:Puppet::Parser::AST::ASTArray
+                line: 128
+                file: 
+                children: 
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 128
+                    file: 
+                    param: ensure
+                    value: !ruby/object:Puppet::Parser::AST::Name
+                      line: 128
+                      file: 
+                      value: running
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 129
+                    file: 
+                    param: name
+                    value: !ruby/object:Puppet::Parser::AST::Concat
+                      line: 129
+                      file: 
+                      value: 
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 129
+                          file: 
+                          value: redis_
+                        - !ruby/object:Puppet::Parser::AST::Variable
+                          line: 129
+                          file: 
+                          value: redis_port
+                        - !ruby/object:Puppet::Parser::AST::String
+                          line: 129
+                          file: 
+                          value: ""
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 130
+                    file: 
+                    param: enable
+                    value: !ruby/object:Puppet::Parser::AST::Boolean
+                      line: 130
+                      file: 
+                      value: true
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 131
+                    file: 
+                    param: require
+                    value: !ruby/object:Puppet::Parser::AST::ASTArray
+                      line: 131
+                      file: 
+                      children: 
+                        - !ruby/object:Puppet::Parser::AST::ResourceReference
+                          line: 131
+                          file: 
+                          type: File
+                          title: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 131
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Concat
+                                line: 131
+                                file: 
+                                value: 
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 131
+                                    file: 
+                                    value: redis_port_
+                                  - !ruby/object:Puppet::Parser::AST::Variable
+                                    line: 131
+                                    file: 
+                                    value: redis_port
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 131
+                                    file: 
+                                    value: ".conf"
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceReference
+                          line: 131
+                          file: 
+                          type: File
+                          title: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 131
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Concat
+                                line: 131
+                                file: 
+                                value: 
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 131
+                                    file: 
+                                    value: redis-init-
+                                  - !ruby/object:Puppet::Parser::AST::Variable
+                                    line: 131
+                                    file: 
+                                    value: redis_port
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 131
+                                    file: 
+                                    value: ""
+                          children: []
+                        - !ruby/object:Puppet::Parser::AST::ResourceReference
+                          line: 131
+                          file: 
+                          type: File
+                          title: !ruby/object:Puppet::Parser::AST::ASTArray
+                            line: 131
+                            file: 
+                            children: 
+                              - !ruby/object:Puppet::Parser::AST::Concat
+                                line: 131
+                                file: 
+                                value: 
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 131
+                                    file: 
+                                    value: redis-lib-port-
+                                  - !ruby/object:Puppet::Parser::AST::Variable
+                                    line: 131
+                                    file: 
+                                    value: redis_port
+                                  - !ruby/object:Puppet::Parser::AST::String
+                                    line: 131
+                                    file: 
+                                    value: ""
+                          children: []
+                    children: []
+                  - !ruby/object:Puppet::Parser::AST::ResourceParam
+                    line: 132
+                    file: 
+                    param: subscribe
+                    value: !ruby/object:Puppet::Parser::AST::ResourceReference
+                      line: 132
+                      file: 
+                      type: File
+                      title: !ruby/object:Puppet::Parser::AST::ASTArray
+                        line: 132
+                        file: 
+                        children: 
+                          - !ruby/object:Puppet::Parser::AST::Concat
+                            line: 132
+                            file: 
+                            value: 
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 132
+                                file: 
+                                value: redis_port_
+                              - !ruby/object:Puppet::Parser::AST::Variable
+                                line: 132
+                                file: 
+                                value: redis_port
+                              - !ruby/object:Puppet::Parser::AST::String
+                                line: 132
+                                file: 
+                                value: ".conf"
+                      children: []
+                    children: []
+              children: []
+        children: []
+  doc: "== Define: redis::instance\n\nConfigure redis instance on an arbitrary port.\n\n=== Parameters\n\n[*redis_port*]\n  Accept redis connections on this port.\n  Default: 6379\n\n[*redis_bind_address*]\n  Address to bind to.\n  Default: false, which binds to all interfaces\n\n[*redis_max_memory*]\n  Max memory usage configuration.\n  Default: 4gb\n\n[*redis_max_clients*]\n  Set the redis config value maxclients. If no value provided, it is\n  not included in the configuration for 2.6+ and set to 0 (unlimited)\n  for 2.4.\n  Default: 0 (2.4)\n  Default: nil (2.6+)\n\n[*redis_timeout*]\n  Set the redis config value timeout (seconds).\n  Default: 300\n\n[*redis_loglevel*]\n  Set the redis config value loglevel. Valid values are debug,\n  verbose, notice, and warning.\n  Default: notice\n\n[*redis_databases*]\n  Set the redis config value databases.\n  Default: 16\n\n[*redis_slowlog_log_slower_than*]\n  Set the redis config value slowlog-log-slower-than (microseconds).\n  Default: 10000\n\n[*redis_showlog_max_len*]\n  Set the redis config value slowlog-max-len.\n  Default: 1024\n\n[*redis_password*]\n  Password used by AUTH command. Will be setted if it is not nil.\n  Default: nil\n\n[*redis_saves*]\n  Redis snapshotting parameters. Set to false for no snapshots.\n  Default: ['save 900 1', 'save 300 10', 'save 60 10000']\n\n=== Examples\n\nredis::instance { 'redis-6900':\n  redis_port       => '6900',\n  redis_max_memory => '64gb',\n}\n\n=== Authors\n\nThomas Van Doren\n\n=== Copyright\n\nCopyright 2012 Thomas Van Doren, unless otherwise noted.\n\n"
+  line: 70
+--- !ruby/object:Puppet::Resource::Type
+  type: !ruby/sym hostclass
+  name: "redis::params"
+  namespace: "redis::params"
+  arguments: {}
+  argument_types: {}
+  match: 
+  module_name: ""
+  code: !ruby/object:Puppet::Parser::AST::BlockExpression
+    line: 18
+    file: 
+    children: 
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 17
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 17
+          file: 
+          value: redis_port
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 17
+          file: 
+          value: "6379"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 18
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 18
+          file: 
+          value: redis_bind_address
+        value: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 18
+          file: 
+          value: false
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 19
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 19
+          file: 
+          value: version
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 19
+          file: 
+          value: "2.8.12"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 20
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 20
+          file: 
+          value: redis_src_dir
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 20
+          file: 
+          value: /opt/redis-src
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 21
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 21
+          file: 
+          value: redis_bin_dir
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 21
+          file: 
+          value: /opt/redis
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 22
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 22
+          file: 
+          value: redis_max_memory
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 22
+          file: 
+          value: "4gb"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 23
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 23
+          file: 
+          value: redis_max_clients
+        value: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 23
+          file: 
+          value: false
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 24
+        file: 
+        doc: "0 = disabled\n"
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 24
+          file: 
+          value: redis_timeout
+        value: !ruby/object:Puppet::Parser::AST::Name
+          line: 24
+          file: 
+          value: "300"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 25
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 25
+          file: 
+          value: redis_loglevel
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 25
+          file: 
+          value: notice
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 26
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 26
+          file: 
+          value: redis_databases
+        value: !ruby/object:Puppet::Parser::AST::Name
+          line: 26
+          file: 
+          value: "16"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 27
+        file: 
+        doc: "microseconds\n"
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 27
+          file: 
+          value: redis_slowlog_log_slower_than
+        value: !ruby/object:Puppet::Parser::AST::Name
+          line: 27
+          file: 
+          value: "10000"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 28
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 28
+          file: 
+          value: redis_slowlog_max_len
+        value: !ruby/object:Puppet::Parser::AST::Name
+          line: 28
+          file: 
+          value: "1024"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 29
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 29
+          file: 
+          value: redis_password
+        value: !ruby/object:Puppet::Parser::AST::Boolean
+          line: 29
+          file: 
+          value: false
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 30
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 30
+          file: 
+          value: redis_saves
+        value: !ruby/object:Puppet::Parser::AST::ASTArray
+          line: 30
+          file: 
+          children: 
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 30
+              file: 
+              value: "save 900 1"
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 30
+              file: 
+              value: "save 300 10"
+            - !ruby/object:Puppet::Parser::AST::String
+              line: 30
+              file: 
+              value: "save 60 10000"
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 31
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 31
+          file: 
+          value: redis_user
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 31
+          file: 
+          value: root
+        children: []
+      - !ruby/object:Puppet::Parser::AST::VarDef
+        line: 32
+        file: 
+        doc: ""
+        name: !ruby/object:Puppet::Parser::AST::Name
+          line: 32
+          file: 
+          value: redis_group
+        value: !ruby/object:Puppet::Parser::AST::String
+          line: 32
+          file: 
+          value: root
+        children: []
+  doc: "== Class: redis::params\n\nRedis params.\n\n=== Parameters\n\n=== Authors\n\nThomas Van Doren\n\n=== Copyright\n\nCopyright 2012 Thomas Van Doren, unless otherwise noted.\n\n"
+  line: 15

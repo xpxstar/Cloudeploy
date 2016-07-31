@@ -1,0 +1,12 @@
+component:
+  name: cloudeploy::default::component::host
+  display_name: Host
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::defaiult::host::install
+  displayName: 添加
+  nodes:
+  - nodeName: host_default_add
+    searchName: cloudeploydocker::primitive::domain
+    extractParams:
+    - $allParams

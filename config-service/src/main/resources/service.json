@@ -1,0 +1,78 @@
+{
+	"tomcat" : {
+		"startParams" : [{
+			"key" : "service_ensure",
+			"value" : "running"
+		}],
+		"stopParams" : [{
+			"key" : "service_ensure",
+			"value" : "stopped"
+		}]
+	},
+	
+	"mysql" : {
+		"startParams" : [{
+			"key" : "ensure",
+			"value" : "true"
+		}],
+		"stopParams" : [{
+			"key" : "ensure",
+			"value" : "false"
+		}]
+	},
+	
+	"playframework" : {
+		"startParams" : [{
+			"key" : "service_ensure",
+			"value" : "true"
+		}],
+		"stopParams" : [{
+			"key" : "service_ensure",
+			"value" : "false"
+		}]
+	},
+	
+	"redis" : {
+		"startParams" : [{
+			"key" : "ensure",
+			"value" : "running"
+		}],
+		"stopParams" : [{
+			"key" : "ensure",
+			"value" : "stopped"
+		}]
+	},
+	
+	"nginx" : {
+		"startParams" : [{
+			"key" : "service_ensure",
+			"value" : "running"
+		}],
+		"stopParams" : [{
+			"key" : "service_ensure",
+			"value" : "stopped"
+		}]
+	},
+	
+	"activemq" : {
+		"startParams" : [{
+			"key" : "ensure",
+			"value" : "running"
+		}],
+		"stopParams" : [{
+			"key" : "ensure",
+			"value" : "stopped"
+		}]
+	},
+	
+	"consul" : {
+		"startParams" : [{
+			"key" : "ensure",
+			"value" : "running"
+		}],
+		"stopParams" : [{
+			"key" : "ensure",
+			"value" : "stopped"
+		}]
+	}
+}

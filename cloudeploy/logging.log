@@ -1,0 +1,1137 @@
+2015-10-27 15:25:21 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [application_context.xml]
+2015-10-27 15:25:21 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@6ec76003: startup date [Tue Oct 27 15:25:21 CST 2015]; root of context hierarchy
+2015-10-27 15:25:21 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/application.properties]
+2015-10-27 15:25:21 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/classes/application.properties]
+2015-10-27 15:25:22 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-27 15:25:22 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-27 15:25:22 main INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-10-27 15:25:22 main INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-10-27 15:25:22 main INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-10-27 15:25:22 main INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-27 15:25:22 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2015-10-27 15:25:23 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-10-27 15:25:23 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2015-10-27 15:25:23 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2015-10-27 15:25:23 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action_param
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_capability_type
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_9uj7hmsb1oxlcvqoqbuhw821r, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component_type
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_custom_file
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, name, create_time, user_id, file_md5]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_exec
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, name, create_time, user_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_934lu54sbbvwacjpdukjhj017]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_934lu54sbbvwacjpdukjhj017]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_file_source
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_host
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_import_action
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_instance_param
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, instance_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_3161ji5k42ygbrsc0w0wd7dgt]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_3161ji5k42ygbrsc0w0wd7dgt, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_interface_definition
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_gbv80vo809s12hdt6rvh9a0mr]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_interface_element
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_279vu7m7rqd04n2x2vnpjcc9m, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_node_template
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, min_instance, topology_tem_id, update_time, description, name, create_time, max_instance, type]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lpjsybinl44wpntvxc20q6xmg]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_lpjsybinl44wpntvxc20q6xmg, primary, uk_hfkbf6epmuxq7lpehu5t5uuqo]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_node_type
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_d9yu8lcsg57ng5tubl5bcgo23, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_attribute
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tds9b48q1kf4gllc33emqwini]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_tds9b48q1kf4gllc33emqwini, uk_tbxyn4dt1h827m6qyuny6x2dh]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_interface
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_property
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_g47xljk487jwewhdwicymo06w, fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_attribute
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_bc5tel05wm6k13ahxxm4mqahw]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_bc5tel05wm6k13ahxxm4mqahw, uk_b975k7laxmr82o93oiko73mkj]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_capability
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, type]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ib6tprtqtj2khkbbwrjd522ss]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_673r1qucex6ue06yyfbcywbl3, fk_ib6tprtqtj2khkbbwrjd522ss, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_interface
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [node_type_id, interface_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_property
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type, required]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahunw3pl8i7w1b7ujsuvj8tsr]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahunw3pl8i7w1b7ujsuvj8tsr, primary, uk_o855g50bc2uo7pp2tac8drfsj]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_requirement
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, capability]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m2df1in4wu61sym15q8qpr4qu]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_m2df1in4wu61sym15q8qpr4qu, uk_5papwwvni1utnwmkfgg5w0xqu, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_operation_definition
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, interface_id, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_n5qgna24qg39my9pootv486b]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_c81w94s1fsohrvs87vq1c9ych, primary, fk_n5qgna24qg39my9pootv486b]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_operation_element
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, create_time, interface_element_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_fjypyk2ih57s1r4xe50ymh4ix]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_fjypyk2ih57s1r4xe50ymh4ix, primary, uk_4byh904diowj1x5y6t7txacku]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_param_element
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation_id, update_time, description, name, value, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwsxxe0213o3y8ccbrimbwl6w]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_qwsxxe0213o3y8ccbrimbwl6w, uk_c5fwtl4pa70sxkd5274dkx98c, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relation_template
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, source, update_time, description, name, target, create_time, type]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_79rwr74ve3kp11vl0ljvfxmvk]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_79rwr74ve3kp11vl0ljvfxmvk, uk_g23md4j47q8edejlu3si2b50g, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relation_type
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_tn1mxrhvn4ji26jihl51ttpjs, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relationtemplate_interface
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_2y9mlr0erhbu9yxvgosu6h5hk, fk_1xmpnaupehvxqisa83joltc3a]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_2y9mlr0erhbu9yxvgosu6h5hk, uk_1xmpnaupehvxqisa83joltc3a]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relationtype_interface
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [relation_type_id, interface_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_remote_file
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, name, path, create_time, user_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_software_instance
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, component_id, update_time, status, alias, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation, executed_time, update_time, xml_file_key, name, create_time, user_id]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_l8qtmgjbwdkmr7yecci177njo]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_l8qtmgjbwdkmr7yecci177njo, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_edge
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, to_id, update_time, from_id, task_id, relation, create_time]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i, primary]
+2015-10-27 15:25:23 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_executable
+2015-10-27 15:25:23 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, task_id, create_time, executable_file_key]
+2015-10-27 15:25:23 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-10-27 15:25:23 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-10-27 15:25:24 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node
+2015-10-27 15:25:24 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, operation, update_time, y_pos, task_id, create_time, x_pos, identifier]
+2015-10-27 15:25:24 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r48u4hy8835k0jj3bt6w69qet]
+2015-10-27 15:25:24 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_h0m90g0kyts7aibtak3765cqm, primary, uk_85hj05x84ynruj3c136ljtkwr, fk_r48u4hy8835k0jj3bt6w69qet, fk_b3yhxisvc7vcdef0cxpg1vg8p]
+2015-10-27 15:25:24 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node_host
+2015-10-27 15:25:24 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, create_time, node_id]
+2015-10-27 15:25:24 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-10-27 15:25:24 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-10-27 15:25:24 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node_param
+2015-10-27 15:25:24 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, node_id]
+2015-10-27 15:25:24 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h9mgpys27asroihdjm17hw7hv]
+2015-10-27 15:25:24 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_h9mgpys27asroihdjm17hw7hv]
+2015-10-27 15:25:24 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_temp_file
+2015-10-27 15:25:24 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2015-10-27 15:25:24 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:24 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-27 15:25:24 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_topology_template
+2015-10-27 15:25:24 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:24 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:24 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_p7n1r681e7hmyc3d528u4osnk, primary]
+2015-10-27 15:25:24 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user
+2015-10-27 15:25:24 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, role, password, salt]
+2015-10-27 15:25:24 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:24 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-27 15:25:24 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user_token
+2015-10-27 15:25:24 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2015-10-27 15:25:24 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2015-10-27 15:25:24 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2015-10-27 15:25:25 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2015-10-27 15:25:25 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2/#sql-9c1_278' to './cloudeploy2/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2015-10-27 15:25:25 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2015-10-27 15:25:26 main INFO  PropertiesFactoryBean:172 - Loading properties file from class path resource [application.properties]
+2015-10-27 15:25:26 main INFO  TransactionalTestExecutionListener:276 - Began transaction (1) for test context [DefaultTestContext@600401c7 testClass = TaskControllerTest, testInstance = cn.ac.iscas.cloudeploy.v2.controller.TaskControllerTest@2710e110, testMethod = testExecuteTask@TaskControllerTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4527f579 testClass = TaskControllerTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@4264fe67]; rollback [true]
+2015-10-27 15:25:26 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@600401c7 testClass = TaskControllerTest, testInstance = cn.ac.iscas.cloudeploy.v2.controller.TaskControllerTest@2710e110, testMethod = testExecuteTask@TaskControllerTest, testException = java.lang.NoClassDefFoundError: javax/servlet/SessionCookieConfig, mergedContextConfiguration = [MergedContextConfiguration@4527f579 testClass = TaskControllerTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-10-27 15:25:26 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/contextDBTest.xml]
+2015-10-27 15:25:27 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@5529d23e: startup date [Tue Oct 27 15:25:27 CST 2015]; root of context hierarchy
+2015-10-27 15:25:27 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/test.db.properties]
+2015-10-27 15:25:27 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-27 15:25:27 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-27 15:25:27 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2015-10-27 15:25:27 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-10-27 15:25:27 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2015-10-27 15:25:27 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2015-10-27 15:25:27 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_action
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc, uk_ohrael4pskvnjvj58l6pogl54]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_action_param
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_capability_type
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_9uj7hmsb1oxlcvqoqbuhw821r, primary]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_component
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, identifiers, repeatable, name, create_time, component_type_id]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_component_type
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_custom_file
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, name, create_time, user_id, file_md5]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_e24ruv79u28531f61r9s2xmg6, fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_exec
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, name, create_time, user_id]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_934lu54sbbvwacjpdukjhj017]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_934lu54sbbvwacjpdukjhj017]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_file_source
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, credential]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_host
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_import_action
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_instance_param
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, instance_id]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_3161ji5k42ygbrsc0w0wd7dgt]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_3161ji5k42ygbrsc0w0wd7dgt, primary]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_interface_definition
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_gbv80vo809s12hdt6rvh9a0mr]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_interface_element
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_279vu7m7rqd04n2x2vnpjcc9m, primary]
+2015-10-27 15:25:27 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_node_template
+2015-10-27 15:25:27 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, update_time, description, name, create_time, type]
+2015-10-27 15:25:27 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lpjsybinl44wpntvxc20q6xmg]
+2015-10-27 15:25:27 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_lpjsybinl44wpntvxc20q6xmg, primary, uk_hfkbf6epmuxq7lpehu5t5uuqo]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_node_type
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_d9yu8lcsg57ng5tubl5bcgo23, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_attribute
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tds9b48q1kf4gllc33emqwini]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_tds9b48q1kf4gllc33emqwini, uk_tbxyn4dt1h827m6qyuny6x2dh]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_interface
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_property
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_g47xljk487jwewhdwicymo06w, fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_attribute
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_bc5tel05wm6k13ahxxm4mqahw]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_bc5tel05wm6k13ahxxm4mqahw, uk_b975k7laxmr82o93oiko73mkj]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_capability
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, type]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ib6tprtqtj2khkbbwrjd522ss]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_673r1qucex6ue06yyfbcywbl3, fk_ib6tprtqtj2khkbbwrjd522ss, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_interface
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [node_type_id, interface_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_property
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type, required]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahunw3pl8i7w1b7ujsuvj8tsr]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahunw3pl8i7w1b7ujsuvj8tsr, primary, uk_o855g50bc2uo7pp2tac8drfsj]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_requirement
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, capability]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m2df1in4wu61sym15q8qpr4qu]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_m2df1in4wu61sym15q8qpr4qu, uk_5papwwvni1utnwmkfgg5w0xqu, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_operation_definition
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, interface_id, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_n5qgna24qg39my9pootv486b]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_c81w94s1fsohrvs87vq1c9ych, primary, fk_n5qgna24qg39my9pootv486b]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_operation_element
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, create_time, interface_element_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_fjypyk2ih57s1r4xe50ymh4ix]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_fjypyk2ih57s1r4xe50ymh4ix, primary, uk_4byh904diowj1x5y6t7txacku]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_param_element
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation_id, update_time, description, name, value, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwsxxe0213o3y8ccbrimbwl6w]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_qwsxxe0213o3y8ccbrimbwl6w, uk_c5fwtl4pa70sxkd5274dkx98c, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relation_template
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, source, update_time, description, name, target, create_time, type]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_79rwr74ve3kp11vl0ljvfxmvk]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_79rwr74ve3kp11vl0ljvfxmvk, uk_g23md4j47q8edejlu3si2b50g, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relation_type
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_tn1mxrhvn4ji26jihl51ttpjs, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relationtemplate_interface
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_2y9mlr0erhbu9yxvgosu6h5hk, fk_1xmpnaupehvxqisa83joltc3a]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_2y9mlr0erhbu9yxvgosu6h5hk, uk_1xmpnaupehvxqisa83joltc3a]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relationtype_interface
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [relation_type_id, interface_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_remote_file
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, name, path, create_time, user_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u, primary, uk_qpnuhubj4jpjj0ug8gtr1j53]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_software_instance
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, component_id, update_time, status, alias, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, executed_time, update_time, xml_file_key, name, create_time, user_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_l8qtmgjbwdkmr7yecci177njo]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_l8qtmgjbwdkmr7yecci177njo, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_edge
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, to_id, update_time, from_id, task_id, relation, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_executable
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, task_id, create_time, executable_file_key]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, y_pos, task_id, create_time, x_pos, identifier]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h0m90g0kyts7aibtak3765cqm, fk_b3yhxisvc7vcdef0cxpg1vg8p]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_h0m90g0kyts7aibtak3765cqm, primary, uk_85hj05x84ynruj3c136ljtkwr, fk_b3yhxisvc7vcdef0cxpg1vg8p]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node_host
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, create_time, node_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node_param
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, node_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h9mgpys27asroihdjm17hw7hv]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_h9mgpys27asroihdjm17hw7hv]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_temp_file
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_topology_template
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_p7n1r681e7hmyc3d528u4osnk, primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_user
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, password, salt]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-10-27 15:25:28 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_user_token
+2015-10-27 15:25:28 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2015-10-27 15:25:28 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2015-10-27 15:25:28 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2015-10-27 15:25:35 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2015-10-27 15:25:35 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2_test/#sql-9c1_27a' to './cloudeploy2_test/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2015-10-27 15:25:37 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2015-10-27 15:25:37 main WARN  EntityManagerFactoryRegistry:80 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2015-10-27 15:25:38 Thread-2 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@6ec76003: startup date [Tue Oct 27 15:25:21 CST 2015]; root of context hierarchy
+2015-10-27 15:25:38 Thread-3 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@5529d23e: startup date [Tue Oct 27 15:25:27 CST 2015]; root of context hierarchy
+2015-10-27 15:25:38 Thread-3 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-10-27 15:25:38 Thread-2 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-11-11 09:17:39 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [application_context.xml]
+2015-11-11 09:17:39 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@1c148bd4: startup date [Wed Nov 11 09:17:39 CST 2015]; root of context hierarchy
+2015-11-11 09:17:39 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/application.properties]
+2015-11-11 09:17:39 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/classes/application.properties]
+2015-11-11 09:17:40 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-11-11 09:17:40 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-11-11 09:17:40 main INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-11-11 09:17:40 main INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-11-11 09:17:40 main INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-11-11 09:17:40 main INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-11-11 09:17:40 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2015-11-11 09:17:41 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-11-11 09:17:41 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2015-11-11 09:17:41 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2015-11-11 09:17:41 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action_param
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_capability_type
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_9uj7hmsb1oxlcvqoqbuhw821r, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component_type
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_custom_file
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, name, create_time, user_id, file_md5]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_exec
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, name, create_time, user_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_934lu54sbbvwacjpdukjhj017]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_934lu54sbbvwacjpdukjhj017]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_file_source
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_host
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_import_action
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_instance_param
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, instance_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_3161ji5k42ygbrsc0w0wd7dgt]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_3161ji5k42ygbrsc0w0wd7dgt, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_interface_definition
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_gbv80vo809s12hdt6rvh9a0mr]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_interface_element
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_279vu7m7rqd04n2x2vnpjcc9m, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_node_template
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, min_instance, topology_tem_id, update_time, description, name, create_time, max_instance, type]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lpjsybinl44wpntvxc20q6xmg]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_lpjsybinl44wpntvxc20q6xmg, primary, uk_hfkbf6epmuxq7lpehu5t5uuqo]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_node_type
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_d9yu8lcsg57ng5tubl5bcgo23, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_attribute
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tds9b48q1kf4gllc33emqwini]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_tds9b48q1kf4gllc33emqwini, uk_tbxyn4dt1h827m6qyuny6x2dh]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_interface
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_property
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_g47xljk487jwewhdwicymo06w, fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_attribute
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_bc5tel05wm6k13ahxxm4mqahw]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_bc5tel05wm6k13ahxxm4mqahw, uk_b975k7laxmr82o93oiko73mkj]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_capability
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, type]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ib6tprtqtj2khkbbwrjd522ss]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_673r1qucex6ue06yyfbcywbl3, fk_ib6tprtqtj2khkbbwrjd522ss, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_interface
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [node_type_id, interface_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_property
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type, required]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahunw3pl8i7w1b7ujsuvj8tsr]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahunw3pl8i7w1b7ujsuvj8tsr, primary, uk_o855g50bc2uo7pp2tac8drfsj]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_requirement
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, capability]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m2df1in4wu61sym15q8qpr4qu]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_m2df1in4wu61sym15q8qpr4qu, uk_5papwwvni1utnwmkfgg5w0xqu, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_operation_definition
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, interface_id, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_n5qgna24qg39my9pootv486b]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_c81w94s1fsohrvs87vq1c9ych, primary, fk_n5qgna24qg39my9pootv486b]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_operation_element
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, create_time, interface_element_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_fjypyk2ih57s1r4xe50ymh4ix]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_fjypyk2ih57s1r4xe50ymh4ix, primary, uk_4byh904diowj1x5y6t7txacku]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_param_element
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation_id, update_time, description, name, value, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwsxxe0213o3y8ccbrimbwl6w]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_qwsxxe0213o3y8ccbrimbwl6w, uk_c5fwtl4pa70sxkd5274dkx98c, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relation_template
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, source, update_time, description, name, target, create_time, type]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_79rwr74ve3kp11vl0ljvfxmvk]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_79rwr74ve3kp11vl0ljvfxmvk, uk_g23md4j47q8edejlu3si2b50g, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relation_type
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_tn1mxrhvn4ji26jihl51ttpjs, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relationtemplate_interface
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_2y9mlr0erhbu9yxvgosu6h5hk, fk_1xmpnaupehvxqisa83joltc3a]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_2y9mlr0erhbu9yxvgosu6h5hk, uk_1xmpnaupehvxqisa83joltc3a]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relationtype_interface
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [relation_type_id, interface_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_remote_file
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, name, path, create_time, user_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_software_instance
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, component_id, update_time, status, alias, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation, executed_time, update_time, xml_file_key, name, create_time, user_id]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_l8qtmgjbwdkmr7yecci177njo]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_l8qtmgjbwdkmr7yecci177njo, primary]
+2015-11-11 09:17:41 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_edge
+2015-11-11 09:17:41 main INFO  TableMetadata:67 - HHH000037: Columns: [id, to_id, update_time, from_id, task_id, relation, create_time]
+2015-11-11 09:17:41 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i]
+2015-11-11 09:17:41 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i, primary]
+2015-11-11 09:17:42 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_executable
+2015-11-11 09:17:42 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, task_id, create_time, executable_file_key]
+2015-11-11 09:17:42 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-11-11 09:17:42 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-11-11 09:17:42 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node
+2015-11-11 09:17:42 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, operation, update_time, y_pos, task_id, create_time, x_pos, identifier]
+2015-11-11 09:17:42 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r48u4hy8835k0jj3bt6w69qet]
+2015-11-11 09:17:42 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_h0m90g0kyts7aibtak3765cqm, primary, uk_85hj05x84ynruj3c136ljtkwr, fk_r48u4hy8835k0jj3bt6w69qet, fk_b3yhxisvc7vcdef0cxpg1vg8p]
+2015-11-11 09:17:42 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node_host
+2015-11-11 09:17:42 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, create_time, node_id]
+2015-11-11 09:17:42 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-11-11 09:17:42 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-11-11 09:17:42 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node_param
+2015-11-11 09:17:42 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, node_id]
+2015-11-11 09:17:42 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h9mgpys27asroihdjm17hw7hv]
+2015-11-11 09:17:42 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_h9mgpys27asroihdjm17hw7hv]
+2015-11-11 09:17:42 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_temp_file
+2015-11-11 09:17:42 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2015-11-11 09:17:42 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:42 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-11-11 09:17:42 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_topology_template
+2015-11-11 09:17:42 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:42 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:42 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_p7n1r681e7hmyc3d528u4osnk, primary]
+2015-11-11 09:17:42 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user
+2015-11-11 09:17:42 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, role, password, salt]
+2015-11-11 09:17:42 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:42 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-11-11 09:17:42 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user_token
+2015-11-11 09:17:42 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2015-11-11 09:17:42 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2015-11-11 09:17:42 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2015-11-11 09:17:43 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2015-11-11 09:17:43 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2/#sql-9c1_6bb' to './cloudeploy2/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2015-11-11 09:17:43 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2015-11-11 09:17:44 main INFO  PropertiesFactoryBean:172 - Loading properties file from class path resource [application.properties]
+2015-11-11 09:17:45 main INFO  TransactionalTestExecutionListener:276 - Began transaction (1) for test context [DefaultTestContext@35b822e5 testClass = TaskControllerTest, testInstance = cn.ac.iscas.cloudeploy.v2.controller.TaskControllerTest@4bfb03f0, testMethod = testExecuteTask@TaskControllerTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4cbfa888 testClass = TaskControllerTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3ad1a015]; rollback [true]
+2015-11-11 09:17:45 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@35b822e5 testClass = TaskControllerTest, testInstance = cn.ac.iscas.cloudeploy.v2.controller.TaskControllerTest@4bfb03f0, testMethod = testExecuteTask@TaskControllerTest, testException = java.lang.NoClassDefFoundError: javax/servlet/SessionCookieConfig, mergedContextConfiguration = [MergedContextConfiguration@4cbfa888 testClass = TaskControllerTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-11-11 09:17:45 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/contextDBTest.xml]
+2015-11-11 09:17:45 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@179d89fb: startup date [Wed Nov 11 09:17:45 CST 2015]; root of context hierarchy
+2015-11-11 09:17:45 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/test.db.properties]
+2015-11-11 09:17:45 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-11-11 09:17:45 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-11-11 09:17:45 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2015-11-11 09:17:45 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-11-11 09:17:45 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2015-11-11 09:17:45 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2015-11-11 09:17:45 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_action
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc, uk_ohrael4pskvnjvj58l6pogl54]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_action_param
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_capability_type
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_9uj7hmsb1oxlcvqoqbuhw821r, primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_component
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_component_type
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_custom_file
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, name, create_time, user_id, file_md5]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_e24ruv79u28531f61r9s2xmg6, fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_exec
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, name, create_time, user_id]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_934lu54sbbvwacjpdukjhj017]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_934lu54sbbvwacjpdukjhj017]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_file_source
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_host
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_import_action
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_instance_param
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, instance_id]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_3161ji5k42ygbrsc0w0wd7dgt]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_3161ji5k42ygbrsc0w0wd7dgt, primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_interface_definition
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_gbv80vo809s12hdt6rvh9a0mr]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_interface_element
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_279vu7m7rqd04n2x2vnpjcc9m, primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_node_template
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, update_time, description, name, create_time, type]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lpjsybinl44wpntvxc20q6xmg]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_lpjsybinl44wpntvxc20q6xmg, primary, uk_hfkbf6epmuxq7lpehu5t5uuqo]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_node_type
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_d9yu8lcsg57ng5tubl5bcgo23, primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_attribute
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tds9b48q1kf4gllc33emqwini]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_tds9b48q1kf4gllc33emqwini, uk_tbxyn4dt1h827m6qyuny6x2dh]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_interface
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_property
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_g47xljk487jwewhdwicymo06w, fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_attribute
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_bc5tel05wm6k13ahxxm4mqahw]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_bc5tel05wm6k13ahxxm4mqahw, uk_b975k7laxmr82o93oiko73mkj]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_capability
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, type]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ib6tprtqtj2khkbbwrjd522ss]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_673r1qucex6ue06yyfbcywbl3, fk_ib6tprtqtj2khkbbwrjd522ss, primary]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_interface
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [node_type_id, interface_id]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-11-11 09:17:45 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_property
+2015-11-11 09:17:45 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type, required]
+2015-11-11 09:17:45 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahunw3pl8i7w1b7ujsuvj8tsr]
+2015-11-11 09:17:45 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahunw3pl8i7w1b7ujsuvj8tsr, primary, uk_o855g50bc2uo7pp2tac8drfsj]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_requirement
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, capability]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m2df1in4wu61sym15q8qpr4qu]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_m2df1in4wu61sym15q8qpr4qu, uk_5papwwvni1utnwmkfgg5w0xqu, primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_operation_definition
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, interface_id, create_time]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_n5qgna24qg39my9pootv486b]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_c81w94s1fsohrvs87vq1c9ych, primary, fk_n5qgna24qg39my9pootv486b]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_operation_element
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, create_time, interface_element_id]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_fjypyk2ih57s1r4xe50ymh4ix]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_fjypyk2ih57s1r4xe50ymh4ix, primary, uk_4byh904diowj1x5y6t7txacku]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_param_element
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation_id, update_time, description, name, value, create_time]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwsxxe0213o3y8ccbrimbwl6w]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_qwsxxe0213o3y8ccbrimbwl6w, uk_c5fwtl4pa70sxkd5274dkx98c, primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relation_template
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, source, update_time, description, name, target, create_time, type]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_79rwr74ve3kp11vl0ljvfxmvk]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_79rwr74ve3kp11vl0ljvfxmvk, uk_g23md4j47q8edejlu3si2b50g, primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relation_type
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_tn1mxrhvn4ji26jihl51ttpjs, primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relationtemplate_interface
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_2y9mlr0erhbu9yxvgosu6h5hk, fk_1xmpnaupehvxqisa83joltc3a]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_2y9mlr0erhbu9yxvgosu6h5hk, uk_1xmpnaupehvxqisa83joltc3a]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relationtype_interface
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [relation_type_id, interface_id]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_remote_file
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, name, path, create_time, user_id]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u, primary, uk_qpnuhubj4jpjj0ug8gtr1j53]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_software_instance
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, component_id, update_time, status, alias, create_time]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv, primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation, executed_time, update_time, xml_file_key, name, create_time, user_id]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_l8qtmgjbwdkmr7yecci177njo]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_l8qtmgjbwdkmr7yecci177njo, primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_edge
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, to_id, update_time, from_id, task_id, relation, create_time]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i, primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_executable
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, task_id, create_time, executable_file_key]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, operation, update_time, y_pos, task_id, create_time, x_pos, identifier]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h0m90g0kyts7aibtak3765cqm, fk_b3yhxisvc7vcdef0cxpg1vg8p, fk_r48u4hy8835k0jj3bt6w69qet]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_h0m90g0kyts7aibtak3765cqm, primary, uk_85hj05x84ynruj3c136ljtkwr, fk_r48u4hy8835k0jj3bt6w69qet, fk_b3yhxisvc7vcdef0cxpg1vg8p]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node_host
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, create_time, node_id]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node_param
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, node_id]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h9mgpys27asroihdjm17hw7hv]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_h9mgpys27asroihdjm17hw7hv]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_temp_file
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_topology_template
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_p7n1r681e7hmyc3d528u4osnk, primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_user
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, password, salt]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-11-11 09:17:46 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_user_token
+2015-11-11 09:17:46 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2015-11-11 09:17:46 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2015-11-11 09:17:46 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2015-11-11 09:17:47 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2015-11-11 09:17:47 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2_test/#sql-9c1_6bd' to './cloudeploy2_test/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2015-11-11 09:17:47 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2015-11-11 09:17:47 main WARN  EntityManagerFactoryRegistry:80 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2015-11-11 09:17:48 Thread-3 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@179d89fb: startup date [Wed Nov 11 09:17:45 CST 2015]; root of context hierarchy
+2015-11-11 09:17:48 Thread-2 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@1c148bd4: startup date [Wed Nov 11 09:17:39 CST 2015]; root of context hierarchy
+2015-11-11 09:17:48 Thread-3 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-11-11 09:17:48 Thread-2 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-12-09 09:32:50 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [application_context.xml]
+2015-12-09 09:32:50 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@6ec76003: startup date [Wed Dec 09 09:32:50 CST 2015]; root of context hierarchy
+2015-12-09 09:32:51 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/application.properties]
+2015-12-09 09:32:51 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/classes/application.properties]
+2015-12-09 09:32:51 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-12-09 09:32:51 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-12-09 09:32:51 main INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-12-09 09:32:51 main INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-12-09 09:32:51 main INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-12-09 09:32:51 main INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-09 09:32:51 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2015-12-09 09:32:52 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-09 09:32:52 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2015-12-09 09:32:52 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2015-12-09 09:32:52 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_action_param
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_capability_type
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_9uj7hmsb1oxlcvqoqbuhw821r, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_component_type
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_custom_file
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, name, create_time, user_id, file_md5]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_exec
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, name, create_time, user_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_934lu54sbbvwacjpdukjhj017]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_934lu54sbbvwacjpdukjhj017]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_file_source
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_host
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_import_action
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_instance_param
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, instance_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_3161ji5k42ygbrsc0w0wd7dgt]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_3161ji5k42ygbrsc0w0wd7dgt, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_interface_definition
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_gbv80vo809s12hdt6rvh9a0mr]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_interface_element
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_279vu7m7rqd04n2x2vnpjcc9m, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_node_template
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, min_instance, topology_tem_id, update_time, description, name, create_time, max_instance, type]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lpjsybinl44wpntvxc20q6xmg]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_lpjsybinl44wpntvxc20q6xmg, primary, uk_hfkbf6epmuxq7lpehu5t5uuqo]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_node_type
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_d9yu8lcsg57ng5tubl5bcgo23, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_attribute
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tds9b48q1kf4gllc33emqwini]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_tds9b48q1kf4gllc33emqwini, uk_tbxyn4dt1h827m6qyuny6x2dh]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_interface
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetemplate_property
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_g47xljk487jwewhdwicymo06w, fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_attribute
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_bc5tel05wm6k13ahxxm4mqahw]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_bc5tel05wm6k13ahxxm4mqahw, uk_b975k7laxmr82o93oiko73mkj]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_capability
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, type]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ib6tprtqtj2khkbbwrjd522ss]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_673r1qucex6ue06yyfbcywbl3, fk_ib6tprtqtj2khkbbwrjd522ss, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_interface
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [node_type_id, interface_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_property
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type, required]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahunw3pl8i7w1b7ujsuvj8tsr]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahunw3pl8i7w1b7ujsuvj8tsr, primary, uk_o855g50bc2uo7pp2tac8drfsj]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_nodetype_requirement
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, capability]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m2df1in4wu61sym15q8qpr4qu]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_m2df1in4wu61sym15q8qpr4qu, uk_5papwwvni1utnwmkfgg5w0xqu, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_operation_definition
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, interface_id, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_n5qgna24qg39my9pootv486b]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_c81w94s1fsohrvs87vq1c9ych, primary, fk_n5qgna24qg39my9pootv486b]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_operation_element
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, create_time, interface_element_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_fjypyk2ih57s1r4xe50ymh4ix]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_fjypyk2ih57s1r4xe50ymh4ix, primary, uk_4byh904diowj1x5y6t7txacku]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_param_element
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation_id, update_time, description, name, value, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwsxxe0213o3y8ccbrimbwl6w]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_qwsxxe0213o3y8ccbrimbwl6w, uk_c5fwtl4pa70sxkd5274dkx98c, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relation_template
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, source, update_time, description, name, target, create_time, type]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_79rwr74ve3kp11vl0ljvfxmvk]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_79rwr74ve3kp11vl0ljvfxmvk, uk_g23md4j47q8edejlu3si2b50g, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relation_type
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_tn1mxrhvn4ji26jihl51ttpjs, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relationtemplate_interface
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_2y9mlr0erhbu9yxvgosu6h5hk, fk_1xmpnaupehvxqisa83joltc3a]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_2y9mlr0erhbu9yxvgosu6h5hk, uk_1xmpnaupehvxqisa83joltc3a]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_relationtype_interface
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [relation_type_id, interface_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_remote_file
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, name, path, create_time, user_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_software_instance
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, component_id, update_time, status, alias, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation, executed_time, update_time, xml_file_key, name, create_time, user_id]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_l8qtmgjbwdkmr7yecci177njo]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_l8qtmgjbwdkmr7yecci177njo, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_edge
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, to_id, update_time, from_id, task_id, relation, create_time]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i, primary]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_executable
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, task_id, create_time, executable_file_key]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-12-09 09:32:52 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-12-09 09:32:52 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node
+2015-12-09 09:32:52 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, operation, update_time, y_pos, task_id, create_time, x_pos, identifier]
+2015-12-09 09:32:52 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r48u4hy8835k0jj3bt6w69qet]
+2015-12-09 09:32:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_h0m90g0kyts7aibtak3765cqm, primary, uk_85hj05x84ynruj3c136ljtkwr, fk_r48u4hy8835k0jj3bt6w69qet, fk_b3yhxisvc7vcdef0cxpg1vg8p]
+2015-12-09 09:32:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node_host
+2015-12-09 09:32:53 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, create_time, node_id]
+2015-12-09 09:32:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-12-09 09:32:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-12-09 09:32:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_task_node_param
+2015-12-09 09:32:53 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, node_id]
+2015-12-09 09:32:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h9mgpys27asroihdjm17hw7hv]
+2015-12-09 09:32:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_h9mgpys27asroihdjm17hw7hv]
+2015-12-09 09:32:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_temp_file
+2015-12-09 09:32:53 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2015-12-09 09:32:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-12-09 09:32:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_topology_template
+2015-12-09 09:32:53 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_p7n1r681e7hmyc3d528u4osnk, primary]
+2015-12-09 09:32:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user
+2015-12-09 09:32:53 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, role, password, salt]
+2015-12-09 09:32:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-12-09 09:32:53 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2.d_user_token
+2015-12-09 09:32:53 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2015-12-09 09:32:53 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2015-12-09 09:32:53 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2015-12-09 09:32:54 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2015-12-09 09:32:54 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2/#sql-9c1_c74' to './cloudeploy2/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2015-12-09 09:32:54 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2015-12-09 09:32:55 main INFO  PropertiesFactoryBean:172 - Loading properties file from class path resource [application.properties]
+2015-12-09 09:32:55 main INFO  TransactionalTestExecutionListener:276 - Began transaction (1) for test context [DefaultTestContext@25651920 testClass = TaskControllerTest, testInstance = cn.ac.iscas.cloudeploy.v2.controller.TaskControllerTest@1054970e, testMethod = testExecuteTask@TaskControllerTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@21892082 testClass = TaskControllerTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@31b54801]; rollback [true]
+2015-12-09 09:32:55 main INFO  TransactionalTestExecutionListener:298 - Rolled back transaction after test execution for test context [DefaultTestContext@25651920 testClass = TaskControllerTest, testInstance = cn.ac.iscas.cloudeploy.v2.controller.TaskControllerTest@1054970e, testMethod = testExecuteTask@TaskControllerTest, testException = java.lang.NoClassDefFoundError: javax/servlet/SessionCookieConfig, mergedContextConfiguration = [MergedContextConfiguration@21892082 testClass = TaskControllerTest, locations = '{classpath:/application_context.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{dev}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+2015-12-09 09:32:55 main INFO  XmlBeanDefinitionReader:316 - Loading XML bean definitions from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/contextDBTest.xml]
+2015-12-09 09:32:56 main INFO  GenericApplicationContext:513 - Refreshing org.springframework.context.support.GenericApplicationContext@56f1e4bd: startup date [Wed Dec 09 09:32:56 CST 2015]; root of context hierarchy
+2015-12-09 09:32:56 main INFO  PropertySourcesPlaceholderConfigurer:172 - Loading properties file from URL [file:/F:/project/Cloudeploy2.0/cloudeploy/target/test-classes/test.db.properties]
+2015-12-09 09:32:56 main INFO  LocalContainerEntityManagerFactoryBean:332 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-12-09 09:32:56 main INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-12-09 09:32:56 main INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2015-12-09 09:32:56 main INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-12-09 09:32:56 main INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2015-12-09 09:32:56 main INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2015-12-09 09:32:56 main INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_action
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, component_id, update_time, define_file_key, name, create_time, show_in_resource_view]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_a99udcuan9eruccys7d25rnhc]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_a99udcuan9eruccys7d25rnhc, uk_ohrael4pskvnjvj58l6pogl54]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_action_param
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, view_type, param_type, description, default_value, create_time, param_key]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_6kkb3r9gbedbd486rigqqt8c1]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_capability_type
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_9uj7hmsb1oxlcvqoqbuhw821r, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_component
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, identifiers, repeatable, name, create_time, component_type_id, user_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tjhc4icodgip93w688ucnvkv6]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_tjhc4icodgip93w688ucnvkv6, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_component_type
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, display_name, update_time, name, create_time, user_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_custom_file
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, name, create_time, user_id, file_md5]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_e24ruv79u28531f61r9s2xmg6, fk_kc1vqrbe56n60xh8cge30wx5t]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_exec
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, name, create_time, user_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_934lu54sbbvwacjpdukjhj017]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_934lu54sbbvwacjpdukjhj017]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_file_source
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, md5, create_time, typ, credential]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_host
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, create_time, user_id, host_name, hostip]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lc94tvqarqloffdnt1ok5m36n]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_lc94tvqarqloffdnt1ok5m36n]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_import_action
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, update_time, create_time, imported_action_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahxgi5qs1gwdrmt5054qkr13k, fk_hbf42r1yvbcv4btlacud0e4am, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_instance_param
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, instance_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_3161ji5k42ygbrsc0w0wd7dgt]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_3161ji5k42ygbrsc0w0wd7dgt, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_interface_definition
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_gbv80vo809s12hdt6rvh9a0mr]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_interface_element
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_279vu7m7rqd04n2x2vnpjcc9m, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_node_template
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, update_time, description, name, create_time, type]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lpjsybinl44wpntvxc20q6xmg]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_lpjsybinl44wpntvxc20q6xmg, primary, uk_hfkbf6epmuxq7lpehu5t5uuqo]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_node_type
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_d9yu8lcsg57ng5tubl5bcgo23, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_attribute
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_tds9b48q1kf4gllc33emqwini]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_tds9b48q1kf4gllc33emqwini, uk_tbxyn4dt1h827m6qyuny6x2dh]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_interface
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_i25dv065g0h86vajxvqpjsicy, fk_c62fxlh1oelx4u29eiecsqeue]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetemplate_property
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, node_template_id, update_time, description, name, value, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, uk_g47xljk487jwewhdwicymo06w, fk_kiwpjvkvuxvyp6y26a47xu5c]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_attribute
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_bc5tel05wm6k13ahxxm4mqahw]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_bc5tel05wm6k13ahxxm4mqahw, uk_b975k7laxmr82o93oiko73mkj]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_capability
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, type]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ib6tprtqtj2khkbbwrjd522ss]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_673r1qucex6ue06yyfbcywbl3, fk_ib6tprtqtj2khkbbwrjd522ss, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_interface
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [node_type_id, interface_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_q2x97kmd1m5nc3kgee52vebtd, fk_4946m247428qbauxdlwwifne7]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_property
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, default_value, description, name, create_time, type, required]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ahunw3pl8i7w1b7ujsuvj8tsr]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ahunw3pl8i7w1b7ujsuvj8tsr, primary, uk_o855g50bc2uo7pp2tac8drfsj]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_nodetype_requirement
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, node_type_id, description, name, create_time, capability]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m2df1in4wu61sym15q8qpr4qu]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_m2df1in4wu61sym15q8qpr4qu, uk_5papwwvni1utnwmkfgg5w0xqu, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_operation_definition
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, interface_id, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_n5qgna24qg39my9pootv486b]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_c81w94s1fsohrvs87vq1c9ych, primary, fk_n5qgna24qg39my9pootv486b]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_operation_element
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, implementation, description, name, create_time, interface_element_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_fjypyk2ih57s1r4xe50ymh4ix]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_fjypyk2ih57s1r4xe50ymh4ix, primary, uk_4byh904diowj1x5y6t7txacku]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_param_element
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation_id, update_time, description, name, value, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwsxxe0213o3y8ccbrimbwl6w]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_qwsxxe0213o3y8ccbrimbwl6w, uk_c5fwtl4pa70sxkd5274dkx98c, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relation_template
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, topology_tem_id, source, update_time, description, name, target, create_time, type]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_79rwr74ve3kp11vl0ljvfxmvk]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_79rwr74ve3kp11vl0ljvfxmvk, uk_g23md4j47q8edejlu3si2b50g, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relation_type
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_tn1mxrhvn4ji26jihl51ttpjs, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relationtemplate_interface
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [interface_id, template_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_2y9mlr0erhbu9yxvgosu6h5hk, fk_1xmpnaupehvxqisa83joltc3a]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_2y9mlr0erhbu9yxvgosu6h5hk, uk_1xmpnaupehvxqisa83joltc3a]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_relationtype_interface
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [relation_type_id, interface_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_lkgxd1req2jiajoetxtds4aln, fk_flfj0yfcohjmrkn6mb3d3dk6d]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_remote_file
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, name, path, create_time, user_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ptoggx8v2qbvv65m30cwamtqh, fk_n9pghswwqhsaup15h2hgaai6u, primary, uk_qpnuhubj4jpjj0ug8gtr1j53]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_software_instance
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, component_id, update_time, status, alias, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_ih4jh1a9ppmtn9vrwcemo4u1u, fk_8geisaqdsv2m4qqs2i868ndtv, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, operation, executed_time, update_time, xml_file_key, name, create_time, user_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_l8qtmgjbwdkmr7yecci177njo]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_l8qtmgjbwdkmr7yecci177njo, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_edge
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, to_id, update_time, from_id, task_id, relation, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_sgydexfygyk3xiry5bl0yokgc, fk_334kp0xd2h0tno48s8g68vtwl, fk_n9oy8k5ns8n31n0n65fpscs3i, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_executable
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, task_id, create_time, executable_file_key]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_r7daxunsv057174ltcm4ollsc, fk_bkywt08j3aqu8gqq2y32fgsay]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [action_id, id, operation, update_time, y_pos, task_id, create_time, x_pos, identifier]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h0m90g0kyts7aibtak3765cqm, fk_b3yhxisvc7vcdef0cxpg1vg8p, fk_r48u4hy8835k0jj3bt6w69qet]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [fk_h0m90g0kyts7aibtak3765cqm, primary, uk_85hj05x84ynruj3c136ljtkwr, fk_r48u4hy8835k0jj3bt6w69qet, fk_b3yhxisvc7vcdef0cxpg1vg8p]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node_host
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, host_id, update_time, create_time, node_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_m5sxit1kyiu4xvsebylwlu93j, fk_jy9bp7k26nganfmk018uew401]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_task_node_param
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [param_value, id, update_time, create_time, param_key, node_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_h9mgpys27asroihdjm17hw7hv]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_h9mgpys27asroihdjm17hw7hv]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_temp_file
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, link, create_time, time_to_live, access_key]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_topology_template
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, description, name, create_time]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [uk_p7n1r681e7hmyc3d528u4osnk, primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_user
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [id, update_time, email, name, create_time, password, salt]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-12-09 09:32:56 main INFO  TableMetadata:66 - HHH000261: Table found: cloudeploy2_test.d_user_token
+2015-12-09 09:32:56 main INFO  TableMetadata:67 - HHH000037: Columns: [content, id, update_time, create_time, user_id]
+2015-12-09 09:32:56 main INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_qwolew1b7wi7grpe277mh3wdy]
+2015-12-09 09:32:56 main INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_qwolew1b7wi7grpe277mh3wdy, uk_cwclph8msoe4sgov2nd5a8d6b]
+2015-12-09 09:32:58 main ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table d_import_action add constraint FK_2egc8j6tor7sl2pqv6stf5sja foreign key (id) references d_import_action (id)
+2015-12-09 09:32:58 main ERROR SchemaUpdate:237 - Error on rename of './cloudeploy2_test/#sql-9c1_c76' to './cloudeploy2_test/d_import_action' (errno: 150 - Foreign key constraint is incorrectly formed)
+2015-12-09 09:32:58 main INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2015-12-09 09:32:58 main WARN  EntityManagerFactoryRegistry:80 - HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2015-12-09 09:32:59 Thread-3 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@56f1e4bd: startup date [Wed Dec 09 09:32:56 CST 2015]; root of context hierarchy
+2015-12-09 09:32:59 Thread-2 INFO  GenericApplicationContext:873 - Closing org.springframework.context.support.GenericApplicationContext@6ec76003: startup date [Wed Dec 09 09:32:50 CST 2015]; root of context hierarchy
+2015-12-09 09:32:59 Thread-3 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-12-09 09:32:59 Thread-2 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'

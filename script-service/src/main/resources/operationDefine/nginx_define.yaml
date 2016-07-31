@@ -1,0 +1,52 @@
+component:
+  name: cloudeploy::default::component::package::nginx
+  display_name: NGINX
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::default::nginx::install
+  displayName: 安装
+  nodes:
+  - nodeName: nginx_install_node
+    searchName: cloudeploy::nginx::install
+    extractParams:
+    - $allParams
+- operationName: cloudeploy::default::nginx::vhost
+  displayName: 虚拟节点Vhost
+  nodes:
+  - nodeName: nginx_vhost_node
+    searchName: cloudeploy::nginx::vhost
+    extractParams:
+    - $allParams
+- operationName: cloudeploy::default::nginx::upstream
+  displayName: UPSTREAM
+  nodes:
+  - nodeName: nginx_upstream_node
+    searchName: cloudeploy::nginx::upstream
+    extractParams:
+    - '$allParams'
+- operationName: cloudeploy::default::nginx::location
+  displayName: LOCATION
+  nodes:
+  - nodeName: nginx_location_node
+    searchName: cloudeploy::nginx::location
+    extractParams:
+    - '$allParams'
+- operationName: cloudeploy::default::nginx::config
+  displayName: 配置
+  nodes:
+  - nodeName: nginx_config_node
+    searchName: nginx::config
+    extractParams:
+    - '$allParams'
+- operationName: cloudeploy::default::nginx::service
+  displayName: 服务
+  nodes:
+  - nodeName: nginx_service_node
+    searchName: nginx::service
+    extractParams:
+    - service_ensure: stopped
+- operationName: cloudeploy::default::nginx::delete
+  displayName: 卸载
+  nodes:
+  - nodeName: nginx_delete_node
+    searchName: cloudeploy::nginx::delete

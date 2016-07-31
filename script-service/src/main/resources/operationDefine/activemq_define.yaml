@@ -1,0 +1,34 @@
+component:
+  name: cloudeploy::default::component::package::activemq
+  display_name: ActiveMQ
+  componentType: PACKAGE::OTHER
+operations:
+- operationName: cloudeploy::default::activemq::install
+  displayName: 安装
+  nodes:
+  - nodeName: activemq_install_node
+    searchName: cloudeploy::activemq::install
+    extractParams: 
+    - '$allParams'
+- operationName: cloudeploy::default::activemq::service
+  displayName: 服务
+  nodes:
+  - nodeName: activemq_service_node
+    searchName: cloudeploy::activemq::service
+    extractParams:
+    - ensure
+#- operationName: cloudeploy::default::activemq::stomp
+#  displayName: STOMP
+#  nodes:
+#  - nodeName: activemq_stomp_node
+#    searchName: cloudeploy::activemq::stomp
+#    extractParams:
+#    - port: 61613
+#    - activemq_home: /opt 
+- operationName: cloudeploy::default::activemq::delete
+  displayName: 卸载
+  nodes:
+  - nodeName: activemq_delete_node
+    searchName: cloudeploy::activemq::uninstall
+    extractParams:
+    - home: /opt

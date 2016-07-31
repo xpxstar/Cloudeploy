@@ -1,0 +1,9 @@
+{
+	"exec" : {
+		"run" : ["command"]
+	},
+	
+	"file" : {
+		"upload" : ["source","target","force","timeout"]
+	}
+}

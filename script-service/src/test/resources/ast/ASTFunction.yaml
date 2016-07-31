@@ -1,0 +1,15 @@
+--- !ruby/object:Puppet::Parser::AST::Function
+ftype: !ruby/sym rvalue
+line: 51
+file: 
+doc: ""
+name: empty
+arguments: !ruby/object:Puppet::Parser::AST::ASTArray
+  line: 51
+  file: 
+  children: 
+    - !ruby/object:Puppet::Parser::AST::Variable
+      line: 51
+      file: 
+      value: additional_attributes
+children: []

@@ -1,0 +1,43 @@
+--- 
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "java::config"
+    type: !ruby/sym hostclass
+    params: {}
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: java
+    type: !ruby/sym hostclass
+    params: 
+      distribution: 
+        value: jdk
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 41
+          file: 
+          value: jdk
+      version: 
+        value: present
+        type: !ruby/object:Puppet::Parser::AST::String
+          line: 42
+          file: 
+          value: present
+      package: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 43
+          file: 
+          value: !ruby/sym undef
+      java_alternative: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 44
+          file: 
+          value: !ruby/sym undef
+      java_alternative_path: 
+        value: undef
+        type: !ruby/object:Puppet::Parser::AST::Undef
+          line: 45
+          file: 
+          value: !ruby/sym undef
+  - !ruby/object:Proxy::Puppet::PuppetClass
+    klass: "java::params"
+    type: !ruby/sym hostclass
+    params: {}

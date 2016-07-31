@@ -1,0 +1,42 @@
+!!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: java::config
+params: {}
+type: hostclass
+--- &id001 !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: java
+params:
+  distribution:
+    paramName: distribution
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 41, value: jdk}
+    value: jdk
+  version:
+    paramName: version
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTString {file: null,
+      line: 42, value: present}
+    value: present
+  package:
+    paramName: package
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 43,
+      value: undef}
+    value: undef
+  java_alternative:
+    paramName: java_alternative
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 44,
+      value: undef}
+    value: undef
+  java_alternative_path:
+    paramName: java_alternative_path
+    parent: *id001
+    type: !!cn.ac.iscas.cloudeploy.v2.puppet.transform.ast.ASTUndef {file: null, line: 45,
+      value: undef}
+    value: undef
+type: hostclass
+--- !!cn.ac.iscas.cloudeploy.v2.puppet.transform.PuppetClass
+klass: java::params
+params: {}
+type: hostclass
