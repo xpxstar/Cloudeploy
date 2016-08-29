@@ -28,10 +28,10 @@ html, body {
 
 .deploy-error-bar {
 	color: #a94442;
-	background-color: rgba(242, 222, 222, 0.8);
+	background-color: rgb(242, 222, 222);
 }
 
 .deploy-success-bar {
 	color: #31708f;
-	background-color: rgba(217, 237, 247, 0.8);
+	background-color: rgb(217, 237, 247);
 }

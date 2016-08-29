@@ -3,6 +3,8 @@ package cn.ac.iscas.cloudeploy.v2.model.service.config;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ws.rs.NotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,6 +46,10 @@ public class RegisterCenterService {
 	@Autowired
 	private EventService eventService;
 	
+	/**
+	 * @param serviceName
+	 * @return
+	 */
 	public List<CatalogService> findServiceInstance(String serviceName){
 		CatalogClient catalogClient = consul.catalogClient();
 		ConsulResponse<List<CatalogService>> responses = catalogClient.getService(serviceName);
@@ -51,6 +57,11 @@ public class RegisterCenterService {
 		return catalogServices;
 	}
 	
+	/**
+	 * get the health check result of a terminate service in all nodes
+	 * @param serviceName
+	 * @return
+	 */
 	public List<ServiceHealth> findServiceInstanceWithStatus(String serviceName){
 		HealthClient healthClient = consul.healthClient();
 		ConsulResponse<List<ServiceHealth>> responses = healthClient.getAllServiceInstances(serviceName);
@@ -65,7 +76,12 @@ public class RegisterCenterService {
 		String containerKey = keyGenerator.nodeTemplateKey(container.getName(), container.getIdentifier());
 		String key = KeyGenerator.appPropertiesKey(appKey, containerKey, user);
 		KeyValueClient client = consul.keyValueClient();
-		List<Value> values = client.getValues(key);
+		List<Value> values = null;
+		try{
+			values= client.getValues(key);
+		}catch(NotFoundException nfe){
+			values = new ArrayList<Value>();
+		}
 		List<PropertyElement> properties = new ArrayList<>();
 		PropertyElementBuilder builder = PropertyElement.builder();
 		for(Value value : ForEachHelper.of(values)){
@@ -79,7 +95,12 @@ public class RegisterCenterService {
 	public List<AttributeElement> findAttributes(String appName, String containerName, User user){
 		String key = KeyGenerator.appAttributesKey(appName, containerName);
 		KeyValueClient client = consul.keyValueClient();
-		List<Value> values = client.getValues(key);
+		List<Value> values = null;
+		try{
+			values= client.getValues(key);
+		}catch(NotFoundException nfe){
+			values = new ArrayList<Value>();
+		}
 		List<AttributeElement> attributes = new ArrayList<>();
 		AttributeElementBuilder builder = AttributeElement.builder();
 		for(Value value : ForEachHelper.of(values)){
@@ -107,7 +128,13 @@ public class RegisterCenterService {
 		String containerKey = keyGenerator.nodeTemplateKey(container.getName(), container.getIdentifier());
 		String key = KeyGenerator.appAttributesKey(appKey, containerKey);
 		KeyValueClient client = consul.keyValueClient();
-		List<Value> values = client.getValues(key);
+		
+		List<Value> values = null ;
+		try{
+			values= client.getValues(key);
+		}catch(NotFoundException nfe){
+			values = new ArrayList<Value>();
+		}
 		List<AttributeElement> attributes = new ArrayList<>();
 		AttributeElementBuilder builder = AttributeElement.builder();
 		for(Value value : ForEachHelper.of(values)){
@@ -131,6 +158,8 @@ public class RegisterCenterService {
 					.build();
 			eventService.pubConfigEvent(configEvent);
 		}
+		//TODO 更新数据库的
+		
 		return true;
 	}
 }

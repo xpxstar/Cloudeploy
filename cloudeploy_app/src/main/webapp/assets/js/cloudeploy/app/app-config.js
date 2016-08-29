@@ -3,19 +3,23 @@ var configManager = {
 		configManager.initAppList(1);
 	},
 	
-	operationId : function(){
-		return 1;
-	},
+	operationId : 1,
 	
-	propertyOperation : function(){
-		configManager.operationId = function(){
-			return 1;
+	propertyOperation : function(item){
+		if(configManager.operationId != 1){
+			configManager.operationId = 1;
+			$(".param-type").removeClass("active");
+			$(item).addClass("active");
+			$("#d-app-list-buttons .active").click();
 		}
 	},
 	
-	attributeOperation : function(){
-		configManager.operationId = function(){
-			return 2;
+	attributeOperation : function(item){
+		if(configManager.operationId != 2){
+			configManager.operationId = 2;
+			$(".param-type").removeClass("active");
+			$(item).addClass("active");
+			$("#d-app-list-buttons .active").click();
 		}
 	},
 
@@ -33,7 +37,9 @@ var configManager = {
 		container.html(dHtml.genAppsListHtml(apps));
 	},
 	
-	getContainers : function(appId, appName){
+	getContainers : function(appitem,appId, appName){
+		$(".cfg-container").removeClass("active");
+		$(appitem).addClass("active");
 		ajaxGetJsonAuthc(dURIs.appURI + "/" + appId, null,
 			function(data){
 				var apps = data;
@@ -43,7 +49,7 @@ var configManager = {
 					var containerId = $(this).attr('href');
 					var containerName = $(this).text();
 					var callFunc = function(){
-						switch(configManager.operationId()){
+						switch(configManager.operationId){
 						case 1: 
 							configManager.getProperties(appId, appName, containerId, containerName);
 							break;
@@ -67,7 +73,11 @@ var configManager = {
 		ajaxGetJsonAuthc(dURIs.viewsURI.configManager + "/properties/" + appId + "/"
 				+ containerId, null, function(data) {
 			var properties = data;
+			$('.tab-pane').each(function(){
+				$(this).hide();
+			});
 			var container = $("#"+containerId);
+			container.show();
 			container.html(dHtml.genPropertyTableHtml(properties));
 //			$('#tabs-758944 a[href="'+ containerId +'"]').tab('show');
 		}, null);
@@ -76,8 +86,12 @@ var configManager = {
 	getAttributes : function(appId, appName, containerId, containerName) {
 		ajaxGetJsonAuthc(dURIs.viewsURI.configManager + "/attributes/" + appId + "/"
 				+ containerId, null, function(data) {
+			$('.tab-pane').each(function(){
+				$(this).hide();
+			});
 			var properties = data;
 			var container = $("#"+containerId);
+			container.show();
 			container.html(dHtml.genPropertyTableHtml(properties));
 		}, null);
 	},
@@ -110,7 +124,7 @@ var dHtml = {
 		for ( var i in apps) {
 			var app = apps[i];
 			html += '<div class="btn-group-vertical btn-group-justified" role="group" aria-label="...">'
-				 + '<a role="button" class="btn btn-default" href="javascript:configManager.getContainers('
+				 + '<a role="button" class="cfg-container list-group-item" href="javascript:void(0);" onclick="configManager.getContainers(this,'
 				 + app.id 
 				 +',\'' 
 				 + app.name
@@ -167,7 +181,7 @@ var dHtml = {
 	 */
 	genPropertyTableHtml : function(properties){
 		var func = undefined;
-		switch(configManager.operationId()){
+		switch(configManager.operationId){
 		case 1: 
 			func = "updateProperty"
 			break;
@@ -177,19 +191,19 @@ var dHtml = {
 		}
 		var html = '';
 		html += "<table class=\"table\">";
-		html += "   <thead>";
+		html += "   <thead>";  
 		html += "      <tr>";
 		html += "         <th>";
 		html += "            #";
 		html += "         <\/th>";
 		html += "         <th>";
-		html += "            名称";
+		html += "            key";
 		html += "         <\/th>";
 		html += "         <th>";
-		html += "            值";
+		html += "            value";
 		html += "         <\/th>";
 		html += "         <th>";
-		html += "            操作";
+		html += "            action";
 		html += "         <\/th>";
 		html += "      <\/tr>";
 		html += "   <\/thead>";
@@ -210,7 +224,7 @@ var dHtml = {
 			html += "         <\/td>";
 			html += "         <td>";
 			html += "<button type=\"button\" class=\"btn btn-success btn-xs\" onclick=\"javascript:configManager."+ func +"("+args+")\">";
-			html += "更新";
+			html += "update";
 			html += "<\/button>";
 			html += "         <\/td>";
 			html += "      <\/tr>";

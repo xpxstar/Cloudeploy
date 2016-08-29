@@ -12,7 +12,7 @@ var dCustomFiles = {
 			'auto' : false,
 			'multi' : false,
 			'uploadLimit' : 1,
-			'buttonText' : '选择文件',
+			'buttonText' : 'choose file',
 			'swf' : dURIs.swfs + '/uploadify.swf',
 			'uploader' : dURIs.filesURI,
 			'fileObjName' : 'file',
@@ -73,7 +73,7 @@ var dCustomFiles = {
 	},
 
 	removeFile : function(fileId) {
-		var r = confirm("确定删除此文件？")
+		var r = confirm("delete this file?")
 		if (r == true) {
 			ajaxDeleteJsonAuthc(dURIs.customFilesURI + "/" + fileId, null,
 					dCustomFiles.getFileList, null, false);
@@ -91,9 +91,9 @@ var dCustomFiles = {
 					+ getFormatDateFromLong(file.updatedAt) + '</td><td>';
 			html += '<a style="margin-right:15px;" href="javascript:dCustomFiles.replaceFileClick('
 					+ file.id
-					+ ')"><i class="fa fa-upload"></i> 替换</a>'
+					+ ')"><i class="fa fa-upload"></i> exchange</a>'
 					+ '<a style="margin-right:15px;" href="javascript:dCustomFiles.removeFile('
-					+ file.id + ')"><i class="fa fa-remove"></i> 删除</a>';
+					+ file.id + ')"><i class="fa fa-remove"></i> delete</a>';
 			html += '</td></tr>';
 		}
 		$("#fileTable tbody").html(html);

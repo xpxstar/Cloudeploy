@@ -13,6 +13,8 @@ public class ContainerTemplateView {
 		public String source;
 		public String target;
 		public String command;
+		public Long createdAt;
+		public Long updatedAt;
 	}
 
 	private static Function<TemplateParam, ContainerTemplateView.Item> DTAILED_ITEM_VIEW_TRANSFORMER = new Function<TemplateParam, ContainerTemplateView.Item>(){
@@ -22,6 +24,10 @@ public class ContainerTemplateView {
 			view.source = input.getSource();
 			view.target = input.getTarget();
 			view.command = input.getCommand();
+			view.createdAt = input.getCreateTime() == null ? null : input
+					.getCreateTime().getTime();
+			view.updatedAt = input.getUpdateTime() == null ? null : input
+					.getUpdateTime().getTime();
 			return view;
 		}
 	};

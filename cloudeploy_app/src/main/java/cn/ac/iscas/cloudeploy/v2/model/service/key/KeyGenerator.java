@@ -16,6 +16,13 @@ public class KeyGenerator {
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * generate instance key in format :userid/appname/instancename
+	 * @param appName
+	 * @param containerInstanceName
+	 * @param user
+	 * @return
+	 */
 	public static String instanceKey(String appName, String containerInstanceName, User user){
 		StringBuilder builder = new StringBuilder();
 		builder.append("/").append(user.getId())
@@ -24,6 +31,13 @@ public class KeyGenerator {
 		return builder.toString();
 	}
 	
+	/**
+	 *  generate properties key in format :userid/appname/containerName
+	 * @param appName
+	 * @param containerName
+	 * @param user
+	 * @return
+	 */
 	public static String appPropertiesKey(String appName, String containerName, User user){
 		StringBuilder builder = new StringBuilder();
 		builder.append("/").append(user.getId())
@@ -33,6 +47,14 @@ public class KeyGenerator {
 		return builder.toString();
 	}
 	
+	/**
+	 *  generate app property key in format :userid/appname/containerName/properties/propertyName
+	 * @param propertyName
+	 * @param containerName
+	 * @param appName
+	 * @param user
+	 * @return
+	 */
 	public static String appPropertyKey(String propertyName, String containerName, String appName, User user){
 		StringBuilder builder = new StringBuilder();
 		builder.append("/").append(user.getId())
@@ -43,6 +65,14 @@ public class KeyGenerator {
 		return builder.toString();
 	}
 	
+	/**
+	 *  generate propertylistener key in format :userid/appname/containerName/properties/propertyName
+	 * @param propertyName
+	 * @param containerName
+	 * @param appName
+	 * @param user
+	 * @return
+	 */
 	public static String propertyListenerKey(String propertyName, String containerName, String appName, User user){
 		StringBuilder builder = new StringBuilder();
 		builder.append("/").append(user.getId())
@@ -54,6 +84,14 @@ public class KeyGenerator {
 		return builder.toString();
 	}
 	
+	/**
+	 *  generate containerInstanceKey in format :userid/appname/containerName/properties/propertyName
+	 * @param instanceName
+	 * @param containerName
+	 * @param appName
+	 * @param user
+	 * @return
+	 */
 	public static String containerInstanceKey(String instanceName, String containerName, String appName, User user){
 		StringBuilder builder = new StringBuilder();
 		builder.append("/").append(user.getId())
@@ -72,6 +110,12 @@ public class KeyGenerator {
 		return builder.toString();
 	}
 	
+	/**
+	 * get propertyName from key (key format: string/string/propertyName
+	 * that is to say get the last string of key.
+	 * @param key
+	 * @return
+	 */
 	public static String getPropertyNameFromKey(String key){
 		Preconditions.checkArgument(!Strings.isNullOrEmpty(key), "key can't be null or empty");
 		String[] values = key.split("/");

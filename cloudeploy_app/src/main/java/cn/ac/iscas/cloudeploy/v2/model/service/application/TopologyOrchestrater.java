@@ -93,6 +93,11 @@ public class TopologyOrchestrater implements ApplicationService{
 		return app;
 	}
 	
+	/**
+	 * store the edge and node as well as their positions of the Graph
+	 * @param view
+	 * @param app
+	 */
 	private void storeGraph(DetailedItem view, Application app) {
 		Map<String, Container> nodeToContainer = new HashMap<String, Container>();
 		for (ContainerView.DetailedItem cView : view.containers) {
@@ -136,6 +141,11 @@ public class TopologyOrchestrater implements ApplicationService{
 		return (List<Application>) appDAO.findAll();
 	}
 	
+	/**
+	 * create a Task(plan) with specific strategy(docker,puppet)
+	 * @param applicationId
+	 * @param startegy
+	 */
 	public void createDeploymentPlan(Long applicationId, PacketStrategy startegy){
 		Application app = appDAO.findOne(applicationId);
 		try {

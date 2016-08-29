@@ -4,20 +4,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>应用列表</title>
+<title>Applications</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<div id="d-main-content">
-		<div class="col-sm-9">
+		<div class="intro">
+			<h1>Applications&nbsp;Manager</h1>
+				<p class="lead" style="margin-top:10px">
+					An <em>application&nbsp;</em> is a task of deploying or configuring middleware components, including orchestration and properties. Applications Manager shows application list for user to view details and do other actions.
+				</p>
+		</div>
+		
+   		<div class="content-board">
 			<table style="margin-bottom: 0px; border-bottom: 0px;"
-				class="table table-bordered table-condensed">
+				class="table table-bordered table-condensed deploy-table">
 				<thead>
 					<tr>
-						<th style="width: 20%;">应用名称</th>
-						<th style="width: 20%;">应用状态</th>
-						<th>操作</th>
+						<th style="width: 20%;">Name</th>
+						<th style="width: 20%;">Status</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>

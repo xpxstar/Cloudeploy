@@ -116,6 +116,12 @@ public class ApplicationRuntimeService {
 		app.setDeployFileKey(md5);
 	}
 	
+	/**
+	 * deploy application task of user with a specific strategy(Docker,Puppet)
+	 * @param app
+	 * @param user
+	 * @param strategy
+	 */
 	public void deployApplication(Application app, User user, PacketStrategy strategy){
 		EventFactory factory  = null;
 		switch(strategy){

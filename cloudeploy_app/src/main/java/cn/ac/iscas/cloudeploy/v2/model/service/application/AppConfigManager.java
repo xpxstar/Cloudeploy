@@ -33,6 +33,12 @@ public class AppConfigManager {
 	@Autowired
 	private Consul consul;
 	
+	/**
+	 * properties is dependent by other component 
+	 * @param app
+	 * @param user
+	 * @return
+	 */
 	public boolean registerAppProperties(ServiceTemplate app, User user){
 		KeyValueClient keyAgent = consul.keyValueClient();
 		Map<String, NodeType> nodeTypes = new HashMap<>();

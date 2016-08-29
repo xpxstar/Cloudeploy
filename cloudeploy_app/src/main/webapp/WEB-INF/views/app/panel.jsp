@@ -4,23 +4,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>应用画板</title>
+<title>Orchestration</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<div id="d-main-content">
-		<div id="app-panel">
+		<div class="intro">
+			<h1>Orchestration&nbsp;Manager</h1>
+				<p class="lead" style="margin-top:10px">
+					<em>Orchestration&nbsp;</em>is a scheme on how to deploy or configure middleware components. You can design your application task by dragging different components from bars on the right, connecting them with edges which means dependent correlation, setting properties of a component by double-click on nodes.
+				</p>
+		</div>
+		
+		<div id="app-panel" class="content-board">
 			<div id="graph-panel" class="col-sm-10" style="overflow: auto;">
 				<div id="tmp-panel"></div>
 			</div>
 			<div id="group-list" class="col-sm-2">
 				<div>
 					<div id="btn-save" class="save-btn">
-						<i class="fa fa-save"></i> 保存
+						<i class="fa fa-save"></i> Save
 					</div>
 					<div id="btn-save-as" class="save-btn" style="display: none;">
-						<i class="fa fa-save"></i><i class="fa fa-pencil"></i> 另存为
+						<i class="fa fa-save"></i><i class="fa fa-pencil"></i> Save As
 					</div>
 				</div>
 				<!-- panel group for operations component list -->
@@ -39,7 +46,7 @@
 							data-dismiss="modal">
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
-						<h4 class="modal-title" id="myModalLabel">配置容器参数</h4>
+						<h4 class="modal-title" id="myModalLabel">middleware-parameters</h4>
 					</div>
 					<div class="modal-body">
 						<form role="form">
@@ -47,22 +54,22 @@
 								<div class="col-sm-3">
 									<div class="form-group">
 										<label for="containerName" class="control-label pull-left"
-											style="padding-right: 1em;">应用名称:</label> 
+											style="padding-right: 1em;">middleware-name:</label> 
 										<input id="containerName" name="containerName" class="form-control">
 									</div>
 									<div class="form-group">
 										<label for="containerPort" class="control-label pull-left"
-											style="padding-right: 2em;">端口号:</label> 
+											style="padding-right: 2em;">middleware-port:</label> 
 										<input type="number"
 											id="containerPort" name="containerPort" class="form-control">
 									</div>
 									<div class="form-group">
-										<label for="initCount" class="control-label pull-left">初始实例数:</label>
+										<label for="initCount" class="control-label pull-left">primary-instances:</label>
 										<input type="number" id="initCount" name="initCount"
 											class="form-control">
 									</div>
 									<div class="form-group">
-										<label for="maxCount" class="control-label pull-left">最大实例数:</label>
+										<label for="maxCount" class="control-label pull-left">max-instances:</label>
 										<input type="number" id="maxCount" name="maxCount"
 											class="form-control">
 									</div>
@@ -87,7 +94,7 @@
 											  <td colspan="4" style="padding-left:0; padding-right:0; text-align:center;">
 											  	<a href="#" id = "addTemplate">
 											  		<i class="fa fa-plus"></i>
-											  		<span>添加模板</span>
+											  		<span>add templates</span>
 											  	</a>
 											  </td>
 											 </tr>
@@ -104,7 +111,7 @@
 											  <td colspan="3" style="padding-left:0; padding-right:0; text-align:center;">
 											  	<a href="#" role="button" id="addAttribute">
 											  		<i class="fa fa-plus"></i>
-											  		<span>添加属性</span>
+											  		<span>add properties</span>
 											  	</a>
 											  </td>
 											 </tr>
@@ -121,7 +128,7 @@
 											  <td colspan="3" style="padding-left:0; padding-right:0; text-align:center;">
 											  	<a href="#" role="button" id="addAttribute">
 											  		<i class="fa fa-plus"></i>
-											  		<span>添加服务</span>
+											  		<span>add services</span>
 											  	</a>
 											  </td>
 											 </tr>
@@ -148,8 +155,8 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default editCancel"
-							data-dismiss="modal">取消</button>
-						<button type="button" class="btn btn-primary editSave">保存</button>
+							data-dismiss="modal">cancel</button>
+						<button type="button" class="btn btn-primary editSave">save</button>
 					</div>
 				</div>
 			</div>
@@ -164,19 +171,19 @@
 						<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
-						<h4 class="modal-title" id="myModalLabel">保存应用</h4>
+						<h4 class="modal-title" id="myModalLabel">save application</h4>
 					</div>
 					<div class="modal-body">
 						<div style="width: 50%;">
 							<div class="form-group">
-								<label for="appName">应用名称</label> <input type="text"
-									class="form-control" id="appName" placeholder="应用名称">
+								<label for="appName">application name</label> <input type="text"
+									class="form-control" id="appName" placeholder="application name">
 							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-						<button type="button" id="save-app-btn" class="btn btn-primary">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+						<button type="button" id="save-app-btn" class="btn btn-primary">save</button>
 					</div>
 				</div>
 			</div>
@@ -192,7 +199,7 @@
 						<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
-						<h4 class="modal-title" id="myModalLabel">选择操作</h4>
+						<h4 class="modal-title" id="myModalLabel">actions</h4>
 					</div>
 					<div class="modal-body">
 						<ul class="operation-list">
@@ -200,37 +207,37 @@
 								<div class="oper-icon">
 									<i class="fa fa-play text-success"></i>
 								</div>
-								<div class="oper-text">启动</div>
+								<div class="oper-text">start</div>
 							</li>
 							<li id="stop" data-oper-type="STOP" data-view-id="1">
 								<div class="oper-icon">
 									<i class="fa fa-stop text-danger"></i>
 								</div>
-								<div class="oper-text">停止</div>
+								<div class="oper-text">stop</div>
 							</li>
 							<li id="remove" data-oper-type="REMOVE" data-view-id="2">
 								<div class="oper-icon">
 									<i class="fa fa-minus text-danger"></i>
 								</div>
-								<div class="oper-text">移除</div>
+								<div class="oper-text">remove</div>
 							</li>
 							<li id="copy" data-oper-type="COPY" data-view-id="2">
 								<div class="oper-icon">
 									<i class="fa fa-plus text-primary"></i>
 								</div>
-								<div class="oper-text">复制</div>
+								<div class="oper-text">copy</div>
 							</li>
 							<li id="fail" data-oper-type="FAIL" data-view-id="3">
 								<div class="oper-icon">
 									<i class="fa fa-times text-danger"></i>
 								</div>
-								<div class="oper-text">模拟故障</div>
+								<div class="oper-text">fail test</div>
 							</li>
 							<li id="fail" data-oper-type="START" data-view-id="3">
 								<div class="oper-icon">
 									<i class="fa fa-play text-success"></i>
 								</div>
-								<div class="oper-text">故障恢复</div>
+								<div class="oper-text">recover</div>
 							</li>
 						</ul>
 					</div>

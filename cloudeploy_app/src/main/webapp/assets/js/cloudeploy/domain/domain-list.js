@@ -23,7 +23,7 @@ var domainList = {
 						+ domain.ip
 						+ '</td><td><i class="fa fa-circle-o-notch text-success small"></i> '
 						+ '<a class="link-btn" href="javascript:domainList.deleteDomain('
-						+ domain.id + ')">解除绑定</a></td></tr>';
+						+ domain.id + ')">release binding</a></td></tr>';
 			}
 		} else {
 			html = DHtml.emptyRow(6);
@@ -32,7 +32,7 @@ var domainList = {
 	},
 
 	deleteDomain : function(domainId) {
-		if (confirm("确定解除域名绑定?")) {
+		if (confirm("release domain?")) {
 			ajaxDeleteJsonAuthc(dURIs.domainURI + "/" + domainId, null,
 					domainList.requestDomainList, defaultErrorFunc, true);
 		}

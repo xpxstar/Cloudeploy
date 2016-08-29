@@ -16,6 +16,10 @@ public class HostSelector {
 	
 	private int i = 1;
 	
+	/**
+	 * this is a test case for termate host
+	 * @return
+	 */
 	public DHost getHost(){
 //		User user = userService.getCurrentUser();
 //		List<DHost> hosts = hostService.findDHostsByUser(user.getId());

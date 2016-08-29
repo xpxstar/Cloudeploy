@@ -75,15 +75,15 @@ var dHtml = {
 		var html = '';
 		for ( var i in templates) {
 			var file = templates[i];
-			var key = file.source.split('?')[0];
-			var name = file.source.split("=")[1];
+			var key = file.source;
+			var name = file.target;
 			html += '<tr data-id="' + file.id + '"><td class="hide"></td><td >'
 					+ name + '</td><td>'
 					+ getFormatDateFromLong(file.createdAt) + '</td><td>'
 					+ getFormatDateFromLong(file.updatedAt) + '</td><td>';
 			html += '<a key = "'+key
 			+'" name="'+name
-			+'" style="margin-right:15px;" href="javascript:void(0);" onclick="dHtml.scanFileClick(this)"><i class="fa fa-eye"></i> 查看</a>'
+			+'" style="margin-right:15px;" href="javascript:void(0);" onclick="dHtml.scanFileClick(this)"><i class="fa fa-eye"></i> view</a>'
 			html += '</td></tr>';
 		}
 		$("#fileTable tbody").html(html);

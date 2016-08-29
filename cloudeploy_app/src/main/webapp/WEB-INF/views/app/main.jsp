@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>应用管理</title>
+<title>Cloudeploy</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="<c:url value='/css/bootstrap/bootstrap.min.css' />"
@@ -14,13 +14,15 @@
 	type="text/css" rel="stylesheet">
 <link href="<c:url value='/css/cloudeploy/cloudeploy.css' />"
 	type="text/css" rel="stylesheet">
+<link href="<c:url value='/css/new/dashboard.css' />" type="text/css" rel="stylesheet" >
 <link href="<c:url value='/css/cloudeploy/app-list.css' />"
 	type="text/css" rel="stylesheet">
 <link href="<c:url value='/css/cloudeploy/app-panel.css' />"
 	type="text/css" rel="stylesheet">
 	<link href="<c:url value='/css/cloudeploy/template.css' />" type="text/css" rel="stylesheet">
 	<link href="<c:url value='/css/uploadify/uploadify.css' />" type="text/css" rel="stylesheet">
-	
+	<link href="<c:url value='/css/new/style.css'/>" type="text/css"  rel="stylesheet"/>
+	<%@ include file="../share/head.jsp" %>
 </head>
 <body>
 	<script src="<c:url value='/js/jquery/jquery-1.11.0.js' />"></script>
@@ -33,16 +35,37 @@
 	<script src="<c:url value='/js/cloudeploy/common.js' />"></script>
 	<script src="<c:url value='/js/cloudeploy/app/app-main.js' />"></script>
 	<div class="d-main">
-		<div class="btn-group" role="group" aria-label="nav-btn-group"
-			style="margin: 15px;">
-			<button type="button" class="btn btn-default" id="app-list-btn">应用列表</button>
-			<button type="button" class="btn btn-default"
-				id="app-orchestration-btn">模型编排</button>
-			<button type="button" class="btn btn-default" id="domain-btn">域名管理</button>
-			<button type="button" class="btn btn-default" id="service-list-btn">服务状态</button>
-			<button type="button" class="btn btn-default" id="config-btn">配置管理</button>
-			<button type="button" class="btn btn-default" id="config-btn">应用类型</button>
-			<button type="button" class="btn btn-default" id="tempt-btn">模板管理</button>
+		<div class="navigation">
+		<div class="profile">
+			<div class="avartar">
+				<div id="avartar-top"></div>
+				<div id="avartar-bottom"></div>
+			</div>
+		
+			<p class="user-name">
+				<a href="javascript:void(0)">Tom</a>
+			</p>
+			<div class="user-link">
+				<a title="index"><span class="glyphicon glyphicon-home"></span></a>
+				<a href="#" title="dashboard"><span class="glyphicon glyphicon-dashboard"></span></a>
+				<a title="help"><span class="glyphicon glyphicon-book"></span></a>
+				<a href="#" title="logout"><span class="glyphicon glyphicon-off"></span></a>
+			</div>
+		</div>
+		<div class="sidebar">
+			<ul id="sidebar-list" class="nav nav-list">
+				<li id="app-list-btn"><a><span class="glyphicon glyphicon-list-alt cool-orange"></span><span class="name">Applications</span><span class="title">应用列表</span></a><div class="cool-border"></div></li>
+				<li id="app-orchestration-btn"><a><span class="glyphicon glyphicon-retweet cool-cyan"></span><span class="name">Orchestration</span><span class="title">模型编排</span></a><div class="cool-border"></div></li>
+				<!-- <li id="domain-btn"><a><span class="glyphicon glyphicon-cloud-upload cool-green"></span><span class="name">Domain</span><span class="title">域名管理</span></a><div class="cool-border"></div></li>
+				 --><li id="service-list-btn"><a><span class="glyphicon glyphicon-cloud cool-blue"></span><span class="name">Services</span><span class="title">服务状态</span></a><div class="cool-border"></div></li>
+				<li id="config-btn"><a><span class="glyphicon glyphicon-cog cool-purple"></span><span class="name">Configure</span><span class="title">配置管理</span></a><div class="cool-border"></div></li>
+				<!-- <li id="config-btn"><a><span class="glyphicon glyphicon-th cool-orange"></span><span class="name">Apptype</span><span class="title">应用类型</span></a><div class="cool-border"></div></li>
+				 --><li id="tempt-btn"><a><span class="glyphicon glyphicon-road cool-blue"></span><span class="name">Templates</span><span class="title">模板管理</span></a><div class="cool-border"></div></li>
+			
+			</ul>
+			<ul class="nav nav-list" style="margin-top:50px">
+			</ul>
+		</div>
 		</div>
 		<div class="d-main-content"></div>
 	</div>

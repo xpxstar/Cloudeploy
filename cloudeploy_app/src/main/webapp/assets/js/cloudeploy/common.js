@@ -179,7 +179,7 @@ var getLocalData = function(key) {
 var DHtml = {
 	emptyRow : function(colspan) {
 		return "<tr><td colspan='" + colspan
-				+ "'><span class='text-success'>没有数据</span></td></tr>";
+				+ "'><span class='text-success'>Empty</span></td></tr>";
 	}
 };
 
@@ -228,7 +228,7 @@ var decorate = function(str) {
 var showShade = function(ajaxObj) {
 	var maskHtml = '<div id="deploy-state" style="display: none;">'
 			+ '<div style="z-index: 1050; position: fixed; top: 45%; left: 30%; width: 500px;">'
-			+ '<div style="color: white; margin-bottom: 5px;">操作正在执行，请耐心等待...</div>'
+			+ '<div style="color: white; margin-bottom: 5px;">action is under-going, be patient...</div>'
 			+ '<div class="progress">'
 			+ '<div class="progress-bar progress-bar-striped active" '
 			+ 'role="progressbar" aria-valuenow="100" aria-valuemin="0"'
@@ -265,7 +265,7 @@ var showSuccess = function(msg, callback) {
 
 var showElement = function(element, msg, callback) {
 	if (element) {
-		element.html(msg ? msg : "数据异常");
+		element.html(msg ? msg : "message exception");
 		element.css("opacity", "1");
 		setTimeout(function() {
 			element.animate({
@@ -282,11 +282,11 @@ var showElement = function(element, msg, callback) {
 };
 
 var defaultSuccessFunc = function() {
-	showSuccess("操作执行成功");
+	showSuccess("Opration completed");
 };
 
 var defaultErrorFunc = function() {
-	showError("操作执行失败");
+	showError("Operation failed");
 };
 
 /*

@@ -76,7 +76,7 @@ jsPlumb.ready(function() {
 	instance.bind("connection", function(connInfo, originalEvent) {
 		var conn = connInfo.connection;
 		conn.bind("dblclick", function(connection, originalEvent) {
-			if (confirm("删除连接?")) {
+			if (confirm("delete edge?")) {
 				jsPlumb.detach(conn);
 			}
 		});

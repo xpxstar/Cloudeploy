@@ -4,21 +4,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>域名绑定</title>
+<title>Domain binding</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<div id="d-main-content">
-		<div class="col-sm-9">
+		<div class="intro">
+			<h1>Applications&nbsp;Manager</h1>
+				<p class="lead" style="margin-top:10px">
+					<em>Applications&nbsp;</em>is a tasks list .It shows schemes user design before. 
+				</p>
+		</div>
+		<div class="content-board">
 			<table id="domain-list"
 				style="margin-bottom: 0px; border-bottom: 0px;"
-				class="table table-bordered table-condensed">
+				class="table table-bordered table-condensed  deploy-table">
 				<thead>
 					<tr>
-						<th style="width: 20%;">域名</th>
-						<th style="width: 20%;">IP地址</th>
-						<th>操作</th>
+						<th style="width: 20%;">domain</th>
+						<th style="width: 20%;">IP</th>
+						<th>action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -28,7 +34,7 @@
 		<div class="col-sm-12">
 			<a class="btn btn-default"
 				href="javascript:domainList.bindDomainClick()"><i
-				class="fa fa-plus"></i> 绑定新域名</a>
+				class="fa fa-plus"></i> new domain</a>
 		</div>
 		<div style="margin-top: 200px;" class="modal fade"
 			id="bindDomainModal" tabindex="-1" role="dialog"
@@ -40,27 +46,27 @@
 						<button type="button" class="close" data-dismiss="modal">
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
-						<h4 class="modal-title" id="myModalLabel">域名绑定</h4>
+						<h4 class="modal-title" id="myModalLabel">binding</h4>
 					</div>
 					<div class="modal-body">
 						<div style="width: 80%;">
 							<div class="form-group">
-								<label for="domainName">域名</label> <input type="text"
+								<label for="domainName">domain</label> <input type="text"
 									class="form-control" name="domainName" id="domainName"
-									placeholder="域名">
+									placeholder="domain">
 							</div>
 						</div>
 						<div style="width: 80%;">
 							<div class="form-group">
-								<label for="domainIP">IP地址</label> <input type="text"
+								<label for="domainIP">IP</label> <input type="text"
 									class="form-control" name="domainIP" id="domainIP"
-									placeholder="IP地址">
+									placeholder="IP">
 							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-						<button type="button" id="save-domain-btn" class="btn btn-primary">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+						<button type="button" id="save-domain-btn" class="btn btn-primary">save</button>
 					</div>
 				</div>
 			</div>

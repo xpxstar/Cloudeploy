@@ -6,6 +6,7 @@ var appPanel = {
 	cachedContainers : new Map(),
 	cachedContainersById : new Map(),
 	cachedCustomFiles : new Map(),
+	cachedTemplate:new Map(),
 	initReady : 0,// 001 hosts ready,010 components ready
 	currentTab : -1,
 
@@ -309,7 +310,7 @@ var appPanel = {
 						if (parseInt($(this).val()) > parseInt($(
 								"#detailModal #maxCount").val())) {
 							$(this).val($("#detailModal #maxCount").val());
-							alert("初始实例数不能大于最大实例数！")
+							alert("primary instances must be less than max instances！")
 						}
 					});
 			$(".editSave").unbind("click");
@@ -529,7 +530,7 @@ var appPanel = {
 	 * @param instanceId
 	 */
 	doOperationOnInstance : function(instanceId, element) {
-		if (confirm("执行" + element.find(".oper-text").html() + "操作?")) {
+		if (confirm("execute " + element.find(".oper-text").html() + " action?")) {
 			ajaxPutJsonAuthc(dURIs.appInstanceURI + "/" + instanceId
 					+ "?operation=" + element.attr("data-oper-type"), null,
 					appPanel.doOperationSuccess, appPanel.doOperationError,
@@ -570,7 +571,7 @@ var appPanel = {
 	validateApp : function() {
 		var appName = $("#appName").val().replace(/ /, "");
 		if (appName.length <= 0) {
-			showError("应用名不能为空");
+			showError("appname can not be empty");
 			return false;
 		}
 //		return appPanel.checkHostSelect();
@@ -588,7 +589,7 @@ var appPanel = {
 			var node = cachedNodes[i];
 			if (node instanceof ContainerNode
 					&& (!verifyParam(node.getHosts()) || node.getHosts().length <= 0)) {
-				showError("请为节点\"" + node.getName() + "\"选择主机");
+				showError("please select hosts for\"" + node.getName()|+"\"");
 				return false;
 			}
 		}
@@ -629,7 +630,7 @@ var appPanel = {
 	},
 
 	deleteNode : function(nodeId) {
-		if (confirm("删除节点?")) {
+		if (confirm("delete this node?")) {
 			var node = $("#" + nodeId);
 			var endPoints = appInstance.getEndpoints(node);
 			for ( var i in endPoints) {
@@ -707,8 +708,7 @@ var orcheHtml = {
 		var id = verifyParam(nodeId) ? nodeId : dateToId();
 		var nodeName = verifyParam(nodeName) ? nodeName : component.displayName;
 		var nodePort = verifyParam(nodePort) ? nodePort : "";
-		var nodeStatus = appMain.statusMap
-				.get(verifyParam(nodeStatus) ? nodeStatus : "CREATED");
+		var nodeStatus = verifyParam(nodeStatus) ? nodeStatus : "CREATED";
 
 		var html = '<div id='
 				+ id
@@ -718,10 +718,10 @@ var orcheHtml = {
 				+ nodeName
 				+ '">'
 				+ '<div class="node-title"><i class="fa fa-minus-circle node-del-btn" onclick="javascript:appPanel.deleteNode('
-				+ id + ')"></i></div>' + '<div class="node-name">名称:<span>'
+				+ id + ')"></i></div>' + '<div class="node-name">name:<span>'
 				+ nodeName + '</span></div>'
-				+ '<div class="node-port">端口:<span>' + nodePort
-				+ '</span></div>' + '<div class="node-status">状态:<span>'
+				+ '<div class="node-port">port:<span>' + nodePort
+				+ '</span></div>' + '<div class="node-status">status:<span>'
 				+ nodeStatus + '</span></div></div>';
 		$("#tmp-panel").append(html);
 		$("#" + id).unbind("dblclick");
@@ -753,10 +753,10 @@ var orcheHtml = {
 				+ statusStyle
 				+ '" data-toggle="tooltip" data-placement="left" title="'
 				+ nodeName + '">' + '<div class="node-title"></div>'
-				+ '<div class="node-name">名称:<span>' + nodeName
-				+ '</span></div>' + '<div class="node-port">端口:<span>'
+				+ '<div class="node-name">name:<span>' + nodeName
+				+ '</span></div>' + '<div class="node-port">port:<span>'
 				+ nodePort + '</span></div>'
-				+ '<div class="node-status">状态:<span>' + nodeStatus
+				+ '<div class="node-status">status:<span>' + nodeStatus
 				+ '</span></div></div>';
 		$("#tmp-panel").append(html);
 		$("#" + id).unbind("dblclick");
@@ -876,7 +876,7 @@ var orcheHtml = {
 		});
 		conn.unbind("dblclick");
 		conn.bind("dblclick", function(connection, originalEvent) {
-			if (confirm("删除连接?")) {
+			if (confirm("delete edge?")) {
 				jsPlumb.detach(conn);
 			}
 		});
@@ -891,9 +891,9 @@ var orcheHtml = {
 		var templates = node.templates;
 		if(templates.length > 0){
 			thead +=  "<tr>" +
-						"<th>模板文件</th>" +
-						"<th>文件路径</th>" +
-						"<th>重载命令(可选)</th>" +
+						"<th>template</th>" +
+						"<th>target path</th>" +
+						"<th>reload cmd(optional)</th>" +
 						'<th class="deleterow">' + 
 								'<a href="#" role="button" class="text-warning">'+
 								   '<i class="fa fa-minus-circle"></i>'
@@ -937,10 +937,10 @@ var orcheHtml = {
 		var thead = "";
 		if($("#detailModal #templates thead tr").length <= 0){
 			thead +=  "<tr>" +
-						"<th>模板文件</th>" +
-						"<th>文件路径</th>" +
-						"<th>重载命令(可选)</th>" +
-						'<th class="deleterow">' + 
+							"<th>template</th>" +
+							"<th>file URL</th>" +
+							"<th>reload command(optional)</th>" +
+							'<th class="deleterow">' + 
 								'<a href="#" role="button" class="text-warning">'+
 								   '<i class="fa fa-minus-circle"></i>'
 								'</a>'+

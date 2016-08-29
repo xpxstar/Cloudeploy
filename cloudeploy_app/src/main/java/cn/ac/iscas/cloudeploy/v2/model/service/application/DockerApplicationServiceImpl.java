@@ -65,6 +65,10 @@ import com.orbitz.consul.option.EventOptions;
 import com.orbitz.consul.option.ImmutableEventOptions;
 
 //@Service
+/**
+ * @author admin
+ *
+ */
 public class DockerApplicationServiceImpl implements ApplicationService{
 	private static Logger logger = LoggerFactory.getLogger(DockerApplicationServiceImpl.class);
 	private static final String INSTANCE_NAME_FORMAT = "%s-%d";
@@ -167,7 +171,7 @@ public class DockerApplicationServiceImpl implements ApplicationService{
 	
 	/**
 	 * 与强哥最大不同点在于部署的行为，以及实时的状态查询上。从图转化为Application Container其实可以维持不变
-	 * 
+	 * deploy Application Task
 	 */
 	@Override
 	public Application deployApplication(Long applicationId) {
@@ -178,6 +182,13 @@ public class DockerApplicationServiceImpl implements ApplicationService{
 		return appDAO.findOne(applicationId);
 	}
 	
+	
+	/**
+	 * @param app
+	 * deploy application with multiple containers \
+	 * by transforming to yaml-format data and fire to message Queue
+	 *  
+	 */
 	private void transformAppToYaml(Application app){
 		List<Container> containers = app.getContainers();
 		for(Container cur : containers){
@@ -203,7 +214,10 @@ public class DockerApplicationServiceImpl implements ApplicationService{
 		relationDAO.delete(cur.getOutRelations());
 		containerDAO.delete(cur);
 	}
-	
+	/**
+	 * @param container
+	 * initial deploy single container with multiple instance 
+	 */
 	private void deployContainer(Container container){
 		for (int i = 0; i < container.getMaxCount()
 				&& i < container.getInitCount(); i++) {
@@ -213,6 +227,14 @@ public class DockerApplicationServiceImpl implements ApplicationService{
 		containerDAO.save(container);
 	}
     
+	/**
+	 * deploy single instance in container
+	 * extract instace from container 
+	 * @param container
+	 * @param instanceSeq instance No.
+	 * @return
+	 * paramName ：instance name
+	 */
 	private ContainerInstance addInstanceToContainer(Container container,
 			int instanceSeq) {
 		if (instanceSeq > container.getMaxCount()) {
@@ -239,6 +261,13 @@ public class DockerApplicationServiceImpl implements ApplicationService{
 		return cInstance;
 	}
 	
+	/**
+	 * deploy a terminate instance to target host
+	 * build up a message Entry including: 
+	 * service,container(VMcontainer),template,attributes,
+	 * some properties of container is set by reflect (with invoke method,this require paramkey in db be same with properties).
+	 * @param cInstance
+	 */
 	private void deployContainerInstance(ContainerInstance cInstance) {
 		//builder service
 		ServiceBuilder serviceBuilder = SpecificEntity.Service.builder().name("");
