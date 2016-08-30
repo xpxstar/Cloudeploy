@@ -1,0 +1,84 @@
+.resource {
+	text-align: center;
+	overflow: hidden;
+	clear: both;
+}
+.resource .resource-item {
+	height: 130px;
+	width: 20%;
+	float: left;
+	cursor: pointer;
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+}
+.resource .resource-item:hover {
+	background-color: #d9ecff;
+}
+.resource strong {
+	text-align: center;
+	font-size: 60px;
+	line-height: 80px;
+	border-left: 1px solid #eee;
+	font-family: Arial;
+	color: #34aadc;
+	display: block;
+	padding: 20px 0 0;
+}
+.resource h5 {
+	color: #777;
+	margin: 0;
+	padding: 0 0 20px;
+	border-left: 1px solid #eee;
+}
+.resource span {
+	margin: 4px 7px 0 0 !important;
+}
+.area {
+	display: inline;
+	float: left;
+	margin: 0;
+	width: 50%;
+}
+.area h4 {
+	margin: 30px 30px 10px 40px;
+	font-size: 16px;
+	line-height: 20px;
+}
+.area a {
+	color: #777;
+}
+.area .inner {
+	margin: 10px 30px 20px;
+}
+.inner .none {
+	padding: 10px;
+}
+.area .table-inner {
+	padding: 20px;
+}
+.inner .act-item {
+	color: #1f90c8;
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+	margin: 2px 0;
+	padding-left: 10px;
+	line-height: 28px;
+}
+.inner .act-item .created, .inner .act-item .consumed {
+	color: #777;
+	float: right;
+	width: 200px;
+	padding: 0 10px;
+}
+.inner .act-item .consumed {
+	width: 100px !important;
+}
+.inner .glyphicon {
+	margin-right: 10px;
+}
+.inner .icon-right {
+	margin-right: 15px;
+}
+.inner span {
+	line-height: 28px;
+}

@@ -1,0 +1,194 @@
+.once-tab {
+	background: #eee;
+	padding: 0 30px;
+	border: none;
+	border-bottom: none;
+}
+.once-tab li a {
+	padding: 10px 20px !important;
+	font-size: 14px;
+	display: inline-block;
+	color: #555;
+	border: none !important;
+	border-radius: 0 !important;
+	cursor: auto;
+}
+.once-tab li.active a, .once-tab li.active a:hover {
+	color: #1f90c8;
+}
+.once-tab li.active a .glyphicon {
+	background: #1f90c8;
+}
+.once-tab .glyphicon {
+	margin-right: 6px;
+	padding: 6px 6px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	text-align: center;
+	background: #555;
+	color: #fff;
+	font-size: 10px;
+}
+.once-pane {
+	padding: 10px 30px;
+}
+.once-pane #once-tab-title {
+	margin: 15px 0;
+	padding: 10px;
+}
+.once-pane .qa-content {
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 20px;
+}
+.once-pane .attachments {
+	padding-top: 10px;
+	border-top: 1px solid #eee;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.reply-item .owner {
+	float: left;
+	margin-top: 12px;
+}
+.reply-item .avatar {
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: block;
+	width: 46px;
+	height: 46px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	border: 2px solid #eee;
+}
+.reply-item .reply-content {
+	margin-left: 60px;
+	padding: 5px 12px;
+}
+.once-toolbar {
+	position: relative;
+	z-index: 4;
+	margin: 10px 0 15px 0;
+}
+.once-toolbar .btn {
+	font-family: "Microsoft Yahei","微软雅黑",Tahoma,Helvetica,Arial,sans-serif !important;
+	font-size: 12px !important;
+}
+.once-toolbar span {
+	margin-right: 7px;
+}
+.once-toolbar .fee-total {
+	line-height: 30px;
+    display: inline-block;
+    font-size: 16px;
+}
+.fee-total .price {
+    font-size: 16px;
+}
+.once-toolbar .provider {
+	display: inline-block;
+	padding: 8px 0;
+	color: #777;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.provider .provider-filter {
+	background: #eee;
+	padding: 5px 15px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	margin-left: 5px;
+}
+.provider .provider-filter.selected {
+	background: #1f90c8;
+	color: #fff;
+}
+.provider a {
+	color: #1f90c8;
+}
+.once-toolbar .search {
+	height: 30px;
+	width: 140px;
+	margin-left: 10px;
+	padding: 6px 8px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid #ccc;
+	background: #fff;
+	-webkit-appearance: none;
+	color: #555;
+}
+.once-toolbar .search:focus {
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid #08c;
+	outline: none;
+}
+.once-toolbar .toolbar-right {
+	float: right;
+}
+.toolbar-right table,
+.toolbar-right a {
+	color: #777;
+}
+.toolbar-right .page {
+	width: 50px;
+	text-align: center;
+	vertical-align: top;
+	padding: 5px;
+	border: 2px solid #ccc;
+	background: #fff;
+	-webkit-appearance: none;
+	font-size: 14px;
+	line-height: 16px;
+	color: #555;
+}
+.toolbar-right .page:focus {
+	border: 2px solid #08c;
+	outline: none;
+}
+.once-table {
+	background: #fff;
+}
+.once-table a {
+	cursor: pointer;
+}
+.once-table tbody tr:hover > td,
+.once-table tbody tr:hover > th {
+	background-color: #D9ECFF;
+}
+.once-table th {
+	background: #eee;
+}
+.once-table th, .once-table td {
+	padding: 10px;
+	font-weight: 400;
+	font-size: 12px;
+	font-family: "Microsoft Yahei","微软雅黑",Tahoma,Helvetica,Arial,sans-serif;
+	empty-cells: show;
+}
+td.rcheck {
+	text-align: center;
+}
+a.id {
+	font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+	display: inline-block;
+	font-size: 12px;
+	margin-right: 8px;
+	vertical-align: top;
+	word-wrap: break-word;
+	word-break: normal;
+}
+a:hover {
+	text-decoration: underline;
+}
+tr.idle {
+	background: #f3f3f3;
+	color: #ccc;
+}
+

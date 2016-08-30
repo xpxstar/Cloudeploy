@@ -25,7 +25,6 @@ import cn.ac.iscas.cloudeploy.v2.packet.util.JsonUtils;
 public class TypeImpleInstaller {
 	@Autowired
 	private TypeImpleDAO dao;
-	
 	@Test
 	@Ignore
 	public void addTomcatTypeImpl() throws DockerException, InterruptedException, JsonProcessingException{
@@ -34,7 +33,7 @@ public class TypeImpleInstaller {
 		DockerClient client = DefaultDockerClient.builder()
 				.uri("http://" + "133.133.134.103:2375")
 				.build();
-		ImageInfo imageInfo = client.inspectImage("341e9c72c19d");
+		ImageInfo imageInfo = client.inspectImage("xpxstar/tomcat");
 		builder.metaJson(JsonUtils.convertToJson(imageInfo));
 		dao.save(builder.build());
 	}
@@ -47,7 +46,7 @@ public class TypeImpleInstaller {
 		DockerClient client = DefaultDockerClient.builder()
 				.uri("http://" + "133.133.134.103:2375")
 				.build();
-		ImageInfo imageInfo = client.inspectImage("3e1f4de1a63e");
+		ImageInfo imageInfo = client.inspectImage("xpxstar/mysql");
 		builder.metaJson(JsonUtils.convertToJson(imageInfo));
 		dao.save(builder.build());
 	}
@@ -57,10 +56,12 @@ public class TypeImpleInstaller {
 		TypeImplementionBuilder builder = TypeImplemention.builder();
 		builder.interfaceName("install").nodeType("cloudeploy::docker::component::package::nginx").startegy("docker");
 		DockerClient client = DefaultDockerClient.builder()
-				.uri("http://" + "133.133.134.103:2375")
+				.uri("http://" + "133.133.134.171:2375")
 				.build();
-		ImageInfo imageInfo = client.inspectImage("89732b811e7f");
-		builder.metaJson(JsonUtils.convertToJson(imageInfo));
-		dao.save(builder.build());
+		ImageInfo imageInfo = client.inspectImage("docker.io/nginx");
+//		builder.metaJson(JsonUtils.convertToJson(imageInfo));
+//		dao.save(builder.build());
+		System.out.println("start");
+		System.out.println(JsonUtils.convertToJson(imageInfo));
 	}
 }

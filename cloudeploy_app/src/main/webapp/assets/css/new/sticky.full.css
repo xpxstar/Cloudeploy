@@ -1,0 +1,42 @@
+div.sticky-queue {
+	position: fixed;
+	background: #fff;
+	height: 38px;
+	width: 300px;
+	background: rgba(255, 255, 255, 0);
+}
+div.sticky {
+	font-size: 12px;
+	color: #555;
+	display: none;
+	padding: 0;
+	position: relative;
+	height: 38px;
+	width: 300px;
+	background: rgba(255, 255, 255, 0);
+}
+span.sticky-close {
+	margin: 7px;
+}
+.top-right {
+	right: 20px;
+}
+.top-left {
+	left: 20px;
+}
+.top-right, .top-left {
+	top: 8px;
+}
+.bottom-right {
+	right: 20px;
+}
+.bottom-left {
+	left: 20px;
+}
+.bottom-right, .bottom-left {
+	bottom: 8px;
+}
+.sticky-note .alert {
+	margin-bottom: 0px;
+	padding: 10px 15px;
+}
