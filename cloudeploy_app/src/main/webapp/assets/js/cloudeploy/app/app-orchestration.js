@@ -5,15 +5,15 @@ var appPanel = {
 	currentApp : null,
 	cachedContainers : new Map(),
 	cachedContainersById : new Map(),
-	cachedCustomFiles : new Map(),
+	cachedCustomFiles : null,
 	cachedTemplate:new Map(),
 	initReady : 0,// 001 hosts ready,010 components ready
 	currentTab : -1,
-
 	init : function(param) {
 		this.requestHosts();
 		this.requestComponentTypes();
 		this.initEvents();
+		this.initCustomFileList();
 		this.initReady = 0;
 	},
 
@@ -36,7 +36,7 @@ var appPanel = {
 	},
 	
 	initCustomFileList : function(selectedFile) {
-		if (appPanel.cachedCustomFiles.isEmpty()) {
+		if (null == appPanel.cachedCustomFiles) {
 			ajaxGetJsonAuthc(dURIs.customFilesURI, null,
 					appPanel.requestCustomFileListCallback, null);
 		} else {
@@ -52,10 +52,8 @@ var appPanel = {
 	 */
 	requestCustomFileListCallback : function(data) {
 		var files = data;
-		for ( var i in files) {
-			appPanel.cachedCustomFiles.put(files[i].id, files[i]);
-		}
-		orcheHtml.paintCustomFileList(files);
+		appPanel.cachedCustomFiles = data;
+//		orcheHtml.paintCustomFileList(files);
 	},
 
 	showSaveAsBtn : function() {
@@ -901,6 +899,7 @@ var orcheHtml = {
 						'</th>'+
 					  "</tr>";
 			$("#detailModal #templates thead").html(thead);
+			
 			for(var i in templates){
 				var template = templates[i];
 				html += "<tr>" +
@@ -935,10 +934,15 @@ var orcheHtml = {
 	addTemplate: function(){
 		var html = "";
 		var thead = "";
+		var fileSelect='<select class="form-control" name="source">';
+		for(var i in appPanel.cachedCustomFiles){
+			fileSelect+='<option value="'+appPanel.cachedCustomFiles[i].fileKey+'">'+appPanel.cachedCustomFiles[i].name+'</option>';
+		}
+		fileSelect+="</select>";
 		if($("#detailModal #templates thead tr").length <= 0){
 			thead +=  "<tr>" +
 							"<th>template</th>" +
-							"<th>file URL</th>" +
+							"<th>target path</th>" +
 							"<th>reload command(optional)</th>" +
 							'<th class="deleterow">' + 
 								'<a href="#" role="button" class="text-warning">'+
@@ -948,9 +952,10 @@ var orcheHtml = {
 					  "</tr>";
 			$("#detailModal #templates thead").html(thead);
 		}
+		alert(appPanel.cachedCustomFiles);
 		html += "<tr>" +
 			'<td class="temSource">' + 
-				'<textarea class="form-control" name="source">'+ '</textarea>' +
+				fileSelect +
 			"</td>" +
 			'<td class="temTarget">' + 
 				'<textarea class="form-control" name="target">'+ '</textarea>' +
