@@ -25,8 +25,7 @@ Required Files :
 Cloudeploy.zip
 cloudeploy.sql
 ConsulAgent.zip
-Consul-template
-mydb
+
 ```
 Overview:The Frame of this platform consists of two part: agent cluster and servers, as the figure1 shows.
 
@@ -39,7 +38,7 @@ OS：Liunx-x64
 Java  (version >= 7.0)
 docker(version >= 1.9)[Download and Install](https://docs.docker.com/engine/installation/linux/)
 consul(version >= 0.6)[Download and Install](https://www.consul.io/intro/getting-started/install.html)
-consul-UI [Download and unzip to /opt/ui](https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_web_ui.zip)
+
 ```
 
 #### (1)Docker
@@ -55,7 +54,9 @@ docker pull xpxstar/mysql
 docker pull xpxstar/tomcat
 docker pull docker.io/nginx
 ```
-#### (2)Consul
+#### (2)consul
+>unzip consulAgent.zip to directory of　"／opt"
+
 >start consul on agent1、agent2 with model of server and add itself to consul cluster.
 
 ```shell
@@ -70,21 +71,18 @@ consul join <agent1-ip>
 ```
 
 #### (3)consul-template
->make several directory:
+
+>start consul-template on agent:
 
 ```
-mkdir /opt/agent/{consul-template,bolt,template,packet,volume}
-```
->start consul-template:
-
-```
-consul-template consul-template -config /etc/consul-template --consul 0.0.0.0:8500 -retry=1s &
+/opt/consul-template -config /opt/agent/consul-template --consul 0.0.0.0:8500 -retry=1s &
 ```
 #### (4)consulAgent
->unzip file 'consulAgent.zip' to /opt/agent, and start consulAgent.jar with the following command:
+
+>start consulAgent.jar with the following command:
 
 ```
-java -jar consulAgent-0.0.1-SNAPSHOT.jar
+java -jar /opt/agent/consulAgent-0.0.1-SNAPSHOT.jar
 ```
 
 ###### notice: you should open some ports through firewall of agent.：
@@ -98,10 +96,11 @@ There are Web server,Database server,File server.The OS of server hosts can be l
 ```
 MySQL(version >= 5.1) [Download and Install](http://dev.mysql.com/downloads/mysql/)
 ```
->start mysql and create database named cloudeploy.Import cloudeploy.sql into database to build data structures.
-Environment of Host B and C
+start mysql and create database named cloudeploy.Import cloudeploy.sql into database to build data structures.
+
+>Environment of Host B and C
 Here we can put file servr and web server into the same Host, named Host B
->Environment of Host B
+
 
 ```
 JAVA (version >= 7.0)
@@ -119,19 +118,19 @@ Cloudeploy/config/src/main/resources/configs.properties:
 deploy.server.host=<agent1-ip>
 server.root=http://<Host B-ip>:8080/cloudapp
 ```
->start tomcat
+>start tomcat to finish installation
 
 ```
 sh $TOMCAT_PATH/bin/startup.sh
 ```
->visit url of "http://HostB-ip:8080/cloudapp/init" to initialize demo data and finish installing
+
 ## User Demo Guide
-To see in Demo.md
+To see Demo.md
 ## Develpment based on Cloudeploy
 
 Server project of Cloudeploy_app is develped by java with maven,so just import the project into Eclipse in maven environment.
 
-Client Agent project of ConsulAgent is a normal java project.
+Client Agent project( https://github.com/xpxstar/ConsulAgent) of ConsulAgent is a normal java project.
 
 FAQ:
 Support By Pershing [xupeixing14@otcaix.iscas.ac.cn]
