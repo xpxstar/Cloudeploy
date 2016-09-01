@@ -29,6 +29,9 @@ ConsulAgent.zip
 ```
 Overview:The Frame of this platform consists of two part: agent cluster and servers, as the figure1 shows.
 
+Figure-1:
+![framework][1]
+[1]:https://raw.githubusercontent.com/xpxstar/Cloudeploy/master/doc-image/framwork.jpg "framework for cloudeploy"
 
 ### 1.Install agent cluster
 Agent cluster consists of at least three computers(agent 1-3 in figure1), which are hosts of cloud based applications. For every agent, the environment is built as follows.
