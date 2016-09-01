@@ -190,7 +190,6 @@ var appPanel = {
 		for ( var i in app.containers) {
 			var container = app.containers[i];
 			if (container.status == "CREATED" || container.status == "DEPLOYED") {
-				alert(container.status);
 				appPanel.cachedContainers.put(container.nodeId, container);
 				appPanel.cachedContainersById.put(container.id, container);
 			}
@@ -204,7 +203,6 @@ var appPanel = {
 				appPanel.rearrangeElementWithPos(node.id, container.xPos,
 						container.yPos);
 			} else if (container.status == "DEPLOYED") {
-				alert(container.instances.length);
 				for (var j = 0; j < container.instances.length; j++) {
 					var instance = container.instances[j];
 					var node = appPanel.nodeFactory
@@ -342,7 +340,7 @@ var appPanel = {
 			}
 		});
 		$("#templates tbody tr").each(function(index, element) {
-			var source = $(element).find('.temSource textarea').val();
+			var source = $(element).find('.temSource [name="source"]').val();
 			var target = $(element).find('.temTarget textarea').val();
 			var command = $(element).find('.temCommand textarea').val();
 			if (source != "" && target != "") {
@@ -353,6 +351,9 @@ var appPanel = {
 				});
 			}
 		});
+		for(var i in newTemplates){
+			alert(newTemplates[i].source)
+		}
 		$("#attributes tbody tr").each(function(index, element) {
 			var attrKey = $(element).find('.attrKey textarea').val();
 			var attrValue = $(element).find('.attrValue textarea').val();
@@ -427,7 +428,6 @@ var appPanel = {
 					templates : n.getTemplates(),
 					attributes: n.getAttribtues()
 				};
-				alert(n.getPort());
 				if (!nodes.containsKey(node.nodeId)) {
 					nodes.put(node.nodeId, node);
 				}
@@ -952,7 +952,6 @@ var orcheHtml = {
 					  "</tr>";
 			$("#detailModal #templates thead").html(thead);
 		}
-		alert(appPanel.cachedCustomFiles);
 		html += "<tr>" +
 			'<td class="temSource">' + 
 				fileSelect +

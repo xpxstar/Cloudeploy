@@ -120,13 +120,13 @@
 									</div>
 									<hr>
 									<div style="margin-top:25px;">
-										<table class="table table-bordered table-condensed" id="attributes">
+										<table class="table table-bordered table-condensed" id="services">
 											<thead></thead>
 											<tbody></tbody>
 											<tfoot>
 											 <tr>
 											  <td colspan="3" style="padding-left:0; padding-right:0; text-align:center;">
-											  	<a href="#" role="button" id="addAttribute">
+											  	<a href="#" role="button" id="addService">
 											  		<i class="fa fa-plus"></i>
 											  		<span>add services</span>
 											  	</a>
