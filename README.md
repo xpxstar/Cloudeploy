@@ -109,7 +109,7 @@ Here we can put file servr and web server into the same Host, named Host B
 JAVA (version >= 7.0)
 Tomcat (version>=7.0.30) [Download and Install] (https://tomcat.apache.org/download-70.cgi)
 ```
->unzip cloudeploy.zip to directory of "$TOMCAT_PATH/webapps",edit configure files：
+>unzip cloudapp.zip to directory of "$TOMCAT_PATH/webapps",edit configure files：
 
 Cloudeploy/WEB-INF/classes/application.properties:
 ```
@@ -135,8 +135,13 @@ To see document/Demo.mp4
 Server project of Cloudeploy_app is develped by java with maven,so just import the project into Eclipse in maven environment.
 
 Client Agent project( https://github.com/xpxstar/ConsulAgent) of ConsulAgent is a normal java project.
-see document/design document.pdf
-	document/requirement document.pdf
+
+see：
+>document/design document.pdf
+
+>document/requirement document.pdf
+
 FAQ:
 Support By Pershing [xupeixing14@otcaix.iscas.ac.cn]
+
 with License under GNU showing in  LICENSE.
