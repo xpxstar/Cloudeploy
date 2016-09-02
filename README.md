@@ -111,12 +111,12 @@ Tomcat (version>=7.0.30) [Download and Install] (https://tomcat.apache.org/downl
 ```
 >unzip cloudeploy.zip to directory of "$TOMCAT_PATH/webapps",edit configure files：
 
-Cloudeploy/cloudeploy_app/src/main/resources/application.properties:
+Cloudeploy/WEB-INF/classes/application.properties:
 ```
 jdbc.url=<HostA-ip>
 consul_host=<agent1-ip>
 ```
-Cloudeploy/config/src/main/resources/configs.properties:
+Cloudeploy/WEB-INF/lib/configs.properties:
 ```
 deploy.server.host=<agent1-ip>
 server.root=http://<Host B-ip>:8080/cloudapp
@@ -128,13 +128,15 @@ sh $TOMCAT_PATH/bin/startup.sh
 ```
 
 ## User Demo Guide
-To see Demo.md
+To see document/Demo.mp4
+
 ## Develpment based on Cloudeploy
 
 Server project of Cloudeploy_app is develped by java with maven,so just import the project into Eclipse in maven environment.
 
 Client Agent project( https://github.com/xpxstar/ConsulAgent) of ConsulAgent is a normal java project.
-
+see document/design document.pdf
+	document/requirement document.pdf
 FAQ:
 Support By Pershing [xupeixing14@otcaix.iscas.ac.cn]
 with License under GNU showing in  LICENSE.
