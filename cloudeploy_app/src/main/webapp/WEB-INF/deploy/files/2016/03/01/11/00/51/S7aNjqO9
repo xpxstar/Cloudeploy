@@ -1,0 +1,41 @@
+name: cloudeploy::docker::component::package::tomcat
+description: tomcat type
+properties:
+- name: catalina_base
+  defaultValue: /usr/local/tomcat
+  required: false
+- name: http_connector_port
+  defaultValue: 8080
+  required: true
+- name: shutdownport
+  defaultValue: 8005
+  required: false
+- name: http_redirect_port
+  defaultValue: 8443
+- name: ajp_connector_port
+  defaultValue: 8443
+- name: ajp_redirect_port
+  defaultValue: 8443
+capabilities:
+- name: host
+  source: container
+requirements:
+- name: host
+  target: container
+services:
+- name: tomcat_service
+  serviceId:
+  ip:
+  port: 8080
+  check:
+interfaces:
+- name: install
+  params:
+  - name: catalina_base
+    value: /usr/local/tomcat
+- name: start
+- name: stop
+- name: delete
+attributes:
+- name: http_connector_port
+  value: 8080

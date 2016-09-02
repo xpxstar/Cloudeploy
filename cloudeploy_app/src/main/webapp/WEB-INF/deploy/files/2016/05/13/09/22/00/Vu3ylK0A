@@ -1,0 +1,16 @@
+name: cloudeploy::docker::component::package::nginx
+description: nginx type
+requirements:
+- name: dbms
+  target: tomcat
+services:
+- name: nginx_service
+  serviceId:
+  ip:
+  port: 80
+  check:
+interfaces:
+- name: install
+- name: start
+- name: stop
+- name: delete

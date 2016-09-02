@@ -1,0 +1,26 @@
+name: cloudeploy::docker::component::package::mysql
+description: mysql type
+properties:
+- name: username
+  defaultValue: root
+  required: true
+- name: userpasswd
+  defaultValue: root
+  required: true
+capabilities:
+- name: dbms
+  source: mysql
+requirements:
+- name: dbms
+  target: mysql
+services:
+- name: mysql_service
+  serviceId:
+  ip:
+  port: 3306
+  check:
+interfaces:
+- name: install
+- name: start
+- name: stop
+- name: delete
