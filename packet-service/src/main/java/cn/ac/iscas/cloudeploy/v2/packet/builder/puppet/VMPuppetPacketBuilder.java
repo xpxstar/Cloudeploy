@@ -23,7 +23,7 @@ import cn.ac.iscas.cloudeploy.v2.util.ForEachHelper;
 import cn.ac.iscas.cloudeploy.v2.workflowEngine.entity.Deployment;
 /**
  * build all packets for application using puppet strategy.
- * @author RichardLcc
+ * @author xpxstar
  *
  */
 @Component

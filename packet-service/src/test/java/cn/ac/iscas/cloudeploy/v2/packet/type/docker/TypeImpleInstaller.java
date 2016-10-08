@@ -26,12 +26,12 @@ public class TypeImpleInstaller {
 	@Autowired
 	private TypeImpleDAO dao;
 	@Test
-	@Ignore
+//	@Ignore
 	public void addTomcatTypeImpl() throws DockerException, InterruptedException, JsonProcessingException{
 		TypeImplementionBuilder builder = TypeImplemention.builder();
 		builder.interfaceName("install").nodeType("cloudeploy::docker::component::package::tomcat").startegy("docker");
 		DockerClient client = DefaultDockerClient.builder()
-				.uri("http://" + "133.133.134.103:2375")
+				.uri("http://" + "119.29.206.183:2375")
 				.build();
 		ImageInfo imageInfo = client.inspectImage("xpxstar/tomcat");
 		builder.metaJson(JsonUtils.convertToJson(imageInfo));
@@ -39,12 +39,11 @@ public class TypeImpleInstaller {
 	}
 	
 	@Test
-	@Ignore
 	public void addMySQLTypeImpl() throws DockerException, InterruptedException, JsonProcessingException{
 		TypeImplementionBuilder builder = TypeImplemention.builder();
 		builder.interfaceName("install").nodeType("cloudeploy::docker::component::package::mysql").startegy("docker");
 		DockerClient client = DefaultDockerClient.builder()
-				.uri("http://" + "133.133.134.103:2375")
+				.uri("http://" + "119.29.206.183:2375")
 				.build();
 		ImageInfo imageInfo = client.inspectImage("xpxstar/mysql");
 		builder.metaJson(JsonUtils.convertToJson(imageInfo));
@@ -52,15 +51,16 @@ public class TypeImpleInstaller {
 	}
 	
 	@Test
+	@Ignore
 	public void addNginxTypeImpl() throws DockerException, InterruptedException, JsonProcessingException{
 		TypeImplementionBuilder builder = TypeImplemention.builder();
 		builder.interfaceName("install").nodeType("cloudeploy::docker::component::package::nginx").startegy("docker");
 		DockerClient client = DefaultDockerClient.builder()
-				.uri("http://" + "133.133.134.171:2375")
+				.uri("http://" + "119.29.206.183:2375")
 				.build();
 		ImageInfo imageInfo = client.inspectImage("docker.io/nginx");
-//		builder.metaJson(JsonUtils.convertToJson(imageInfo));
-//		dao.save(builder.build());
+		builder.metaJson(JsonUtils.convertToJson(imageInfo));
+		dao.save(builder.build());
 		System.out.println("start");
 		System.out.println(JsonUtils.convertToJson(imageInfo));
 	}
